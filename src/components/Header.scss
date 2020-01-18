@@ -2,10 +2,10 @@
 
 @mixin header-text {
   text-transform: uppercase;
-  color: $sc-color;
+  color: $pp-color;
   font-size: 0.8em;
   letter-spacing: $header-spacing;
-  font-weight: lighter;
+  font-weight: bold;
   transition: opacity 300ms ease;
 }
 

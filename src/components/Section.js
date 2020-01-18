@@ -5,7 +5,7 @@ import "./Section.scss";
 class Section extends React.Component {
   render() {
     return (
-      <section>
+      <section className={this.props.className + "-section"}>
         <figure>
           <Illustration />
         </figure>

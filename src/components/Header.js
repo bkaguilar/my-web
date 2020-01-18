@@ -4,7 +4,6 @@ import "./Header.scss";
 
 class Header extends React.Component {
   render() {
-    const NAV_ITEMS = ["inicio", "personal", "contacto"];
     return (
       <header className="header">
         <figure className="header__figure">
@@ -14,7 +13,7 @@ class Header extends React.Component {
           <h1 className="header__figure__text">bk Aguilar</h1>
         </figure>
         <nav className="header__nav">
-          {NAV_ITEMS.map(item => {
+          {this.props.pages.map(item => {
             return <Item title={item} className="header__nav__item" />;
           })}
         </nav>
