@@ -1,9 +1,18 @@
 @import "common.scss";
 @import url("https://fonts.googleapis.com/css?family=Oxygen|Roboto+Mono|Ubuntu&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   height: 100%;
   font-size: 100%;
   background: $pp-color;
   font-family: "Oxygen", sans-serif;
+
+  a {
+    text-decoration: none;
+  }
 }
