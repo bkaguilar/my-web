@@ -16,3 +16,41 @@ body {
     text-decoration: none;
   }
 }
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: $header-height;
+  margin: 15px;
+  padding: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__figure {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__logo {
+      margin: 0 15px;
+      width: 16px;
+      height: 100%;
+    }
+
+    &__text {
+      @include header-text();
+    }
+  }
+
+  &__nav {
+    &:hover > a:not(:hover) {
+      opacity: 0.5;
+    }
+  }
+}

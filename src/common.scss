@@ -9,3 +9,11 @@ $header-height: 50px;
 $header-spacing: 0.15em;
 
 //Mixins
+@mixin header-text {
+  text-transform: uppercase;
+  color: $pp-color;
+  font-size: 0.8em;
+  letter-spacing: $header-spacing;
+  font-weight: bold;
+  transition: opacity 300ms ease;
+}
