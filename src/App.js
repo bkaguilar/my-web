@@ -13,7 +13,9 @@ const pages = [
     name: "inicio",
     image: <Portada />,
     title: "Front end Developer.",
-    button: <Button type="button" className="btn__contac" value="Contactar" />,
+    button: (
+      <Button type="button" className="Button__contac" value="Contactar" />
+    ),
     content:
       "Lately we all have been hearing a lot about “JavaScript Modules Everyone is likely wondering what to do with them, and how do they even play a vital role in our daily lives…?"
   },
