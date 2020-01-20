@@ -11,7 +11,7 @@ body {
   height: 100%;
   font-size: 100%;
   // background: $pp-color;
-  font-family: "Oxygen", sans-serif;
+  font-family: "Ubuntu", sans-serif;
 
   a {
     text-decoration: none;
@@ -68,7 +68,6 @@ body {
   transition: all 300ms ease-in;
 
   display: flex;
-
   align-items: center;
 
   &__figure {
@@ -82,7 +81,8 @@ body {
     width: 60%;
 
     &__title {
-      font-size: 4.5em;
+      font-size: 6em;
+      letter-spacing: -0.02em;
     }
 
     &__content {
@@ -90,21 +90,14 @@ body {
     }
   }
 }
-// .black-theme::after {
-//   content: "";
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   background: $pp-color;
-//   z-index: -2;
-//   transform: translateY(-100%);
-//   animation: show 250ms ease-in forwards;
 
-//   @keyframes show {
-//     100% {
-//       transform: none;
-//     }
-//   }
-// }
+.black-theme {
+  background: $pp-color;
+
+  .App__section__text {
+    color: $sc-color;
+  }
+}
+.white-theme {
+  background: $sc-color;
+}

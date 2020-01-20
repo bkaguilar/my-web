@@ -4,3 +4,7 @@
   @include header-text();
   margin: 35px;
 }
+
+.active {
+  color: $brand-color_2;
+}

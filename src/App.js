@@ -11,6 +11,7 @@ const pages = [
   {
     name: "inicio",
     image: <Portada />,
+    title: "Front end Developer.",
     content:
       "Lately we all have been hearing a lot about “JavaScript Modules Everyone is likely wondering what to do with them, and how do they even play a vital role in our daily lives…?"
   },
@@ -31,17 +32,18 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: 0
+      active: 0,
+      blackTheme: ""
     };
   }
 
-  changeHandle(e) {
+  handleChange(e) {
     this.setState({
       active: parseInt(e.currentTarget.attributes.index.value)
     });
   }
 
-  wheelHandler(e) {
+  handleWheel(e) {
     if (e.deltaY > 1 && this.state.active + 1 < pages.length) {
       this.setState({
         active: this.state.active + 1
@@ -53,22 +55,51 @@ class App extends React.Component {
     }
   }
 
+  handleKeydown(e) {
+    if (e.keyCode === 40 && this.state.active + 1 < pages.length) {
+      this.setState({
+        active: this.state.active + 1
+      });
+    }
+    if (e.keyCode === 38 && this.state.active >= 1) {
+      this.setState({
+        active: this.state.active - 1
+      });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.active !== prevState.active) {
+      if (this.state.active % 2 === 1) {
+        this.setState({
+          blackTheme: true
+        });
+      } else {
+        this.setState({
+          blackTheme: false
+        });
+      }
+    }
+  }
+
   render() {
     let content,
       name,
-      image = "";
+      image,
+      title = "";
     let link = pages.map((item, i) => {
       const active = this.state.active === i;
       image = active ? item.image : image;
       content = active ? item.content : content;
       name = active ? item.name : name;
+      title = active ? item.title : title;
       return (
         <Link
           key={item.name}
           index={i}
           title={item.name}
           className={active ? "active" : ""}
-          onClick={this.changeHandle.bind(this)}
+          onClick={this.handleChange.bind(this)}
         />
       );
     });
@@ -88,13 +119,19 @@ class App extends React.Component {
           <nav className="App__header__nav">{link}</nav>
         </header>
         <section
+          tabIndex="0"
           id={name}
-          className="App__section"
-          onWheel={this.wheelHandler.bind(this)}
+          className={
+            this.state.blackTheme
+              ? "App__section black-theme"
+              : "App__section white-theme"
+          }
+          onWheel={this.handleWheel.bind(this)}
+          onKeyDown={this.handleKeydown.bind(this)}
         >
           <figure className="App__section__figure">{image}</figure>
           <div className="App__section__text">
-            <h2 className="App__section__text__title">Hmmm</h2>
+            <h2 className="App__section__text__title">{title}</h2>
             <p className="App__section__text__content">{content}</p>
           </div>
         </section>
