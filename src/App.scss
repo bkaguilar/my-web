@@ -27,6 +27,7 @@ body {
   margin: 15px;
   padding: 10px;
   z-index: 1;
+  transition: all 200ms ease;
 
   display: flex;
   justify-content: space-between;
@@ -58,13 +59,13 @@ body {
 }
 
 .App__section {
-  opacity: 1;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   padding: 50px;
+  transition: all 300ms ease-in;
 
   display: flex;
 
@@ -89,3 +90,21 @@ body {
     }
   }
 }
+// .black-theme::after {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   background: $pp-color;
+//   z-index: -2;
+//   transform: translateY(-100%);
+//   animation: show 250ms ease-in forwards;
+
+//   @keyframes show {
+//     100% {
+//       transform: none;
+//     }
+//   }
+// }

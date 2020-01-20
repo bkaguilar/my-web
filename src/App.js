@@ -1,5 +1,5 @@
 import React from "react";
-// import { TransitionGroup, CSSTransition } from "react-transition-group";
+// import { CSSTransition } from "react-transition-group";
 import { ReactComponent as Logo } from "./images/logo.svg";
 import { ReactComponent as Portada } from "./images/portada.svg";
 import { ReactComponent as Message } from "./images/message.svg";
@@ -37,9 +37,20 @@ class App extends React.Component {
 
   changeHandle(e) {
     this.setState({
-      active: parseInt(e.currentTarget.attributes.index.value),
-      pageActive: !this.setState.pageActive
+      active: parseInt(e.currentTarget.attributes.index.value)
     });
+  }
+
+  wheelHandler(e) {
+    if (e.deltaY > 1 && this.state.active + 1 < pages.length) {
+      this.setState({
+        active: this.state.active + 1
+      });
+    } else if (e.deltaY < -1 && this.state.active >= 1) {
+      this.setState({
+        active: this.state.active - 1
+      });
+    }
   }
 
   render() {
@@ -78,9 +89,8 @@ class App extends React.Component {
         </header>
         <section
           id={name}
-          className={
-            this.state.pageChange ? "App__section animate" : "App__section"
-          }
+          className="App__section"
+          onWheel={this.wheelHandler.bind(this)}
         >
           <figure className="App__section__figure">{image}</figure>
           <div className="App__section__text">
