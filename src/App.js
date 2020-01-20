@@ -5,6 +5,7 @@ import { ReactComponent as Portada } from "./images/portada.svg";
 import { ReactComponent as Message } from "./images/message.svg";
 import { ReactComponent as Nature } from "./images/nature.svg";
 import Link from "./components/Link";
+import Button from "./components/Button";
 import "./App.scss";
 
 const pages = [
@@ -12,17 +13,20 @@ const pages = [
     name: "inicio",
     image: <Portada />,
     title: "Front end Developer.",
+    button: <Button type="button" className="btn__contac" value="Contactar" />,
     content:
       "Lately we all have been hearing a lot about “JavaScript Modules Everyone is likely wondering what to do with them, and how do they even play a vital role in our daily lives…?"
   },
   {
     name: "personal",
     image: <Nature />,
+    title: "Over the past 9 years",
     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspe"
   },
   {
     name: "contacto",
     image: <Message />,
+    title: "Send me a message!",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspessss"
   }
@@ -86,6 +90,7 @@ class App extends React.Component {
     let content,
       name,
       image,
+      button,
       title = "";
     let link = pages.map((item, i) => {
       const active = this.state.active === i;
@@ -93,6 +98,7 @@ class App extends React.Component {
       content = active ? item.content : content;
       name = active ? item.name : name;
       title = active ? item.title : title;
+      button = active ? item.button : button;
       return (
         <Link
           key={item.name}
@@ -133,6 +139,7 @@ class App extends React.Component {
           <div className="App__section__text">
             <h2 className="App__section__text__title">{title}</h2>
             <p className="App__section__text__content">{content}</p>
+            {button}
           </div>
         </section>
       </div>
