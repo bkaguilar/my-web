@@ -1,10 +1,11 @@
 import React from "react";
-import "./App.scss";
+// import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { ReactComponent as Logo } from "./images/logo.svg";
 import { ReactComponent as Portada } from "./images/portada.svg";
 import { ReactComponent as Message } from "./images/message.svg";
 import { ReactComponent as Nature } from "./images/nature.svg";
 import Link from "./components/Link";
+import "./App.scss";
 
 const pages = [
   {
@@ -36,7 +37,8 @@ class App extends React.Component {
 
   changeHandle(e) {
     this.setState({
-      active: parseInt(e.currentTarget.attributes.index.value)
+      active: parseInt(e.currentTarget.attributes.index.value),
+      pageActive: !this.setState.pageActive
     });
   }
 
@@ -45,33 +47,46 @@ class App extends React.Component {
       name,
       image = "";
     let link = pages.map((item, i) => {
-      image = this.state.active === i ? item.image : image;
-      content = this.state.active === i ? item.content : content;
-      name = this.state.active === i ? item.name : name;
+      const active = this.state.active === i;
+      image = active ? item.image : image;
+      content = active ? item.content : content;
+      name = active ? item.name : name;
       return (
         <Link
-          key={i}
+          key={item.name}
           index={i}
           title={item.name}
-          className={this.state.active === i ? "active" : ""}
+          className={active ? "active" : ""}
           onClick={this.changeHandle.bind(this)}
         />
       );
     });
+
     return (
       <div className="App">
-        <header className="header">
-          <figure className="header__figure">
+        <header className="App__header">
+          <figure className="App__header__figure">
             <a href="/">
-              <Logo title="Bk Aguilar logo" className="header__figure__logo" />
+              <Logo
+                title="Bk Aguilar logo"
+                className="App__header__figure__logo"
+              />
             </a>
-            <h1 className="header__figure__text">bk Aguilar</h1>
+            <h1 className="App__header__figure__text">bk Aguilar</h1>
           </figure>
-          <nav className="header__nav">{link}</nav>
+          <nav className="App__header__nav">{link}</nav>
         </header>
-        <section id={name} className={name + "-section"}>
-          <figure>{image}</figure>
-          <p>{content}</p>
+        <section
+          id={name}
+          className={
+            this.state.pageChange ? "App__section animate" : "App__section"
+          }
+        >
+          <figure className="App__section__figure">{image}</figure>
+          <div className="App__section__text">
+            <h2 className="App__section__text__title">Hmmm</h2>
+            <p className="App__section__text__content">{content}</p>
+          </div>
         </section>
       </div>
     );

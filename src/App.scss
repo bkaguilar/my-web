@@ -4,6 +4,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
   }
 }
 
-.header {
+.App__header {
   position: fixed;
   top: 0;
   right: 0;
@@ -25,6 +26,7 @@ body {
   height: $header-height;
   margin: 15px;
   padding: 10px;
+  z-index: 1;
 
   display: flex;
   justify-content: space-between;
@@ -51,6 +53,39 @@ body {
   &__nav {
     &:hover > a:not(:hover) {
       opacity: 0.5;
+    }
+  }
+}
+
+.App__section {
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  &__figure {
+    position: absolute;
+    right: 50px;
+    width: 45%;
+    z-index: -1;
+  }
+
+  &__text {
+    width: 60%;
+
+    &__title {
+      font-size: 4.5em;
+    }
+
+    &__content {
+      font-size: 1.3em;
     }
   }
 }
