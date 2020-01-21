@@ -44,6 +44,13 @@ body {
       margin: 0 15px;
       width: 14px;
       height: 100%;
+
+      .logo-path1 {
+        fill: url(#d-1);
+      }
+      .logo-path2 {
+        fill: url(#d-2);
+      }
     }
 
     &__text {
@@ -60,6 +67,7 @@ body {
 }
 
 .App__section {
+  outline: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -97,6 +105,13 @@ body {
 body[data-theme="black-theme"] {
   header {
     color: $sc-color;
+
+    svg .logo-path1 {
+      fill: #cccccc;
+    }
+    svg .logo-path2 {
+      fill: white;
+    }
   }
   section {
     background: $pp-color;
