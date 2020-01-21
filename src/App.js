@@ -88,7 +88,7 @@ class App extends React.Component {
           key={item.name}
           index={i}
           name={item.name}
-          className={active ? "active" : ""}
+          className={active ? " active" : ""}
           onClick={this.handleChange.bind(this)}
         />
       );
@@ -96,16 +96,13 @@ class App extends React.Component {
 
     let dot = PAGES.map((item, i) => {
       return (
-        <li>
-          <Dot
-            key={item.name}
-            index={i}
-            name={item.name}
-            className={this.state.active === i ? "active" : ""}
-            onClick={this.handleChange.bind(this)}
-          />
-          ;
-        </li>
+        <Dot
+          key={item.name}
+          index={i}
+          name={item.name}
+          className={this.state.active === i ? " active" : ""}
+          onClick={this.handleChange.bind(this)}
+        />
       );
     });
 

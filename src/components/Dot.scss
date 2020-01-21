@@ -1,14 +1,14 @@
 @import "../common.scss";
 
 .Dot {
+  display: table-caption;
   position: relative;
-  display: inline-block;
   cursor: pointer;
   height: $dot-size;
   width: $dot-size;
   border-radius: 50%;
   background: $pp-color;
-  margin: 10px;
+  margin: 15px;
   opacity: 0.7;
   transition: all 500ms ease-in-out;
 
@@ -30,14 +30,14 @@
 
     @keyframes pulse {
       100% {
-        transform: scale(3);
+        transform: scale(6);
         opacity: 0;
       }
     }
   }
 
   &.active {
-    background: $brand-color_2;
+    background: $brand-color_2 !important;
     transform: scale(1.4);
   }
 }

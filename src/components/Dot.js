@@ -4,9 +4,7 @@ import "./Dot.scss";
 class Dot extends React.Component {
   render() {
     const { name, className } = this.props;
-    return (
-      <a href={"#" + name} className={"Dot " + className} title={name}></a>
-    );
+    return <li className={"Dot" + className} title={name}></li>;
   }
 }
 

@@ -9,7 +9,7 @@ class Link extends React.Component {
         href={"#" + name}
         index={index}
         name={name}
-        className={"App__header__nav__item " + className}
+        className={"App__header__nav__item" + className}
         onClick={onClick}
       >
         {name}
