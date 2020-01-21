@@ -11,6 +11,7 @@ body {
   height: 100%;
   font-size: 100%;
   font-family: "Raleway", sans-serif;
+  background: $sc-color;
 
   a {
     text-decoration: none;
@@ -23,7 +24,7 @@ body {
   right: 0;
   left: 0;
   height: $header-height;
-  margin: 15px;
+  margin: 4em;
   padding: 10px;
   z-index: 1;
   transition: all 200ms ease;
@@ -41,12 +42,13 @@ body {
 
     &__logo {
       margin: 0 15px;
-      width: 16px;
+      width: 14px;
       height: 100%;
     }
 
     &__text {
       @include header-text();
+      font-weight: lighter;
     }
   }
 
@@ -64,6 +66,7 @@ body {
   right: 0;
   bottom: 0;
   padding: 50px;
+  padding: 0 140px;
   transition: all 300ms ease-in;
 
   display: flex;
@@ -82,6 +85,7 @@ body {
     &__title {
       font-size: 6em;
       letter-spacing: -0.02em;
+      margin-bottom: 25px;
     }
 
     &__content {
@@ -97,6 +101,10 @@ body[data-theme="black-theme"] {
   section {
     background: $pp-color;
     color: $sc-color;
+
+    h2 {
+      color: $brand-color_1;
+    }
   }
 }
 
