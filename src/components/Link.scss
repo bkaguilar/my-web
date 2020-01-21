@@ -2,9 +2,9 @@
 
 .App__header__nav__item {
   @include header-text();
-  margin: 35px;
-}
+  margin-left: 35px;
 
-.active {
-  color: $brand-color_2;
+  &.active {
+    color: $brand-color_2;
+  }
 }

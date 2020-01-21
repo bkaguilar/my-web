@@ -1,0 +1,43 @@
+@import "../common.scss";
+
+.Dot {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  height: $dot-size;
+  width: $dot-size;
+  border-radius: 50%;
+  background: $pp-color;
+  margin: 10px;
+  opacity: 0.7;
+  transition: all 500ms ease-in-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: $dot-size;
+    width: $dot-size;
+    border-radius: 50%;
+    background: inherit;
+  }
+
+  &:hover::before {
+    animation: pulse 800ms ease-in-out;
+
+    @keyframes pulse {
+      100% {
+        transform: scale(3);
+        opacity: 0;
+      }
+    }
+  }
+
+  &.active {
+    background: $brand-color_2;
+    transform: scale(1.4);
+  }
+}

@@ -3,6 +3,7 @@ import React from "react";
 import { ReactComponent as Logo } from "./images/logo.svg";
 import { PAGES } from "./constant";
 import Link from "./components/Link";
+import Dot from "./components/Dot";
 import "./App.scss";
 
 let lastTime = new Date().getTime();
@@ -35,7 +36,6 @@ class App extends React.Component {
 
   handleWheel(e) {
     let time = new Date().getTime();
-    console.log(time - lastTime);
     if (time - lastTime < 400) return;
     lastTime = time;
 
@@ -55,10 +55,6 @@ class App extends React.Component {
     }
   }
 
-  // componentDidMount() {
-  //   document.body.setAttribute("data-theme", "white-theme");
-  // }
-
   componentDidUpdate(prevProps, prevState) {
     if (this.state.active !== prevState.active) {
       if (this.state.active % 2 === 1) {
@@ -69,12 +65,17 @@ class App extends React.Component {
     }
   }
 
+  renderContent(key, i, item) {
+    console.log`${key} = this.state.active === ${i} ? ${item.key} : ${key}`;
+  }
+
   render() {
     let content,
       name,
       image,
       button,
       title = "";
+
     let link = PAGES.map((item, i) => {
       const active = this.state.active === i;
       image = active ? item.image : image;
@@ -86,10 +87,25 @@ class App extends React.Component {
         <Link
           key={item.name}
           index={i}
-          title={item.name}
+          name={item.name}
           className={active ? "active" : ""}
           onClick={this.handleChange.bind(this)}
         />
+      );
+    });
+
+    let dot = PAGES.map((item, i) => {
+      return (
+        <li>
+          <Dot
+            key={item.name}
+            index={i}
+            name={item.name}
+            className={this.state.active === i ? "active" : ""}
+            onClick={this.handleChange.bind(this)}
+          />
+          ;
+        </li>
       );
     });
 
@@ -120,6 +136,7 @@ class App extends React.Component {
             <p className="App__section__text__content">{content}</p>
             {button}
           </div>
+          <ul className="App__section__dots">{dot}</ul>
         </section>
       </div>
     );
