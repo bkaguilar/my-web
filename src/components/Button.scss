@@ -5,7 +5,8 @@
   cursor: pointer;
   outline: none;
   // FIXME:
-  min-width: 20em;
+  max-width: 400px;
+  width: 100%;
   padding: 15px 10px;
   margin: 15px 0;
   font-size: 1.2em;
@@ -16,6 +17,14 @@
   border: none;
   box-shadow: 0 15px 40px rgba($brand-color_2, 0.2);
   transition: all 200ms ease-in;
+
+  &:hover {
+    box-shadow: 0 0 5px rgba($brand-color_2, 0.2);
+  }
+
+  &:active {
+    transform: scale(0.99);
+  }
 
   // &::before {
   //   content: "";
@@ -31,10 +40,6 @@
   //   overflow: hidden;
   // }
 
-  &:hover {
-    box-shadow: 0 0 5px rgba($brand-color_2, 0.2);
-  }
-
   // &:hover::before {
   //   animation: s 300ms ease-in-out alternate;
   //   @keyframes s {
@@ -43,8 +48,4 @@
   //     }
   //   }
   // }
-
-  &:active {
-    transform: translateY(5px);
-  }
 }

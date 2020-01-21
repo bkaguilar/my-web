@@ -10,7 +10,6 @@
 body {
   height: 100%;
   font-size: 100%;
-  // background: $pp-color;
   font-family: "Raleway", sans-serif;
 
   a {
@@ -81,7 +80,6 @@ body {
     width: 60%;
 
     &__title {
-      color: $pp-color;
       font-size: 6em;
       letter-spacing: -0.02em;
     }
@@ -92,13 +90,22 @@ body {
   }
 }
 
-.black-theme {
-  background: $pp-color;
-
-  .App__section__text {
+body[data-theme="black-theme"] {
+  header {
+    color: $sc-color;
+  }
+  section {
+    background: $pp-color;
     color: $sc-color;
   }
 }
-.white-theme {
-  background: $sc-color;
+
+body[data-theme="white-theme"] {
+  header {
+    color: $pp-color;
+  }
+  section {
+    background: $sc-color;
+    color: $pp-color;
+  }
 }

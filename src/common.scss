@@ -1,7 +1,7 @@
 //Var
 // $main-font: ;
 $pp-color: #191919;
-$sc-color: whitesmoke;
+$sc-color: #f2f4f6;
 $brand-color_1: #11cebb;
 $brand-color_2: #11a9bb;
 
@@ -11,9 +11,8 @@ $header-spacing: 0.15em;
 //Mixins
 @mixin header-text {
   text-transform: uppercase;
-  color: $pp-color;
   font-size: 0.8em;
   letter-spacing: $header-spacing;
-  font-weight: bold;
   transition: all 300ms ease;
+  color: inherit;
 }

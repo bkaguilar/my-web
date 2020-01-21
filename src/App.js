@@ -11,9 +11,20 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: 0,
-      blackTheme: ""
+      active: 0
     };
+  }
+
+  nextPage(sign) {
+    return this.setState({
+      active: this.state.active + 1
+    });
+  }
+
+  prevPage(sign) {
+    return this.setState({
+      active: this.state.active - 1
+    });
   }
 
   handleChange(e) {
@@ -29,39 +40,31 @@ class App extends React.Component {
     lastTime = time;
 
     if (e.deltaY > 1 && this.state.active + 1 < PAGES.length) {
-      this.setState({
-        active: this.state.active + 1
-      });
+      this.nextPage();
     } else if (e.deltaY < -1 && this.state.active >= 1) {
-      this.setState({
-        active: this.state.active - 1
-      });
+      this.prevPage();
     }
   }
 
   handleKeydown(e) {
     if (e.keyCode === 40 && this.state.active + 1 < PAGES.length) {
-      this.setState({
-        active: this.state.active + 1
-      });
+      this.nextPage();
     }
     if (e.keyCode === 38 && this.state.active >= 1) {
-      this.setState({
-        active: this.state.active - 1
-      });
+      this.prevPage();
     }
   }
+
+  // componentDidMount() {
+  //   document.body.setAttribute("data-theme", "white-theme");
+  // }
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.active !== prevState.active) {
       if (this.state.active % 2 === 1) {
-        this.setState({
-          blackTheme: true
-        });
+        document.body.setAttribute("data-theme", "black-theme");
       } else {
-        this.setState({
-          blackTheme: false
-        });
+        document.body.setAttribute("data-theme", "white-theme");
       }
     }
   }
@@ -107,11 +110,7 @@ class App extends React.Component {
         <section
           tabIndex="0"
           id={name}
-          className={
-            this.state.blackTheme
-              ? "App__section black-theme"
-              : "App__section white-theme"
-          }
+          className="App__section"
           onWheel={this.handleWheel.bind(this)}
           onKeyDown={this.handleKeydown.bind(this)}
         >
