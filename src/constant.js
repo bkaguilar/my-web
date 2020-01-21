@@ -17,19 +17,19 @@ export const PAGES = [
       />
     ),
     content:
-      "Lately we all have been hearing a lot about “JavaScript Modules Everyone is likely wondering what to do with them, and how do they even play a vital role in our daily lives…?"
+      "I like to craft solid and scalable FE products with great user experiences."
   },
   {
     name: "personal",
     image: <Nature />,
     title: "Over the past 9 years",
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspe"
+    content:
+      "I'm probably not the typical designer positioned behind an Illustrator artboard adjusting pixels, but I design. Immersed in stylesheets tweaking font sizes and contemplating layouts is where you'll find me (~_^). I'm committed to creating fluent user experiences while staying fashionable. In building JavaScript applications and solid infrastructure, I'm equipped with just the right tools, and can absolutely function independently of them to deliver fast, definitive solutions optimized for scale — performance and scalabilty are priorities on my radar."
   },
   {
     name: "contacto",
     image: <Message />,
     title: "Send me a message!",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspessss"
+    content: "Got a question or proposal, or just want to say hello? Go ahead."
   }
 ];
