@@ -14,7 +14,11 @@ const pages = [
     image: <Portada />,
     title: "Front end Developer.",
     button: (
-      <Button type="button" className="Button__contac" value="Contactar" />
+      <Button
+        type="button"
+        className="Button__contact"
+        value="Use me for free"
+      />
     ),
     content:
       "Lately we all have been hearing a lot about “JavaScript Modules Everyone is likely wondering what to do with them, and how do they even play a vital role in our daily lives…?"
@@ -34,6 +38,8 @@ const pages = [
   }
 ];
 
+let lastTime = new Date().getTime();
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -50,6 +56,11 @@ class App extends React.Component {
   }
 
   handleWheel(e) {
+    let time = new Date().getTime();
+    console.log(time - lastTime);
+    if (time - lastTime < 400) return;
+    lastTime = time;
+
     if (e.deltaY > 1 && this.state.active + 1 < pages.length) {
       this.setState({
         active: this.state.active + 1
