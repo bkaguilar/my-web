@@ -1,42 +1,9 @@
 import React from "react";
 // import { CSSTransition } from "react-transition-group";
 import { ReactComponent as Logo } from "./images/logo.svg";
-import { ReactComponent as Portada } from "./images/portada.svg";
-import { ReactComponent as Message } from "./images/message.svg";
-import { ReactComponent as Nature } from "./images/nature.svg";
+import { PAGES } from "./constant";
 import Link from "./components/Link";
-import Button from "./components/Button";
 import "./App.scss";
-
-const pages = [
-  {
-    name: "inicio",
-    image: <Portada />,
-    title: "Front end Developer.",
-    button: (
-      <Button
-        type="button"
-        className="Button__contact"
-        value="Use me for free"
-      />
-    ),
-    content:
-      "Lately we all have been hearing a lot about “JavaScript Modules Everyone is likely wondering what to do with them, and how do they even play a vital role in our daily lives…?"
-  },
-  {
-    name: "personal",
-    image: <Nature />,
-    title: "Over the past 9 years",
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspe"
-  },
-  {
-    name: "contacto",
-    image: <Message />,
-    title: "Send me a message!",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspessss"
-  }
-];
 
 let lastTime = new Date().getTime();
 
@@ -61,7 +28,7 @@ class App extends React.Component {
     if (time - lastTime < 400) return;
     lastTime = time;
 
-    if (e.deltaY > 1 && this.state.active + 1 < pages.length) {
+    if (e.deltaY > 1 && this.state.active + 1 < PAGES.length) {
       this.setState({
         active: this.state.active + 1
       });
@@ -73,7 +40,7 @@ class App extends React.Component {
   }
 
   handleKeydown(e) {
-    if (e.keyCode === 40 && this.state.active + 1 < pages.length) {
+    if (e.keyCode === 40 && this.state.active + 1 < PAGES.length) {
       this.setState({
         active: this.state.active + 1
       });
@@ -105,7 +72,7 @@ class App extends React.Component {
       image,
       button,
       title = "";
-    let link = pages.map((item, i) => {
+    let link = PAGES.map((item, i) => {
       const active = this.state.active === i;
       image = active ? item.image : image;
       content = active ? item.content : content;
