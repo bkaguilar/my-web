@@ -12,6 +12,8 @@ body {
   font-size: 100%;
   font-family: "Raleway", sans-serif;
   background: $sc-color;
+  overflow: hidden;
+  transition: background 300ms ease-in;
 
   a {
     text-decoration: none;
@@ -72,13 +74,14 @@ body {
 
 .App__section {
   outline: none;
-  position: fixed;
+  max-width: $max-width;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 50px;
-  padding: 0 140px;
+  padding: 4em;
+  margin: 0 auto;
   transition: all 300ms ease-in;
 
   display: flex;
@@ -108,12 +111,25 @@ body {
   }
 
   &__dots {
-    position: absolute;
+    position: fixed;
     right: 4em;
+
+    display: flex;
+    flex-direction: column;
   }
 }
 
+.App__footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 250px;
+  background: white;
+}
+
 body[data-theme="black-theme"] {
+  background: $pp-color;
   header {
     color: $sc-color;
 
@@ -126,7 +142,6 @@ body[data-theme="black-theme"] {
   }
 
   section {
-    background: $pp-color;
     color: $sc-color;
 
     h2 {
@@ -144,7 +159,6 @@ body[data-theme="white-theme"] {
     color: $pp-color;
   }
   section {
-    background: $sc-color;
     color: $pp-color;
   }
 }

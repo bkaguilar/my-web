@@ -33,3 +33,26 @@ export const PAGES = [
     content: "Got a question or proposal, or just want to say hello? Go ahead."
   }
 ];
+
+export const RRSS = [
+  {
+    name: "Github",
+    link: "https://github.com/bkaguilar"
+  },
+  {
+    name: "Linkedin",
+    link: "https://linkedin.com/in/bk-aguilar"
+  },
+  {
+    name: "CodePen",
+    link: "https://codepen.io/bkaguilar/pens/public/"
+  },
+  {
+    name: "Instagram",
+    link: "https://www.instagram.com/bk_aguilar/"
+  },
+  {
+    name: "Telegram",
+    link: "https://t.me/bkaguilar"
+  }
+];

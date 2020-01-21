@@ -3,13 +3,14 @@ import "./Link.scss";
 
 class Link extends React.Component {
   render() {
-    const { name, index, onClick, className } = this.props;
+    const { href, name, index, onClick, className, target } = this.props;
     return (
       <a
-        href={"#" + name}
+        href={href}
+        target={target}
         index={index}
         name={name}
-        className={"App__header__nav__item" + className}
+        className={className}
         onClick={onClick}
       >
         {name}

@@ -1,7 +1,7 @@
 import React from "react";
 // import { CSSTransition } from "react-transition-group";
 import { ReactComponent as Logo } from "./images/logo.svg";
-import { PAGES } from "./constant";
+import { PAGES, RRSS } from "./constant";
 import Link from "./components/Link";
 import Dot from "./components/Dot";
 import "./App.scss";
@@ -12,7 +12,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: 0
+      active: 0,
+      isLast: false
     };
   }
 
@@ -62,11 +63,16 @@ class App extends React.Component {
       } else {
         document.body.setAttribute("data-theme", "white-theme");
       }
+      if (this.state.active === PAGES.length - 1) {
+        this.setState({
+          isLast: true
+        });
+      } else {
+        this.setState({
+          isLast: false
+        });
+      }
     }
-  }
-
-  renderContent(key, i, item) {
-    console.log`${key} = this.state.active === ${i} ? ${item.key} : ${key}`;
   }
 
   render() {
@@ -88,7 +94,10 @@ class App extends React.Component {
           key={item.name}
           index={i}
           name={item.name}
-          className={active ? " active" : ""}
+          href={"#" + item.name}
+          className={
+            active ? "App__header__nav__item active" : "App__header__nav__item"
+          }
           onClick={this.handleChange.bind(this)}
         />
       );
@@ -106,8 +115,23 @@ class App extends React.Component {
       );
     });
 
+    let socialMedia = RRSS.map((item, i) => {
+      return (
+        <Link
+          href={item.link}
+          target="_blank"
+          name={item.name}
+          className="App__footer__link"
+        />
+      );
+    });
+
     return (
-      <div className="App">
+      <div
+        className="App"
+        onWheel={this.handleWheel.bind(this)}
+        onKeyDown={this.handleKeydown.bind(this)}
+      >
         <header className="App__header">
           <figure className="App__header__figure">
             <a href="/">
@@ -120,13 +144,7 @@ class App extends React.Component {
           </figure>
           <nav className="App__header__nav">{link}</nav>
         </header>
-        <section
-          tabIndex="0"
-          id={name}
-          className="App__section"
-          onWheel={this.handleWheel.bind(this)}
-          onKeyDown={this.handleKeydown.bind(this)}
-        >
+        <section tabIndex="0" id={name} className="App__section">
           <figure className="App__section__figure">{image}</figure>
           <div className="App__section__text">
             <h2 className="App__section__text__title">{title}</h2>
@@ -135,6 +153,11 @@ class App extends React.Component {
           </div>
           <ul className="App__section__dots">{dot}</ul>
         </section>
+        {this.state.isLast && (
+          <footer className="App__footer">
+            <div>{socialMedia}</div>
+          </footer>
+        )}
       </div>
     );
   }
