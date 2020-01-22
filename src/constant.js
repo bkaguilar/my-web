@@ -34,7 +34,7 @@ export const PAGES = [
   }
 ];
 
-export const RRSS = [
+export const SOCIAL = [
   {
     name: "Github",
     link: "https://github.com/bkaguilar"
@@ -50,6 +50,13 @@ export const RRSS = [
   {
     name: "Instagram",
     link: "https://www.instagram.com/bk_aguilar/"
+  }
+];
+
+export const SERVICES = [
+  {
+    name: "hola@bkaguilar.com",
+    link: "https://t.me/bkaguilar"
   },
   {
     name: "Telegram",

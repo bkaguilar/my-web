@@ -1,7 +1,7 @@
 import React from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { ReactComponent as Logo } from "./images/logo.svg";
-import { PAGES, RRSS } from "./constant";
+import { PAGES, SOCIAL, SERVICES } from "./constant";
 import Link from "./components/Link";
 import Dot from "./components/Dot";
 import "./App.scss";
@@ -115,13 +115,24 @@ class App extends React.Component {
       );
     });
 
-    let socialMedia = RRSS.map((item, i) => {
+    let socialMedia = SOCIAL.map((item, i) => {
       return (
         <Link
           href={item.link}
           target="_blank"
           name={item.name}
-          className="App__footer__link"
+          className="App__footer__links__nav__item"
+        />
+      );
+    });
+
+    let services = SERVICES.map((item, i) => {
+      return (
+        <Link
+          href={item.link}
+          target="_blank"
+          name={item.name}
+          className="App__footer__links__nav__item"
         />
       );
     });
@@ -150,7 +161,7 @@ class App extends React.Component {
             <TransitionGroup component={null}>
               <CSSTransition
                 key={"title" + this.state.active}
-                timeout={2000}
+                timeout={1000}
                 classNames="titleAnimation"
               >
                 <h2 className="App__section__text__title">{title}</h2>
@@ -170,8 +181,27 @@ class App extends React.Component {
         </section>
         {this.state.isLast && (
           <footer className="App__footer">
-            <div>
-              <nav>{socialMedia}</nav>
+            <div className="App__footer__links">
+              <figure className="App__footer__links__logo">
+                <Logo />
+              </figure>
+              <nav className="App__footer__links__nav">
+                <h3>Di hola</h3>
+                {services}
+              </nav>
+              <nav className="App__footer__links__nav">
+                <h3>Social Media</h3>
+                {socialMedia}
+              </nav>
+            </div>
+            <div className="App__footer__author">
+              <small>
+                <span id="year">&copy;2019</span>
+                <a href="/" title="Bk Aguilar" aria-label="Bk Aguilar">
+                  Bessy K. Aguilar
+                </a>
+              </small>
+              <span role="img">Made with &#9996; </span>
             </div>
           </footer>
         )}
