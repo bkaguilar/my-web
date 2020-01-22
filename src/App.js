@@ -3,6 +3,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { ReactComponent as Logo } from "./images/logo.svg";
 import { PAGES, SOCIAL, SERVICES } from "./constant";
 import Link from "./components/Link";
+import Button from "./components/Button";
 import Dot from "./components/Dot";
 import "./App.scss";
 
@@ -13,6 +14,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       active: 0,
+      image: 0,
       isLast: false
     };
   }
@@ -153,7 +155,14 @@ class App extends React.Component {
             </a>
             <h1 className="App__header__figure__text">bk Aguilar</h1>
           </figure>
-          <nav className="App__header__nav">{link}</nav>
+          <nav className="App__header__nav">
+            {link}
+            <Button
+              type="button"
+              className="App__header__nav__button"
+              value="Resume"
+            />
+          </nav>
         </header>
         <section tabIndex="0" id={name} className="App__section">
           <figure className="App__section__figure">{image}</figure>
@@ -196,12 +205,22 @@ class App extends React.Component {
             </div>
             <div className="App__footer__author">
               <small>
-                <span id="year">&copy;2019</span>
+                <span id="year">
+                  <span role="img" arial-label="copy">
+                    &copy;
+                  </span>
+                  2019
+                </span>
                 <a href="/" title="Bk Aguilar" aria-label="Bk Aguilar">
                   Bessy K. Aguilar
                 </a>
               </small>
-              <span role="img">Made with &#9996; </span>
+              <span>
+                Made with
+                <span role="img" arial-label="copy">
+                  &#9996;
+                </span>
+              </span>
             </div>
           </footer>
         )}
