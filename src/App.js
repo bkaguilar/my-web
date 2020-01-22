@@ -84,13 +84,16 @@ class App extends React.Component {
       button,
       title = "";
 
-    let link = PAGES.map((item, i) => {
+    PAGES.map((item, i) => {
       const active = this.state.active === i;
       image = active ? item.image : image;
       content = active ? item.content : content;
       name = active ? item.name : name;
       title = active ? item.title : title;
       button = active ? item.button : button;
+    });
+
+    let link = PAGES.map((item, i) => {
       return (
         <Link
           key={item.name}
@@ -98,7 +101,9 @@ class App extends React.Component {
           name={item.name}
           href={"#" + item.name}
           className={
-            active ? "App__header__nav__item active" : "App__header__nav__item"
+            this.state.active === i
+              ? "App__header__nav__item active"
+              : "App__header__nav__item"
           }
           onClick={this.handleChange.bind(this)}
         />
