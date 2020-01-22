@@ -99,7 +99,7 @@ body {
   align-items: center;
 
   &__figure {
-    @include showAnimation;
+    // @include showAnimation;
     position: absolute;
     right: 50px;
     width: 45%;
@@ -111,7 +111,7 @@ body {
     width: 60%;
 
     &__title {
-      @include showAnimation;
+      // @include showAnimation;
       font-size: 6em;
       font-family: "Raleway", sans-serif;
       letter-spacing: -0.02em;
@@ -121,21 +121,24 @@ body {
     }
 
     &__content {
-      @include showAnimation;
+      // @include showAnimation;
       font-size: 1.1em;
       line-height: 1.8;
       letter-spacing: 0.05em;
     }
   }
 
-  &__dots {
-    @include showAnimation;
-    position: fixed;
-    right: $lr-padding;
-
-    display: flex;
-    flex-direction: column;
+  &--contacto {
+    bottom: $max-footer;
   }
+}
+
+.App__dots {
+  @include showAnimation;
+  @include position(fixed, 50%, $lr-padding, unset, unset);
+
+  display: flex;
+  flex-direction: column;
 }
 
 //Footer
@@ -143,6 +146,7 @@ body {
   @include showAnimation;
   @include position(fixed, unset, 0, 0, 0);
   background: white;
+  max-height: $max-footer;
 
   &__links {
     border-bottom: 1px solid #ededed;
@@ -223,11 +227,11 @@ body[data-theme="black-theme"] {
     h2 {
       color: $brand-color_1;
     }
-
-    .Dot {
-      background: $sc-color;
-    }
   }
+}
+
+.Dot {
+  background: $sc-color;
 }
 
 body[data-theme="white-theme"] {

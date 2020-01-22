@@ -168,7 +168,11 @@ class App extends React.Component {
             />
           </nav>
         </header>
-        <section tabIndex="0" id={name} className="App__section">
+        <section
+          tabIndex="0"
+          id={name}
+          className={"App__section App__section--" + name}
+        >
           <figure className="App__section__figure">{image}</figure>
           <div className="App__section__text">
             <TransitionGroup component={null}>
@@ -183,8 +187,8 @@ class App extends React.Component {
             <p className="App__section__text__content">{content}</p>
             {button}
           </div>
-          <ul className="App__section__dots">{dot}</ul>
         </section>
+        <ul className="App__dots">{dot}</ul>
         {this.state.isLast && (
           <footer className="App__footer">
             <div className="App__footer__links">
