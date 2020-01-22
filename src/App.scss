@@ -145,7 +145,7 @@ body {
 .App__footer {
   @include showAnimation;
   @include position(fixed, unset, 0, 0, 0);
-  background: white;
+  background: rgba(white, 0.6);
   max-height: $max-footer;
 
   &__links {
@@ -223,6 +223,11 @@ body[data-theme="black-theme"] {
 
   section {
     color: $sc-color;
+    justify-content: flex-end;
+
+    figure {
+      left: 50px;
+    }
 
     h2 {
       color: $brand-color_1;
