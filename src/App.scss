@@ -13,7 +13,7 @@ body {
   font-family: "Raleway", sans-serif;
   background: $sc-color;
   overflow: hidden;
-  transition: background 300ms ease-in;
+  transition: background $timing-transition ease-in;
 
   a {
     text-decoration: none;
@@ -46,6 +46,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    a {
+      display: flex;
+      align-items: center;
+      color: inherit;
+    }
 
     &__logo {
       margin-right: 15px;
@@ -91,7 +97,7 @@ body {
   max-width: $max-width;
   padding: 4em;
   margin: 0 auto;
-  transition: all 300ms ease-in;
+  transition: all $timing-transition ease-in;
 
   display: flex;
   align-items: center;

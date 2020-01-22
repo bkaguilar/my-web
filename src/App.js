@@ -147,13 +147,13 @@ class App extends React.Component {
       >
         <header className="App__header">
           <figure className="App__header__figure">
-            <a href="/">
+            <a href="bkaguilar.com" title="Bessy Aguilar">
               <Logo
                 title="Bk Aguilar logo"
                 className="App__header__figure__logo"
               />
+              <h1 className="App__header__figure__text">bk Aguilar</h1>
             </a>
-            <h1 className="App__header__figure__text">bk Aguilar</h1>
           </figure>
           <nav className="App__header__nav">
             {link}
