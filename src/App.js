@@ -125,6 +125,7 @@ class App extends React.Component {
     let socialMedia = SOCIAL.map((item, i) => {
       return (
         <Link
+          key={item.name}
           href={item.link}
           target="_blank"
           name={item.name}
@@ -136,6 +137,7 @@ class App extends React.Component {
     let services = SERVICES.map((item, i) => {
       return (
         <Link
+          key={item.name}
           href={item.link}
           target="_blank"
           name={item.name}

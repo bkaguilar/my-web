@@ -1,4 +1,4 @@
-//Var
+//Vars
 // $main-font: ;
 $pp-color: #191919;
 $sc-color: #f2f4f6;
@@ -15,10 +15,9 @@ $show-animation: show $timing-transition linear forwards;
 
 //Mixins
 @mixin header-text {
-  text-transform: capitalize;
   font-size: 1em;
+  text-transform: capitalize;
   letter-spacing: $header-spacing;
-  color: inherit;
   transition: all 200ms ease;
 }
 
