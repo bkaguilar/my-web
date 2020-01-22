@@ -14,7 +14,6 @@ class App extends React.Component {
     super(props);
     this.state = {
       active: 0,
-      image: 0,
       isLast: false
     };
   }
@@ -78,6 +77,7 @@ class App extends React.Component {
   }
 
   render() {
+    const LOGO = <Logo title="Bk Aguilar logo" className="Logo" />;
     let content,
       name,
       image,
@@ -144,8 +144,6 @@ class App extends React.Component {
       );
     });
 
-    const LOGO = <Logo title="Bk Aguilar logo" className="Logo" />;
-
     return (
       <div
         className="App"
@@ -201,7 +199,7 @@ class App extends React.Component {
             <div className="App__footer__author">
               <small>
                 <span id="year" className="App__footer__author__year">
-                  <span role="img" arial-label="copy">
+                  <span role="img" aria-label="copy">
                     &copy;
                   </span>
                   2019
@@ -220,9 +218,9 @@ class App extends React.Component {
                 <span
                   className="App__footer__author__emoji"
                   role="img"
-                  arial-label="copy"
+                  aria-label="copy"
                 >
-                  &#9996;
+                  🍻
                 </span>
               </span>
             </div>

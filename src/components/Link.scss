@@ -15,7 +15,7 @@
     height: 0;
     border-radius: 50%;
     border: 0 solid $brand-color_2;
-    transition: all 500ms ease;
+    transition: all $timing-transition ease;
   }
 
   // &:hover::before {

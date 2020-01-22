@@ -28,6 +28,14 @@ $show-animation: show $timing-transition linear forwards;
   animation: $show-animation;
 }
 
+@mixin position($type, $t, $r, $b, $l) {
+  position: $type;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+}
+
 //Keyframes
 @keyframes show {
   100% {

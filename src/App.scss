@@ -30,6 +30,11 @@ body {
     color: inherit;
   }
 
+  button,
+  section {
+    outline: none;
+  }
+
   li {
     list-style: none;
   }
@@ -41,12 +46,9 @@ body {
   }
 }
 
+//Header
 .App__header {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  @include position(fixed, 0, 0, 0, 0);
   height: $header-height;
   margin: $lr-padding;
   padding: 10px;
@@ -59,6 +61,7 @@ body {
   &__figure {
     height: 100%;
     margin: 0;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +69,6 @@ body {
     a {
       display: flex;
       align-items: center;
-      color: inherit;
     }
 
     &__text {
@@ -80,19 +82,15 @@ body {
     align-items: center;
 
     &__button {
-      margin: 0 0 0 35px;
       font-size: 0.8em;
+      margin: 0 0 0 35px;
     }
   }
 }
 
+//Section
 .App__section {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  outline: none;
+  @include position(absolute, 0, 0, 0, 0);
   max-width: $max-width;
   padding: $lr-padding;
   margin: 0 auto;
@@ -124,9 +122,9 @@ body {
 
     &__content {
       @include showAnimation;
+      font-size: 1.1em;
       line-height: 1.8;
       letter-spacing: 0.05em;
-      font-size: 1.1em;
     }
   }
 
@@ -140,25 +138,25 @@ body {
   }
 }
 
+//Footer
 .App__footer {
   @include showAnimation;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  @include position(fixed, unset, 0, 0, 0);
   background: white;
 
   &__links {
+    border-bottom: 1px solid #ededed;
     max-width: $max-width;
     margin: 0 auto;
     padding: 2em $lr-padding;
-    border-bottom: 1px solid #ededed;
+
     display: flex;
     justify-content: space-between;
 
     &__nav {
       height: 100%;
       padding: 10px;
+
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -182,6 +180,7 @@ body {
     max-width: $max-width;
     margin: 0 auto;
     padding: 2em $lr-padding;
+
     display: flex;
     justify-content: space-between;
 
@@ -197,11 +196,13 @@ body {
     }
 
     &__emoji {
-      margin-right: 10px;
+      font-size: 1.4em;
+      margin-left: 10px;
     }
   }
 }
 
+//Themes
 body[data-theme="black-theme"] {
   background: $pp-color;
   header {
@@ -237,6 +238,7 @@ body[data-theme="white-theme"] {
   }
 }
 
+//Render Animation
 .titleAnimation {
   /* starting ENTER animation */
   &-enter {
@@ -255,25 +257,6 @@ body[data-theme="white-theme"] {
     display: none;
   }
 }
-
-// .paragraphAnimation {
-//   /* starting ENTER animation */
-//   &-enter {
-//     opacity: 0;
-//     transform: translateY(200%);
-//   }
-//   /* ending ENTER animation */
-//   &-enter-active {
-//     opacity: 0.4;
-//     transform: translateY(0);
-//   }
-//   /* starting EXIT animation */
-//   /* ending EXIT animation */
-//   &-exit,
-//   &-exit-active {
-//     display: none;
-//   }
-// }
 
 .Logo {
   margin-right: 15px;
