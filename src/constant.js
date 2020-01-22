@@ -56,7 +56,7 @@ export const SOCIAL = [
 export const SERVICES = [
   {
     name: "hola@bkaguilar.com",
-    link: "https://t.me/bkaguilar"
+    link: "mailto:hola@bkaguilar.com"
   },
   {
     name: "Telegram",
