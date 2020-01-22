@@ -1,5 +1,5 @@
 import React from "react";
-// import { CSSTransition } from "react-transition-group";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { ReactComponent as Logo } from "./images/logo.svg";
 import { PAGES, RRSS } from "./constant";
 import Link from "./components/Link";
@@ -147,7 +147,22 @@ class App extends React.Component {
         <section tabIndex="0" id={name} className="App__section">
           <figure className="App__section__figure">{image}</figure>
           <div className="App__section__text">
-            <h2 className="App__section__text__title">{title}</h2>
+            <TransitionGroup component={null}>
+              <CSSTransition
+                key={"title" + this.state.active}
+                timeout={2000}
+                classNames="titleAnimation"
+              >
+                <h2 className="App__section__text__title">{title}</h2>
+              </CSSTransition>
+              {/* <CSSTransition
+                key={"paragraph" + this.state.active}
+                timeout={2000}
+                classNames="paragraphAnimation"
+              >
+                <p className="App__section__text__content">{content}</p>
+              </CSSTransition> */}
+            </TransitionGroup>
             <p className="App__section__text__content">{content}</p>
             {button}
           </div>
@@ -155,7 +170,9 @@ class App extends React.Component {
         </section>
         {this.state.isLast && (
           <footer className="App__footer">
-            <div>{socialMedia}</div>
+            <div>
+              <nav>{socialMedia}</nav>
+            </div>
           </footer>
         )}
       </div>
