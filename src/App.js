@@ -215,8 +215,8 @@ class App extends React.Component {
                   target="_blank"
                 />
               </small>
-              <span>
-                Made with
+              <small>
+                Hecho con
                 <span
                   className="App__footer__author__emoji"
                   role="img"
@@ -224,7 +224,15 @@ class App extends React.Component {
                 >
                   🍻
                 </span>
-              </span>
+                y
+                <span
+                  className="App__footer__author__emoji"
+                  role="img"
+                  aria-label="copy"
+                >
+                  ❤
+                </span>
+              </small>
             </div>
           </footer>
         )}
