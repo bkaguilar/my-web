@@ -1,5 +1,5 @@
 @import "common.scss";
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,900|Roboto+Mono|Ubuntu|Raleway:400,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,900|Muli:400,700,900|Roboto+Mono|Ubuntu|Raleway:400,900&display=swap");
 
 * {
   margin: 0;
@@ -20,7 +20,7 @@
 body {
   height: 100%;
   font-size: 100%;
-  font-family: "Raleway", sans-serif;
+  font-family: "Muli", sans-serif;
   background: $sc-color;
   overflow: hidden;
   transition: background $timing-transition ease-in;
@@ -114,6 +114,7 @@ body {
     &__title {
       @include showAnimation;
       font-size: 6em;
+      font-family: "Raleway", sans-serif;
       letter-spacing: -0.02em;
       margin-bottom: 25px;
       transition: all 1s linear;

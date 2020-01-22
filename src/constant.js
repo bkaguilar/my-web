@@ -8,7 +8,7 @@ export const PAGES = [
   {
     name: "inicio",
     image: <Portada />,
-    title: "Front end Developer.",
+    title: "Hola mi nombre es Bessy.",
     button: (
       <Button
         type="button"
