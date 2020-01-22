@@ -144,6 +144,8 @@ class App extends React.Component {
       );
     });
 
+    const LOGO = <Logo title="Bk Aguilar logo" className="Logo" />;
+
     return (
       <div
         className="App"
@@ -152,11 +154,8 @@ class App extends React.Component {
       >
         <header className="App__header">
           <figure className="App__header__figure">
-            <a href="bkaguilar.com" title="Bessy Aguilar">
-              <Logo
-                title="Bk Aguilar logo"
-                className="App__header__figure__logo"
-              />
+            <a href="/" title="Bessy Aguilar">
+              {LOGO}
               <h1 className="App__header__figure__text">bk Aguilar</h1>
             </a>
           </figure>
@@ -180,13 +179,6 @@ class App extends React.Component {
               >
                 <h2 className="App__section__text__title">{title}</h2>
               </CSSTransition>
-              {/* <CSSTransition
-                key={"paragraph" + this.state.active}
-                timeout={2000}
-                classNames="paragraphAnimation"
-              >
-                <p className="App__section__text__content">{content}</p>
-              </CSSTransition> */}
             </TransitionGroup>
             <p className="App__section__text__content">{content}</p>
             {button}
@@ -196,33 +188,40 @@ class App extends React.Component {
         {this.state.isLast && (
           <footer className="App__footer">
             <div className="App__footer__links">
-              <figure className="App__footer__links__logo">
-                <Logo />
-              </figure>
+              <figure className="App__footer__links__logo">{LOGO}</figure>
               <nav className="App__footer__links__nav">
-                <h3>Di hola</h3>
+                <h3 className="App__footer__links__nav__title">Di hola</h3>
                 {services}
               </nav>
               <nav className="App__footer__links__nav">
-                <h3>Social Media</h3>
+                <h3 className="App__footer__links__nav__title">Social Media</h3>
                 {socialMedia}
               </nav>
             </div>
             <div className="App__footer__author">
               <small>
-                <span id="year">
+                <span id="year" className="App__footer__author__year">
                   <span role="img" arial-label="copy">
                     &copy;
                   </span>
                   2019
                 </span>
-                <a href="/" title="Bk Aguilar" aria-label="Bk Aguilar">
-                  Bessy K. Aguilar
-                </a>
+                <Link
+                  href="/"
+                  className="App__footer__author__name"
+                  name="Bessy K. Aguilar"
+                  title="Bk Aguilar"
+                  aria-label="Bk Aguilar"
+                  target="_blank"
+                />
               </small>
               <span>
                 Made with
-                <span role="img" arial-label="copy">
+                <span
+                  className="App__footer__author__emoji"
+                  role="img"
+                  arial-label="copy"
+                >
                   &#9996;
                 </span>
               </span>

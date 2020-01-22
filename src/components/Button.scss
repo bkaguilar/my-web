@@ -1,10 +1,10 @@
 @import "../common.scss";
 
 .Button {
+  @include showAnimation;
   position: relative;
   cursor: pointer;
   outline: none;
-  // FIXME:
   max-width: 400px;
   width: 100%;
   padding: 15px 10px;

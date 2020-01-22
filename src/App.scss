@@ -17,10 +17,17 @@ body {
 
   a {
     text-decoration: none;
+    color: inherit;
   }
 
   li {
     list-style: none;
+  }
+
+  nav {
+    &:hover > a:not(:hover) {
+      opacity: 0.5;
+    }
   }
 }
 
@@ -31,10 +38,9 @@ body {
   left: 0;
   right: 0;
   height: $header-height;
-  margin: 4em;
+  margin: $lr-padding;
   padding: 10px;
   z-index: 1;
-  transition: all 200ms ease;
 
   display: flex;
   justify-content: space-between;
@@ -53,19 +59,6 @@ body {
       color: inherit;
     }
 
-    &__logo {
-      margin-right: 15px;
-      width: 14px;
-      height: 100%;
-
-      .logo-path1 {
-        fill: url(#d-1);
-      }
-      .logo-path2 {
-        fill: url(#d-2);
-      }
-    }
-
     &__text {
       @include header-text();
       font-weight: lighter;
@@ -80,10 +73,6 @@ body {
       margin: 0 0 0 35px;
       font-size: 0.8em;
     }
-
-    &:hover > a:not(:hover) {
-      opacity: 0.5;
-    }
   }
 }
 
@@ -95,7 +84,7 @@ body {
   right: 0;
   outline: none;
   max-width: $max-width;
-  padding: 4em;
+  padding: $lr-padding;
   margin: 0 auto;
   transition: all $timing-transition ease-in;
 
@@ -103,6 +92,7 @@ body {
   align-items: center;
 
   &__figure {
+    @include showAnimation;
     position: absolute;
     right: 50px;
     width: 45%;
@@ -114,13 +104,16 @@ body {
     width: 60%;
 
     &__title {
+      @include showAnimation;
       font-size: 6em;
       letter-spacing: -0.02em;
       margin-bottom: 25px;
-      transition: all 1s cubic-bezier(0.65, 0.07, 0, 1.35);
+      transition: all 1s linear;
+      // cubic-bezier(0.65, 0.07, 0, 1.35)
     }
 
     &__content {
+      @include showAnimation;
       line-height: 1.8;
       letter-spacing: 0.05em;
       font-size: 1.1em;
@@ -128,8 +121,9 @@ body {
   }
 
   &__dots {
+    @include showAnimation;
     position: fixed;
-    right: 4em;
+    right: $lr-padding;
 
     display: flex;
     flex-direction: column;
@@ -137,29 +131,37 @@ body {
 }
 
 .App__footer {
-  height: 250px;
+  @include showAnimation;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: white;
 
   &__links {
     max-width: $max-width;
     margin: 0 auto;
-    padding: 2em 4em;
+    padding: 2em $lr-padding;
+    border-bottom: 1px solid #ededed;
     display: flex;
     justify-content: space-between;
 
-    &__logo {
-      width: 20px;
-    }
-
     &__nav {
       height: 100%;
+      padding: 10px;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
 
+      &__title {
+        margin-bottom: 15px;
+        font-weight: normal;
+        color: $brand-color_2;
+      }
+
       &__item {
-        margin: 0;
-        font-size: 0.7em;
+        margin: 6px 0;
+        font-size: 0.8em;
         text-transform: capitalize;
       }
     }
@@ -168,9 +170,24 @@ body {
   &__author {
     max-width: $max-width;
     margin: 0 auto;
-    padding: 2em 4em;
+    padding: 2em $lr-padding;
     display: flex;
     justify-content: space-between;
+
+    &__year span {
+      margin-right: 10px;
+    }
+
+    &__name {
+      margin-left: 10px;
+      &:hover {
+        color: $brand-color_2;
+      }
+    }
+
+    &__emoji {
+      margin-right: 10px;
+    }
   }
 }
 
@@ -246,3 +263,15 @@ body[data-theme="white-theme"] {
 //     display: none;
 //   }
 // }
+
+.Logo {
+  margin-right: 15px;
+  width: 14px;
+
+  .logo-path1 {
+    fill: url(#d-1);
+  }
+  .logo-path2 {
+    fill: url(#d-2);
+  }
+}

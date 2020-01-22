@@ -6,11 +6,12 @@ $brand-color_1: #11cebb;
 $brand-color_2: #11a9bb;
 
 $dot-size: 10px;
-$max-width: 1200px;
-
+$max-width: 1300px;
+$lr-padding: 4em;
 $header-height: 50px;
-$header-spacing: 0.15em;
+$header-spacing: 0.05em;
 $timing-transition: 500ms;
+$show-animation: show $timing-transition linear forwards;
 
 //Mixins
 @mixin header-text {
@@ -18,5 +19,19 @@ $timing-transition: 500ms;
   font-size: 1em;
   letter-spacing: $header-spacing;
   color: inherit;
-  transition: all 300ms ease;
+  transition: all 200ms ease;
+}
+
+@mixin showAnimation {
+  opacity: 0;
+  transform: translateY(100%);
+  animation: $show-animation;
+}
+
+//Keyframes
+@keyframes show {
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }

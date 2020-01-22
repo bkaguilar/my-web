@@ -4,6 +4,7 @@
   @include header-text();
   position: relative;
   margin-left: 35px;
+
   &::before {
     content: "";
     position: absolute;
@@ -17,11 +18,11 @@
     transition: all 500ms ease;
   }
 
-  &:hover::before {
-    border-width: 1px;
-    width: 80px;
-    height: 80px;
-  }
+  // &:hover::before {
+  //   border-width: 1px;
+  //   width: 80px;
+  //   height: 80px;
+  // }
 
   &.active {
     color: $brand-color_2;
