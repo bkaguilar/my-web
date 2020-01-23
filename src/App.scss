@@ -108,11 +108,11 @@ body {
 
   &__text {
     position: relative;
-    width: 60%;
+    width: 80%;
 
     &__title {
       // @include showAnimation;
-      font-size: 6em;
+      font-size: 5em;
       font-family: "Raleway", sans-serif;
       letter-spacing: -0.02em;
       margin-bottom: 25px;
@@ -278,4 +278,8 @@ body[data-theme="white-theme"] {
   .logo-path2 {
     fill: url(#d-2);
   }
+}
+
+.title-point {
+  color: $brand-color_1;
 }

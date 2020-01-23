@@ -93,6 +93,12 @@ class App extends React.Component {
       button = active ? item.button : button;
     });
 
+    let paragraphs = content.map(item => {
+      if (content.length > 0) {
+        return <p className="App__section__text__content">{item}</p>;
+      }
+    });
+
     let link = PAGES.map((item, i) => {
       return (
         <Link
@@ -173,7 +179,7 @@ class App extends React.Component {
           id={name}
           className={"App__section App__section--" + name}
         >
-          <figure className="App__section__figure">{image}</figure>
+          {image && <figure className="App__section__figure">{image}</figure>}
           <div className="App__section__text">
             <TransitionGroup component={null}>
               <CSSTransition
@@ -181,10 +187,12 @@ class App extends React.Component {
                 timeout={1000}
                 classNames="titleAnimation"
               >
-                <h2 className="App__section__text__title">{title}</h2>
+                <h2 className="App__section__text__title">
+                  {title} <span className="title-point">.</span>
+                </h2>
               </CSSTransition>
             </TransitionGroup>
-            <p className="App__section__text__content">{content}</p>
+            {paragraphs}
             {button}
           </div>
         </section>

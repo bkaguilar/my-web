@@ -8,7 +8,7 @@ export const PAGES = [
   {
     name: "inicio",
     image: <Portada />,
-    title: "Desarrolladora Front end.",
+    title: "Hola, mi nombre es Bessy",
     button: (
       <Button
         type="button"
@@ -16,20 +16,24 @@ export const PAGES = [
         value="Vamos a hablar!"
       />
     ),
-    content: "Front-end developer y diseñadora web blabalbal"
+    content: ["Front-end developer y diseñadora web de Zaragoza"]
   },
   {
     name: "personal",
-    image: <Nature />,
+    // image: <Nature />,
     title: "Over the past 9 years",
-    content:
-      "Halo, mi nombre es Bessy Aguilar, Soy desarrolladora front-end con sede en Zaragoza, tengo 27 años. Mi formación académica es de Técnico en Computación, pero soy fundamentalmente autodidacta. Actualmente me dedico al diseño y desarrollo de páginas web. Mis principales habilidades son:"
+    content: [
+      "Halo, mi nombre es Bessy Aguilar, Soy desarrolladora front-end desde el 2019,  con sede en Zaragoza. Mi formación académica es de Técnico en Computación, pero soy fundamentalmente autodidacta.",
+      "Desde hace un par de años me empezo a interesar el diseño de web y he estado en continuo aprendizaje desde entonces, ahora mismo me estoy especializando en el desarrollo front-end.",
+      "Actualmente estoy en busca de nuevos retos despues de tomarme unos meses para seguir preparandome y aprendiendo nuevas tecnologias del sector.",
+      "Mas alla de escribir codigo, me encanta la fotografía, y la fantasia medieval, me gusta pasar tiempo viajando y disparando con mi camara, ya sea con la reflex o con mi movil; o bien leyendo un bueno libro y si lleva la palabra Tolkien mucho mejor 🧝🏽‍♀️."
+    ]
   },
   {
     name: "contacto",
     image: <Message />,
     title: "Estemos en contacto!",
-    content: "¿Tienes alguna pregunta o propuesta?, .."
+    content: ["¿Tienes alguna pregunta o propuesta?, .."]
   }
 ];
 
