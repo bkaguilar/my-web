@@ -1,5 +1,5 @@
 @import "../common.scss";
-.Section {
+.Main {
   @include position(absolute, calc(#{$header-height} + 64px), 0, 0, 0);
   max-width: $max-width;
   padding: $lr-padding;

@@ -30,18 +30,12 @@ body {
   }
 
   button,
-  section {
+  main {
     outline: none;
   }
 
   li {
     list-style: none;
-  }
-
-  nav {
-    &:hover > a:not(:hover) {
-      opacity: 0.5;
-    }
   }
 }
 
@@ -103,7 +97,7 @@ body[data-theme="black-theme"] {
     }
   }
 
-  section {
+  main {
     color: $sc-color;
     justify-content: center;
 
@@ -125,7 +119,7 @@ body[data-theme="white-theme"] {
   header {
     color: $pp-color;
   }
-  section {
+  main {
     color: $pp-color;
   }
 }
