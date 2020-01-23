@@ -16,24 +16,27 @@ export const PAGES = [
         value="Vamos a hablar!"
       />
     ),
-    content: ["Front-end developer y diseñadora web de Zaragoza"]
+    content: ["Soy desarrolladora Front-end y diseñadora web de Zaragoza"]
   },
   {
     name: "personal",
     // image: <Nature />,
-    title: "Over the past 9 years",
+    title: "Un poco sobre mi",
     content: [
-      "Halo, mi nombre es Bessy Aguilar, Soy desarrolladora front-end desde el 2019,  con sede en Zaragoza. Mi formación académica es de Técnico en Computación, pero soy fundamentalmente autodidacta.",
+      "Soy desarrolladora front-end desde el 2019, hondureña 🇭🇳 con sede en Zaragoza, España. Mi formación académica es de Técnico en Computación, pero soy fundamentalmente autodidacta.",
       "Desde hace un par de años me empezo a interesar el diseño de web y he estado en continuo aprendizaje desde entonces, ahora mismo me estoy especializando en el desarrollo front-end.",
       "Actualmente estoy en busca de nuevos retos despues de tomarme unos meses para seguir preparandome y aprendiendo nuevas tecnologias del sector.",
-      "Mas alla de escribir codigo, me encanta la fotografía, y la fantasia medieval, me gusta pasar tiempo viajando y disparando con mi camara, ya sea con la reflex o con mi movil; o bien leyendo un bueno libro y si lleva la palabra Tolkien mucho mejor 🧝🏽‍♀️."
+      "Mas alla de escribir codigo, me encanta la fotografía, me gusta pasar tiempo viajando y disparando con mi camara, ya sea con la reflex o con mi movil; O bien leyendo un buen libro de fantasia medieval o distopia y si lleva la palabra Tolkien mucho mejor 🧝🏽‍♀️.",
+      "Mis habilidades técnicas van desde Diseño web responsive, HTML5, CSS, Javascript, Docker, React, Animaciones SVG, Suite Adobe (Photoshop, Illustrator, XD, Lightroom), Software de control de versiones (Git)"
     ]
   },
   {
     name: "contacto",
     image: <Message />,
     title: "Estemos en contacto!",
-    content: ["¿Tienes alguna pregunta o propuesta?, .."]
+    content: [
+      "¿Tienes alguna pregunta o propuesta?, escribeme y hazmela saber."
+    ]
   }
 ];
 

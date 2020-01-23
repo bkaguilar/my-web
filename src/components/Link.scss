@@ -10,19 +10,19 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    border: 0 solid $brand-color_2;
-    transition: all $timing-transition ease;
+    transform: translate(-50%, -50%) scaleY(0);
+    transform-origin: 0 bottom;
+    width: 100%;
+    height: 100%;
+    padding: 15px 10px;
+    border-radius: 4px;
+    background: rgba($brand-color_2, 0.1);
+    transition: all 200ms ease;
   }
 
-  // &:hover::before {
-  //   border-width: 1px;
-  //   width: 80px;
-  //   height: 80px;
-  // }
+  &:hover::before {
+    transform: translate(-50%, -50%) scaleY(1);
+  }
 
   &.active {
     color: $brand-color_2;

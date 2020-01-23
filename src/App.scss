@@ -50,6 +50,7 @@ body {
   @include position(fixed, 0, 0, 0, 0);
   height: $header-height;
   margin: $lr-padding;
+  margin-bottom: 0;
   padding: 10px;
   z-index: 1;
 
@@ -89,7 +90,7 @@ body {
 
 //Section
 .App__section {
-  @include position(absolute, 0, 0, 0, 0);
+  @include position(absolute, calc(#{$header-height} + 64px), 0, 0, 0);
   max-width: $max-width;
   padding: $lr-padding;
   margin: 0 auto;
@@ -122,6 +123,7 @@ body {
 
     &__content {
       // @include showAnimation;
+      margin-bottom: 15px;
       font-size: 1.1em;
       line-height: 1.8;
       letter-spacing: 0.05em;
@@ -163,7 +165,7 @@ body {
 
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      align-items: flex-start;
 
       &__title {
         margin-bottom: 15px;
@@ -176,6 +178,10 @@ body {
         font-size: 0.8em;
         line-height: 24px;
         text-transform: unset;
+
+        &::before {
+          padding: 10px;
+        }
       }
     }
   }
@@ -209,6 +215,7 @@ body {
 
 //Themes
 body[data-theme="black-theme"] {
+  overflow: initial;
   background: $pp-color;
   header {
     color: $sc-color;
@@ -223,7 +230,7 @@ body[data-theme="black-theme"] {
 
   section {
     color: $sc-color;
-    justify-content: flex-end;
+    justify-content: center;
 
     figure {
       left: 50px;
