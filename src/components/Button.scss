@@ -2,6 +2,7 @@
 
 .Button {
   @include showAnimation;
+  animation-delay: 1.8s;
   cursor: pointer;
   position: relative;
   max-width: 400px;

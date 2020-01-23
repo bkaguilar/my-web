@@ -12,7 +12,6 @@ $lr-padding: 4em;
 $header-height: 50px;
 $header-spacing: 0.05em;
 $timing-transition: 500ms;
-$show-animation: show $timing-transition linear forwards;
 
 //Mixins
 @mixin header-text {
@@ -24,8 +23,8 @@ $show-animation: show $timing-transition linear forwards;
 
 @mixin showAnimation {
   opacity: 0;
-  transform: translateY(100%);
-  animation: $show-animation;
+  transform: translateY(10px);
+  animation: show 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
 
 @mixin position($type, $t, $r, $b, $l) {

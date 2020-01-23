@@ -14,7 +14,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       active: 0,
-      isLast: false
+      isLast: false,
+      inProp: true
     };
   }
 
@@ -181,17 +182,17 @@ class App extends React.Component {
         >
           {image && <figure className="App__section__figure">{image}</figure>}
           <div className="App__section__text">
-            <TransitionGroup component={null}>
+            {/* <TransitionGroup component={null}>
               <CSSTransition
                 key={"title" + this.state.active}
                 timeout={1000}
-                classNames="titleAnimation"
-              >
-                <h2 className="App__section__text__title">
-                  {title} <span className="title-point">.</span>
-                </h2>
-              </CSSTransition>
-            </TransitionGroup>
+                classNames="titleAnimation" */}
+
+            <h2 className="App__section__text__title">
+              {title} <span className="title-point">.</span>
+            </h2>
+            {/* </CSSTransition>
+            </TransitionGroup> */}
             {paragraphs}
             {button}
           </div>
