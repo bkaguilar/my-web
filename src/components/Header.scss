@@ -36,5 +36,26 @@
   &__nav {
     display: flex;
     align-items: center;
+    transition: all $timing-transition cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    @media #{$break-smallMax} {
+      @include position(fixed, 0, 0, 0, 0);
+      background: $pp-color;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      transform: translateY(100%);
+      .Link--header {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 3em;
+
+        color: $sc-color;
+      }
+      .Button--header {
+        width: 100px;
+        margin-top: 30px;
+      }
+    }
   }
 }
