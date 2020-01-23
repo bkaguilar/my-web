@@ -2,6 +2,7 @@
 
 .Link {
   @include header-text();
+  @include showAnimation;
   position: relative;
   margin-left: 35px;
 

@@ -12,7 +12,7 @@ export const PAGES = [
     button: (
       <Button
         type="button"
-        className="Button__contact"
+        className="Button--contact"
         value="Vamos a hablar!"
       />
     ),

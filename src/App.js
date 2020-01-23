@@ -15,7 +15,7 @@ class App extends React.Component {
     this.state = {
       active: 0,
       isLast: false,
-      inProp: true
+      isLoading: true
     };
   }
 
@@ -58,6 +58,17 @@ class App extends React.Component {
     }
   }
 
+  componentDidMount() {
+    setTimeout(
+      function() {
+        this.setState({
+          isLoading: false
+        });
+      }.bind(this),
+      1200
+    );
+  }
+
   componentDidUpdate(prevProps, prevState) {
     if (this.state.active !== prevState.active) {
       if (this.state.active % 2 === 1) {
@@ -96,7 +107,17 @@ class App extends React.Component {
 
     let paragraphs = content.map(item => {
       if (content.length > 0) {
-        return <p className="App__section__text__content">{item}</p>;
+        return (
+          <p
+            className={
+              this.state.isAnimate
+                ? "App__section__text__content class"
+                : "App__section__text__content"
+            }
+          >
+            {item}
+          </p>
+        );
       }
     });
 
@@ -159,6 +180,7 @@ class App extends React.Component {
         onWheel={this.handleWheel.bind(this)}
         onKeyDown={this.handleKeydown.bind(this)}
       >
+        {this.state.isLoading && <section className="loading"></section>}
         <header className="App__header">
           <figure className="App__header__figure">
             <a href="/" title="Bessy Aguilar">
