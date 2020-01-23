@@ -1,5 +1,4 @@
 @import "common.scss";
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,900|Muli:400,700,900|Roboto+Mono|Ubuntu|Raleway:400,900&display=swap");
 
 * {
   margin: 0;
@@ -64,313 +63,20 @@ body {
   }
 }
 
-//Header
-.Header {
-  @include position(fixed, 0, 0, 0, 0);
-  @include showAnimation;
-  animation-delay: 500ms;
-  height: $header-height;
-  margin: $lr-padding;
-  margin-bottom: 0;
-  padding: 10px;
-  z-index: 1;
+.Logo {
+  margin-right: 15px;
+  width: 14px;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  &__figure {
-    height: 100%;
-    margin: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    a {
-      display: flex;
-      align-items: center;
-    }
-
-    &__text {
-      @include header-text();
-      font-weight: lighter;
-    }
+  .logo-path1 {
+    fill: url(#d-1);
   }
-
-  &__nav {
-    display: flex;
-    align-items: center;
+  .logo-path2 {
+    fill: url(#d-2);
   }
 }
 
-//Section
-.Section {
-  @include position(absolute, calc(#{$header-height} + 64px), 0, 0, 0);
-  max-width: $max-width;
-  padding: $lr-padding;
-  margin: 0 auto;
-  transition: all $timing-transition ease-in;
-
-  display: flex;
-  align-items: center;
-
-  &__figure {
-    position: absolute;
-    right: 50px;
-    width: 45%;
-    z-index: -1;
-    animation: showImg 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) 2.2s backwards;
-
-    // @mixin key() {
-    //   @for $i from 1 through 20 {
-    //     #{$i}% {
-    //       transform: scale(#{$i * 0.05 + 1}, #{$i * 0.05 + 1});
-    //     }
-    //   }
-    //   @for $i from 25 through 45 {
-    //     #{$i}% {
-    //       transform: scale(#{$i * 0.05 - 0.5}, #{$i * 0.05 - 0.5});
-    //     }
-    //   }
-    //   @for $i from 50 through 70 {
-    //     #{$i}% {
-    //       transform: scaleX(#{$i * 0.05 - 0.89});
-    //     }
-    //   }
-    //   @for $i from 75 through 100 {
-    //     #{$i}% {
-    //       transform: scale(#{$i * 0.01}, #{$i * 0.01});
-    //     }
-    //   }
-    // }
-
-    @keyframes showImg {
-      0% {
-        opacity: 0;
-        transform: scale(1.23373, 0.94595);
-      }
-      1% {
-        transform: scale(1.29186, 1.03062);
-      }
-      3% {
-        transform: scale(1.3225, 1.10034);
-      }
-      4% {
-        transform: scale(1.32792, 1.15298);
-      }
-      6% {
-        transform: scale(1.27805, 1.20532);
-      }
-      7% {
-        transform: scale(1.23192, 1.2071);
-      }
-      9% {
-        transform: scale(1.12125, 1.17312);
-      }
-      10% {
-        transform: scale(1.0654, 1.14322);
-      }
-      12% {
-        transform: scale(1.01397, 1.1088);
-      }
-      14% {
-        transform: scale(0.96954, 1.07274);
-      }
-      15% {
-        transform: scale(0.93387, 1.0376);
-      }
-      17% {
-        transform: scale(0.90788, 1.00546);
-      }
-      18% {
-        transform: scale(0.89175, 0.9779);
-      }
-      20% {
-        transform: scale(0.88498, 0.95598);
-      }
-      21% {
-        transform: scale(0.88656, 0.94023);
-      }
-      23% {
-        transform: scale(0.89512, 0.9307);
-      }
-      25% {
-        transform: scale(0.90903, 0.92704);
-      }
-      26% {
-        transform: scale(0.9266, 0.92858);
-      }
-      28% {
-        transform: scale(0.94614, 0.93443);
-      }
-      29% {
-        transform: scale(0.9661, 0.94355);
-      }
-      31% {
-        transform: scale(0.98516, 0.95487);
-      }
-      32% {
-        transform: scale(1.00223, 0.96731);
-      }
-      34% {
-        transform: scale(1.01654, 0.97993);
-      }
-      35% {
-        transform: scale(1.0276, 0.99188);
-      }
-      37% {
-        transform: scale(1.03521, 1.00252);
-      }
-      39% {
-        transform: scale(1.03941, 1.01136);
-      }
-      40% {
-        transform: scale(1.04046, 1.01812);
-      }
-      42% {
-        transform: scale(1.03877, 1.02269);
-      }
-      43% {
-        transform: scale(1.03487, 1.02512);
-      }
-      45% {
-        transform: scale(1.02936, 1.02557);
-      }
-      46% {
-        transform: scale(1.02282, 1.02433);
-      }
-      48% {
-        transform: scale(1.01584, 1.02173);
-      }
-      50% {
-        transform: scale(1.00892, 1.01815);
-      }
-      51% {
-        transform: scale(1.0025, 1.01396);
-      }
-      53% {
-        transform: scale(0.9969, 1.00953);
-      }
-      54% {
-        transform: scale(0.99236, 1.00517);
-      }
-      56% {
-        transform: scale(0.989, 1.00115);
-      }
-      57% {
-        transform: scale(0.98686, 0.99768);
-      }
-      59% {
-        transform: scale(0.98588, 0.99489);
-      }
-      60% {
-        transform: scale(0.98595, 0.99285);
-      }
-      62% {
-        transform: scale(0.98691, 0.99158);
-      }
-      64% {
-        transform: scale(0.98855, 0.99104);
-      }
-      65% {
-        transform: scaleX(0.99066);
-      }
-      67% {
-        transform: scaleX(0.99305);
-      }
-      68% {
-        transform: scaleX(0.99551);
-      }
-      70% {
-        transform: scaleX(0.99788);
-      }
-      71% {
-        transform: scaleX(1.00002);
-      }
-      73% {
-        transform: scaleX(1.00183);
-      }
-      75% {
-        transform: scaleX(1.00325);
-      }
-      76% {
-        transform: scaleX(1.00424);
-      }
-      78% {
-        transform: scaleX(1.00481);
-      }
-      79% {
-        transform: scaleX(1.00499);
-      }
-      81% {
-        transform: scaleX(1.00482);
-      }
-      82% {
-        transform: scaleX(1.00437);
-      }
-      84% {
-        transform: scaleX(1.00371);
-      }
-      85% {
-        transform: scaleX(1.00292);
-      }
-      87% {
-        transform: scaleX(1.00206);
-      }
-      89% {
-        transform: scaleX(1.00121);
-      }
-      90% {
-        transform: scaleX(1.0004);
-      }
-      92% {
-        transform: scaleX(0.9997);
-      }
-      93% {
-        transform: scaleX(0.99912);
-      }
-      95% {
-        transform: scaleX(0.99869);
-      }
-      96% {
-        transform: scaleX(0.99841);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-  }
-
-  &__text {
-    position: relative;
-    width: 80%;
-
-    &__title {
-      @include showAnimation;
-      animation-delay: 1.8s;
-      font-size: 5em;
-      font-family: "Raleway", sans-serif;
-      letter-spacing: -0.02em;
-      margin-bottom: 25px;
-      transition: all 1s linear;
-      // cubic-bezier(0.65, 0.07, 0, 1.35)
-    }
-
-    &__content {
-      @include showAnimation;
-      animation-delay: 2.4s;
-      margin-bottom: 15px;
-      font-size: 1.1em;
-      line-height: 1.8;
-      letter-spacing: 0.05em;
-    }
-  }
-
-  &--contacto {
-    align-items: flex-start;
-  }
+.title-point {
+  color: $brand-color_1;
 }
 
 .dots {
@@ -380,67 +86,6 @@ body {
 
   display: flex;
   flex-direction: column;
-}
-
-//Footer
-.Footer {
-  @include showAnimation;
-  @include position(fixed, unset, 0, 0, 0);
-  background: rgba(white, 0.6);
-  max-height: $max-footer;
-
-  &__links {
-    border-bottom: 1px solid #ededed;
-    max-width: $max-width;
-    margin: 0 auto;
-    padding: 2em $lr-padding;
-
-    display: flex;
-    justify-content: space-between;
-
-    &__nav {
-      height: 100%;
-      padding: 10px;
-
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-
-      &__title {
-        margin-bottom: 15px;
-        font-weight: normal;
-        color: $brand-color_2;
-      }
-    }
-  }
-
-  &__author {
-    @include showAnimation;
-    animation-delay: 1.5s;
-    max-width: $max-width;
-    margin: 0 auto;
-    padding: 2em $lr-padding;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    &__year span {
-      margin-right: 10px;
-    }
-
-    &__name {
-      margin-left: 10px;
-      &:hover {
-        color: $brand-color_2;
-      }
-    }
-
-    &__emoji {
-      font-size: 1.3em;
-      margin: 0 10px;
-    }
-  }
 }
 
 //Themes
@@ -470,10 +115,10 @@ body[data-theme="black-theme"] {
       color: $brand-color_1;
     }
   }
-}
 
-.Dot {
-  background: $sc-color;
+  .Dot {
+    background: $sc-color;
+  }
 }
 
 body[data-theme="white-theme"] {
@@ -503,20 +148,4 @@ body[data-theme="white-theme"] {
   &-exit-active {
     display: none;
   }
-}
-
-.Logo {
-  margin-right: 15px;
-  width: 14px;
-
-  .logo-path1 {
-    fill: url(#d-1);
-  }
-  .logo-path2 {
-    fill: url(#d-2);
-  }
-}
-
-.title-point {
-  color: $brand-color_1;
 }

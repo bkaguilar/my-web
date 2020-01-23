@@ -1,0 +1,39 @@
+@import "../common.scss";
+.Header {
+  @include position(fixed, 0, 0, 0, 0);
+  @include showAnimation;
+  animation-delay: 500ms;
+  height: $header-height;
+  margin: $lr-padding;
+  margin-bottom: 0;
+  padding: 10px;
+  z-index: 1;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__figure {
+    height: 100%;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+
+    &__text {
+      @include header-text();
+      font-weight: lighter;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+}

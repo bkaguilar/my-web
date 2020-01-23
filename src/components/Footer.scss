@@ -1,0 +1,61 @@
+@import "../common.scss";
+
+.Footer {
+  @include showAnimation;
+  @include position(fixed, unset, 0, 0, 0);
+  background: rgba(white, 0.6);
+  max-height: $max-footer;
+
+  &__links {
+    border-bottom: 1px solid #ededed;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 2em $lr-padding;
+
+    display: flex;
+    justify-content: space-between;
+
+    &__nav {
+      height: 100%;
+      padding: 10px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      &__title {
+        margin-bottom: 15px;
+        font-weight: normal;
+        color: $brand-color_2;
+      }
+    }
+  }
+
+  &__author {
+    @include showAnimation;
+    animation-delay: 1.5s;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 2em $lr-padding;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__year span {
+      margin-right: 10px;
+    }
+
+    &__name {
+      margin-left: 10px;
+      &:hover {
+        color: $brand-color_2;
+      }
+    }
+
+    &__emoji {
+      font-size: 1.3em;
+      margin: 0 10px;
+    }
+  }
+}
