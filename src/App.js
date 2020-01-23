@@ -111,8 +111,8 @@ class App extends React.Component {
           <p
             className={
               this.state.isAnimate
-                ? "App__section__text__content class"
-                : "App__section__text__content"
+                ? "Section__text__content class"
+                : "Section__text__content"
             }
           >
             {item}
@@ -130,8 +130,8 @@ class App extends React.Component {
           href={"#" + item.name}
           className={
             this.state.active === i
-              ? "App__header__nav__item active"
-              : "App__header__nav__item"
+              ? "Header__nav__item active"
+              : "Header__nav__item"
           }
           onClick={this.handleChange.bind(this)}
         />
@@ -157,7 +157,7 @@ class App extends React.Component {
           href={item.link}
           target="_blank"
           name={item.name}
-          className="App__footer__links__nav__item"
+          className="Link--footer"
         />
       );
     });
@@ -169,7 +169,7 @@ class App extends React.Component {
           href={item.link}
           target="_blank"
           name={item.name}
-          className="App__footer__links__nav__item"
+          className="Link--footer"
         />
       );
     });
@@ -181,36 +181,29 @@ class App extends React.Component {
         onKeyDown={this.handleKeydown.bind(this)}
       >
         {this.state.isLoading && <section className="loading"></section>}
-        <header className="App__header">
-          <figure className="App__header__figure">
+        <header className="Header">
+          <figure className="Header__figure">
             <a href="/" title="Bessy Aguilar">
               {LOGO}
-              <h1 className="App__header__figure__text">bk Aguilar</h1>
+              <h1 className="Header__figure__text">bk Aguilar</h1>
             </a>
           </figure>
-          <nav className="App__header__nav">
+          <nav className="Header__nav">
             {link}
-            <Button
-              type="button"
-              className="App__header__nav__button"
-              value="Resume"
-            />
+            <Button type="button" className="Button--header" value="Resume" />
           </nav>
         </header>
-        <section
-          tabIndex="0"
-          id={name}
-          className={"App__section App__section--" + name}
-        >
-          {image && <figure className="App__section__figure">{image}</figure>}
-          <div className="App__section__text">
+
+        <section tabIndex="0" id={name} className={"Section Section--" + name}>
+          {image && <figure className="Section__figure">{image}</figure>}
+          <div className="Section__text">
             {/* <TransitionGroup component={null}>
               <CSSTransition
                 key={"title" + this.state.active}
                 timeout={1000}
                 classNames="titleAnimation" */}
 
-            <h2 className="App__section__text__title">
+            <h2 className="Section__text__title">
               {title} <span className="title-point">.</span>
             </h2>
             {/* </CSSTransition>
@@ -219,23 +212,25 @@ class App extends React.Component {
             {button}
           </div>
         </section>
-        <ul className="App__dots">{dot}</ul>
+
+        <ul className="dots">{dot}</ul>
+
         {this.state.isLast && (
-          <footer className="App__footer">
-            <div className="App__footer__links">
-              <figure className="App__footer__links__logo">{LOGO}</figure>
-              <nav className="App__footer__links__nav">
-                <h3 className="App__footer__links__nav__title">Di hola</h3>
+          <footer className="Footer">
+            <div className="Footer__links">
+              <figure className="Footer__links__logo">{LOGO}</figure>
+              <nav className="Footer__links__nav">
+                <h3 className="Footer__links__nav__title">Di hola</h3>
                 {services}
               </nav>
-              <nav className="App__footer__links__nav">
-                <h3 className="App__footer__links__nav__title">Social Media</h3>
+              <nav className="Footer__links__nav">
+                <h3 className="Footer__links__nav__title">Social Media</h3>
                 {socialMedia}
               </nav>
             </div>
-            <div className="App__footer__author">
+            <div className="Footer__author">
               <small>
-                <span id="year" className="App__footer__author__year">
+                <span id="year" className="Footer__author__year">
                   <span role="img" aria-label="copy">
                     &copy;
                   </span>
@@ -243,7 +238,7 @@ class App extends React.Component {
                 </span>
                 <Link
                   href="/"
-                  className="App__footer__author__name"
+                  className="Footer__author__name"
                   name="Bessy K. Aguilar"
                   title="Bk Aguilar"
                   aria-label="Bk Aguilar"
@@ -253,7 +248,7 @@ class App extends React.Component {
               <small>
                 Hecho con
                 <span
-                  className="App__footer__author__emoji"
+                  className="Footer__author__emoji"
                   role="img"
                   aria-label="copy"
                 >
@@ -261,7 +256,7 @@ class App extends React.Component {
                 </span>
                 y
                 <span
-                  className="App__footer__author__emoji"
+                  className="Footer__author__emoji"
                   role="img"
                   aria-label="copy"
                 >

@@ -24,6 +24,11 @@
     transform: scale(0.99);
   }
 
+  &--header {
+    font-size: 0.8em;
+    margin: 0 0 0 35px;
+  }
+
   &--contact {
     @include showAnimation;
     animation-delay: 3s;

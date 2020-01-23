@@ -65,7 +65,7 @@ body {
 }
 
 //Header
-.App__header {
+.Header {
   @include position(fixed, 0, 0, 0, 0);
   @include showAnimation;
   animation-delay: 500ms;
@@ -109,16 +109,11 @@ body {
         }
       }
     }
-
-    &__button {
-      font-size: 0.8em;
-      margin: 0 0 0 35px;
-    }
   }
 }
 
 //Section
-.App__section {
+.Section {
   @include position(absolute, calc(#{$header-height} + 64px), 0, 0, 0);
   max-width: $max-width;
   padding: $lr-padding;
@@ -386,17 +381,17 @@ body {
   }
 }
 
-.App__dots {
+.dots {
   @include showAnimation;
-  animation-delay: 2s;
   @include position(fixed, 50%, $lr-padding, unset, unset);
+  animation-delay: 2s;
 
   display: flex;
   flex-direction: column;
 }
 
 //Footer
-.App__footer {
+.Footer {
   @include showAnimation;
   @include position(fixed, unset, 0, 0, 0);
   background: rgba(white, 0.6);
@@ -423,23 +418,6 @@ body {
         margin-bottom: 15px;
         font-weight: normal;
         color: $brand-color_2;
-      }
-
-      &__item {
-        margin: 6px 0;
-        font-size: 0.8em;
-        line-height: 24px;
-        text-transform: unset;
-
-        @for $i from 0 through 5 {
-          &:nth-child(#{$i}) {
-            animation-delay: #{$i * 0.25s};
-          }
-        }
-
-        &::before {
-          padding: 10px;
-        }
       }
     }
   }

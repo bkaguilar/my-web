@@ -28,4 +28,21 @@
   &.active {
     color: $brand-color_2;
   }
+
+  &--footer {
+    margin: 6px 0;
+    font-size: 0.8em;
+    line-height: 24px;
+    text-transform: unset;
+
+    @for $i from 0 through 5 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.25s};
+      }
+    }
+
+    &::before {
+      padding: 10px;
+    }
+  }
 }
