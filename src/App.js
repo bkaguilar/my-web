@@ -129,9 +129,7 @@ class App extends React.Component {
           name={item.name}
           href={"#" + item.name}
           className={
-            this.state.active === i
-              ? "Header__nav__item active"
-              : "Header__nav__item"
+            this.state.active === i ? "Link--header active" : "Link--header"
           }
           onClick={this.handleChange.bind(this)}
         />

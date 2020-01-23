@@ -29,6 +29,14 @@
     color: $brand-color_2;
   }
 
+  &--header {
+    @for $i from 0 through 3 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.55s};
+      }
+    }
+  }
+
   &--footer {
     margin: 6px 0;
     font-size: 0.8em;
