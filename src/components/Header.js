@@ -30,15 +30,10 @@ class Header extends React.Component {
           {link}
           <Button type="button" className="Button--header" value="Resume" />
         </nav>
-        <div className="Header__responsive">
-          <Button
-            type="button"
-            onClick=""
-            className="Button--responsive"
-            value="Menú"
-          />
+        <button className="Header__responsive">
+          <span className="Header__responsive__text">Menú</span>
           <span className="Header__responsive__lines"></span>
-        </div>
+        </button>
       </header>
     );
   }

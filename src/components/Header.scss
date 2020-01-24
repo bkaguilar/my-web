@@ -54,11 +54,22 @@
   }
 
   &__responsive {
+    font-size: 1em;
+    color: inherit;
+    padding: 5px;
     display: none;
     align-items: center;
 
     @media #{$break-smallMax} {
       display: flex;
+    }
+
+    &__text {
+      display: none;
+
+      @media #{$break-smallMax} {
+        display: block;
+      }
     }
 
     &__lines {

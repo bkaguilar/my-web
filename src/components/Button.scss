@@ -1,7 +1,6 @@
 @import "../common.scss";
 
 .Button {
-  cursor: pointer;
   position: relative;
   max-width: 400px;
   width: 100%;
@@ -12,7 +11,6 @@
   background: linear-gradient(to left, $brand-color_1, $brand-color_2);
   overflow: hidden;
   border-radius: 4px;
-  border: none;
   box-shadow: 0 15px 40px rgba($brand-color_2, 0.2);
   transition: all 200ms ease-in;
 
@@ -31,21 +29,6 @@
     @media #{$break-smallMax} {
       width: 100px;
       margin-top: 30px;
-    }
-  }
-
-  &--responsive {
-    display: none;
-    font-size: 1em;
-    background: none;
-    box-shadow: none;
-    color: inherit;
-    margin: 0;
-    padding-right: 0;
-    width: auto;
-
-    @media #{$break-smallMax} {
-      display: block;
     }
   }
 
