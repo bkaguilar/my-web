@@ -6,6 +6,10 @@
   background: rgba(white, 0.6);
   max-height: $max-footer;
 
+  @media #{$break-smallMax} {
+    max-height: none;
+  }
+
   &__links {
     border-bottom: 1px solid #ededed;
     max-width: $max-width;
@@ -13,7 +17,19 @@
     padding: 2em $lr-padding;
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+
+    @media #{$break-smallMax} {
+      padding-left: $responsive-padding;
+      padding-right: $responsive-padding;
+
+      flex-direction: column;
+    }
+
+    &__logo {
+      padding: 10px;
+    }
 
     &__nav {
       height: 100%;
@@ -39,8 +55,21 @@
     padding: 2em $lr-padding;
 
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+
+    @media #{$break-smallMax} {
+      font-size: 0.9em;
+      padding-left: $responsive-padding;
+      padding-right: $responsive-padding;
+
+      flex-direction: column;
+
+      small {
+        margin: 3px 0;
+      }
+    }
 
     &__year span {
       margin-right: 10px;

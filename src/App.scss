@@ -20,8 +20,12 @@ body {
   font-size: 100%;
   font-family: "Muli", sans-serif;
   background: $sc-color;
-  overflow: hidden;
+  // overflow: hidden;
   transition: background $timing-transition ease-in;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  //
 
   a {
     text-decoration: none;
@@ -80,6 +84,10 @@ body {
 
   display: flex;
   flex-direction: column;
+
+  @media #{$break-smallMax} {
+    right: 0;
+  }
 }
 
 //Themes
