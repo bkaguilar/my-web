@@ -36,6 +36,25 @@ class Header extends React.Component {
         <nav className={isVisible ? "Header__nav showMenu" : "Header__nav"}>
           {link}
           <Button type="button" className="Button--header" value="Resume" />
+          {isVisible && (
+            <div className="Header__nav__email">
+              <a
+                href="mailto:hola@bkaguilar.com"
+                subject="🤟🏽Hola Bessy, quiero proponerte algo"
+                rel="noopener noreferrer"
+                title="E-mail"
+              >
+                hola@bkaguilar.com
+                <span
+                  role="img"
+                  aria-label="woman tech emoji"
+                  className="emoji"
+                >
+                  &#9998;
+                </span>
+              </a>
+            </div>
+          )}
         </nav>
         <button
           type="button"

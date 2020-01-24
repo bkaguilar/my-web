@@ -10,6 +10,7 @@ class Link extends React.Component {
         target={target}
         index={index}
         name={name}
+        title={name}
         className={"Link " + className}
         onClick={onClick}
       >

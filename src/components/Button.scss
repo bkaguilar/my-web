@@ -1,6 +1,7 @@
 @import "../common.scss";
 
 .Button {
+  @include showAnimation();
   position: relative;
   max-width: 400px;
   width: 100%;
@@ -23,17 +24,17 @@
   }
 
   &--header {
+    animation-delay: 2s;
     font-size: 0.8em;
     margin: 0 0 0 35px;
 
     @media #{$break-smallMax} {
       width: 100px;
-      margin-top: 30px;
+      margin: 0 0 70px 0;
     }
   }
 
   &--contact {
-    @include showAnimation;
     animation-delay: 3s;
   }
 }

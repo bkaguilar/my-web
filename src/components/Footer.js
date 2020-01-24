@@ -61,19 +61,11 @@ class Footer extends React.Component {
           </small>
           <small>
             Hecho con
-            <span
-              className="Footer__author__emoji"
-              role="img"
-              aria-label="copy"
-            >
+            <span className="emoji" role="img" aria-label="beer">
               🍻
             </span>
             y
-            <span
-              className="Footer__author__emoji"
-              role="img"
-              aria-label="copy"
-            >
+            <span className="emoji" role="img" aria-label="heart">
               ❤
             </span>
           </small>
