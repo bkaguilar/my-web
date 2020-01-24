@@ -40,6 +40,12 @@
       font-size: 2em;
       font-weight: bolder;
       color: $pp-color;
+
+      @for $i from 0 through 3 {
+        &:nth-child(#{$i}) {
+          animation-delay: #{$i * 0.25s};
+        }
+      }
     }
   }
 
