@@ -5,7 +5,14 @@ import "./Header.scss";
 
 class Header extends React.Component {
   render() {
-    const { active, onClick, logo, pages } = this.props;
+    const {
+      active,
+      onClick,
+      onClickResponsive,
+      logo,
+      pages,
+      isVisible
+    } = this.props;
     let link = pages.map((item, i) => {
       return (
         <Link
@@ -26,13 +33,28 @@ class Header extends React.Component {
             <h1 className="Header__figure__text">bk Aguilar</h1>
           </a>
         </figure>
-        <nav className="Header__nav">
+        <nav className={isVisible ? "Header__nav showMenu" : "Header__nav"}>
           {link}
           <Button type="button" className="Button--header" value="Resume" />
         </nav>
-        <button className="Header__responsive">
-          <span className="Header__responsive__text">Menú</span>
-          <span className="Header__responsive__lines"></span>
+        <button
+          type="button"
+          className="Header__responsive"
+          onClick={onClickResponsive}
+          style={{
+            color: isVisible ? "#191919" : "inherit"
+          }}
+        >
+          <span className="Header__responsive__text">
+            {isVisible ? "Cerrar" : "Menú"}
+          </span>
+          <span
+            className={
+              isVisible
+                ? "Header__responsive__lines is-visible"
+                : "Header__responsive__lines"
+            }
+          ></span>
         </button>
       </header>
     );

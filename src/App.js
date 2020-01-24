@@ -15,6 +15,7 @@ class App extends React.Component {
     this.state = {
       active: 0,
       isLast: false,
+      isVisible: false,
       isLoading: true
     };
   }
@@ -35,6 +36,14 @@ class App extends React.Component {
     this.setState({
       active: parseInt(e.currentTarget.attributes.index.value)
     });
+  }
+
+  handleShowMenu() {
+    if (window.innerWidth <= 768) {
+      this.setState({
+        isVisible: !this.state.isVisible
+      });
+    }
   }
 
   handleWheel(e) {
@@ -71,6 +80,9 @@ class App extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.active !== prevState.active) {
+      this.setState({
+        isVisible: false
+      });
       if (this.state.active % 2 === 1) {
         document.body.setAttribute("data-theme", "black-theme");
       } else {
@@ -111,6 +123,8 @@ class App extends React.Component {
         <Header
           active={this.state.active}
           onClick={this.handleChange.bind(this)}
+          onClickResponsive={this.handleShowMenu.bind(this)}
+          isVisible={this.state.isVisible}
           logo={LOGO}
           pages={PAGES}
         />

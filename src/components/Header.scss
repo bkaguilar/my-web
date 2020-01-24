@@ -21,7 +21,6 @@
   &__figure {
     height: 100%;
     margin: 0;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,31 +44,35 @@
     @media #{$break-smallMax} {
       @include position(fixed, 0, 0, 0, 0);
       display: none;
-      background: $pp-color;
+      background: $sc-color;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      transform: translateY(100%);
+      transform: translateY(-100%);
+      animation: showMenu $timing-transition cubic-bezier(0.165, 0.84, 0.44, 1)
+        forwards;
+
+      @keyframes showMenu {
+        100% {
+          transform: translateY(0);
+        }
+      }
+      &.showMenu {
+        display: flex;
+      }
     }
   }
 
   &__responsive {
+    z-index: 1;
+    display: none;
     font-size: 1em;
     color: inherit;
     padding: 5px;
-    display: none;
     align-items: center;
 
     @media #{$break-smallMax} {
       display: flex;
-    }
-
-    &__text {
-      display: none;
-
-      @media #{$break-smallMax} {
-        display: block;
-      }
     }
 
     &__lines {
@@ -93,6 +96,15 @@
       }
       &::after {
         transform: translate(-50%, 2px);
+      }
+
+      &.is-visible {
+        &::before {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        &::after {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
       }
     }
   }

@@ -38,8 +38,9 @@
     @media #{$break-smallMax} {
       margin-top: 30px;
       margin-bottom: 30px;
-      font-size: 3em;
-      color: $sc-color;
+      font-size: 2em;
+      font-weight: bolder;
+      color: $pp-color;
     }
   }
 
