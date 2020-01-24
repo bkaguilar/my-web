@@ -44,23 +44,44 @@
 
     @media #{$break-smallMax} {
       @include position(fixed, 0, 0, 0, 0);
+      display: none;
       background: $pp-color;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
       transform: translateY(100%);
+    }
+  }
 
-      .Link--header {
-        margin-top: 30px;
-        margin-bottom: 30px;
-        font-size: 3em;
+  &__responsive {
+    display: none;
+    align-items: center;
 
-        color: $sc-color;
+    @media #{$break-smallMax} {
+      display: flex;
+    }
+
+    &__lines {
+      position: relative;
+      height: 24px;
+      width: 24px;
+      margin-left: 5px;
+      display: block;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-top: 1px solid;
+        width: 70%;
+        transition: all 200ms ease;
       }
-
-      .Button--header {
-        width: 100px;
-        margin-top: 30px;
+      &::before {
+        transform: translate(-50%, -4px);
+      }
+      &::after {
+        transform: translate(-50%, 2px);
       }
     }
   }

@@ -35,6 +35,12 @@
         animation-delay: #{$i * 0.55s};
       }
     }
+    @media #{$break-smallMax} {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-size: 3em;
+      color: $sc-color;
+    }
   }
 
   &--footer {
