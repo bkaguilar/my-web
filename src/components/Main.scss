@@ -1,6 +1,6 @@
 @import "../common.scss";
 .Main {
-  @include position(absolute, calc(#{$header-height} + 64px), 0, 0, 0);
+  @include position(fixed, calc(#{$header-height} + 64px), 0, 0, 0);
   max-width: $max-width;
   padding: $lr-padding;
   margin: 0 auto;
@@ -250,7 +250,7 @@
     }
 
     &__title {
-      // @include showAnimation;
+      @include showAnimation;
       animation-delay: 1.8s;
       font-size: 5em;
       font-family: "Raleway", sans-serif;

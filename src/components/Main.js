@@ -5,9 +5,7 @@ import "./Main.scss";
 class Main extends React.Component {
   render() {
     const { pages, active } = this.props;
-    const { title, image, name, content, button } = pages[active];
-
-    console.log('hey');
+    const { title, image, name, content, button, id } = pages[active];
 
     let paragraphs = content.map((item, index) => {
       if (content.length > 0) {
@@ -23,22 +21,25 @@ class Main extends React.Component {
     return (
       <main tabIndex="0" id={name} className={"Main Main--" + name}>
         {image && <figure className="Main__figure">{image}</figure>}
-        <div className="Main__text">
-          <TransitionGroup component={null}>
-            <CSSTransition
-              key={"title" + active}
-              timeout={1000}
-              classNames="titleAnimation"
-            >
+        <TransitionGroup component={null}>
+          <CSSTransition
+            in
+            key={id}
+            timeout={1000}
+            appear={true}
+            classNames="titleAnimation"
+          >
+            <div className="Main__text">
               <h2 className="Main__text__title">
                 {title} <span className="title-point">.</span>
               </h2>
-            </CSSTransition>
-          </TransitionGroup>
-          {paragraphs}
-          {button}
-        </div>
-      </main>
+              {paragraphs}
+              {button}
+
+            </div>
+          </CSSTransition>
+        </TransitionGroup>
+      </main >
     );
   }
 }

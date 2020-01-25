@@ -146,15 +146,13 @@ body[data-theme="white-theme"] {
 //Render Animation
 .titleAnimation {
   /* starting ENTER animation */
-  &-enter {
-    opacity: 0 !important;
-    transform: translateY(200%) !important;
-  }
-  /* ending ENTER animation */
-  &-enter-active {
-    opacity: 0.4 !important;
-    transform: translateY(0) !important;
-  }
+  // &-appear, &-enter {
+  //   opacity: 1 !important;
+  // }
+  // /* ending ENTER animation */
+  // &-appear-active, &-enter-active {
+  //   opacity: 1 !important;
+  // }
   /* starting EXIT animation */
   /* ending EXIT animation */
   &-exit,
