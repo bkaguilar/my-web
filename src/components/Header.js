@@ -26,7 +26,9 @@ class Header extends React.Component {
       );
     });
     return (
-      <header className="Header">
+      <header className="Header" style={{
+        background: active % 2 === 1 ? "#191919" : "#f2f4f6"
+      }}>
         <figure className="Header__figure">
           <a href="/" title="Bessy Aguilar">
             {logo}

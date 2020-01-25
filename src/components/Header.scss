@@ -15,7 +15,9 @@
   align-items: center;
 
   @media #{$break-smallMax} {
-    margin: $responsive-padding $responsive-padding 0 $responsive-padding;
+    height: 80px;
+    margin: 0;
+    padding: 20px  2.5em;
   }
 
   &__figure {
