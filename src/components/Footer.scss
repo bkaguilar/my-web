@@ -52,7 +52,7 @@
 
   &__author {
     @include showAnimation;
-    animation-delay: 1.5s;
+    animation-delay: calc(#{$time-delay} + 3.2s);
     max-width: $max-width;
     margin: 0 auto;
     padding: 2em $lr-padding;

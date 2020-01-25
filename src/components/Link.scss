@@ -30,8 +30,8 @@
   }
 
   &--header {
-    @for $i from 0 through 3 {
-      &:nth-child(#{$i}) {
+    @for $i from 1 through 3 {
+      &:nth-of-type(#{$i}) {
         animation-delay: #{$i * $time-delay};
       }
     }
@@ -41,8 +41,8 @@
       font-weight: bolder;
       color: $pp-color;
 
-      @for $i from 0 through 3 {
-        &:nth-child(#{$i}) {
+      @for $i from 1 through 3 {
+        &:nth-of-type(#{$i}) {
           animation-delay: #{$i * ($time-delay - 0.2)};
         }
       }
@@ -55,9 +55,9 @@
     line-height: 24px;
     text-transform: unset;
 
-    @for $i from 0 through 5 {
-      &:nth-child(#{$i}) {
-        animation-delay: #{$i * ($time-delay + 0.25s)};
+    @for $i from 1 through 5 {
+      &:nth-of-type(#{$i}) {
+        animation-delay: calc(#{$i * $time-delay} + 1.6s);
       }
     }
 

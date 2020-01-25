@@ -91,18 +91,24 @@ class App extends React.Component {
   }
 
   // componentDidMount() {
-  //   setTimeout(
-  //     function () {
-  //       this.setState({
-  //         isLoading: false
-  //       });
-  //     }.bind(this),
-  //     1200
-  //   );
+  //   //   setTimeout(
+  //   //     function () {
+  //   //       this.setState({
+  //   //         isLoading: false
+  //   //       });
+  //   //     }.bind(this),
+  //   //     1200
+  //   //   );
   // }
+  scroll() {
+    if (window.pageYOffset > 0) {
+      console.log(window.pageYOffset);
+    }
+  }
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.active !== prevState.active) {
+      console.log("se actualiza");
       this.setState({
         isVisible: false
       });
@@ -112,7 +118,6 @@ class App extends React.Component {
         document.body.setAttribute("data-theme", "white-theme");
       }
       if (document.querySelector(".Main").offsetHeight > window.innerHeight) {
-        console.log("big");
         this.setState({
           isScroll: true
         });
@@ -131,6 +136,7 @@ class App extends React.Component {
   }
 
   render() {
+    console.log("render");
     const LOGO = <Logo title="Bk Aguilar logo" className="Logo" />;
     let dot = PAGES.map((item, i) => {
       return (

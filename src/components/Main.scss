@@ -71,6 +71,12 @@
       font-size: 1.1em;
       line-height: 1.8;
       letter-spacing: 0.05em;
+
+      @for $i from 0 through 11 {
+        &:nth-of-type(#{$i}) {
+          animation-delay: #{$i * ($time-delay + 0.2s)};
+        }
+      }
     }
   }
 
