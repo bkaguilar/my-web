@@ -43,7 +43,7 @@
 
       @for $i from 0 through 3 {
         &:nth-child(#{$i}) {
-          animation-delay: #{$i * ($time-delay - .2)};
+          animation-delay: #{$i * ($time-delay - 0.2)};
         }
       }
     }
@@ -57,7 +57,7 @@
 
     @for $i from 0 through 5 {
       &:nth-child(#{$i}) {
-        animation-delay: #{$i * 0.25s};
+        animation-delay: #{$i * ($time-delay + 0.25s)};
       }
     }
 

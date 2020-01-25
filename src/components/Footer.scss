@@ -3,6 +3,7 @@
 .Footer {
   @include showAnimation;
   @include position(fixed, unset, 0, 0, 0);
+  animation-delay: calc(#{$time-delay} + 1.2s);
   background: rgba(white, 0.6);
   max-height: $max-footer;
 
