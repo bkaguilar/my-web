@@ -32,7 +32,7 @@
   &--header {
     @for $i from 0 through 3 {
       &:nth-child(#{$i}) {
-        animation-delay: #{$i * 0.55s};
+        animation-delay: #{$i * $time-delay};
       }
     }
     @media #{$break-smallMax} {
@@ -43,7 +43,7 @@
 
       @for $i from 0 through 3 {
         &:nth-child(#{$i}) {
-          animation-delay: #{$i * 0.25s};
+          animation-delay: #{$i * ($time-delay - .2)};
         }
       }
     }

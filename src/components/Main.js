@@ -19,16 +19,16 @@ class Main extends React.Component {
     });
 
     return (
-      <main tabIndex="0" id={name} className={"Main Main--" + name}>
-        {image && <figure className="Main__figure">{image}</figure>}
-        <TransitionGroup component={null}>
-          <CSSTransition
-            in
-            key={id}
-            timeout={1000}
-            appear={true}
-            classNames="titleAnimation"
-          >
+      <TransitionGroup component={null}>
+        <CSSTransition
+          in
+          key={id}
+          timeout={1000}
+          appear={true}
+          classNames="titleAnimation"
+        >
+          <main tabIndex="0" id={name} className={"Main Main--" + name}>
+            {image && <figure className="Main__figure">{image}</figure>}
             <div className="Main__text">
               <h2 className="Main__text__title">
                 {title} <span className="title-point">.</span>
@@ -37,9 +37,9 @@ class Main extends React.Component {
               {button}
 
             </div>
-          </CSSTransition>
-        </TransitionGroup>
-      </main >
+          </main >
+        </CSSTransition>
+      </TransitionGroup >
     );
   }
 }

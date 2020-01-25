@@ -81,8 +81,7 @@ class App extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     if (this.state.active !== prevState.active) {
       this.setState({
-        isVisible: false,
-        image: PAGES[this.state.active].image
+        isVisible: false
       });
       if (this.state.active % 2 === 1) {
         document.body.setAttribute("data-theme", "black-theme");

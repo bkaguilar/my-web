@@ -24,19 +24,19 @@
   }
 
   &--header {
-    animation-delay: 2s;
+    animation-delay: calc(#{$time-delay} +  1.3s);
     font-size: 0.8em;
     margin: 0 0 0 35px;
 
     @media #{$break-smallMax} {
-      animation-delay: 1s;
+      animation-delay: calc(#{$time-delay} +  .7s);
       width: 100px;
       margin: 0 0 70px 0;
     }
   }
 
   &--contact {
-    animation-delay: 3s;
+    animation-delay: calc(#{$time-delay} +  1.2s);
 
     @media #{$break-smallMax} {
       margin-top: 60px;

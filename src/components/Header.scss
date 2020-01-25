@@ -3,7 +3,7 @@
 .Header {
   @include position(fixed, 0, 0, 0, 0);
   @include showAnimation;
-  animation-delay: 500ms;
+  animation-delay: $time-delay;
   height: $header-height;
   margin: $lr-padding;
   margin-bottom: 0;
@@ -43,7 +43,7 @@
 
     &__email {
       @include showAnimation();
-      animation-delay: 1.2s;
+      animation-delay: calc(#{$time-delay} + 1s);
       text-transform: uppercase;
       letter-spacing: 0.15px;
       font-size: 0.8em;
