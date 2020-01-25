@@ -8,7 +8,6 @@ import Dot from "./components/Dot";
 import "./App.scss";
 
 let lastTime = new Date().getTime();
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -67,27 +66,30 @@ class App extends React.Component {
     }
   }
 
-  componentDidMount() {
-    setTimeout(
-      function() {
-        this.setState({
-          isLoading: false
-        });
-      }.bind(this),
-      1200
-    );
-  }
+  // componentDidMount() {
+  //   setTimeout(
+  //     function () {
+  //       this.setState({
+  //         isLoading: false
+  //       });
+  //     }.bind(this),
+  //     1200
+  //   );
+  // }
+
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.active !== prevState.active) {
       this.setState({
-        isVisible: false
+        isVisible: false,
+        image: PAGES[this.state.active].image
       });
       if (this.state.active % 2 === 1) {
         document.body.setAttribute("data-theme", "black-theme");
       } else {
         document.body.setAttribute("data-theme", "white-theme");
       }
+
       if (this.state.active === PAGES.length - 1) {
         this.setState({
           isLast: true
@@ -128,7 +130,7 @@ class App extends React.Component {
           logo={LOGO}
           pages={PAGES}
         />
-        <Main actives={this.state.active} pages={PAGES} />
+        <Main active={this.state.active} pages={PAGES} />
         {this.state.isLast && (
           <Footer servicesLinks={SERVICES} socialLinks={SOCIAL} logo={LOGO} />
         )}

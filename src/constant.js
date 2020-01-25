@@ -1,11 +1,12 @@
 import React from "react";
 import { ReactComponent as Portada } from "./images/portada.svg";
 import { ReactComponent as Message } from "./images/message.svg";
-import { ReactComponent as Nature } from "./images/nature.svg";
+// import { ReactComponent as Nature } from "./images/nature.svg";
 import Button from "./components/Button";
 
 export const PAGES = [
   {
+    id: 0,
     name: "inicio",
     image: <Portada />,
     title: "Hola, mi nombre es Bessy",
@@ -19,6 +20,7 @@ export const PAGES = [
     content: ["Soy desarrolladora Front-end y diseñadora web de Zaragoza"]
   },
   {
+    id: 1,
     name: "personal",
     // image: <Nature />,
     title: "Un poco sobre mi",
@@ -31,6 +33,7 @@ export const PAGES = [
     ]
   },
   {
+    id: 2,
     name: "contacto",
     image: <Message />,
     title: "Estemos en contacto!",

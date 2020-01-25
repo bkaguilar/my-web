@@ -247,14 +247,10 @@
 
     @media #{$break-smallMax} {
       width: 100%;
-
-      .Button--contact {
-        margin-top: 60px;
-      }
     }
 
     &__title {
-      @include showAnimation;
+      // @include showAnimation;
       animation-delay: 1.8s;
       font-size: 5em;
       font-family: "Raleway", sans-serif;
