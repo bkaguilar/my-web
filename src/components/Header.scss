@@ -1,23 +1,19 @@
 @import "../common.scss";
 
 .Header {
-  @include position(fixed, 0, 0, 0, 0);
+  @include position(fixed, 0, 0, unset, 0);
   @include showAnimation;
   animation-delay: $time-delay;
-  height: $header-height;
-  margin: $lr-padding;
-  margin-bottom: 0;
-  padding: 10px;
+  // height: $header-height;
+  padding: $lr-padding $lr-padding 0 $lr-padding;
   z-index: 1;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   @media #{$break-smallMax} {
     height: 80px;
-    margin: 0;
-    padding: 20px  2.5em;
+    padding: 20px 2.5em;
   }
 
   &__figure {

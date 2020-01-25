@@ -20,12 +20,10 @@ body {
   font-size: 100%;
   font-family: "Muli", sans-serif;
   background: $sc-color;
-  // overflow: hidden;
   transition: background $timing-transition ease-in;
   &::-webkit-scrollbar {
-    width: 0;
+    display: none;
   }
-  //
 
   a {
     text-decoration: none;
@@ -99,7 +97,7 @@ body {
 .emoji {
   font-size: 1.3em;
   margin: 0 10px;
-    @media #{$break-smallMax} {
+  @media #{$break-smallMax} {
     margin: 0 5px;
   }
 }

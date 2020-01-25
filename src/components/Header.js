@@ -25,10 +25,13 @@ class Header extends React.Component {
         />
       );
     });
+
+
+    // FIXME: style={{
+    //     background: active % 2 === 1 ? "#191919" : "#f2f4f6"
+    //   }}
     return (
-      <header className="Header" style={{
-        background: active % 2 === 1 ? "#191919" : "#f2f4f6"
-      }}>
+      <header className="Header">
         <figure className="Header__figure">
           <a href="/" title="Bessy Aguilar">
             {logo}

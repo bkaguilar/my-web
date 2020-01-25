@@ -15,6 +15,7 @@ class App extends React.Component {
       active: 0,
       isLast: false,
       isVisible: false,
+      isScroll: false,
       isLoading: true
     };
   }
@@ -57,6 +58,29 @@ class App extends React.Component {
     }
   }
 
+  handleRemove(e) {
+    let d = document.documentElement;
+    let offset = d.scrollTop + window.innerHeight;
+    let height = d.offsetHeight;
+
+    // if (e.keyCode === 38 && d.scrollTop <= 0) {
+    //   this.setState({
+    //     isScroll: false
+    //   });
+    // }
+
+    if (d.scrollTop <= 0 && e.deltaY < -1) {
+      this.setState({
+        isScroll: false
+      });
+    }
+    if (offset === height) {
+      this.setState({
+        isScroll: false
+      });
+    }
+  }
+
   handleKeydown(e) {
     if (e.keyCode === 40 && this.state.active + 1 < PAGES.length) {
       this.nextPage();
@@ -77,7 +101,6 @@ class App extends React.Component {
   //   );
   // }
 
-
   componentDidUpdate(prevProps, prevState) {
     if (this.state.active !== prevState.active) {
       this.setState({
@@ -87,6 +110,12 @@ class App extends React.Component {
         document.body.setAttribute("data-theme", "black-theme");
       } else {
         document.body.setAttribute("data-theme", "white-theme");
+      }
+      if (document.querySelector(".Main").offsetHeight > window.innerHeight) {
+        console.log("big");
+        this.setState({
+          isScroll: true
+        });
       }
 
       if (this.state.active === PAGES.length - 1) {
@@ -118,8 +147,16 @@ class App extends React.Component {
     return (
       <div
         className="App"
-        onWheel={this.handleWheel.bind(this)}
-        onKeyDown={this.handleKeydown.bind(this)}
+        onWheel={
+          this.state.isScroll
+            ? this.handleRemove.bind(this)
+            : this.handleWheel.bind(this)
+        }
+        onKeyDown={
+          this.state.isScroll
+            ? this.handleRemove.bind(this)
+            : this.handleKeydown.bind(this)
+        }
       >
         <Header
           active={this.state.active}
