@@ -99,6 +99,9 @@ body {
 .emoji {
   font-size: 1.3em;
   margin: 0 10px;
+    @media #{$break-smallMax} {
+    margin: 0 5px;
+  }
 }
 
 //Themes

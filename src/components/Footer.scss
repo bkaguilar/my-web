@@ -21,8 +21,9 @@
     justify-content: space-between;
 
     @media #{$break-smallMax} {
-      padding-left: $responsive-padding;
-      padding-right: $responsive-padding;
+      width: 80%;
+      padding-left: 0;
+      padding-right: 0;
 
       flex-direction: column;
     }
@@ -61,9 +62,7 @@
 
     @media #{$break-smallMax} {
       font-size: 0.9em;
-      padding-left: $responsive-padding;
-      padding-right: $responsive-padding;
-
+      padding: 15px $responsive-padding 15px $responsive-padding;
       flex-direction: column;
 
       small {
