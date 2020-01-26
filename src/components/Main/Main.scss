@@ -63,8 +63,6 @@
     }
 
     &__content {
-      @include showAnimation;
-      animation-delay: calc(#{$time-delay} + 0.9s);
       margin-bottom: 15px;
       font-size: 1.3em;
       line-height: 1.8;

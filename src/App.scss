@@ -165,3 +165,8 @@ body[data-theme="white-theme"] {
     display: none;
   }
 }
+
+.showAnimation {
+  @include showAnimation;
+  animation-delay: $time-delay;
+}
