@@ -1,8 +1,9 @@
 @import "../../common.scss";
 .Main {
   // @include position(fixed, calc(#{$header-height} + 64px), 0, 0, 0);
+  flex: 1;
   max-width: $max-width;
-  padding: 109px $lr-padding $lr-padding $lr-padding;
+  padding: $lr-padding;
   margin: 0 auto;
   transition: all $timing-transition ease-in;
 
@@ -12,7 +13,7 @@
   @media #{$break-smallMax} {
     position: relative;
     top: 0;
-    padding: 80px 2.5em 2.5em 2.5em;
+    padding: 2.5em;
   }
 
   &__figure {

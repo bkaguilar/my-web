@@ -1,11 +1,17 @@
 @import "./../../common.scss";
 
 .Footer {
-  @include showAnimation;
   @include position(fixed, unset, 0, 0, 0);
-  animation-delay: calc(#{$time-delay} + 1.2s);
+  opacity: 0;
   background: rgba(white, 0.6);
   max-height: $max-footer;
+  animation: appear 500ms ease 1s forwards;
+
+  @keyframes appear {
+    100% {
+      opacity: 1;
+    }
+  }
 
   @media #{$break-smallMax} {
     position: static;

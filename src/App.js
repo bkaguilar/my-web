@@ -19,13 +19,6 @@ class App extends React.Component {
   }
 
   moveToPage(n) {
-    console.log(
-      "estamos en pagina " +
-        this.state.active +
-        " y movemos a " +
-        (this.state.active + n)
-    );
-    // window.scrollTo(0, 0);
     this.setState({
       active: this.state.active + n
     });
@@ -88,13 +81,18 @@ class App extends React.Component {
     if (touchesEnd - toucheStart > 100 && this.checkPage()[1]) {
       this.moveToPage(-1);
     }
-    if (touchesEnd - toucheStart < 100 && this.checkPage()[0]) {
+    if (touchesEnd - toucheStart < -100 && this.checkPage()[0]) {
       this.moveToPage(1);
     }
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.active !== prevState.active) {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+      });
       if (this.state.active % 2 === 1) {
         document.body.setAttribute("data-theme", "black-theme");
       } else {
