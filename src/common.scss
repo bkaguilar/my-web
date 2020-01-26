@@ -16,7 +16,7 @@ $header-spacing: 0.05em;
 
 //Transitions
 $timing-transition: 500ms;
-$time-delay: 0.4s;
+$time-delay: 0.3s;
 
 //Breakpoints
 $break-smallMax: "only screen and (max-width : 767px)";
@@ -33,7 +33,7 @@ $break-smallMin: "only screen and (min-width : 768px)";
 @mixin showAnimation {
   opacity: 0;
   transform: translateY(20px);
-  animation: show 800ms cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  animation: show 800ms cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
 @mixin position($type, $t, $r, $b, $l) {

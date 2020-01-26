@@ -8,14 +8,14 @@ class Main extends React.Component {
     const { title, image, name, content, button, id } = pages[active];
 
     let paragraphs = content.map((item, index) => {
-      if (content.length > 0) {
+      if (content.length > 1) {
         return (
           <p key={index} className="Main__text__content">
             {item}
           </p>
         );
       }
-      return content;
+      return <p className="Main__text__content">{item}</p>;
     });
 
     return (

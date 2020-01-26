@@ -85,7 +85,7 @@ class App extends React.Component {
       this.moveToPage(1);
     }
   }
-
+  // FIXME:
   showElements() {
     const texts = document.querySelectorAll(".Main__text__content");
     let observer = new IntersectionObserver((entries, observer) => {
