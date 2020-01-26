@@ -7,6 +7,7 @@ import Dot from "./components/Widgets/Dot/Dot";
 import "./App.scss";
 
 let lastTime = new Date().getTime();
+let toucheStart, touchesEnd;
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -50,7 +51,7 @@ class App extends React.Component {
     let height = document.documentElement.offsetHeight;
 
     return [
-      activePage + 1 < PAGES.length && offset >= height,
+      activePage < PAGES.length - 1 && offset >= height,
       activePage > 0 && top <= 0
     ];
   }
@@ -61,7 +62,7 @@ class App extends React.Component {
     if (time - lastTime < 400) return;
     lastTime = time;
 
-    if (delta > 0 && (this.state.active === 0 || this.checkPage()[0])) {
+    if (delta > 0 && this.checkPage()[0]) {
       this.moveToPage(1);
     } else if (delta < 0 && this.checkPage()[1]) {
       this.moveToPage(-1);
@@ -69,12 +70,26 @@ class App extends React.Component {
   }
 
   handleKeydown(e) {
-    console.log(e.key);
     if (e.key === "ArrowDown" && this.checkPage()[0]) {
       this.moveToPage(1);
     }
     if (e.key === "ArrowUp" && this.checkPage()[1]) {
       this.moveToPage(-1);
+    }
+  }
+
+  handleTouchStart(e) {
+    toucheStart = e.touches[0].pageY;
+  }
+
+  handleTouchEnd(e) {
+    touchesEnd = e.changedTouches[0].pageY;
+    console.log("touchstart " + toucheStart + "touchEnd " + touchesEnd);
+    if (touchesEnd - toucheStart > 100 && this.checkPage()[1]) {
+      this.moveToPage(-1);
+    }
+    if (touchesEnd - toucheStart < 100 && this.checkPage()[0]) {
+      this.moveToPage(1);
     }
   }
 
@@ -116,6 +131,8 @@ class App extends React.Component {
         className="App"
         onWheel={this.handleWheel.bind(this)}
         onKeyDown={this.handleKeydown.bind(this)}
+        onTouchStart={this.handleTouchStart.bind(this)}
+        onTouchEnd={this.handleTouchEnd.bind(this)}
       >
         <Header
           {...this.state}
