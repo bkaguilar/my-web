@@ -75,18 +75,7 @@
     }
   }
 
-  &--inicio {
-    height: 100vh;
-    @media #{$break-smallMax} {
-      height: 100vh;
-    }
-  }
-
   &--contacto {
-    height: 100vh;
     align-items: flex-start;
-    @media #{$break-smallMax} {
-      height: auto;
-    }
   }
 }

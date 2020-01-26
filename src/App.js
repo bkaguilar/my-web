@@ -88,11 +88,10 @@ class App extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.active !== prevState.active) {
-      window.scroll({
-        top: 0,
-        left: 0,
-        behavior: "smooth"
-      });
+      // FIXME:
+      setTimeout(function() {
+        window.scrollTo(0, 0);
+      }, 1000);
       if (this.state.active % 2 === 1) {
         document.body.setAttribute("data-theme", "black-theme");
       } else {
