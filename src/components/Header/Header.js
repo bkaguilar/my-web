@@ -1,6 +1,6 @@
 import React from "react";
-import Link from "./Link";
-import Button from "./Button";
+import Link from "../Widgets/Link/Link";
+import Button from "../Widgets/Button/Button";
 import "./Header.scss";
 
 class Header extends React.Component {
@@ -25,7 +25,6 @@ class Header extends React.Component {
         />
       );
     });
-
 
     // FIXME: style={{
     //     background: active % 2 === 1 ? "#191919" : "#f2f4f6"

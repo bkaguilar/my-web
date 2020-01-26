@@ -1,4 +1,4 @@
-@import "../common.scss";
+@import "../../common.scss";
 
 .Header {
   @include position(fixed, 0, 0, unset, 0);

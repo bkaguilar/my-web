@@ -1,10 +1,10 @@
 import React from "react";
 import { ReactComponent as Logo } from "./images/logo.svg";
 import { PAGES, SOCIAL, SERVICES } from "./constant";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
-import Dot from "./components/Dot";
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
+import Footer from "./components/Footer/Footer";
+import Dot from "./components/Widgets/Dot/Dot";
 import "./App.scss";
 
 let lastTime = new Date().getTime();
@@ -25,6 +25,7 @@ class App extends React.Component {
         " y movemos a " +
         (this.state.active + n)
     );
+    // window.scrollTo(0, 0);
     this.setState({
       active: this.state.active + n
     });

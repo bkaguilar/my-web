@@ -2,7 +2,7 @@ import React from "react";
 import { ReactComponent as Portada } from "./images/portada.svg";
 import { ReactComponent as Message } from "./images/message.svg";
 // import { ReactComponent as Nature } from "./images/nature.svg";
-import Button from "./components/Button";
+import Button from "./components/Widgets/Button/Button";
 
 export const PAGES = [
   {
