@@ -14,13 +14,18 @@ class App extends React.Component {
     this.state = {
       active: 0,
       isLast: false,
-      isVisible: false,
-      isScroll: false
+      isVisible: false
     };
   }
 
   moveToPage(n) {
-    return this.setState({
+    console.log(
+      "estamos en pagina " +
+        this.state.active +
+        " y movemos a " +
+        (this.state.active + n)
+    );
+    this.setState({
       active: this.state.active + n
     });
   }
@@ -43,30 +48,29 @@ class App extends React.Component {
     let time = new Date().getTime();
     if (time - lastTime < 400) return;
     lastTime = time;
-    if (e.deltaY > 1 && this.state.active + 1 < PAGES.length) {
+
+    let top = window.scrollY;
+    let offset = top + window.innerHeight;
+    let height = document.documentElement.offsetHeight;
+    const activePage = this.state.active;
+
+    if (
+      e.deltaY > 0 &&
+      (activePage === 0 || (activePage + 1 < PAGES.length && offset >= height))
+    ) {
       this.moveToPage(1);
-    } else if (e.deltaY < -1 && this.state.active >= 1) {
+    } else if (e.deltaY < 0 && activePage > 0 && top <= 0) {
       this.moveToPage(-1);
     }
   }
 
-  handleRemove(e) {
-    let top = document.documentElement.scrollTop;
-    let offset = top + window.innerHeight;
-    let height = document.documentElement.offsetHeight;
-
-    if ((top <= 0 && e.deltaY < -1) || (offset === height && e.deltaY > 1)) {
-      this.setState({
-        isScroll: false
-      });
-    }
-  }
-
   handleKeydown(e) {
-    if (e.keyCode === 40 && this.state.active + 1 < PAGES.length) {
+    console.log("estamos en handleKeydown()");
+    console.log(e.key);
+    if (e.key === "ArrowDown" && this.state.active + 1 < PAGES.length) {
       this.moveToPage(1);
     }
-    if (e.keyCode === 38 && this.state.active >= 1) {
+    if (e.key === "ArrowUp" && this.state.active >= 1) {
       this.moveToPage(-1);
     }
   }
@@ -80,13 +84,6 @@ class App extends React.Component {
         document.body.setAttribute("data-theme", "black-theme");
       } else {
         document.body.setAttribute("data-theme", "white-theme");
-      }
-
-      if (document.documentElement.offsetHeight > window.innerHeight) {
-        console.log("im in");
-        this.setState({
-          isScroll: true
-        });
       }
 
       if (this.state.active === PAGES.length - 1) {
@@ -118,16 +115,8 @@ class App extends React.Component {
     return (
       <div
         className="App"
-        onWheel={
-          this.state.isScroll
-            ? this.handleRemove.bind(this)
-            : this.handleWheel.bind(this)
-        }
-        onKeyDown={
-          this.state.isScroll
-            ? this.handleRemove.bind(this)
-            : this.handleKeydown.bind(this)
-        }
+        onWheel={this.handleWheel.bind(this)}
+        onKeyDown={this.handleKeydown.bind(this)}
       >
         <Header
           active={this.state.active}
