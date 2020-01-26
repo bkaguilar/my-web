@@ -41,7 +41,7 @@
 
     &__email {
       @include showAnimation();
-      animation-delay: calc(#{$time-delay} + 1s);
+      animation-delay: calc(#{$time-delay} + 0.5s);
       text-transform: uppercase;
       letter-spacing: 0.15px;
       font-size: 0.8em;
