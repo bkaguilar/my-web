@@ -1,6 +1,5 @@
 import React from "react";
-import { ReactComponent as Logo } from "./images/logo.svg";
-import { PAGES, SOCIAL, SERVICES } from "./constant";
+import { PAGES, SOCIAL, SERVICES, LOGO } from "./constant";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
@@ -45,42 +44,42 @@ class App extends React.Component {
     }
   }
 
-  handleWheel(e) {
-    let time = new Date().getTime();
-    if (time - lastTime < 400) return;
-    lastTime = time;
-
+  checkPage(activePage = this.state.active) {
     let top = window.scrollY;
     let offset = top + window.innerHeight;
     let height = document.documentElement.offsetHeight;
-    const activePage = this.state.active;
 
-    if (
-      e.deltaY > 0 &&
-      (activePage === 0 || (activePage + 1 < PAGES.length && offset >= height))
-    ) {
+    return [
+      activePage + 1 < PAGES.length && offset >= height,
+      activePage > 0 && top <= 0
+    ];
+  }
+
+  handleWheel(e) {
+    let time = new Date().getTime();
+    let delta = e.deltaY || -e.wheelDelta || e.detail;
+    if (time - lastTime < 400) return;
+    lastTime = time;
+
+    if (delta > 0 && (this.state.active === 0 || this.checkPage()[0])) {
       this.moveToPage(1);
-    } else if (e.deltaY < 0 && activePage > 0 && top <= 0) {
+    } else if (delta < 0 && this.checkPage()[1]) {
       this.moveToPage(-1);
     }
   }
 
   handleKeydown(e) {
-    console.log("estamos en handleKeydown()");
     console.log(e.key);
-    if (e.key === "ArrowDown" && this.state.active + 1 < PAGES.length) {
+    if (e.key === "ArrowDown" && this.checkPage()[0]) {
       this.moveToPage(1);
     }
-    if (e.key === "ArrowUp" && this.state.active >= 1) {
+    if (e.key === "ArrowUp" && this.checkPage()[1]) {
       this.moveToPage(-1);
     }
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.active !== prevState.active) {
-      this.setState({
-        isVisible: false
-      });
       if (this.state.active % 2 === 1) {
         document.body.setAttribute("data-theme", "black-theme");
       } else {
@@ -100,8 +99,7 @@ class App extends React.Component {
   }
 
   render() {
-    const LOGO = <Logo title="Bk Aguilar logo" className="Logo" />;
-    let dot = PAGES.map((item, i) => {
+    let dots = PAGES.map((item, i) => {
       return (
         <Dot
           key={item.name}
@@ -120,10 +118,9 @@ class App extends React.Component {
         onKeyDown={this.handleKeydown.bind(this)}
       >
         <Header
-          active={this.state.active}
+          {...this.state}
           onClick={this.handleChange.bind(this)}
-          onClickResponsive={this.handleShowMenu.bind(this)}
-          isVisible={this.state.isVisible}
+          showMenu={this.handleShowMenu.bind(this)}
           logo={LOGO}
           pages={PAGES}
         />
@@ -131,7 +128,7 @@ class App extends React.Component {
         {this.state.isLast && (
           <Footer servicesLinks={SERVICES} socialLinks={SOCIAL} logo={LOGO} />
         )}
-        <ul className="dots">{dot}</ul>
+        <ul className="dots">{dots}</ul>
         <section className="loading"></section>
       </div>
     );

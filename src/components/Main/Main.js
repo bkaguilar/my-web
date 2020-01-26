@@ -35,11 +35,10 @@ class Main extends React.Component {
               </h2>
               {paragraphs}
               {button}
-
             </div>
-          </main >
+          </main>
         </CSSTransition>
-      </TransitionGroup >
+      </TransitionGroup>
     );
   }
 }

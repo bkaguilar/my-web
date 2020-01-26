@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactComponent as Logo } from "./images/logo.svg";
 import { ReactComponent as Portada } from "./images/portada.svg";
 import { ReactComponent as Message } from "./images/message.svg";
 // import { ReactComponent as Nature } from "./images/nature.svg";
@@ -78,3 +79,5 @@ export const SERVICES = [
     link: "https://t.me/bkaguilar"
   }
 ];
+
+export const LOGO = <Logo title="Bk Aguilar logo" className="Logo" />;

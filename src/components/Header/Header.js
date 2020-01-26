@@ -5,22 +5,17 @@ import "./Header.scss";
 
 class Header extends React.Component {
   render() {
-    const {
-      active,
-      onClick,
-      onClickResponsive,
-      logo,
-      pages,
-      isVisible
-    } = this.props;
-    let link = pages.map((item, i) => {
+    const { onClick, showMenu, logo, pages } = this.props;
+    let links = pages.map((item, i) => {
       return (
         <Link
           key={item.name}
           index={i}
           name={item.name}
           href={"#" + item.name}
-          className={active === i ? "Link--header active" : "Link--header"}
+          className={
+            this.props.active === i ? "Link--header active" : "Link--header"
+          }
           onClick={onClick}
         />
       );
@@ -29,6 +24,7 @@ class Header extends React.Component {
     // FIXME: style={{
     //     background: active % 2 === 1 ? "#191919" : "#f2f4f6"
     //   }}
+
     return (
       <header className="Header">
         <figure className="Header__figure">
@@ -37,10 +33,14 @@ class Header extends React.Component {
             <h1 className="Header__figure__text">bk Aguilar</h1>
           </a>
         </figure>
-        <nav className={isVisible ? "Header__nav showMenu" : "Header__nav"}>
-          {link}
+        <nav
+          className={
+            this.props.isVisible ? "Header__nav showMenu" : "Header__nav"
+          }
+        >
+          {links}
           <Button type="button" className="Button--header" value="Resume" />
-          {isVisible && (
+          {this.props.isVisible && (
             <div className="Header__nav__email">
               <a
                 href="mailto:hola@bkaguilar.com"
@@ -63,17 +63,17 @@ class Header extends React.Component {
         <button
           type="button"
           className="Header__responsive"
-          onClick={onClickResponsive}
+          onClick={showMenu}
           style={{
-            color: isVisible ? "#191919" : "inherit"
+            color: this.props.isVisible ? "#191919" : "inherit"
           }}
         >
           <span className="Header__responsive__text">
-            {isVisible ? "Cerrar" : "Menú"}
+            {this.props.isVisible ? "Cerrar" : "Menú"}
           </span>
           <span
             className={
-              isVisible
+              this.props.isVisible
                 ? "Header__responsive__lines is-visible"
                 : "Header__responsive__lines"
             }
