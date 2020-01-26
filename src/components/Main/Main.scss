@@ -44,34 +44,35 @@
   &__text {
     position: relative;
     margin: 0 0 20px 0;
+    width: 60%;
+
+    @media #{$break-smallMax} {
+      width: 100%;
+    }
 
     &__title {
       @include showAnimation;
       animation-delay: calc(#{$time-delay} + 0.6s);
       position: relative;
-      font-size: 6em;
+      font-size: 5em;
       font-family: "Raleway", sans-serif;
       letter-spacing: -0.02em;
       margin-bottom: 50px;
-      width: 80%;
       transition: all 1s linear;
       // cubic-bezier(0.65, 0.07, 0, 1.35)
 
       @media #{$break-smallMax} {
         font-size: 1.8em;
-        width: 100%;
       }
     }
 
     &__content {
       margin-bottom: 15px;
-      font-size: 1.3em;
-      line-height: 1.8;
+      font-size: 1.1em;
       letter-spacing: 0.04em;
 
       @media #{$break-smallMax} {
         font-size: 1em;
-        width: 100%;
         line-height: 1.4;
       }
     }
