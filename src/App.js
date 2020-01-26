@@ -15,20 +15,13 @@ class App extends React.Component {
       active: 0,
       isLast: false,
       isVisible: false,
-      isScroll: false,
-      isLoading: true
+      isScroll: false
     };
   }
 
-  nextPage(sign) {
+  moveToPage(n) {
     return this.setState({
-      active: this.state.active + 1
-    });
-  }
-
-  prevPage(sign) {
-    return this.setState({
-      active: this.state.active - 1
+      active: this.state.active + n
     });
   }
 
@@ -50,31 +43,19 @@ class App extends React.Component {
     let time = new Date().getTime();
     if (time - lastTime < 400) return;
     lastTime = time;
-
     if (e.deltaY > 1 && this.state.active + 1 < PAGES.length) {
-      this.nextPage();
+      this.moveToPage(1);
     } else if (e.deltaY < -1 && this.state.active >= 1) {
-      this.prevPage();
+      this.moveToPage(-1);
     }
   }
 
   handleRemove(e) {
-    let d = document.documentElement;
-    let offset = d.scrollTop + window.innerHeight;
-    let height = d.offsetHeight;
+    let top = document.documentElement.scrollTop;
+    let offset = top + window.innerHeight;
+    let height = document.documentElement.offsetHeight;
 
-    // if (e.keyCode === 38 && d.scrollTop <= 0) {
-    //   this.setState({
-    //     isScroll: false
-    //   });
-    // }
-
-    if (d.scrollTop <= 0 && e.deltaY < -1) {
-      this.setState({
-        isScroll: false
-      });
-    }
-    if (offset === height) {
+    if ((top <= 0 && e.deltaY < -1) || (offset === height && e.deltaY > 1)) {
       this.setState({
         isScroll: false
       });
@@ -83,32 +64,15 @@ class App extends React.Component {
 
   handleKeydown(e) {
     if (e.keyCode === 40 && this.state.active + 1 < PAGES.length) {
-      this.nextPage();
+      this.moveToPage(1);
     }
     if (e.keyCode === 38 && this.state.active >= 1) {
-      this.prevPage();
-    }
-  }
-
-  // componentDidMount() {
-  //   //   setTimeout(
-  //   //     function () {
-  //   //       this.setState({
-  //   //         isLoading: false
-  //   //       });
-  //   //     }.bind(this),
-  //   //     1200
-  //   //   );
-  // }
-  scroll() {
-    if (window.pageYOffset > 0) {
-      console.log(window.pageYOffset);
+      this.moveToPage(-1);
     }
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.active !== prevState.active) {
-      console.log("se actualiza");
       this.setState({
         isVisible: false
       });
@@ -117,7 +81,9 @@ class App extends React.Component {
       } else {
         document.body.setAttribute("data-theme", "white-theme");
       }
-      if (document.querySelector(".Main").offsetHeight > window.innerHeight) {
+
+      if (document.documentElement.offsetHeight > window.innerHeight) {
+        console.log("im in");
         this.setState({
           isScroll: true
         });
@@ -136,7 +102,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log("render");
     const LOGO = <Logo title="Bk Aguilar logo" className="Logo" />;
     let dot = PAGES.map((item, i) => {
       return (
@@ -177,7 +142,7 @@ class App extends React.Component {
           <Footer servicesLinks={SERVICES} socialLinks={SOCIAL} logo={LOGO} />
         )}
         <ul className="dots">{dot}</ul>
-        {this.state.isLoading && <section className="loading"></section>}
+        <section className="loading"></section>
       </div>
     );
   }
