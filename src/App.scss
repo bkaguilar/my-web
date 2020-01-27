@@ -114,8 +114,32 @@ body {
 .emoji {
   font-size: 1.3em;
   margin: 0 10px;
+
   @media #{$break-smallMax} {
     margin: 0 5px;
+  }
+}
+
+.patterns {
+  position: absolute;
+  top: -5px;
+  left: -30px;
+  height: 100px;
+  width: 150px;
+  opacity: 0;
+  background: url("./images/pattern5.svg") no-repeat;
+  animation: showPattern $timing-transition ease 1.2s forwards;
+
+  @keyframes showPattern {
+    100% {
+      opacity: 0.3;
+    }
+  }
+  @media #{$break-smallMax} {
+    left: -3px;
+    top: -10px;
+    height: 50px;
+    width: 80px;
   }
 }
 
@@ -123,6 +147,10 @@ body {
 body[data-theme="black-theme"] {
   background: $pp-color;
   @include patternBackground("./images/pattern6.svg");
+
+  &::before {
+    position: fixed;
+  }
 
   header {
     color: $sc-color;

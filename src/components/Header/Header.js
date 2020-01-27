@@ -42,6 +42,7 @@ class Header extends React.Component {
           <Button type="button" className="Button--header" value="Resume" />
           {this.props.isVisible && (
             <div className="Header__nav__email">
+              <div className="patterns"></div>
               <a
                 href="mailto:hola@bkaguilar.com"
                 subject="🤟🏽Hola Bessy, quiero proponerte algo"

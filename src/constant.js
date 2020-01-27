@@ -44,7 +44,7 @@ export const PAGES = [
     image: <Plane />,
     title: "Estemos en contacto!",
     content: [
-      "¿Tienes alguna pregunta o propuesta?, escribeme y hazmela saber."
+      "¿Tienes alguna pregunta o propuesta?, escribeme y hazmela saber. ⊂(´･◡･⊂ )"
     ]
   }
 ];
