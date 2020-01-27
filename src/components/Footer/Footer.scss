@@ -6,18 +6,7 @@
   background: white;
   max-height: $max-footer;
   animation: appear 500ms ease 1s forwards;
-
-  &::before {
-    content: "";
-    background: url("../../images/pattern6.svg") repeat;
-    opacity: 0.3;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-  }
+  @include patternBackground("./images/pattern6.svg");
 
   @keyframes appear {
     100% {

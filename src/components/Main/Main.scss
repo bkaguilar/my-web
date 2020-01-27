@@ -13,16 +13,19 @@
 
   @media #{$break-smallMax} {
     position: relative;
+    justify-content: center;
     top: 0;
     padding: 1.6em;
   }
 
   &__text {
     position: relative;
-    margin: 30px 0;
-    width: 60%;
+    margin: 40px 0;
+    width: 63%;
 
     @media #{$break-smallMax} {
+      margin-top: initial;
+      text-align: center;
       width: 100%;
     }
 
@@ -57,20 +60,21 @@
 
   &__figure {
     z-index: -1;
-    clip-path: circle(0 at 100% 100%);
+    clip-path: circle(0 at 50% 100%);
     animation: showImg 4s cubic-bezier(0.165, 0.84, 0.44, 1) 1.5s forwards;
 
     @keyframes showImg {
       100% {
-        clip-path: circle(200% at 100% 100%);
+        clip-path: circle(200% at 50% 100%);
       }
     }
   }
 
   &--inicio {
     .Main__text {
-      margin-top: 80px;
+      margin-top: 60px;
     }
+
     .Main__figure {
       @include position(absolute, unset, 0, 0, 0);
 
@@ -106,10 +110,16 @@
   }
 
   &--personal {
+    align-items: center;
+
     .Main__figure {
-      // @include position(fixed, 40%, 70px, unset, unset);
-      margin: 200px 70px;
-      width: 40%;
+      margin: 200px 30px;
+      width: 30%;
+
+      @media #{$break-smallMax} {
+        width: 100%;
+        margin: 10px;
+      }
     }
 
     .Main__text__content:nth-of-type(1) {
@@ -119,12 +129,26 @@
 
   &--contacto {
     .Main__figure {
-      @include position(absolute, 100px, 10%, unset, unset);
+      @include position(absolute, 100px, 10%, 0, unset);
       transform: rotate(-45deg);
-      width: 50%;
+      width: 80%;
+      clip-path: circle(0 at 0 0);
+      animation: showPlane 4s linear 1.5s forwards;
+
+      @keyframes showPlane {
+        100% {
+          clip-path: circle(200% at 0 0);
+        }
+      }
 
       .plane-svg {
         transform: translate(-90px, -90px) rotate(15deg);
+      }
+
+      @media #{$break-smallMax} {
+        transform: rotate(-55deg);
+        top: 30px;
+        width: inherit;
       }
     }
   }

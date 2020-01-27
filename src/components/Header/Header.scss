@@ -1,8 +1,6 @@
 @import "../../common.scss";
 
 .Header {
-  // @include position(fixed, 0, 0, unset, 0);
-  // height: $header-height;
   padding: $lr-padding $lr-padding 0 $lr-padding;
   z-index: 1;
   display: flex;
