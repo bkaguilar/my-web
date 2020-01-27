@@ -26,17 +26,17 @@ body {
     display: none;
   }
 
-  &::before {
-    content: "";
-    background: url("./images/pattern6.svg") repeat;
-    opacity: 0.3;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-  }
+  // &::before {
+  //   content: "";
+  //   background: url("./images/pattern6.svg") repeat;
+  //   opacity: 0.3;
+  //   top: 0;
+  //   left: 0;
+  //   bottom: 0;
+  //   right: 0;
+  //   position: absolute;
+  //   z-index: -1;
+  // }
 
   a {
     text-decoration: none;
@@ -136,12 +136,12 @@ body[data-theme="black-theme"] {
   main {
     color: $sc-color;
 
-    figure {
-      left: 50px;
-    }
-
     h2 {
       color: $brand-color_1;
+
+      .title-point {
+        color: $sc-color;
+      }
     }
   }
 

@@ -15,7 +15,11 @@ class Main extends React.Component {
           </p>
         );
       }
-      return <p className="Main__text__content">{item}</p>;
+      return (
+        <p key={index} className="Main__text__content">
+          {item}
+        </p>
+      );
     });
 
     return (
@@ -28,7 +32,6 @@ class Main extends React.Component {
           classNames="titleAnimation"
         >
           <main tabIndex="0" id={name} className={"Main Main--" + name}>
-            {image && <figure className="Main__figure">{image}</figure>}
             <div className="Main__text">
               <h2 className="Main__text__title">
                 {title} <span className="title-point">.</span>
@@ -36,6 +39,7 @@ class Main extends React.Component {
               {paragraphs}
               {button}
             </div>
+            {image && <figure className="Main__figure">{image}</figure>}
           </main>
         </CSSTransition>
       </TransitionGroup>
