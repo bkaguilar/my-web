@@ -151,7 +151,11 @@ class App extends React.Component {
         onWheel={this.handleWheel.bind(this)}
         onKeyDown={this.handleKeydown.bind(this)}
         onTouchStart={this.handleTouchStart.bind(this)}
-        onTouchEnd={this.handleTouchEnd.bind(this)}
+        onTouchEnd={
+          this.state.isVisible
+            ? !this.handleTouchEnd.bind(this)
+            : this.handleTouchEnd.bind(this)
+        }
       >
         <Header
           {...this.state}
