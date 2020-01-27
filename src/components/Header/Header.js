@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Anchor from "../Widgets/Anchor/Anchor";
 import Button from "../Widgets/Button/Button";
 import "./Header.scss";
@@ -39,7 +40,9 @@ class Header extends React.Component {
           }
         >
           {anchors}
-          <Button type="button" className="Button--header" value="Resume" />
+          <Link to="/resume" target="_blank">
+            <Button type="button" className="Button--header" value="Resume" />
+          </Link>
           {this.props.isVisible && (
             <div className="Header__nav__email">
               <div className="patterns"></div>
