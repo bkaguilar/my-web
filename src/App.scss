@@ -181,5 +181,5 @@ body[data-theme="white-theme"] {
 
 .showAnimation {
   @include showAnimation;
-  animation-delay: $time-delay;
+  animation-delay: $time-delay + 1;
 }

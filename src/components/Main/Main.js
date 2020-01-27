@@ -33,6 +33,7 @@ class Main extends React.Component {
         >
           <main tabIndex="0" id={name} className={"Main Main--" + name}>
             <div className="Main__text">
+              <div className="Main__text__patterns"></div>
               <h2 className="Main__text__title">
                 {title} <span className="title-point">.</span>
               </h2>
