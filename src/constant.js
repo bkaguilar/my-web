@@ -1,8 +1,8 @@
 import React from "react";
 import { ReactComponent as Logo } from "./images/logo.svg";
 import { ReactComponent as Portada } from "./images/portada.svg";
-import { ReactComponent as Message } from "./images/message.svg";
-// import { ReactComponent as Nature } from "./images/nature.svg";
+import { ReactComponent as Bike } from "./images/bike.svg";
+import { ReactComponent as Plane } from "./images/plane.svg";
 import Button from "./components/Widgets/Button/Button";
 
 export const PAGES = [
@@ -23,7 +23,7 @@ export const PAGES = [
   {
     id: 1,
     name: "personal",
-    // image: <Nature />,
+    image: <Bike />,
     title: "Un poco sobre mi",
     content: [
       "Soy desarrolladora front-end desde el 2019, hondureña 🇭🇳 con sede en Zaragoza, España. Mi formación académica es de Técnico en Computación, pero soy fundamentalmente autodidacta.",
@@ -41,7 +41,7 @@ export const PAGES = [
   {
     id: 2,
     name: "contacto",
-    image: <Message />,
+    image: <Plane />,
     title: "Estemos en contacto!",
     content: [
       "¿Tienes alguna pregunta o propuesta?, escribeme y hazmela saber."

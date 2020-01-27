@@ -3,9 +3,21 @@
 .Footer {
   @include position(fixed, unset, 0, 0, 0);
   opacity: 0;
-  background: rgba(white, 0.6);
+  background: white;
   max-height: $max-footer;
   animation: appear 500ms ease 1s forwards;
+
+  // &::before {
+  //   content: "";
+  //   background: url("../../images/pattern6.svg") repeat;
+  //   opacity: 0.3;
+  //   top: 0;
+  //   left: 0;
+  //   bottom: 0;
+  //   right: 0;
+  //   position: absolute;
+  //   z-index: -1;
+  // }
 
   @keyframes appear {
     100% {
