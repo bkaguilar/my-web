@@ -26,7 +26,8 @@ class App extends React.Component {
 
   handleChange(e) {
     this.setState({
-      active: parseInt(e.currentTarget.attributes.index.value)
+      active: parseInt(e.currentTarget.attributes.index.value),
+      isVisible: false
     });
   }
 
