@@ -52,30 +52,30 @@ export const PAGES = [
 export const SOCIAL = [
   {
     name: "Github",
-    link: "https://github.com/bkaguilar"
+    anchor: "https://github.com/bkaguilar"
   },
   {
     name: "Linkedin",
-    link: "https://linkedin.com/in/bk-aguilar"
+    anchor: "https://linkedin.com/in/bk-aguilar"
   },
   {
     name: "CodePen",
-    link: "https://codepen.io/bkaguilar/pens/public/"
+    anchor: "https://codepen.io/bkaguilar/pens/public/"
   },
   {
     name: "Instagram",
-    link: "https://www.instagram.com/bk_aguilar/"
+    anchor: "https://www.instagram.com/bk_aguilar/"
   }
 ];
 
 export const SERVICES = [
   {
     name: "hola@bkaguilar.com",
-    link: "mailto:hola@bkaguilar.com"
+    anchor: "mailto:hola@bkaguilar.com"
   },
   {
     name: "Telegram",
-    link: "https://t.me/bkaguilar"
+    anchor: "https://t.me/bkaguilar"
   }
 ];
 

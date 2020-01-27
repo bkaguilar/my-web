@@ -1,7 +1,7 @@
 import React from "react";
-import "./Link.scss";
+import "./Anchor.scss";
 
-class Link extends React.Component {
+class Anchor extends React.Component {
   render() {
     const { href, name, index, onClick, className, target } = this.props;
     return (
@@ -11,7 +11,7 @@ class Link extends React.Component {
         index={index}
         name={name}
         title={name}
-        className={"Link " + className}
+        className={"Anchor " + className}
         onClick={onClick}
       >
         {name}
@@ -20,4 +20,4 @@ class Link extends React.Component {
   }
 }
 
-export default Link;
+export default Anchor;

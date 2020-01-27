@@ -3,11 +3,11 @@ import "./Resume.scss";
 
 class Resume extends React.Component {
   render() {
-    const { type, onClick, className, value } = this.props;
+    // const { type, onClick, className, value } = this.props;
     return (
       <main>
-        <aside></aside>
-        <article></article>
+        <aside>hola</aside>
+        <article>mundo!</article>
       </main>
     );
   }

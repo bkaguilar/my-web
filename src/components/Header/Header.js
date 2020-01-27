@@ -1,20 +1,20 @@
 import React from "react";
-import Link from "../Widgets/Link/Link";
+import Anchor from "../Widgets/Anchor/Anchor";
 import Button from "../Widgets/Button/Button";
 import "./Header.scss";
 
 class Header extends React.Component {
   render() {
     const { onClick, showMenu, logo, pages } = this.props;
-    let links = pages.map((item, i) => {
+    let anchors = pages.map((item, i) => {
       return (
-        <Link
+        <Anchor
           key={item.name}
           index={i}
           name={item.name}
           href={"#" + item.name}
           className={
-            this.props.active === i ? "Link--header active" : "Link--header"
+            this.props.active === i ? "Anchor--header active" : "Anchor--header"
           }
           onClick={onClick}
         />
@@ -38,7 +38,7 @@ class Header extends React.Component {
             this.props.isVisible ? "Header__nav showMenu" : "Header__nav"
           }
         >
-          {links}
+          {anchors}
           <Button type="button" className="Button--header" value="Resume" />
           {this.props.isVisible && (
             <div className="Header__nav__email">

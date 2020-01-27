@@ -1,8 +1,10 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { PAGES, SOCIAL, SERVICES, LOGO } from "./constant";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
+import Resume from "./components/Resume/Resume";
 import Dot from "./components/Widgets/Dot/Dot";
 import "./App.scss";
 
@@ -157,19 +159,32 @@ class App extends React.Component {
             : this.handleTouchEnd.bind(this)
         }
       >
-        <Header
-          {...this.state}
-          onClick={this.handleChange.bind(this)}
-          showMenu={this.handleShowMenu.bind(this)}
-          logo={LOGO}
-          pages={PAGES}
-        />
-        <Main active={this.state.active} pages={PAGES} />
-        {this.state.isLast && (
-          <Footer servicesLinks={SERVICES} socialLinks={SOCIAL} logo={LOGO} />
-        )}
-        <ul className="dots">{dots}</ul>
-        <section className="loading"></section>
+        <Router>
+          <Switch>
+            <Route path="/" exact>
+              <Header
+                {...this.state}
+                onClick={this.handleChange.bind(this)}
+                showMenu={this.handleShowMenu.bind(this)}
+                logo={LOGO}
+                pages={PAGES}
+              />
+              <Main active={this.state.active} pages={PAGES} />
+              {this.state.isLast && (
+                <Footer
+                  servicesAnchors={SERVICES}
+                  socialAnchors={SOCIAL}
+                  logo={LOGO}
+                />
+              )}
+              <ul className="dots">{dots}</ul>
+              <section className="loading"></section>
+            </Route>
+            <Route path="/resume" exact>
+              <Resume />
+            </Route>
+          </Switch>
+        </Router>
       </div>
     );
   }

@@ -1,6 +1,6 @@
 @import "../../../common.scss";
 
-.Link {
+.Anchor {
   @include header-text();
   @include showAnimation;
   position: relative;
