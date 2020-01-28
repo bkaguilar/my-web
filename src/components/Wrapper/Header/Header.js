@@ -36,14 +36,14 @@ class Header extends React.Component {
         </figure>
         <nav
           className={
-            this.props.isVisible ? "Header__nav showMenu" : "Header__nav"
+            this.props.isMenuVisible ? "Header__nav showMenu" : "Header__nav"
           }
         >
           {anchors}
           <Link to="/resume" target="_blank">
             <Button type="button" className="Button--header" value="Resume" />
           </Link>
-          {this.props.isVisible && (
+          {this.props.isMenuVisible && (
             <div className="Header__nav__email">
               <div className="patterns"></div>
               <a
@@ -69,15 +69,15 @@ class Header extends React.Component {
           className="Header__responsive"
           onClick={showMenu}
           style={{
-            color: this.props.isVisible ? "#191919" : "inherit"
+            color: this.props.isMenuVisible ? "#191919" : "inherit"
           }}
         >
           <span className="Header__responsive__text">
-            {this.props.isVisible ? "Cerrar" : "Menú"}
+            {this.props.isMenuVisible ? "Cerrar" : "Menú"}
           </span>
           <span
             className={
-              this.props.isVisible
+              this.props.isMenuVisible
                 ? "Header__responsive__lines is-visible"
                 : "Header__responsive__lines"
             }

@@ -14,7 +14,7 @@ class Wrapper extends React.Component {
     this.state = {
       active: 0,
       isLast: false,
-      isVisible: false
+      isMenuVisible: false
     };
   }
 
@@ -27,14 +27,14 @@ class Wrapper extends React.Component {
   handleChange(e) {
     this.setState({
       active: parseInt(e.currentTarget.attributes.index.value),
-      isVisible: false
+      isMenuVisible: false
     });
   }
 
   handleShowMenu() {
     if (window.innerWidth <= 768) {
       this.setState({
-        isVisible: !this.state.isVisible
+        isMenuVisible: !this.state.isMenuVisible
       });
     }
   }
@@ -78,7 +78,7 @@ class Wrapper extends React.Component {
 
   handleTouchEnd(e) {
     touchesEnd = e.changedTouches[0].pageY;
-    if (this.state.isVisible) return;
+    if (this.state.isMenuVisible) return;
 
     if (touchesEnd - toucheStart > 100 && this.checkPage()[1]) {
       this.moveToPage(-1);
@@ -114,7 +114,7 @@ class Wrapper extends React.Component {
       // FIXME:
       setTimeout(function() {
         window.scrollTo(0, 0);
-      }, 1000);
+      }, 500);
       if (this.state.active % 2 === 1) {
         document
           .querySelector(".Wrapper")
@@ -157,7 +157,7 @@ class Wrapper extends React.Component {
         onTouchEnd={this.handleTouchEnd.bind(this)}
         data-theme="white-theme"
         style={{
-          position: this.state.isVisible ? "fixed" : ""
+          position: this.state.isMenuVisible ? "fixed" : ""
         }}
       >
         <Header

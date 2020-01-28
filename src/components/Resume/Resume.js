@@ -15,11 +15,11 @@ class Resume extends React.Component {
     return (
       <main className="Resume">
         <header className="Resume__header">
-          <h1 className="Resume__header__name">Bessy G. Aguilar</h1>
+          <h1 className="Resume__header__name">Bessy Karina G. Aguilar</h1>
           <h2 className="Resume__header__title">Front end en proceso....</h2>
           <span>Zaragoza, España</span>
           <a
-            href="algo.pdf"
+            href={"./BessyAguilar-Front-endDeveloper.pdf"}
             className="Resume__header__link"
             title="Curriculum PDF"
             alt="PDF"

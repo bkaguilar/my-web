@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactComponent as Logo } from "./images/logo.svg";
-import { ReactComponent as Portada } from "./images/portada2.svg";
+import { ReactComponent as Portada } from "./images/portada.svg";
 import { ReactComponent as Bike } from "./images/bike.svg";
 import { ReactComponent as Plane } from "./images/plane.svg";
 import Button from "./components/Widgets/Button/Button";
