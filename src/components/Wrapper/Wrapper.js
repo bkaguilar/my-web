@@ -1,8 +1,8 @@
 import React from "react";
 import { PAGES, SOCIAL, SERVICES, LOGO } from "../../constant";
-import Header from "../Header/Header";
-import Main from "../Main/Main";
-import Footer from "../Footer/Footer";
+import Header from "./Header/Header";
+import Main from "./Main/Main";
+import Footer from "./Footer/Footer";
 import Dot from "../Widgets/Dot/Dot";
 
 let lastTime = new Date().getTime();

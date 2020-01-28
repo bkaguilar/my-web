@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Anchor from "../Widgets/Anchor/Anchor";
-import Button from "../Widgets/Button/Button";
+import Anchor from "../../Widgets/Anchor/Anchor";
+import Button from "../../Widgets/Button/Button";
 import "./Header.scss";
 
 class Header extends React.Component {

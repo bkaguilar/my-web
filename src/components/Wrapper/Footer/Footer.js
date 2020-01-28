@@ -1,5 +1,5 @@
 import React from "react";
-import Anchor from "../Widgets/Anchor/Anchor";
+import Anchor from "../../Widgets/Anchor/Anchor";
 import "./Footer.scss";
 
 class Footer extends React.Component {

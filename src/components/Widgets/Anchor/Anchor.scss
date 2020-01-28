@@ -13,12 +13,12 @@
     left: 50%;
     transform: translate(-50%, -50%) scaleY(0);
     transform-origin: 0 bottom;
+    transition: all 200ms ease;
     width: 100%;
     height: 100%;
     padding: 15px 10px;
     border-radius: 4px;
     background: rgba($brand-color_2, 0.1);
-    transition: all 200ms ease;
   }
 
   &:hover::before {
@@ -44,7 +44,7 @@
 
       @for $i from 1 through 3 {
         &:nth-of-type(#{$i}) {
-          animation-delay: #{$i * ($time-delay - 0.2)};
+          animation-delay: #{$i * $time-delay};
         }
       }
     }

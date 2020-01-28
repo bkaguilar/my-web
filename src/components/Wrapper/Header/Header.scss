@@ -1,4 +1,4 @@
-@import "../../common.scss";
+@import "../../../common.scss";
 
 .Header {
   padding: $lr-padding $lr-padding 0 $lr-padding;
@@ -40,7 +40,7 @@
     &__email {
       @include showAnimation();
       position: relative;
-      animation-delay: calc(#{$time-delay} + 0.5s);
+      animation-delay: calc(#{$time-delay} + 1s);
       text-transform: uppercase;
       letter-spacing: 0.15px;
       font-size: 0.8em;

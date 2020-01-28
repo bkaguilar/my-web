@@ -21,7 +21,6 @@ body {
   font-size: 100%;
   font-family: "Muli", sans-serif;
   background: $sc-color;
-  transition: background $timing-transition ease-in;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -64,6 +63,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  transition: all 1s ease-in-out;
 }
 
 .loading {

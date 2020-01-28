@@ -27,7 +27,7 @@ $break-smallMin: "only screen and (min-width : 768px)";
   font-size: 1em;
   text-transform: capitalize;
   letter-spacing: $header-spacing;
-  transition: all 200ms ease;
+  transition: all 1s ease-in-out;
 }
 
 @mixin showAnimation {
