@@ -1,5 +1,5 @@
 import React from "react";
-import { RESUME_PROFILE, RESUME_DATA } from "../../constant";
+import { RESUME_PROFILE, RESUME_DATA, LOGO } from "../../constant";
 import profile from "../../images/perfil.jpg";
 import "./Resume.scss";
 
@@ -17,6 +17,7 @@ class Resume extends React.Component {
         <header className="Resume__header">
           <h1 className="Resume__header__name">Bessy G. Aguilar</h1>
           <h2 className="Resume__header__title">Front end en proceso....</h2>
+          <span>Zaragoza, España</span>
         </header>
         <div className="Resume__description">
           <h3 className="Resume__description__title">Perfil</h3>
@@ -30,10 +31,10 @@ class Resume extends React.Component {
           </p>
         </div>
         <div className="Resume__main">
-          <aside className="Resume__data">{dataSections}</aside>
-          <article className="Resume__profile">{profileSections}</article>
+          <aside className="Resume__main__data">{dataSections}</aside>
+          <article className="Resume__main__profile">{profileSections}</article>
         </div>
-
+        <footer className="Resume__footer">{LOGO}</footer>
         <section className="loading"></section>
       </main>
     );
@@ -58,6 +59,11 @@ class SumaryProfile extends React.Component {
             <span className="SumaryProfile__list__item__year">
               {this.props.item.year}
             </span>
+            {this.props.item.description && (
+              <p className="SumaryProfile__list__item__description">
+                {this.props.item.description}
+              </p>
+            )}
           </li>
         </ul>
       </section>

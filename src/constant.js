@@ -18,7 +18,9 @@ export const RESUME_PROFILE = [
     sectionName: "Experiencia Laboral",
     year: "Marzo 2019 - Septiembre 2019",
     title: "Diseñadora Web",
-    site: "BaboonLab"
+    site: "BaboonLab",
+    description:
+      "I orchestrated and developed the frontend infrastructure, design and functionality for hellotax's new JavaScript-centric app powered by Vue and also managed a co-engineer."
   }
 ];
 
