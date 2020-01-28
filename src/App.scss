@@ -144,12 +144,13 @@ body {
 }
 
 //Themes
-body[data-theme="black-theme"] {
+div[data-theme="black-theme"] {
   background: $pp-color;
   @include patternBackground("./images/pattern6.svg");
 
   &::before {
     position: fixed;
+    z-index: 0;
   }
 
   header {
@@ -173,6 +174,9 @@ body[data-theme="black-theme"] {
         color: $sc-color;
       }
     }
+    figure {
+      z-index: 0;
+    }
   }
 
   .Dot {
@@ -180,7 +184,7 @@ body[data-theme="black-theme"] {
   }
 }
 
-body[data-theme="white-theme"] {
+div[data-theme="white-theme"] {
   header {
     color: $pp-color;
   }

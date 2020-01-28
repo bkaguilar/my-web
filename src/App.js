@@ -117,9 +117,13 @@ class App extends React.Component {
         window.scrollTo(0, 0);
       }, 1000);
       if (this.state.active % 2 === 1) {
-        document.body.setAttribute("data-theme", "black-theme");
+        document
+          .querySelector(".App")
+          .setAttribute("data-theme", "black-theme");
       } else {
-        document.body.setAttribute("data-theme", "white-theme");
+        document
+          .querySelector(".App")
+          .setAttribute("data-theme", "white-theme");
       }
 
       if (this.state.active === PAGES.length - 1) {
@@ -158,6 +162,7 @@ class App extends React.Component {
             ? !this.handleTouchEnd.bind(this)
             : this.handleTouchEnd.bind(this)
         }
+        data-theme="white-theme"
       >
         <Router>
           <Switch>

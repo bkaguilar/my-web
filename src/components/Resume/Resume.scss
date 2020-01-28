@@ -1,17 +1,17 @@
 @import "../../common.scss";
 
-h3 {
-  font-size: 1em;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  padding: 10px;
-}
-
 .Resume {
   max-width: $max-width - 100;
   margin: 30px auto;
   background: url("../../images/texture.jpeg") repeat;
   padding: 50px;
+
+  h3 {
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding: 10px;
+  }
 
   &__header {
     min-height: 200px;
