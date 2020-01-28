@@ -1,4 +1,5 @@
 import React from "react";
+import Anchor from "./components/Widgets/Anchor/Anchor";
 import { ReactComponent as Logo } from "./images/logo.svg";
 import { ReactComponent as Portada } from "./images/portada.svg";
 import { ReactComponent as Bike } from "./images/bike.svg";
@@ -26,7 +27,26 @@ export const RESUME_PROFILE = [
 export const RESUME_DATA = [
   {
     sectionName: "Contacto",
-    items: ["hola@bkaguilar.com", "bkaguilar.com", "t.me/bkaguilar"]
+    items: [
+      <Anchor
+        href="mailto:hola@bkaguilar.com?subject=🤟🏽Hola Bessy, quiero proponerte algo"
+        name="hola@bkaguilar.com"
+        target="__blank"
+        className="Anchor--resume"
+      />,
+      <Anchor
+        href="bkaguilar.com"
+        name="bkaguilar.com"
+        target="__blank"
+        className="Anchor--resume"
+      />,
+      <Anchor
+        href="t.me/bkaguilar"
+        name="t.me/bkaguilar"
+        target="__blank"
+        className="Anchor--resume"
+      />
+    ]
   },
   {
     sectionName: "Habilidades",
