@@ -24,6 +24,12 @@ class Wrapper extends React.Component {
     });
   }
 
+  movetoContact() {
+    this.setState({
+      active: 2
+    });
+  }
+
   handleChange(e) {
     this.setState({
       active: parseInt(e.currentTarget.attributes.index.value),
@@ -136,6 +142,7 @@ class Wrapper extends React.Component {
       }
     }
   }
+
   render() {
     let dots = PAGES.map((item, i) => {
       return (
@@ -167,7 +174,11 @@ class Wrapper extends React.Component {
           logo={LOGO}
           pages={PAGES}
         />
-        <Main active={this.state.active} pages={PAGES} />
+        <Main
+          active={this.state.active}
+          pages={PAGES}
+          onClick={this.movetoContact.bind(this)}
+        />
         {this.state.isLast && (
           <Footer
             servicesAnchors={SERVICES}

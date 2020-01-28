@@ -1,11 +1,12 @@
 import React from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import Button from "../../Widgets/Button/Button";
 import "./Main.scss";
 
 class Main extends React.Component {
   render() {
     const { pages, active } = this.props;
-    const { title, image, name, content, button, id } = pages[active];
+    const { title, image, name, content, id } = pages[active];
 
     let paragraphs = content.map((item, index) => {
       if (content.length > 1) {
@@ -38,7 +39,14 @@ class Main extends React.Component {
                 {title} <span className="title-point">.</span>
               </h2>
               {paragraphs}
-              {button}
+              {active === 0 && (
+                <Button
+                  type="button"
+                  onClick={this.props.onClick}
+                  className="Button--contact"
+                  value="Vamos a hablar!"
+                />
+              )}
             </div>
             {image && <figure className="Main__figure">{image}</figure>}
           </main>

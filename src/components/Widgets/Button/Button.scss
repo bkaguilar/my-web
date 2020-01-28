@@ -37,5 +37,9 @@
 
   &--contact {
     animation-delay: calc(#{$time-delay} + 1.2s);
+
+    @media #{$break-smallMax} {
+      width: 250px;
+    }
   }
 }

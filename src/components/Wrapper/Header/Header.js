@@ -47,8 +47,7 @@ class Header extends React.Component {
             <div className="Header__nav__email">
               <div className="patterns"></div>
               <a
-                href="mailto:hola@bkaguilar.com"
-                subject="🤟🏽Hola Bessy, quiero proponerte algo"
+                href="mailto:hola@bkaguilar.com?subject=🤟🏽Hola Bessy, quiero proponerte algo"
                 rel="noopener noreferrer"
                 title="E-mail"
               >

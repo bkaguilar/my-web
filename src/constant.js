@@ -3,7 +3,6 @@ import { ReactComponent as Logo } from "./images/logo.svg";
 import { ReactComponent as Portada } from "./images/portada.svg";
 import { ReactComponent as Bike } from "./images/bike.svg";
 import { ReactComponent as Plane } from "./images/plane.svg";
-import Button from "./components/Widgets/Button/Button";
 
 export const RESUME_PROFILE = [
   {
@@ -50,13 +49,6 @@ export const PAGES = [
     name: "inicio",
     image: <Portada />,
     title: "Hola, mi nombre es Bessy",
-    button: (
-      <Button
-        type="button"
-        className="Button--contact"
-        value="Vamos a hablar!"
-      />
-    ),
     content: ["Soy desarrolladora Front-end y diseñadora web de Zaragoza"]
   },
   {
@@ -110,7 +102,8 @@ export const SOCIAL = [
 export const SERVICES = [
   {
     name: "hola@bkaguilar.com",
-    anchor: "mailto:hola@bkaguilar.com"
+    anchor:
+      "mailto:hola@bkaguilar.com?subject=🤟🏽Hola Bessy, quiero proponerte algo"
   },
   {
     name: "Telegram",
