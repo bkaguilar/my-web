@@ -18,6 +18,18 @@ class Resume extends React.Component {
           <h1 className="Resume__header__name">Bessy G. Aguilar</h1>
           <h2 className="Resume__header__title">Front end en proceso....</h2>
           <span>Zaragoza, España</span>
+          <a
+            href="algo.pdf"
+            className="Resume__header__link"
+            title="Curriculum PDF"
+            alt="PDF"
+            download
+          >
+            <span className="emoji" role="img" aria-label="download">
+              ⬇
+            </span>
+            Descargar
+          </a>
         </header>
         <div className="Resume__description">
           <h3 className="Resume__description__title">Perfil</h3>
