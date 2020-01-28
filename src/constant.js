@@ -5,6 +5,43 @@ import { ReactComponent as Bike } from "./images/bike.svg";
 import { ReactComponent as Plane } from "./images/plane.svg";
 import Button from "./components/Widgets/Button/Button";
 
+export const RESUME_PROFILE = [
+  {
+    id: 1,
+    sectionName: "Educación",
+    year: "2007 - 2009",
+    title: "Tecnico en computacíon",
+    site: "INTAE, San Pedro Sula, Honduras"
+  },
+  {
+    id: 2,
+    sectionName: "Experiencia Laboral",
+    year: "Marzo 2019 - Septiembre 2019",
+    title: "Diseñadora Web",
+    site: "BaboonLab"
+  }
+];
+
+export const RESUME_DATA = [
+  {
+    sectionName: "Contacto",
+    items: ["hola@bkaguilar.com", "bkaguilar.com", "t.me/bkaguilar"]
+  },
+  {
+    sectionName: "Habilidades",
+    items: [
+      "Control de versiones GIT",
+      "Docker",
+      "React",
+      "Javascript",
+      "HTML5",
+      "CSS3",
+      "NodeJS",
+      "Suite Adobe(Illustrator, Photoshop, XD, Lightroom)"
+    ]
+  }
+];
+
 export const PAGES = [
   {
     id: 0,

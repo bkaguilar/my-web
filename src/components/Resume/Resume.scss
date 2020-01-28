@@ -1,8 +1,143 @@
 @import "../../common.scss";
 
+h3 {
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding: 10px;
+}
+
 .Resume {
-  max-width: $max-width;
+  max-width: $max-width - 100;
   margin: 30px auto;
-  background: white;
-  padding: 20px;
+  background: url("../../images/texture.jpeg") repeat;
+  padding: 50px;
+
+  &__header {
+    min-height: 200px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    &__name {
+      // width: 50%;
+      font-size: 4.4em;
+      color: $brand_color-2;
+      margin-bottom: 10px;
+    }
+
+    &__title {
+      font-size: 1em;
+    }
+  }
+
+  &__description {
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "header header"
+      "photo content";
+
+    &__title {
+      grid-area: header;
+      background: rgba(#ccc, 0.4);
+    }
+
+    &__photo {
+      grid-area: photo;
+      border-radius: 50%;
+      height: 150px;
+      width: 150px;
+      overflow: hidden;
+      margin: 35px;
+      background: wheat;
+      place-self: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      grid-area: content;
+      place-self: center;
+    }
+  }
+
+  &__main {
+    display: flex;
+  }
+
+  &__data,
+  &__profile {
+    min-height: 500px;
+  }
+
+  &__data {
+    border-right: 1px solid #ccc;
+    width: 35%;
+  }
+
+  &__profile {
+    width: 65%;
+  }
+}
+
+.SumaryProfile,
+.TechnicalData {
+  min-height: 300px;
+  &__title {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+
+  &__list {
+    padding: 50px 10px;
+
+    &__item {
+      margin: 15px 0;
+    }
+  }
+}
+
+.SumaryProfile {
+  &__title,
+  &__list {
+    padding-left: 50px;
+  }
+
+  &__list__item {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    &__site {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: $brand_color-2;
+      margin-bottom: 10px;
+    }
+
+    &__year {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.TechnicalData {
+  &__list__item {
+    &::before {
+      content: "•";
+      margin: 5px;
+      font-size: 1.5em;
+      color: $pp-color;
+    }
+  }
 }
