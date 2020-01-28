@@ -44,7 +44,8 @@ class Main extends React.Component {
                   type="button"
                   onClick={this.props.onClick}
                   className="Button--contact"
-                  value="Vamos a hablar!"
+                  value="Vamos a hablar"
+                  emoji="➝"
                 />
               )}
             </div>

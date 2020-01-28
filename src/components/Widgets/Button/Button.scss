@@ -38,6 +38,16 @@
   &--contact {
     animation-delay: calc(#{$time-delay} + 1.2s);
 
+    &:hover > .emoji {
+      transform: translateX(15px);
+    }
+
+    .emoji {
+      font-size: 1.4em;
+      margin-left: 100px;
+      transition: all 200ms linear;
+    }
+
     @media #{$break-smallMax} {
       width: 250px;
     }
