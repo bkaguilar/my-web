@@ -8,18 +8,19 @@
 
   @media #{$break-smallMax} {
     text-align: center;
+    margin: 0 auto;
   }
 
   h3 {
     font-size: 1em;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    padding: 10px;
   }
 
   &__header {
     position: relative;
     min-height: 200px;
+    padding: 50px 0;
     text-transform: uppercase;
     letter-spacing: 0.1em;
 
@@ -30,7 +31,7 @@
       margin-bottom: 10px;
 
       @media #{$break-smallMax} {
-        font-size: 3em;
+        font-size: 2.7em;
       }
     }
 
@@ -72,6 +73,7 @@
 
     &__title {
       grid-area: header;
+      padding: 10px;
       background: rgba(#ccc, 0.4);
     }
 
@@ -111,6 +113,7 @@
     &__data {
       border-right: 1px solid #ccc;
       flex: 1 1 35%;
+
       @media #{$break-smallMax} {
         border: none;
       }
@@ -137,6 +140,7 @@
 .TechnicalData {
   min-height: 400px;
   &__title {
+    padding: 10px;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
   }
@@ -155,6 +159,10 @@
   &__title,
   &__list {
     padding-left: 50px;
+
+    @media #{$break-smallMax} {
+      padding-left: 10px;
+    }
   }
 
   &__list__item {
@@ -185,11 +193,14 @@
 }
 
 .TechnicalData {
+  &__list {
+    text-align: start;
+  }
   &__list__item {
     &::before {
       content: "•";
       margin: 5px;
-      color: $pp-color;
+      color: $brand_color-2;
     }
   }
 }
