@@ -13,7 +13,7 @@
 
   @media #{$break-smallMax} {
     padding: 1.6em;
-    justify-content: center;
+    align-items: center;
   }
 
   &__text {
@@ -22,8 +22,8 @@
     width: 63%;
 
     @media #{$break-smallMax} {
-      margin-top: initial;
       text-align: center;
+      margin: 10px 0;
       width: 100%;
     }
 
@@ -68,14 +68,6 @@
   }
 
   &--inicio {
-    .Main__text {
-      margin-top: 60px;
-
-      @media #{$break-largeHeight} {
-        margin-top: 150px;
-      }
-    }
-
     .Main__figure {
       @include position(fixed, unset, 0, 0, 0);
       // .leaf-svg {
@@ -105,6 +97,10 @@
         .phone-svg {
           display: none;
         }
+      }
+
+      @media #{$break-landscape} {
+        bottom: -100px;
       }
     }
   }

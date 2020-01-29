@@ -137,15 +137,16 @@ class Wrapper extends React.Component {
     });
     return (
       <div
-        className="Wrapper"
+        className={
+          this.state.isMenuVisible || this.state.active === 0
+            ? "Wrapper positionFixed"
+            : "Wrapper"
+        }
         onWheel={this.handleWheel.bind(this)}
         onKeyDown={this.handleKeydown.bind(this)}
         onTouchStart={this.handleTouchStart.bind(this)}
         onTouchEnd={this.handleTouchEnd.bind(this)}
         data-theme={this.state.active % 2 === 1 ? "black-theme" : "white-theme"}
-        style={{
-          position: this.state.isMenuVisible ? "fixed" : ""
-        }}
       >
         <Header
           {...this.state}
