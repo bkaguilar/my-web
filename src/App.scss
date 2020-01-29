@@ -25,18 +25,6 @@ body {
     display: none;
   }
 
-  // &::before {
-  //   content: "";
-  //   background: url("./images/pattern6.svg") repeat;
-  //   opacity: 0.3;
-  //   top: 0;
-  //   left: 0;
-  //   bottom: 0;
-  //   right: 0;
-  //   position: absolute;
-  //   z-index: -1;
-  // }
-
   a {
     text-decoration: none;
     color: inherit;
@@ -186,7 +174,6 @@ div[data-theme="black-theme"] {
 }
 
 div[data-theme="white-theme"] {
-  overflow: hidden;
   header {
     color: $pp-color;
   }

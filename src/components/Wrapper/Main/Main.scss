@@ -12,9 +12,6 @@
   flex-wrap: wrap;
 
   @media #{$break-smallMax} {
-    position: relative;
-    justify-content: center;
-    top: 0;
     padding: 1.6em;
   }
 
