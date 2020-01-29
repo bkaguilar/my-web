@@ -21,6 +21,7 @@ $time-delay: 0.3s;
 //Breakpoints
 $break-smallMax: "only screen and (max-width : 767px)";
 $break-smallMin: "only screen and (min-width : 768px)";
+$break-largeHeight: "only screen and (min-height: 730px) and (max-width: 767px)";
 
 //Mixins
 @mixin header-text {

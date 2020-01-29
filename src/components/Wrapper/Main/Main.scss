@@ -73,6 +73,10 @@
   &--inicio {
     .Main__text {
       margin-top: 60px;
+
+      @media #{$break-largeHeight} {
+        margin-top: 150px;
+      }
     }
 
     .Main__figure {
@@ -112,12 +116,15 @@
     align-items: center;
 
     .Main__figure {
-      margin: 200px 30px;
+      margin: 10px;
       width: 30%;
 
       @media #{$break-smallMax} {
         width: 100%;
         margin: 10px;
+      }
+      @media #{$break-largeHeight} {
+        width: 80%;
       }
     }
 
