@@ -48,6 +48,9 @@
         }
       }
     }
+    @media #{$break-landscape} {
+      margin: 5px;
+    }
   }
 
   &--footer {
