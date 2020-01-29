@@ -78,7 +78,7 @@
     }
 
     .Main__figure {
-      @include position(fixed, unset, 0, -90px, 0);
+      @include position(fixed, unset, 0, 0, 0);
       // .leaf-svg {
       //   animation: leaf 3s ease infinite;
 

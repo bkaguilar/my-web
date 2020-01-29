@@ -49,7 +49,6 @@ class Wrapper extends React.Component {
     let top = window.scrollY;
     let offset = top + window.innerHeight;
     let height = document.documentElement.offsetHeight;
-
     return [
       activePage < PAGES.length - 1 && offset >= height,
       activePage > 0 && top <= 0
@@ -86,10 +85,12 @@ class Wrapper extends React.Component {
     touchesEnd = e.changedTouches[0].pageY;
     if (this.state.isMenuVisible) return;
 
-    if (touchesEnd - toucheStart > 100 && this.checkPage()[1]) {
+    console.log(touchesEnd - toucheStart);
+
+    if (touchesEnd - toucheStart > 60 && this.checkPage()[1]) {
       this.moveToPage(-1);
     }
-    if (touchesEnd - toucheStart < -100 && this.checkPage()[0]) {
+    if (touchesEnd - toucheStart < -60 && this.checkPage()[0]) {
       this.moveToPage(1);
     }
   }
@@ -121,25 +122,6 @@ class Wrapper extends React.Component {
       setTimeout(function() {
         window.scrollTo(0, 0);
       }, 500);
-      if (this.state.active % 2 === 1) {
-        document
-          .querySelector(".Wrapper")
-          .setAttribute("data-theme", "black-theme");
-      } else {
-        document
-          .querySelector(".Wrapper")
-          .setAttribute("data-theme", "white-theme");
-      }
-
-      if (this.state.active === PAGES.length - 1) {
-        this.setState({
-          isLast: true
-        });
-      } else {
-        this.setState({
-          isLast: false
-        });
-      }
     }
   }
 
@@ -162,7 +144,7 @@ class Wrapper extends React.Component {
         onKeyDown={this.handleKeydown.bind(this)}
         onTouchStart={this.handleTouchStart.bind(this)}
         onTouchEnd={this.handleTouchEnd.bind(this)}
-        data-theme="white-theme"
+        data-theme={this.state.active % 2 === 1 ? "black-theme" : "white-theme"}
         style={{
           position: this.state.isMenuVisible ? "fixed" : ""
         }}
@@ -179,7 +161,7 @@ class Wrapper extends React.Component {
           pages={PAGES}
           onClick={this.movetoContact.bind(this)}
         />
-        {this.state.isLast && (
+        {this.state.active === PAGES.length - 1 && (
           <Footer
             servicesAnchors={SERVICES}
             socialAnchors={SOCIAL}
