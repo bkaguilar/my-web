@@ -5,7 +5,7 @@ import "./Footer.scss";
 class Footer extends React.Component {
   render() {
     const { servicesAnchors, socialAnchors, logo } = this.props;
-
+    let year = new Date().getFullYear();
     let socialMedia = socialAnchors.map((item, i) => {
       return (
         <Anchor
@@ -48,7 +48,7 @@ class Footer extends React.Component {
               <span role="img" aria-label="copy">
                 &copy;
               </span>
-              2019
+              {year}
             </span>
             <Anchor
               href="/"

@@ -13,6 +13,7 @@
 
   @media #{$break-smallMax} {
     padding: 1.6em;
+    justify-content: center;
   }
 
   &__text {
