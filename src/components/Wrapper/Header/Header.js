@@ -36,9 +36,7 @@ class Header extends React.Component {
             alt="BkAguilar"
           >
             {logo}
-            <h1 className="Header__figure__text" aria-labelledby="Header title">
-              bk Aguilar
-            </h1>
+            <h1 className="Header__figure__text">bk Aguilar</h1>
           </a>
         </figure>
         <nav
