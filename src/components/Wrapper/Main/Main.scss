@@ -1,7 +1,7 @@
 @import "../../../common.scss";
 .Main {
   position: relative;
-  flex: 1;
+  flex: 1 0 auto;
   width: 100%;
   max-width: $max-width;
   padding: $lr-padding;
@@ -44,7 +44,8 @@
     }
 
     &__content {
-      opacity: 0;
+      @include showAnimation();
+      animation-delay: $time-delay + 0.8;
       margin-bottom: 15px;
       font-size: 1.1em;
       letter-spacing: 0.04em;

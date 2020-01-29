@@ -84,40 +84,38 @@ class Wrapper extends React.Component {
   handleTouchEnd(e) {
     touchesEnd = e.changedTouches[0].pageY;
     if (this.state.isMenuVisible) return;
-
-    console.log(touchesEnd - toucheStart);
-
-    if (touchesEnd - toucheStart > 60 && this.checkPage()[1]) {
+    if (touchesEnd - toucheStart > 80 && this.checkPage()[1]) {
       this.moveToPage(-1);
     }
-    if (touchesEnd - toucheStart < -60 && this.checkPage()[0]) {
+    if (touchesEnd - toucheStart < -80 && this.checkPage()[0]) {
       this.moveToPage(1);
     }
   }
-  // FIXME:
-  showElements() {
-    const texts = document.querySelectorAll(".Main__text__content");
-    let observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.intersectionRatio > 0) {
-          entry.target.classList.add("showAnimation");
-        } else {
-          entry.target.classList.remove("showAnimation");
-        }
-      });
-    });
-    texts.forEach(text => {
-      observer.observe(text);
-    });
-  }
 
-  componentDidMount() {
-    this.showElements();
-  }
+  // // FIXME:
+  // showElements() {
+  //   const texts = document.querySelectorAll(".Main__text__content");
+  //   let observer = new IntersectionObserver((entries, observer) => {
+  //     entries.forEach(entry => {
+  //       if (entry.intersectionRatio > 0) {
+  //         entry.target.classList.add("showAnimation");
+  //       } else {
+  //         entry.target.classList.remove("showAnimation");
+  //       }
+  //     });
+  //   });
+  //   texts.forEach(text => {
+  //     observer.observe(text);
+  //   });
+  // }
+
+  // componentDidMount() {
+  //   this.showElements();
+  // }
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.active !== prevState.active) {
-      this.showElements();
+      // this.showElements();
       // FIXME:
       setTimeout(function() {
         window.scrollTo(0, 0);
