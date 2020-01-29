@@ -15,8 +15,12 @@ class Resume extends React.Component {
     return (
       <main className="Resume">
         <header className="Resume__header">
-          <h1 className="Resume__header__name">Bessy Karina G. Aguilar</h1>
-          <h2 className="Resume__header__title">Front end en proceso....</h2>
+          <h1 className="Resume__header__name" aria-labelledby="header">
+            Bessy Karina G. Aguilar
+          </h1>
+          <h2 className="Resume__header__title" aria-labelledby="header">
+            Front end en proceso....
+          </h2>
           <span>Zaragoza, España</span>
           <a
             href={"./BessyAguilar-Front-endDeveloper.pdf"}
@@ -32,11 +36,19 @@ class Resume extends React.Component {
           </a>
         </header>
         <div className="Resume__description">
-          <h3 className="Resume__description__title">Perfil</h3>
+          <h3
+            className="Resume__description__title"
+            aria-labelledby="Description title"
+          >
+            Perfil
+          </h3>
           <figure className="Resume__description__photo">
             <img src={profile} alt="perfil" />
           </figure>
-          <p className="Resume__description__content">
+          <p
+            className="Resume__description__content"
+            aria-labelledby="Description"
+          >
             Engineer valued for driving high-performance accessible web
             experiences. I design quality, user-friendly and scalable products
             regardless of stack.
@@ -59,9 +71,20 @@ class SumaryProfile extends React.Component {
   render() {
     return (
       <section className="SumaryProfile">
-        <h3 className="SumaryProfile__title">{this.props.item.sectionName}</h3>
-        <ul className="SumaryProfile__list">
-          <li className="SumaryProfile__list__item">
+        <h3
+          className="SumaryProfile__title"
+          aria-labelledby="SumaryProfile Header"
+        >
+          {this.props.item.sectionName}
+        </h3>
+        <ul
+          className="SumaryProfile__list"
+          aria-labelledby="SumaryProfile container"
+        >
+          <li
+            className="SumaryProfile__list__item"
+            aria-labelledby="SumaryProfile"
+          >
             <h4 className="SumaryProfile__list__item__title">
               {this.props.item.title}
             </h4>
@@ -87,7 +110,11 @@ class TechnicalData extends React.Component {
   render() {
     let list = this.props.item.items.map((item, index) => {
       return (
-        <li className="TechnicalData__list__item" key={index}>
+        <li
+          className="TechnicalData__list__item"
+          key={index}
+          aria-labelledby="TechnicalData"
+        >
           {item}
         </li>
       );
@@ -95,7 +122,12 @@ class TechnicalData extends React.Component {
     return (
       <section className="TechnicalData">
         <h3 className="TechnicalData__title">{this.props.item.sectionName}</h3>
-        <ul className="TechnicalData__list">{list}</ul>
+        <ul
+          className="TechnicalData__list"
+          aria-labelledby="TechnicalData container"
+        >
+          {list}
+        </ul>
       </section>
     );
   }

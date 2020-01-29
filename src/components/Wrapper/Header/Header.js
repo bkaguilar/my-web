@@ -29,9 +29,16 @@ class Header extends React.Component {
     return (
       <header className="Header">
         <figure className="Header__figure">
-          <a href="/" title="Bessy Aguilar">
+          <a
+            href="/"
+            title="Bessy Aguilar"
+            aria-label="Header logo"
+            alt="BkAguilar"
+          >
             {logo}
-            <h1 className="Header__figure__text">bk Aguilar</h1>
+            <h1 className="Header__figure__text" aria-labelledby="Header title">
+              bk Aguilar
+            </h1>
           </a>
         </figure>
         <nav
@@ -49,7 +56,8 @@ class Header extends React.Component {
               <a
                 href="mailto:hola@bkaguilar.com?subject=🤟🏽Hola Bessy, quiero proponerte algo"
                 rel="noopener noreferrer"
-                title="E-mail"
+                title="Enviame un E-mail ;)"
+                alt="hola@bkaguilar.com"
               >
                 hola@bkaguilar.com
                 <span
