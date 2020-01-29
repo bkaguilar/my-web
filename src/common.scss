@@ -9,7 +9,7 @@ $brand-color_2: #11a9bb;
 $dot-size: 10px;
 $max-footer: 350px;
 $max-width: 1350px;
-$lr-padding: 3em;
+$lr-padding: 4em;
 $responsive-padding: 2.5em;
 // $header-height: 50px;
 $header-spacing: 0.05em;
@@ -29,7 +29,6 @@ $break-landscape: "only screen and (max-device-width: 767px) and (max-device-hei
   font-size: 1em;
   text-transform: capitalize;
   letter-spacing: $header-spacing;
-  transition: all 1s ease-in-out;
 }
 
 @mixin showAnimation {
