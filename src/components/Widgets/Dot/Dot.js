@@ -10,6 +10,7 @@ class Dot extends React.Component {
         className={"Dot" + className}
         title={name}
         onClick={onClick}
+        aria-label={"dot " + name}
       ></li>
     );
   }

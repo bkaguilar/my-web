@@ -73,6 +73,7 @@ class Header extends React.Component {
         </nav>
         <button
           type="button"
+          aria-label="Menu button"
           className="Header__responsive"
           onClick={showMenu}
           style={{
@@ -83,6 +84,7 @@ class Header extends React.Component {
             {this.props.isMenuVisible ? "Cerrar" : "Menú"}
           </span>
           <span
+            aria-label="lines"
             className={
               this.props.isMenuVisible
                 ? "Header__responsive__lines is-visible"
