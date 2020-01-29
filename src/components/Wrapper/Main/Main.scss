@@ -77,19 +77,17 @@
 
     .Main__figure {
       @include position(fixed, unset, 0, -90px, 0);
+      // .leaf-svg {
+      //   animation: leaf 3s ease infinite;
 
-      .leaf-svg {
-        animation: leaf 3s ease infinite;
-
-        @keyframes leaf {
-          50% {
-            d: path(
-              "M277.2,580.8c0,0-14.5-11.3-4.5-28.3S311,534,313,538s-11,11-13,15s-8.3,19.5-15.3,23.5S277.2,580.8,277.2,580.8z"
-            );
-          }
-        }
-      }
-
+      //   @keyframes leaf {
+      //     50% {
+      //       d: path(
+      //         "M283,489.8c0,0-11.7-9-3.6-22.7c8-13.7,32.5-17.8,34.1-14.6s-8.4,8.8-10,12s-8.8,18.7-14.5,21.9S283,489.8,283,489.8z"
+      //       );
+      //     }
+      //   }
+      // }
       .phone-svg {
         animation: movePhone 3s ease-in-out infinite;
 
