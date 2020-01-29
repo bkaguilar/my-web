@@ -93,29 +93,29 @@ class Wrapper extends React.Component {
   }
 
   // // FIXME:
-  // showElements() {
-  //   const texts = document.querySelectorAll(".Main__text__content");
-  //   let observer = new IntersectionObserver((entries, observer) => {
-  //     entries.forEach(entry => {
-  //       if (entry.intersectionRatio > 0) {
-  //         entry.target.classList.add("showAnimation");
-  //       } else {
-  //         entry.target.classList.remove("showAnimation");
-  //       }
-  //     });
-  //   });
-  //   texts.forEach(text => {
-  //     observer.observe(text);
-  //   });
-  // }
+  showElements() {
+    const texts = document.querySelectorAll(".Main__text__content");
+    let observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.intersectionRatio > 0) {
+          entry.target.classList.add("showAnimation");
+        } else {
+          entry.target.classList.remove("showAnimation");
+        }
+      });
+    });
+    texts.forEach(text => {
+      observer.observe(text);
+    });
+  }
 
-  // componentDidMount() {
-  //   this.showElements();
-  // }
+  componentDidMount() {
+    this.showElements();
+  }
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.active !== prevState.active) {
-      // this.showElements();
+      this.showElements();
       // FIXME:
       setTimeout(function() {
         window.scrollTo(0, 0);
