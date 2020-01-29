@@ -37,6 +37,9 @@
 
   &--contact {
     animation-delay: calc(#{$time-delay} + 1.2s);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 
     &:hover > .emoji {
       transform: translateX(15px);
@@ -44,12 +47,17 @@
 
     .emoji {
       font-size: 1.4em;
-      margin-left: 100px;
+      font-weight: bold;
       transition: all 200ms linear;
     }
 
     @media #{$break-smallMax} {
       width: 250px;
+      margin: 35px auto;
+
+      .emoji {
+        font-size: 1em;
+      }
     }
   }
 }
