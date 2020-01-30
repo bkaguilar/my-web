@@ -75,7 +75,7 @@ class Header extends React.Component {
           className="Header__responsive"
           onClick={showMenu}
           style={{
-            color: this.props.isMenuVisible ? "#191919" : "inherit"
+            color: this.props.isMenuVisible ? "#f2f4f6" : "inherit"
           }}
         >
           <span className="Header__responsive__text">

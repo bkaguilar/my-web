@@ -40,11 +40,11 @@
       margin: 0 0 60px 0;
       font-size: 1.4em;
       font-weight: bolder;
-      color: $pp-color;
+      color: $sc-color;
 
       @for $i from 1 through 3 {
         &:nth-of-type(#{$i}) {
-          animation-delay: #{$i * $time-delay};
+          animation-delay: #{$i * $time-delay + 0.3};
         }
       }
     }

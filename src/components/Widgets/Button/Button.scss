@@ -29,7 +29,7 @@
     margin: 0;
 
     @media #{$break-smallMax} {
-      animation-delay: calc(#{$time-delay} + 0.8s);
+      animation-delay: calc(#{$time-delay} + 1.2s);
       width: 100px;
       margin: 0 0 60px 0;
     }
