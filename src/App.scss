@@ -58,6 +58,10 @@ body {
   flex-direction: column;
   min-height: 100vh;
   transition: all 500ms ease-in-out;
+
+  @media #{$break-smallMax} {
+    min-height: auto;
+  }
 }
 
 .positionFixed {

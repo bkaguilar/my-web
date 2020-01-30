@@ -22,7 +22,7 @@ $time-delay: 0.3s;
 $break-smallMax: "only screen and (max-width : 767px)";
 $break-smallMin: "only screen and (min-width : 768px)";
 $break-largeHeight: "only screen and (min-height: 730px) and (max-width: 767px)";
-$break-landscape: "only screen and (max-device-width: 767px) and (max-device-height: 640px) and (orientation : landscape) ";
+$break-landscape: "only screen and (max-width: 767px) and (max-height: 640px) and (orientation : landscape) ";
 
 //Mixins
 @mixin header-text {
