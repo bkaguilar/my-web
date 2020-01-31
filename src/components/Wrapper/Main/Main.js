@@ -44,12 +44,12 @@ class Main extends React.Component {
                   type="button"
                   onClick={this.props.onClick}
                   className="Button--contact"
-                  value="Vamos a hablar"
+                  value="Contacto"
                   emoji="➝"
                 />
               )}
             </div>
-            {image && <figure className="Main__figure">{image}</figure>}
+            <figure className="Main__figure">{image}</figure>
           </main>
         </CSSTransition>
       </TransitionGroup>
