@@ -128,7 +128,8 @@ export const SERVICES = [
 
 export const MESSAGE =
   "\n" +
-  "Strong with you the curiosity is....              \n" +
+  "Strong with you, the curiosity is...              \n" +
+  "The curiosity is strong with this one...          \n" +
   "                       .-.                        \n" +
   "                      |_:_|                       \n" +
   "                     /(_Y_)\\                     \n" +
