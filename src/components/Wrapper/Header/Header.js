@@ -21,11 +21,6 @@ class Header extends React.Component {
         />
       );
     });
-
-    // FIXME: style={{
-    //     background: active % 2 === 1 ? "#191919" : "#f2f4f6"
-    //   }}
-
     return (
       <header className="Header">
         <figure className="Header__figure">
@@ -45,6 +40,7 @@ class Header extends React.Component {
           }
         >
           {anchors}
+          <span className="text-background">bk</span>
           <Link to="/resume" target="_blank">
             <Button type="button" className="Button--header" value="Resume" />
           </Link>

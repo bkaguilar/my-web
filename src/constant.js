@@ -69,13 +69,15 @@ export const PAGES = [
     name: "inicio",
     image: <Portada />,
     title: "Hola, mi nombre es Bessy",
-    content: ["Soy desarrolladora Front-end y diseñadora web de Zaragoza"]
+    content: [
+      "Desarrolladora con pasion del desarrollo responsive front end y diseño establecida en Zaragoza"
+    ]
   },
   {
     id: 1,
     name: "personal",
     image: <Bike />,
-    title: "Un poco sobre mi",
+    title: "Hello",
     content: [
       "Soy desarrolladora front-end desde el 2019, hondureña 🇭🇳 con sede en Zaragoza, España. Mi formación académica es de Técnico en Computación, pero soy fundamentalmente autodidacta.",
       "Desde hace un par de años me empezo a interesar el diseño de web y he estado en continuo aprendizaje desde entonces, ahora mismo me estoy especializando en el desarrollo front-end.",
