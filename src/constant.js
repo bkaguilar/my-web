@@ -68,9 +68,9 @@ export const PAGES = [
     id: 0,
     name: "inicio",
     image: <Portada />,
-    title: "Hola, mi nombre es Bessy",
+    title: "Desarrolladora Front end",
     content: [
-      "Desarrolladora con pasion del desarrollo responsive front end y diseño establecida en Zaragoza"
+      "Soy Bessy, desarrolladora con pasion por el desarrollo responsive front end y el diseño establecida en Zaragoza"
     ]
   },
   {
