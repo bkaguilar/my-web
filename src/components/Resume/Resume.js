@@ -4,6 +4,16 @@ import profile from "../../images/perfil.jpg";
 import "./Resume.scss";
 
 class Resume extends React.Component {
+  titleMarquee() {
+    let titleText = document.title;
+    titleText =
+      titleText.substring(1, titleText.length) + titleText.substring(0, 1);
+    document.title = titleText;
+  }
+  componentDidMount() {
+    document.title = "Bessy Aguilar:Resume";
+    setInterval(this.titleMarquee, 500);
+  }
   render() {
     let profileSections = RESUME_PROFILE.map((item, index) => {
       return <SumaryProfile key={item.id} item={item} />;
