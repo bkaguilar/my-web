@@ -111,6 +111,13 @@ class Wrapper extends React.Component {
 
   componentDidMount() {
     this.showElements();
+    setTimeout(
+      console.log.bind(
+        console,
+        "%c(ノ^o^)ノ~ HELLO WORLD!!!! y JOS lo puedo hacer mejor, asi que sientete libre de darme un toque a hola@bkaguilar.com",
+        "padding: 10px; color: #11a9bb; font-size: 1.4em;"
+      )
+    );
   }
 
   componentDidUpdate(prevProps, prevState) {
