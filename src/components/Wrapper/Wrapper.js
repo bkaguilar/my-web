@@ -1,5 +1,5 @@
 import React from "react";
-import { PAGES, SOCIAL, SERVICES, LOGO } from "../../constant";
+import { PAGES, SOCIAL, SERVICES, LOGO, MESSAGE } from "../../constant";
 import Header from "./Header/Header";
 import Main from "./Main/Main";
 import Footer from "./Footer/Footer";
@@ -111,42 +111,7 @@ class Wrapper extends React.Component {
 
   componentDidMount() {
     this.showElements();
-    setTimeout(
-      console.log(
-        "\n" +
-          "Strong with you the curiosity is....              \n" +
-          "                       .-.                        \n" +
-          "                      |_:_|                       \n" +
-          "                     /(_Y_)\\                     \n" +
-          ".                   ( \\/M\\/ )                   \n" +
-          " '.               _.'-/'-'\\-'._                  \n" +
-          "   ':           _/.--'[[[[]'--.\\                 \n" +
-          "     ':        /_'  : |::'| :  '.\\               \n" +
-          "       ':     //   ./ |oUU| \\.'  :\\             \n" +
-          "         ':  _:'..' \\_|___|_/ :   :|             \n" +
-          "           ':.  .'  |_[___]_|  :.':\\             \n" +
-          "            [::\\ |  :  | |  :   ; : \\           \n" +
-          "             '-'   \\/'.| |.' \\  .;.' |          \n" +
-          "             |\\_    \\  '-'   :       |          \n" +
-          "             |  \\    \\ .:    :   |   |          \n" +
-          "             |   \\    | '.   :    \\  |          \n" +
-          "             /       \\   :. .;       |           \n" +
-          "            /     |   |  :__/     :  \\           \n" +
-          "           |  |   |    \\:   | \\   |   ||        \n" +
-          "          /    \\  : :  |:   /  |__|   /|         \n" +
-          "          |     : : :_/_|  /'._\\  '--|_\\        \n" +
-          "          /___.-/_|-'   \\  \\                    \n" +
-          "                         '-'                      \n" +
-          "Si quieres hablar sobre algun proyecto o tu empresa esta buscando a alguien con mis habilidades \n" +
-          "que no son muchas de momento, pero son algunas(hola Jos <3) \n" +
-          "escribeme: hola@bkaguilar.com  (ノ^o^)ノ "
-      )
-      // console.log.bind(
-      //   console,
-      //   `%c(ノ^o^)ノ~ HELLO WORLD!!!! y JOS lo puedo hacer mejor, asi que sientete libre de darme un toque a hola@bkaguilar.com`,
-      //   "padding: 10px; line-height: -2em"
-      // )
-    );
+    setTimeout(console.log.bind(console, MESSAGE));
   }
 
   componentDidUpdate(prevProps, prevState) {

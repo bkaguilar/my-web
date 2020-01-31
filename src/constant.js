@@ -82,13 +82,6 @@ export const PAGES = [
       "Soy desarrolladora front-end desde el 2019, hondureña 🇭🇳 con sede en Zaragoza, España. Mi formación académica es de Técnico en Computación, pero soy fundamentalmente autodidacta.",
       "Desde hace un par de años me empezo a interesar el diseño de web y he estado en continuo aprendizaje desde entonces, ahora mismo me estoy especializando en el desarrollo front-end.",
       "Actualmente estoy en busca de nuevos retos despues de tomarme unos meses para seguir preparandome y aprendiendo nuevas tecnologias del sector."
-      // "Mas alla de escribir codigo, me encanta la fotografía, me gusta pasar tiempo viajando y disparando con mi camara, ya sea con la reflex o con mi movil; O bien leyendo un buen libro de fantasia medieval o distopia y si lleva la palabra Tolkien mucho mejor 🧝🏽‍♀️.",
-      // "Mis habilidades técnicas van desde Diseño web responsive, HTML5, CSS, Javascript, Docker, React, Animaciones SVG, Suite Adobe (Photoshop, Illustrator, XD, Lightroom), Software de control de versiones (Git)",
-      // "Soy desarrolladora front-end desde el 2019, hondureña 🇭🇳 con sede en Zaragoza, España. Mi formación académica es de Técnico en Computación, pero soy fundamentalmente autodidacta.",
-      // "Desde hace un par de años me empezo a interesar el diseño de web y he estado en continuo aprendizaje desde entonces, ahora mismo me estoy especializando en el desarrollo front-end.",
-      // "Actualmente estoy en busca de nuevos retos despues de tomarme unos meses para seguir preparandome y aprendiendo nuevas tecnologias del sector.",
-      // "Mas alla de escribir codigo, me encanta la fotografía, me gusta pasar tiempo viajando y disparando con mi camara, ya sea con la reflex o con mi movil; O bien leyendo un buen libro de fantasia medieval o distopia y si lleva la palabra Tolkien mucho mejor 🧝🏽‍♀️.",
-      // "Mis habilidades técnicas van desde Diseño web responsive, HTML5, CSS, Javascript, Docker, React, Animaciones SVG, Suite Adobe (Photoshop, Illustrator, XD, Lightroom), Software de control de versiones (Git)"
     ]
   },
   {
@@ -132,5 +125,34 @@ export const SERVICES = [
     anchor: "https://t.me/bkaguilar"
   }
 ];
+
+export const MESSAGE =
+  "\n" +
+  "Strong with you the curiosity is....              \n" +
+  "                       .-.                        \n" +
+  "                      |_:_|                       \n" +
+  "                     /(_Y_)\\                     \n" +
+  ".                   ( \\/M\\/ )                   \n" +
+  " '.               _.'-/'-'\\-'._                  \n" +
+  "   ':           _/.--'[[[[]'--.\\                 \n" +
+  "     ':        /_'  : |::'| :  '.\\               \n" +
+  "       ':     //   ./ |oUU| \\.'  :\\             \n" +
+  "         ':  _:'..' \\_|___|_/ :   :|             \n" +
+  "           ':.  .'  |_[___]_|  :.':\\             \n" +
+  "            [::\\ |  :  | |  :   ; : \\           \n" +
+  "             '-'   \\/'.| |.' \\  .;.' |          \n" +
+  "             |\\_    \\  '-'   :       |          \n" +
+  "             |  \\    \\ .:    :   |   |          \n" +
+  "             |   \\    | '.   :    \\  |          \n" +
+  "             /       \\   :. .;       |           \n" +
+  "            /     |   |  :__/     :  \\           \n" +
+  "           |  |   |    \\:   | \\   |   ||        \n" +
+  "          /    \\  : :  |:   /  |__|   /|         \n" +
+  "          |     : : :_/_|  /'._\\  '--|_\\        \n" +
+  "          /___.-/_|-'   \\  \\                    \n" +
+  "                         '-'                      \n" +
+  "Si quieres hablar sobre algun proyecto o tu empresa esta buscando a alguien con mis habilidades \n" +
+  "que no son muchas de momento, pero son algunas(hola Jos <3) \n" +
+  "escribeme: hola@bkaguilar.com  (ノ^o^)ノ ";
 
 export const LOGO = <Logo title="Bk Aguilar logo" className="Logo" />;
