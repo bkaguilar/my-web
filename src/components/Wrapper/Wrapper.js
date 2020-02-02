@@ -13,7 +13,6 @@ class Wrapper extends React.Component {
     super(props);
     this.state = {
       active: 0,
-      isLast: false,
       isMenuVisible: false
     };
   }
