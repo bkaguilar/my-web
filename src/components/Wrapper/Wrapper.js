@@ -92,31 +92,12 @@ class Wrapper extends React.Component {
     }
   }
 
-  // // FIXME:
-  showElements() {
-    const texts = document.querySelectorAll(".Main__text__content");
-    let observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.intersectionRatio > 0) {
-          entry.target.classList.add("showAnimation");
-        } else {
-          entry.target.classList.remove("showAnimation");
-        }
-      });
-    });
-    texts.forEach(text => {
-      observer.observe(text);
-    });
-  }
-
   componentDidMount() {
-    this.showElements();
     setTimeout(console.log.bind(console, MESSAGE));
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.active !== prevState.active) {
-      this.showElements();
       // FIXME:
       setTimeout(function() {
         window.scrollTo(0, 0);
@@ -157,7 +138,7 @@ class Wrapper extends React.Component {
           pages={PAGES}
         />
         <Main
-          active={this.state.active}
+          {...this.state}
           pages={PAGES}
           onClick={this.movetoContact.bind(this)}
         />
