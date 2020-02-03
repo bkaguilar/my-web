@@ -3,6 +3,29 @@ import Anchor from "../../Widgets/Anchor/Anchor";
 import "./Footer.scss";
 
 class Footer extends React.Component {
+  clipboardEmail(e) {
+    if (window.innerWidth >= 768) {
+      let emailValue = e.currentTarget.innerText;
+      if (emailValue === "hola@bkaguilar.com") {
+        e.preventDefault();
+        let inp = document.createElement("input");
+        document.body.appendChild(inp);
+        inp.value = e.currentTarget.textContent;
+        inp.select();
+        document.execCommand("copy", false);
+        inp.remove();
+        e.currentTarget.title = "Email copiado";
+      }
+    }
+  }
+
+  emailHover(e) {
+    let emailValue = e.currentTarget.innerText;
+    if (emailValue === "hola@bkaguilar.com") {
+      e.currentTarget.title = "Copiar al portapapeles";
+    }
+  }
+
   render() {
     const { servicesAnchors, socialAnchors, logo } = this.props;
     let year = new Date().getFullYear();
@@ -26,6 +49,8 @@ class Footer extends React.Component {
           target="_blank"
           name={item.name}
           className="Anchor--footer"
+          onClick={this.clipboardEmail.bind(this)}
+          onHover={this.emailHover.bind(this)}
         />
       );
     });
@@ -61,10 +86,10 @@ class Footer extends React.Component {
           </small>
           <small>
             Hecho con
-            <span className="emoji" role="img" aria-label="beer">
+            {/* <span className="emoji" role="img" aria-label="beer">
               🍻
             </span>
-            y
+            y */}
             <span className="emoji" role="img" aria-label="heart">
               ❤
             </span>

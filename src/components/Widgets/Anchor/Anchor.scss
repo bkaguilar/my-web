@@ -13,7 +13,7 @@
     left: 50%;
     transform: translate(-50%, -50%) scaleY(0);
     transform-origin: 0 bottom;
-    transition: all 200ms ease;
+    transition: transform 200ms ease;
     width: 100%;
     height: 100%;
     padding: 15px 10px;
@@ -73,5 +73,18 @@
   &--resume {
     margin: 0;
     text-transform: none;
+  }
+}
+
+@media #{$break-smallMin} {
+  &[name="hola@bkaguilar.com"]:hover {
+    color: transparent;
+    &::before {
+      content: attr(title);
+      margin-left: 7px;
+      color: $pp-color;
+      padding-right: 25px;
+      white-space: nowrap;
+    }
   }
 }

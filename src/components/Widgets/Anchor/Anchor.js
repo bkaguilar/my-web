@@ -3,7 +3,15 @@ import "./Anchor.scss";
 
 class Anchor extends React.Component {
   render() {
-    const { href, name, index, onClick, className, target } = this.props;
+    const {
+      href,
+      name,
+      index,
+      onClick,
+      className,
+      target,
+      onHover
+    } = this.props;
     return (
       <a
         href={href}
@@ -13,6 +21,7 @@ class Anchor extends React.Component {
         title={name}
         className={"Anchor " + className}
         onClick={onClick}
+        onMouseOver={onHover}
       >
         {name}
       </a>
