@@ -57,8 +57,7 @@
       flex-direction: column;
       justify-content: flex-end;
       transform: translateY(100%);
-      animation: showMenu $timing-transition cubic-bezier(0.165, 0.84, 0.44, 1)
-        forwards;
+      animation: showMenu 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 
       @keyframes showMenu {
         100% {
