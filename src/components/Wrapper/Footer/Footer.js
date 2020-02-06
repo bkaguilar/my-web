@@ -86,10 +86,10 @@ class Footer extends React.Component {
           </small>
           <small>
             Hecho con
-            {/* <span className="emoji" role="img" aria-label="beer">
-              🍻
+            <span className="emoji" role="img" aria-label="beer">
+              ⚛️
             </span>
-            y */}
+            y
             <span className="emoji" role="img" aria-label="heart">
               ❤
             </span>
