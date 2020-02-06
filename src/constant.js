@@ -82,9 +82,6 @@ export const PAGES = [
       "Soy desarrolladora front-end desde el 2019, hondureña 🇭🇳 con sede en Zaragoza, España. Mi formación académica es de Técnico en Computación, pero soy fundamentalmente autodidacta.",
       "Desde hace un par de años me empezo a interesar el diseño de web y he estado en continuo aprendizaje desde entonces, ahora mismo me estoy especializando en el desarrollo front end.",
       "Actualmente estoy en busca de nuevos retos despues de tomarme unos meses para seguir preparandome y aprendiendo nuevas tecnologias del sector.",
-      "Disfruto creando experiencias que son tanto atractivas como funcionales.",
-      "Disfruto creando experiencias que son tanto atractivas como funcionales.",
-      "Disfruto creando experiencias que son tanto atractivas como funcionales.",
       "Disfruto creando experiencias que son tanto atractivas como funcionales."
     ]
   },
