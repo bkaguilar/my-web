@@ -95,14 +95,12 @@ class Wrapper extends React.Component {
     setTimeout(console.log.bind(console, MESSAGE));
   }
 
-  // componentDidUpdate(prevProps, prevState) {
-  //   if (this.state.active !== prevState.active) {
-  //     // FIXME:
-  //     setTimeout(function() {
-  //       window.scrollTo(0, 0);
-  //     }, 500);
-  //   }
-  // }
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.active !== prevState.active) {
+      // FIXME:
+      window.scrollTo(0, 0);
+    }
+  }
 
   render() {
     let dots = PAGES.map((item, i) => {
