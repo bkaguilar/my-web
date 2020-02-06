@@ -40,7 +40,6 @@ class Header extends React.Component {
           }
         >
           {anchors}
-          <span className="text-background">bk</span>
           <Link to="/resume" target="_blank">
             <Button type="button" className="Button--header" value="Resume" />
           </Link>

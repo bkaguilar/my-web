@@ -154,25 +154,6 @@ body {
   }
 }
 
-.text-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(100%);
-  z-index: -1;
-  font-size: 25em;
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.1);
-  opacity: 0.4;
-  text-transform: uppercase;
-  animation: move 10s linear infinite;
-
-  @keyframes move {
-    100% {
-      transform: translate(-100%);
-    }
-  }
-}
 //Themes
 div[data-theme="black-theme"] {
   background: $pp-color;
@@ -239,9 +220,4 @@ div[data-theme="white-theme"] {
   &-exit-active {
     display: none;
   }
-}
-
-.showAnimation {
-  @include showAnimation;
-  animation-delay: $time-delay + 1;
 }

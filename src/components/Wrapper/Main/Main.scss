@@ -45,7 +45,8 @@
     }
 
     &__content {
-      opacity: 0;
+      @include showAnimation;
+      animation-delay: $time-delay + 0.9s;
       margin-bottom: 15px;
       font-size: 1.1em;
       letter-spacing: 0.04em;

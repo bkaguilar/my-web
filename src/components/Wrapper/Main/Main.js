@@ -4,48 +4,13 @@ import Button from "../../Widgets/Button/Button";
 import "./Main.scss";
 
 class Main extends React.Component {
-  constructor() {
-    super();
-    this.ref = [];
-  }
-
-  observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("showAnimation");
-      } else {
-        entry.target.classList.remove("showAnimation");
-      }
-    });
-  });
-
-  observeEachText() {
-    this.ref.forEach(item => {
-      this.observer.observe(item);
-    });
-  }
-
-  componentDidMount() {
-    this.observeEachText();
-  }
-
-  componentDidUpdate(prevProps) {
-    if (this.props.active !== prevProps.active) {
-      this.observeEachText();
-    }
-  }
-
   render() {
     const { pages, active } = this.props;
     const { title, image, name, content, id } = pages[active];
 
     let paragraphs = content.map((item, index) => {
       return (
-        <p
-          key={index}
-          ref={e => (this.ref[index] = e)}
-          className="Main__text__content"
-        >
+        <p key={index} className="Main__text__content">
           {item}
         </p>
       );
