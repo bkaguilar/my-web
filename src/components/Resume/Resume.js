@@ -26,10 +26,10 @@ class Resume extends React.Component {
       <main className="Resume">
         <header className="Resume__header">
           <h1 className="Resume__header__name" aria-labelledby="header">
-            Bessy Karina G. Aguilar
+            Bessy K. Galdamez Aguilar
           </h1>
           <h2 className="Resume__header__title" aria-labelledby="header">
-            Front end en proceso....
+            Desarrolladora Front-end
           </h2>
           <span>Zaragoza, España</span>
           <a
