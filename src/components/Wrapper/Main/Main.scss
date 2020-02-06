@@ -20,7 +20,7 @@
   &__text {
     position: relative;
     margin: 40px 0;
-    width: 63%;
+    width: 60%;
 
     @media #{$break-smallMax} {
       text-align: center;
@@ -48,7 +48,7 @@
       @include showAnimation;
       animation-delay: $time-delay + 0.9s;
       margin-bottom: 15px;
-      font-size: 1.1em;
+      font-size: 1.3em;
       letter-spacing: 0.04em;
 
       @media #{$break-smallMax} {
