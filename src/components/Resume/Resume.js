@@ -33,11 +33,11 @@ class Resume extends React.Component {
           </h2>
           <span>Zaragoza, España</span>
           <a
-            href={"./BessyAguilar-Front-endDeveloper.pdf"}
+            href="./cv.pdf"
             className="Resume__header__link"
             title="Curriculum PDF"
             alt="PDF"
-            download
+            download="Curriculum_BessyAguilar"
           >
             <span className="emoji" role="img" aria-label="download">
               ⬇
