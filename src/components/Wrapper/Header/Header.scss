@@ -51,8 +51,10 @@
     }
 
     &__plant {
-      @include position(absolute, 58%, 20px, unset, unset);
-      width: 100px;
+      @include position(absolute, unset, -25px, 0, unset);
+      opacity: 0.6;
+      z-index: -1;
+      width: 200px;
 
       @media #{$break-landscape} {
         top: 100px;
