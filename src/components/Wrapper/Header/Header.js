@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Anchor from "../../Widgets/Anchor/Anchor";
+import { ReactComponent as Plant } from "../../../images/plant.svg";
 import Button from "../../Widgets/Button/Button";
 import "./Header.scss";
 
@@ -44,8 +45,12 @@ class Header extends React.Component {
             <Button type="button" className="Button--header" value="Resume" />
           </Link>
           {this.props.isMenuVisible && (
+            <div className="Header__nav__plant">
+              <Plant />
+            </div>
+          )}
+          {this.props.isMenuVisible && (
             <div className="Header__nav__email">
-              <div className="patterns"></div>
               <a
                 href="mailto:hola@bkaguilar.com?subject=🤟🏽Hola Bessy, quiero proponerte algo"
                 rel="noopener noreferrer"

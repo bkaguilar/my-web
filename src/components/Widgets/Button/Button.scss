@@ -32,11 +32,11 @@
     @media #{$break-smallMax} {
       animation-delay: calc(#{$time-delay} + 1.2s);
       width: 100px;
-      margin: 0 0 60px 0;
+      margin: 0 0 60px 40px;
     }
 
     @media #{$break-landscape} {
-      margin: 5px;
+      margin: 10px 40px;
     }
   }
 

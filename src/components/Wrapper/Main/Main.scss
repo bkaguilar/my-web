@@ -72,24 +72,49 @@
 
   &--inicio {
     .Main__figure {
-      @include position(fixed, unset, 0, 0, 0);
-      // .leaf-svg {
-      //   animation: leaf 3s ease infinite;
-
-      //   @keyframes leaf {
-      //     50% {
-      //       d: path(
-      //         "M283,489.8c0,0-11.7-9-3.6-22.7c8-13.7,32.5-17.8,34.1-14.6s-8.4,8.8-10,12s-8.8,18.7-14.5,21.9S283,489.8,283,489.8z"
-      //       );
-      //     }
-      //   }
-      // }
+      @include position(fixed, unset, 0, 10%, 0);
       .phone-svg {
         animation: movePhone 3s ease-in-out infinite;
-
         @keyframes movePhone {
           50% {
             transform: translateY(10px);
+          }
+        }
+
+        &__box {
+          animation: moveBox 5s ease;
+          @keyframes moveBox {
+            0% {
+              transform: translateY(-400px);
+            }
+            50% {
+              transform: translateY(70px);
+            }
+          }
+
+          @for $i from 1 through 4 {
+            &:nth-of-type(#{$i}) {
+              animation-delay: #{$i * $time-delay + 0.3};
+            }
+          }
+        }
+
+        &__msg {
+          opacity: 0;
+          animation: moveMesg 1s cubic-bezier(0, 0, 0, 1.15) 6s forwards;
+          @keyframes moveMesg {
+            0% {
+              opacity: 1;
+              transform: translateX(200px);
+            }
+            70% {
+              opacity: 1;
+              transform: translateX(-20px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateX(0);
+            }
           }
         }
       }
@@ -103,7 +128,7 @@
       }
 
       @media #{$break-landscape} {
-        bottom: -100px;
+        bottom: -20px;
       }
     }
   }
