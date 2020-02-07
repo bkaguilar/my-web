@@ -37,7 +37,7 @@ class Main extends React.Component {
                   type="button"
                   onClick={this.props.onClick}
                   className="Button--contact"
-                  value="¡Contacta conmigo!"
+                  value="Contacto"
                   emoji="➝"
                 />
               )}
