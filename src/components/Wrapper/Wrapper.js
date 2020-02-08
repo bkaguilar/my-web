@@ -20,7 +20,8 @@ class Wrapper extends React.Component {
   handleMovePointer(e) {
     let posX = e.clientX - 30;
     let posY = e.clientY - 30;
-    this.pointer.style.transform = `translate3D(${posX}px, ${posY}px, 0)`;
+    let translateStyle = `translate3D(${posX}px, ${posY}px, 0)`;
+    this.pointer.style.transform = translateStyle;
   }
 
   moveToPage(n) {
@@ -155,9 +156,10 @@ class Wrapper extends React.Component {
         )}
         <ul className="dots">{dots}</ul>
         <section className="loading"></section>
-        <div ref={pointer => (this.pointer = pointer)} className="pointer">
-          <span className="pointer__center"></span>
-        </div>
+        <span
+          ref={pointer => (this.pointer = pointer)}
+          className="pointer__circle"
+        ></span>
       </div>
     );
   }

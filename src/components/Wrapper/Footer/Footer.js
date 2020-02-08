@@ -77,7 +77,7 @@ class Footer extends React.Component {
             </span>
             <Anchor
               href="/"
-              className="Footer__author__name"
+              className="Anchor--footer__author"
               name="Bessy K. Aguilar"
               title="Bk Aguilar"
               aria-label="Bk Aguilar"

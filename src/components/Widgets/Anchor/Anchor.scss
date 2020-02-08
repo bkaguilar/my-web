@@ -6,6 +6,11 @@
   position: relative;
   margin-right: 35px;
 
+  &:hover > .pointer {
+    width: 0;
+    height: 0;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -79,6 +84,16 @@
           padding-right: 25px;
           white-space: nowrap;
         }
+      }
+    }
+
+    &__author {
+      margin-left: 10px;
+      &:hover {
+        color: $brand-color_2;
+      }
+      &::before {
+        content: none;
       }
     }
   }
