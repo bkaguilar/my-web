@@ -89,6 +89,7 @@
 
     &__author {
       margin-left: 10px;
+      transition: all $timing-transition linear;
       &:hover {
         color: $brand-color_2;
       }
