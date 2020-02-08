@@ -64,7 +64,7 @@ body {
   //   min-height: auto;
   // }
 
-  &:hover > .pointer__circle {
+  &:hover > .Cursor {
     width: 50px;
     height: 50px;
   }
@@ -158,20 +158,6 @@ body {
   @media #{$break-landscape} {
     left: 15%;
   }
-}
-
-//Pointer
-.pointer__circle {
-  z-index: 2;
-  pointer-events: none;
-  mix-blend-mode: overlay;
-  position: absolute;
-  width: 0;
-  height: 0;
-  background-color: rgba(white, 0.5);
-  border-radius: 50%;
-  transition: transform 800ms, width 2s, height 2s;
-  transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
 //Themes

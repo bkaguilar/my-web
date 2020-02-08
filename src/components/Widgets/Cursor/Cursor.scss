@@ -1,0 +1,12 @@
+.Cursor {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  mix-blend-mode: overlay;
+  background-color: rgba(white, 0.5);
+  transition: transform 300ms, width 2s, height 2s;
+  transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}

@@ -4,6 +4,7 @@ import Header from "./Header/Header";
 import Main from "./Main/Main";
 import Footer from "./Footer/Footer";
 import Dot from "../Widgets/Dot/Dot";
+import Cursor from "../Widgets/Cursor/Cursor";
 
 let lastTime = new Date().getTime();
 let toucheStart, touchesEnd;
@@ -13,14 +14,21 @@ class Wrapper extends React.Component {
     super(props);
     this.state = {
       active: 0,
-      isMenuVisible: false
+      isMenuVisible: false,
+      cursor: {
+        posX: 0,
+        posY: 0
+      }
     };
   }
 
   handleMovePointer(e) {
-    let posX = e.clientX - 15;
-    let posY = e.clientY - 15;
-    this.pointer.style.transform = `translate3D(${posX}px, ${posY}px, 0)`;
+    this.setState({
+      cursor: {
+        posX: e.clientX - 15,
+        posY: e.clientY - 15
+      }
+    });
   }
 
   moveToPage(n) {
@@ -154,10 +162,7 @@ class Wrapper extends React.Component {
         )}
         <ul className="dots">{dots}</ul>
         <section className="loading"></section>
-        <span
-          ref={pointer => (this.pointer = pointer)}
-          className="pointer__circle"
-        ></span>
+        <Cursor {...this.state.cursor} />
       </div>
     );
   }
