@@ -20,8 +20,7 @@ class Wrapper extends React.Component {
   handleMovePointer(e) {
     let posX = e.clientX - 30;
     let posY = e.clientY - 30;
-    let translateStyle = `translate3D(${posX}px, ${posY}px, 0)`;
-    this.pointer.style.transform = translateStyle;
+    this.pointer.style.transform = `translate3D(${posX}px, ${posY}px, 0)`;
   }
 
   moveToPage(n) {

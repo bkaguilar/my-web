@@ -159,6 +159,20 @@ body {
   }
 }
 
+//Pointer
+.pointer__circle {
+  z-index: 2;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-color: rgba(white, 0.9);
+  border-radius: 50%;
+  transition: transform 200ms, width 2s, height 2s;
+  transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
 //Themes
 div[data-theme="black-theme"] {
   background: $pp-color;
@@ -226,17 +240,4 @@ div[data-theme="white-theme"] {
   &-exit-active {
     display: none;
   }
-}
-
-.pointer__circle {
-  z-index: 2;
-  pointer-events: none;
-  mix-blend-mode: difference;
-  position: absolute;
-  width: 0;
-  height: 0;
-  background-color: rgba(white, 0.9);
-  border-radius: 50%;
-  transition: transform 200ms, width 2s, height 2s;
-  transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
