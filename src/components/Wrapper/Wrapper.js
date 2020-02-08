@@ -18,8 +18,8 @@ class Wrapper extends React.Component {
   }
 
   handleMovePointer(e) {
-    let posX = e.clientX - 30;
-    let posY = e.clientY - 30;
+    let posX = e.clientX - 15;
+    let posY = e.clientY - 15;
     this.pointer.style.transform = `translate3D(${posX}px, ${posY}px, 0)`;
   }
 
@@ -103,7 +103,6 @@ class Wrapper extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.active !== prevState.active) {
-      // FIXME:
       window.scrollTo(0, 0);
     }
   }

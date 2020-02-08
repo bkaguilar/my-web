@@ -1,7 +1,7 @@
 @import "../../../common.scss";
 
 .Footer {
-  position: relative;
+  @include position(fixed, unset, 0, 0, 0);
   opacity: 0;
   background: white;
   max-height: $max-footer;
@@ -16,6 +16,7 @@
 
   @media #{$break-smallMax} {
     max-height: none;
+    position: relative;
   }
 
   &__anchors {

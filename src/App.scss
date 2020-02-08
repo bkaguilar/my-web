@@ -163,11 +163,11 @@ body {
 .pointer__circle {
   z-index: 2;
   pointer-events: none;
-  mix-blend-mode: difference;
+  mix-blend-mode: overlay;
   position: absolute;
   width: 0;
   height: 0;
-  background-color: rgba(white, 0.9);
+  background-color: rgba(white, 0.5);
   border-radius: 50%;
   transition: transform 200ms, width 2s, height 2s;
   transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
