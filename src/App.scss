@@ -64,8 +64,8 @@ body {
   // }
 
   &:hover > .pointer__circle {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -231,7 +231,7 @@ div[data-theme="white-theme"] {
 .pointer__circle {
   z-index: 2;
   pointer-events: none;
-  mix-blend-mode: Overlay;
+  mix-blend-mode: difference;
   position: absolute;
   width: 0;
   height: 0;
