@@ -21,6 +21,7 @@ html {
 }
 
 body {
+  cursor: none;
   overscroll-behavior-y: contain;
   font-size: 100%;
   height: 100%;
@@ -220,5 +221,27 @@ div[data-theme="white-theme"] {
   &-exit,
   &-exit-active {
     display: none;
+  }
+}
+
+.pointer {
+  pointer-events: none;
+  mix-blend-mode: Overlay;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(white, 0.5);
+  border-radius: 50%;
+  transition: all 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+
+  &__center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: white;
   }
 }

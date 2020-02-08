@@ -17,6 +17,12 @@ class Wrapper extends React.Component {
     };
   }
 
+  handleMovePointer(e) {
+    let posX = e.clientX - 30;
+    let posY = e.clientY - 30;
+    this.pointer.style.transform = `translate3D(${posX}px, ${posY}px, 0)`;
+  }
+
   moveToPage(n) {
     this.setState({
       active: this.state.active + n
@@ -125,6 +131,7 @@ class Wrapper extends React.Component {
         onKeyDown={this.handleKeydown.bind(this)}
         onTouchStart={this.handleTouchStart.bind(this)}
         onTouchEnd={this.handleTouchEnd.bind(this)}
+        onMouseMove={this.handleMovePointer.bind(this)}
         data-theme={this.state.active % 2 === 1 ? "black-theme" : "white-theme"}
       >
         <Header
@@ -148,6 +155,9 @@ class Wrapper extends React.Component {
         )}
         <ul className="dots">{dots}</ul>
         <section className="loading"></section>
+        <div ref={pointer => (this.pointer = pointer)} className="pointer">
+          <span className="pointer__center"></span>
+        </div>
       </div>
     );
   }
