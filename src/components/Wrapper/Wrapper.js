@@ -33,6 +33,7 @@ class Wrapper extends React.Component {
   }
 
   moveToPage(n) {
+    window.scrollTo(0, 0);
     this.setState({
       active: this.state.active + n
     });
@@ -121,7 +122,9 @@ class Wrapper extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.active !== prevState.active) {
-      window.scrollTo(0, 0);
+      setTimeout(function() {
+        window.scrollTo(0, 0);
+      }, 100);
     }
   }
 

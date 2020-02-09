@@ -1,7 +1,7 @@
 @import "../../../common.scss";
 
 .Header {
-  @include position(fixed, 0, 0, unset, 0);
+  position: relative;
   padding: $lr-padding $lr-padding 0 $lr-padding;
   z-index: 1;
   display: flex;
@@ -11,14 +11,12 @@
   transition: all 100ms ease;
 
   @media #{$break-smallMax} {
-    position: relative;
     height: 80px;
     padding: 1.6em;
   }
 
   @media #{$break-largeLandscape} {
     padding: 1.6em;
-    position: relative;
   }
 
   &__figure {

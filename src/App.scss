@@ -60,10 +60,6 @@ body {
   min-height: 100vh;
   transition: all 500ms ease-in-out;
 
-  // @media #{$break-smallMax} {
-  //   min-height: auto;
-  // }
-
   &:hover > .Cursor {
     width: 50px;
     height: 50px;
@@ -213,16 +209,6 @@ div[data-theme="white-theme"] {
 
 //Render Animation
 .titleAnimation {
-  /* starting ENTER animation */
-  // &-appear, &-enter {
-  //   opacity: 1 !important;
-  // }
-  // /* ending ENTER animation */
-  // &-appear-active, &-enter-active {
-  //   opacity: 1 !important;
-  // }
-  /* starting EXIT animation */
-  /* ending EXIT animation */
   &-exit,
   &-exit-active {
     display: none;

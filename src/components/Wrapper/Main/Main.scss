@@ -4,10 +4,9 @@
   flex: 1 0 auto;
   width: 100%;
   max-width: $max-width;
-  padding: calc(110px + 4em) $lr-padding $lr-padding $lr-padding;
+  padding: $lr-padding;
   margin: 0 auto;
   transition: all $timing-transition ease-in;
-
   display: flex;
   flex-wrap: wrap;
 

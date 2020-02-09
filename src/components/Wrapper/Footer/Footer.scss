@@ -1,7 +1,7 @@
 @import "../../../common.scss";
 
 .Footer {
-  @include position(fixed, unset, 0, 0, 0);
+  position: relative;
   opacity: 0;
   background: white;
   max-height: $max-footer;
@@ -16,12 +16,10 @@
 
   @media #{$break-smallMax} {
     max-height: none;
-    position: relative;
   }
 
   @media #{$break-largeLandscape} {
     max-height: none;
-    position: relative;
   }
 
   &__anchors {
