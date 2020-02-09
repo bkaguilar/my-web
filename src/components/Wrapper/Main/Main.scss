@@ -16,6 +16,9 @@
     align-items: center;
     justify-content: center;
   }
+  @media #{$break-largeLandscape} {
+    padding: 1.6em;
+  }
 
   &__text {
     position: relative;
@@ -26,6 +29,10 @@
       text-align: center;
       margin: 10px 0;
       width: 100%;
+    }
+
+    @media #{$break-largeLandscape} {
+      width: 80%;
     }
 
     &__title {

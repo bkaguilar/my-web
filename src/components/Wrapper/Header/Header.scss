@@ -13,7 +13,12 @@
   @media #{$break-smallMax} {
     position: relative;
     height: 80px;
-    padding: 1.5em;
+    padding: 1.6em;
+  }
+
+  @media #{$break-largeLandscape} {
+    padding: 1.6em;
+    position: relative;
   }
 
   &__figure {

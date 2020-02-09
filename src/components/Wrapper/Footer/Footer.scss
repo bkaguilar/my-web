@@ -19,6 +19,11 @@
     position: relative;
   }
 
+  @media #{$break-largeLandscape} {
+    max-height: none;
+    position: relative;
+  }
+
   &__anchors {
     border-bottom: 1px solid #ededed;
     max-width: $max-width;
