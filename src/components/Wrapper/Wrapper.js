@@ -15,6 +15,7 @@ class Wrapper extends React.Component {
     this.state = {
       active: 0,
       isMenuVisible: false,
+      isSmallDevice: true,
       cursor: {
         posX: 0,
         posY: 0
@@ -107,6 +108,15 @@ class Wrapper extends React.Component {
 
   componentDidMount() {
     setTimeout(console.log.bind(console, MESSAGE));
+    if (window.innerWidth <= 768) {
+      this.setState({
+        isSmallDevice: true
+      });
+    } else {
+      this.setState({
+        isSmallDevice: false
+      });
+    }
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -162,7 +172,7 @@ class Wrapper extends React.Component {
         )}
         <ul className="dots">{dots}</ul>
         <section className="loading"></section>
-        <Cursor {...this.state.cursor} />
+        {!this.state.isSmallDevice && <Cursor {...this.state.cursor} />}
       </div>
     );
   }

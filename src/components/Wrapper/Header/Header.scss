@@ -1,14 +1,17 @@
 @import "../../../common.scss";
 
 .Header {
+  @include position(fixed, 0, 0, unset, 0);
   padding: $lr-padding $lr-padding 0 $lr-padding;
   z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 110px;
   transition: all 100ms ease;
 
   @media #{$break-smallMax} {
+    position: relative;
     height: 80px;
     padding: 1.5em;
   }
