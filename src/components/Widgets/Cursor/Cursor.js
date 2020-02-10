@@ -6,7 +6,12 @@ class Cursor extends React.Component {
     const transformCursor = {
       transform: `translate3D(${this.props.posX}px, ${this.props.posY}px, 0)`
     };
-    return <span style={transformCursor} className="Cursor"></span>;
+    return (
+      <div className="Cursor">
+        <span style={transformCursor} className="Cursor__dot"></span>
+        <span style={transformCursor} className="Cursor__dot"></span>
+      </div>
+    );
   }
 }
 

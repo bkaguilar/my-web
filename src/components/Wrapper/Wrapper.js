@@ -26,8 +26,8 @@ class Wrapper extends React.Component {
   handleMovePointer(e) {
     this.setState({
       cursor: {
-        posX: e.clientX - 15,
-        posY: e.clientY - 15
+        posX: e.clientX,
+        posY: e.clientY
       }
     });
   }

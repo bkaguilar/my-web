@@ -1,12 +1,26 @@
+$size: 10px;
+
 .Cursor {
   position: absolute;
   z-index: 2;
   pointer-events: none;
-  border-radius: 50%;
-  width: 0px;
-  height: 0px;
-  mix-blend-mode: overlay;
-  background-color: rgba(white, 0.5);
-  transition: transform 300ms, width 2s, height 2s;
-  transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+
+  &__dot {
+    position: absolute;
+    border-radius: 50%;
+    width: $size;
+    height: $size;
+  }
+
+  &__dot:first-of-type {
+    background-color: white;
+    transition: transform 100ms;
+    transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  }
+
+  &__dot:last-of-type {
+    background-color: rgba(white, 0.3);
+    transition: transform 600ms;
+    transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  }
 }
