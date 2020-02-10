@@ -71,6 +71,7 @@
 
     @media #{$break-smallMin} {
       &[name="hola@bkaguilar.com"]:hover {
+        transition: color 0.3s ease;
         color: transparent;
         &::before {
           content: attr(title);
