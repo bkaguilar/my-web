@@ -6,11 +6,6 @@
   position: relative;
   margin-right: 35px;
 
-  &:hover > .pointer {
-    width: 0;
-    height: 0;
-  }
-
   &::before {
     content: "";
     position: absolute;

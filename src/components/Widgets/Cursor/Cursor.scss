@@ -3,8 +3,8 @@
   z-index: 2;
   pointer-events: none;
   border-radius: 50%;
-  width: 0;
-  height: 0;
+  width: 0px;
+  height: 0px;
   mix-blend-mode: overlay;
   background-color: rgba(white, 0.5);
   transition: transform 300ms, width 2s, height 2s;
