@@ -4,7 +4,9 @@ import "./Cursor.scss";
 class Cursor extends React.Component {
   render() {
     const transformCursor = {
-      transform: `translate3D(${this.props.posX}px, ${this.props.posY}px, 0)`
+      // transform: `translate3D(${this.props.posX}px, ${this.props.posY}px, 0)`
+      top: this.props.posY,
+      left: this.props.posX
     };
     return (
       <div className="Cursor">
