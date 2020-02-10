@@ -1,12 +1,17 @@
 @import "../../../common.scss";
 
 .Footer {
+  @include patternBackground("./images/pattern6.svg");
   position: relative;
   opacity: 0;
   background: white;
   max-height: $max-footer;
   animation: appear 500ms ease 1s forwards;
-  @include patternBackground("./images/pattern6.svg");
+
+  &:hover ~ .Cursor .Cursor__dot:last-of-type {
+    width: 0;
+    height: 0;
+  }
 
   @keyframes appear {
     100% {

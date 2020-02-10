@@ -1,12 +1,12 @@
 @import "../../../common.scss";
 
 .Cursor {
-  position: absolute;
+  position: fixed;
   z-index: 2;
   pointer-events: none;
 
   &__dot {
-    position: absolute;
+    position: fixed;
     transform: translate(-50%, -50%);
     border-radius: 50%;
   }

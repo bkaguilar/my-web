@@ -10,6 +10,11 @@
   height: 110px;
   transition: all 100ms ease;
 
+  &:hover ~ .Cursor .Cursor__dot:last-of-type {
+    width: 0;
+    height: 0;
+  }
+
   @media #{$break-smallMax} {
     height: 80px;
     padding: 1.6em;
