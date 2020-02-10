@@ -1,4 +1,4 @@
-$size: 10px;
+$size: 15px;
 
 .Cursor {
   position: absolute;
@@ -10,17 +10,17 @@ $size: 10px;
     border-radius: 50%;
     width: $size;
     height: $size;
+    background-color: white;
   }
 
   &__dot:first-of-type {
-    background-color: white;
     transition: transform 100ms;
     transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
   }
 
   &__dot:last-of-type {
-    background-color: rgba(white, 0.3);
-    transition: transform 600ms;
+    opacity: 0.4;
+    transition: transform 700ms;
     transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
   }
 }
