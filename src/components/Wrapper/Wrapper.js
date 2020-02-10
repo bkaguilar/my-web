@@ -33,7 +33,6 @@ class Wrapper extends React.Component {
   }
 
   moveToPage(n) {
-    window.scrollTo(0, 0);
     this.setState({
       active: this.state.active + n
     });
@@ -109,7 +108,7 @@ class Wrapper extends React.Component {
 
   componentDidMount() {
     setTimeout(console.log.bind(console, MESSAGE));
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 768 || window.innerHeight <= 768) {
       this.setState({
         isSmallDevice: true
       });
