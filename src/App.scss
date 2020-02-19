@@ -152,6 +152,32 @@ body {
   }
 }
 
+.scroll-label {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 20px;
+  width: 10px;
+  overflow: hidden;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    border-radius: 50%;
+    border: 2px solid $pp-color;
+    animation: blink 0.9s linear infinite;
+
+    @keyframes blink {
+      100% {
+        transform: translate(-50%, 20px);
+      }
+    }
+  }
+}
+
 //Themes
 div[data-theme="black-theme"] {
   background: $pp-color;
@@ -190,6 +216,10 @@ div[data-theme="black-theme"] {
 
   .Dot {
     background: $sc-color;
+  }
+
+  .scroll-label:after {
+    border-color: $sc-color;
   }
 }
 
