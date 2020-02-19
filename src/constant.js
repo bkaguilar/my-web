@@ -20,13 +20,13 @@ export const RESUME_PROFILE = [
     title: "Diseñadora Web",
     site: "BaboonLab",
     description:
-      "I orchestrated and developed the frontend infrastructure, design and functionality for hellotax's new JavaScript-centric app powered by Vue and also managed a co-engineer."
+      "Desarrollé la infraestructura frontend y diseñe las distinas aplicaciones de la compañia, ayudaba con el desarrollo con el lenguaje PHP ayudandome con el framework symfony "
   }
 ];
 
 export const RESUME_DATA = [
   {
-    sectionName: "contact",
+    sectionName: "contacto",
     items: [
       <Anchor
         href="mailto:hola@bkaguilar.com?subject=🤟🏽Hola Bessy, quiero proponerte algo"
@@ -54,10 +54,12 @@ export const RESUME_DATA = [
       "Control de versiones GIT",
       "Docker",
       "React",
+      "Jest",
       "Javascript",
       "HTML5",
       "CSS3",
       "NodeJS",
+      "SVG Animaciones",
       "Suite Adobe(Illustrator, Photoshop, XD, Lightroom)"
     ]
   }
@@ -83,10 +85,11 @@ export const PAGES = [
       paragrah1:
         "Self-taught developer, designer and photography lover who has been building for the web in some capacity since 2019.",
       paragrah2:
-        "I currently have my residence in Zaragoza, Spain. I love the cinematography and the art behind a lens. I like travel, take pictures, ride my bike and occasionally read fantasy medieval and distopic storys, I'm a person very curious and straightforward.",
-      paragrah3: "Like the space and all that shit",
+        "I currently have my residence in Zaragoza, Spain. I love the cinematography and the art behind a lens; quite appreciate a well done and peculiar scene. I ride my bike when i can and occasionally read fantasy medieval(Go Tolkien <3) and distopic storys, I'm a person very curious and straightforward.",
+      paragrah3:
+        "Outside of my work I like to travelling and getting out with my camera. I shoot with a Nikon D3200(yeah, i know ;( ) and a 18-55mm lens, and sometimes just my phone. I like the space and all that shit and i dont like to talk about me but i like to eat. o.o",
       paragrah4:
-        "I'm still very green and all these but always keeping learning and i keep abreast of new technological advances; I like to craft solid and responsive products without sacrificing creativity.",
+        "I'm still very green and all these but always keeping learning and i keep abreast of new technological advances; I like to craft solid and responsive products without sacrificing creativity. Design quality, user-friendly and scalable products regardless of stack.",
       paragrah5:
         "These days currently im a freelancer developer .... I'm now available for contracts and remote full-time roles."
     }

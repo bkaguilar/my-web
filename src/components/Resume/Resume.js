@@ -59,8 +59,8 @@ class Resume extends React.Component {
             className="Resume__description__content"
             aria-labelledby="Description"
           >
-            Engineer valued for driving high-performance accessible web
-            experiences. I design quality, user-friendly and scalable products
+            I like to craft solid and responsive products without sacrificing
+            creativity. Design quality, user-friendly and scalable products
             regardless of stack.
           </p>
         </div>
