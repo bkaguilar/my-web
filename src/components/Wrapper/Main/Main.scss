@@ -54,7 +54,7 @@
       @include showAnimation;
       animation-delay: $time-delay + 0.9s;
       margin-bottom: 15px;
-      font-size: 1.3em;
+      font-size: 1.1em;
       letter-spacing: 0.04em;
 
       @media #{$break-smallMax} {
@@ -138,7 +138,16 @@
 
   &--personal {
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+
+    .Main__text:first-of-type {
+      margin: 30vh 0;
+    }
+
+    .Main__text:last-child {
+      width: 70%;
+      margin-left: auto;
+    }
 
     .Main__figure {
       margin: 10px;
@@ -155,10 +164,6 @@
       @media #{$break-landscape} {
         width: 50%;
       }
-    }
-
-    .Main__text__content:nth-of-type(1) {
-      margin-bottom: 40px;
     }
   }
 

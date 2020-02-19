@@ -69,30 +69,38 @@ export const PAGES = [
     name: "home",
     image: <Cover />,
     title: "Hello world, I'm Bessy",
-    content: [
-      "I am an Honduran frontend developer who created this landing page to show you how i made landing pages and rule you and bring you in the enlightenment behind it."
-    ]
+    content: {
+      paragrah1:
+        "I am an Honduran frontend developer who created this landing page to show you how i made landing pages and rule you and bring you in the enlightenment behind it."
+    }
   },
   {
     id: 1,
     name: "personal",
     image: <Bike />,
     title: "About me",
-    content: [
-      "Self-taught developer, designer and photography lover who has been building for the web in some capacity since 2019.",
-      "I currently have my residence in Zaragoza, Spain. I love the cinematography and the art behind a lens. I like travel, take pictures, occasionally read fantasy medieval and distopic storys, I'm a person very curious and straightforward.",
-      "I like to craft solid and responsive products without sacrificing creativity."
-    ]
+    content: {
+      paragrah1:
+        "Self-taught developer, designer and photography lover who has been building for the web in some capacity since 2019.",
+      paragrah2:
+        "I currently have my residence in Zaragoza, Spain. I love the cinematography and the art behind a lens. I like travel, take pictures, ride my bike and occasionally read fantasy medieval and distopic storys, I'm a person very curious and straightforward.",
+      paragrah3: "Like the space and all that shit",
+      paragrah4:
+        "I'm still very green and all these but always keeping learning and i keep abreast of new technological advances; I like to craft solid and responsive products without sacrificing creativity.",
+      paragrah5:
+        "These days currently im a freelancer developer .... I'm now available for contracts and remote full-time roles."
+    }
   },
   {
     id: 2,
     name: "contact",
     image: <Plane />,
     title: "Let's work together",
-    content: [
-      "person.idea || person.proposal ? person.writeEmail() : 'Thanks you for passing bye. Have a nice day ⊂(´･◡･⊂ ).'"
+    content: {
+      paragrah1:
+        "person.idea || person.proposal ? person.writeEmail() : 'Thanks you for passing bye. Have a nice day ⊂(´･◡･⊂ ).'"
       // "If you havie some idea or proposal let me now, ⊂(´･◡･⊂ )."
-    ]
+    }
   }
 ];
 
@@ -129,7 +137,6 @@ export const SERVICES = [
 
 export const MESSAGE =
   "\n" +
-  "Strong with you, the curiosity is...              \n" +
   "The curiosity is strong with this one...          \n" +
   "                       .-.                        \n" +
   "                      |_:_|                       \n" +

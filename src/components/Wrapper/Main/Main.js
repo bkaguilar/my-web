@@ -7,15 +7,6 @@ class Main extends React.Component {
   render() {
     const { pages, active } = this.props;
     const { title, image, name, content, id } = pages[active];
-
-    let paragraphs = content.map((item, index) => {
-      return (
-        <p key={index} className="Main__text__content">
-          {item}
-        </p>
-      );
-    });
-
     return (
       <TransitionGroup component={null}>
         <CSSTransition
@@ -31,7 +22,7 @@ class Main extends React.Component {
               <h2 className="Main__text__title">
                 {title} <span className="title-point">.</span>
               </h2>
-              {paragraphs}
+              <p className="Main__text__content">{content.paragrah1}</p>
               {active === 0 && (
                 <Button
                   type="button"
@@ -42,7 +33,16 @@ class Main extends React.Component {
                 />
               )}
             </div>
-            <figure className="Main__figure">{image}</figure>
+            {image && <figure className="Main__figure">{image}</figure>}
+            {content.paragrah2 && (
+              <div className="Main__text">
+                <p className="Main__text__content">{content.paragrah2}</p>
+                <p className="Main__text__content">{content.paragrah3}</p>
+                <p className="Main__text__content">{content.paragrah4}</p>
+                <p className="Main__text__content">{content.paragrah5}</p>
+                <p className="Main__text__content">{content.paragrah6}</p>
+              </div>
+            )}
           </main>
         </CSSTransition>
       </TransitionGroup>
