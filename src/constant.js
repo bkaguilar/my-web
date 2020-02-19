@@ -1,7 +1,7 @@
 import React from "react";
 import Anchor from "./components/Widgets/Anchor/Anchor";
 import { ReactComponent as Logo } from "./images/logo.svg";
-import { ReactComponent as Portada } from "./images/portada.svg";
+import { ReactComponent as Cover } from "./images/cover.svg";
 import { ReactComponent as Bike } from "./images/bike.svg";
 import { ReactComponent as Plane } from "./images/plane.svg";
 
@@ -26,7 +26,7 @@ export const RESUME_PROFILE = [
 
 export const RESUME_DATA = [
   {
-    sectionName: "Contacto",
+    sectionName: "contact",
     items: [
       <Anchor
         href="mailto:hola@bkaguilar.com?subject=🤟🏽Hola Bessy, quiero proponerte algo"
@@ -66,32 +66,32 @@ export const RESUME_DATA = [
 export const PAGES = [
   {
     id: 0,
-    name: "inicio",
-    image: <Portada />,
-    title: "Hola, he hecho esta paǵina web",
+    name: "home",
+    image: <Cover />,
+    title: "Hello world, I'm Bessy",
     content: [
-      "Soy Bessy, una NO ingeniera informatica, independiente desarrolladora que tiene pasion por el desarrollo responsive front end y el diseño, establecida en Zaragoza"
+      "I am an Honduran frontend developer who created this landing page to show you how i made landing pages and rule you and bring you in the enlightenment behind it."
     ]
   },
   {
     id: 1,
     name: "personal",
     image: <Bike />,
-    title: "Hello",
+    title: "About me",
     content: [
-      "Comence con el desarrollo front-end desde hace poco (2019). Mi formación académica es de Técnico en Computación, pero soy fundamentalmente autodidacta.",
-      "Desde hace un par de años me empezo a interesar el diseño de web y he estado en continuo aprendizaje desde entonces, ahora mismo me estoy especializando en el desarrollo front end.",
-      "Actualmente estoy en busca de nuevos retos despues de tomarme unos meses para seguir preparandome y aprendiendo nuevas tecnologias del sector.",
-      "Disfruto creando experiencias que son tanto atractivas como funcionales."
+      "Self-taught developer, designer and photography lover who has been building for the web in some capacity since 2019.",
+      "I currently have my residence in Zaragoza, Spain. I love the cinematography and the art behind a lens. I like travel, take pictures, occasionally read fantasy medieval and distopic storys, I'm a person very curious and straightforward.",
+      "I like to craft solid and responsive products without sacrificing creativity."
     ]
   },
   {
     id: 2,
-    name: "contacto",
+    name: "contact",
     image: <Plane />,
-    title: "Estemos en contacto!",
+    title: "Let's work together",
     content: [
-      "¿Tienes alguna pregunta o propuesta?, escribeme y hazmela saber. ⊂(´･◡･⊂ )"
+      "person.idea || person.proposal ? person.writeEmail() : 'Thanks you for passing bye. Have a nice day ⊂(´･◡･⊂ ).'"
+      // "If you havie some idea or proposal let me now, ⊂(´･◡･⊂ )."
     ]
   }
 ];

@@ -76,7 +76,7 @@
     }
   }
 
-  &--inicio {
+  &--home {
     .Main__figure {
       @include position(fixed, unset, 0, 10%, 0);
       .phone-svg {
@@ -162,7 +162,7 @@
     }
   }
 
-  &--contacto {
+  &--contact {
     .Main__figure {
       @include position(absolute, 100px, 10%, 0, unset);
       transform: rotate(-45deg);

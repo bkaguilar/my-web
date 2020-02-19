@@ -14,7 +14,7 @@ class Footer extends React.Component {
         inp.select();
         document.execCommand("copy", false);
         inp.remove();
-        e.currentTarget.title = "Email copiado";
+        e.currentTarget.title = "Email copied";
       }
     }
   }
@@ -22,7 +22,7 @@ class Footer extends React.Component {
   emailHover(e) {
     let emailValue = e.currentTarget.innerText;
     if (emailValue === "hola@bkaguilar.com") {
-      e.currentTarget.title = "Copiar al portapapeles";
+      e.currentTarget.title = "Copy to clipboard";
     }
   }
 
@@ -59,7 +59,7 @@ class Footer extends React.Component {
         <div className="Footer__anchors">
           <figure className="Footer__anchors__logo">{logo}</figure>
           <nav className="Footer__anchors__nav">
-            <h3 className="Footer__anchors__nav__title">Di hola</h3>
+            <h3 className="Footer__anchors__nav__title">Say Hello</h3>
             {services}
           </nav>
           <nav className="Footer__anchors__nav">
