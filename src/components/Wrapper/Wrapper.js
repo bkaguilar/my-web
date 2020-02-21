@@ -124,6 +124,10 @@ class Wrapper extends React.Component {
         isSmallDevice: false
       });
     }
+    window.addEventListener("wheel", this.handleWheel.bind(this));
+    window.addEventListener("keydown", this.handleKeydown.bind(this));
+    window.addEventListener("touchend", this.handleTouchEnd.bind(this));
+    window.addEventListener("touchstart", this.handleTouchStart.bind(this));
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -153,10 +157,6 @@ class Wrapper extends React.Component {
             ? "Wrapper positionFixed"
             : "Wrapper"
         }
-        onWheel={this.handleWheel.bind(this)}
-        onKeyDown={this.handleKeydown.bind(this)}
-        onTouchStart={this.handleTouchStart.bind(this)}
-        onTouchEnd={this.handleTouchEnd.bind(this)}
         data-theme={this.state.blackTheme ? "black-theme" : "white-theme"}
       >
         <Header

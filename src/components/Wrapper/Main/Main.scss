@@ -147,7 +147,7 @@
 
     .Main__text:last-child {
       width: 100%;
-      margin: 80px 0;
+      margin-top: 80px;
     }
 
     .Main__figure {
@@ -187,9 +187,7 @@
       }
 
       @media #{$break-smallMax} {
-        transform: rotate(-55deg);
-        top: 30px;
-        width: inherit;
+        display: none;
       }
     }
   }
