@@ -7,11 +7,6 @@
   max-height: $max-footer;
   animation: appear 500ms ease 1s forwards;
 
-  &:hover ~ .Cursor .Cursor__dot:last-of-type {
-    width: 0;
-    height: 0;
-  }
-
   @keyframes appear {
     100% {
       opacity: 1;

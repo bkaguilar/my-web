@@ -157,7 +157,6 @@ class Wrapper extends React.Component {
         onKeyDown={this.handleKeydown.bind(this)}
         onTouchStart={this.handleTouchStart.bind(this)}
         onTouchEnd={this.handleTouchEnd.bind(this)}
-        onMouseMove={this.handleMovePointer.bind(this)}
         data-theme={this.state.blackTheme ? "black-theme" : "white-theme"}
       >
         <Header
@@ -181,11 +180,8 @@ class Wrapper extends React.Component {
           />
         )}
         <ul className="dots">{dots}</ul>
-        {this.state.active !== PAGES.length - 1 && (
-          <div className="scroll-label">scroll</div>
-        )}
+        {this.state.active === 1 && <div className="scroll-label">scroll</div>}
         <section className="loading"></section>
-        {!this.state.isSmallDevice && <Cursor {...this.state.cursor} />}
       </div>
     );
   }
