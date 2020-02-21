@@ -182,7 +182,7 @@ class Wrapper extends React.Component {
         )}
         <ul className="dots">{dots}</ul>
         {this.state.active !== PAGES.length - 1 && (
-          <div className="scroll-label"></div>
+          <div className="scroll-label">scroll</div>
         )}
         <section className="loading"></section>
         {!this.state.isSmallDevice && <Cursor {...this.state.cursor} />}

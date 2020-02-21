@@ -154,25 +154,33 @@ body {
 
 .scroll-label {
   position: fixed;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 20px;
-  width: 10px;
-  overflow: hidden;
+  bottom: 10%;
+  left: 4em;
+  transform: rotate(-90deg);
+  letter-spacing: 1em;
+  font-size: 0.6em;
+  color: rgba($pp-color, 0.4);
+  text-transform: uppercase;
 
   &:after {
     content: "";
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, -100%);
+    left: -10px;
+    top: 50%;
+    transform: translate(0, -50%);
     border-radius: 50%;
-    border: 2px solid $pp-color;
-    animation: blink 0.9s linear infinite;
+    border: 2px solid;
+    animation: blink 2s linear infinite;
 
     @keyframes blink {
-      100% {
-        transform: translate(-50%, 20px);
+      50% {
+        transform: translate(-20px, -50%);
+      }
+      70% {
+        transform: translate(-10px, -50%);
+      }
+      80% {
+        transform: translate(-20px, -50%);
       }
     }
   }
@@ -227,15 +235,15 @@ div[data-theme="black-theme"] {
       .shadow-svg {
         display: none;
       }
-    }
 
-    .path-svg {
-      stroke: $sc-color;
-    }
+      .path-svg {
+        stroke: $sc-color;
+      }
 
-    .plane-svg path {
-      stroke: $pp-color;
-      fill: $sc-color;
+      .plane-svg path {
+        stroke: $pp-color;
+        fill: $sc-color;
+      }
     }
   }
 
@@ -249,8 +257,8 @@ div[data-theme="black-theme"] {
     background: $sc-color;
   }
 
-  .scroll-label:after {
-    border-color: $sc-color;
+  .scroll-label {
+    color: rgba($sc-color, 0.4);
   }
 }
 
@@ -261,6 +269,17 @@ div[data-theme="white-theme"] {
   }
   main {
     color: $pp-color;
+  }
+
+  figure {
+    .bike-svg {
+      path,
+      rect,
+      polygon,
+      circle {
+        fill: $pp-color;
+      }
+    }
   }
 
   footer {
