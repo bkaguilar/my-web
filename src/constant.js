@@ -100,9 +100,7 @@ export const PAGES = [
     image: <Plane />,
     title: "Let's work together",
     content: {
-      paragrah1:
-        "person.idea || person.proposal ? person.writeEmail() : 'Thanks you for passing bye. Have a nice day ⊂(´･◡･⊂ ).'"
-      // "If you havie some idea or proposal let me now, ⊂(´･◡･⊂ )."
+      paragrah1: "If you have some idea or proposal let me now, ⊂(´･◡･⊂ )."
     }
   }
 ];

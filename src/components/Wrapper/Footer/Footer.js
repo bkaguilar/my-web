@@ -2,6 +2,8 @@ import React from "react";
 import Anchor from "../../Widgets/Anchor/Anchor";
 import "./Footer.scss";
 
+let year = new Date().getFullYear();
+
 class Footer extends React.Component {
   clipboardEmail(e) {
     if (window.innerWidth >= 768) {
@@ -28,7 +30,6 @@ class Footer extends React.Component {
 
   render() {
     const { servicesAnchors, socialAnchors, logo } = this.props;
-    let year = new Date().getFullYear();
     let socialMedia = socialAnchors.map((item, i) => {
       return (
         <Anchor

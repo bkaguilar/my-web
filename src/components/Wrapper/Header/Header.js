@@ -4,6 +4,7 @@ import Anchor from "../../Widgets/Anchor/Anchor";
 import { ReactComponent as Plant } from "../../../images/plant.svg";
 import Button from "../../Widgets/Button/Button";
 import "./Header.scss";
+import { promised } from "q";
 
 class Header extends React.Component {
   render() {
@@ -34,6 +35,9 @@ class Header extends React.Component {
             {logo}
             <h1 className="Header__figure__text">bk Aguilar</h1>
           </a>
+        </figure>
+        <figure>
+          <span onClick={this.props.handleChangeTheme}>cambiar de tema</span>
         </figure>
         <nav
           className={

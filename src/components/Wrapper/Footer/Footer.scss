@@ -1,7 +1,6 @@
 @import "../../../common.scss";
 
 .Footer {
-  @include patternBackground("./images/pattern6.svg");
   position: relative;
   opacity: 0;
   background: white;

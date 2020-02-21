@@ -14,6 +14,7 @@ class Wrapper extends React.Component {
     super(props);
     this.state = {
       active: 0,
+      blackTheme: false,
       isMenuVisible: false,
       isSmallDevice: true,
       cursor: {
@@ -106,6 +107,12 @@ class Wrapper extends React.Component {
     }
   }
 
+  handleChangeTheme() {
+    this.setState({
+      blackTheme: !this.state.blackTheme
+    });
+  }
+
   componentDidMount() {
     setTimeout(console.log.bind(console, MESSAGE));
     if (window.innerWidth <= 768 || window.innerHeight <= 768) {
@@ -151,7 +158,7 @@ class Wrapper extends React.Component {
         onTouchStart={this.handleTouchStart.bind(this)}
         onTouchEnd={this.handleTouchEnd.bind(this)}
         onMouseMove={this.handleMovePointer.bind(this)}
-        data-theme={this.state.active % 2 === 1 ? "black-theme" : "white-theme"}
+        data-theme={this.state.blackTheme ? "black-theme" : "white-theme"}
       >
         <Header
           {...this.state}
@@ -159,6 +166,7 @@ class Wrapper extends React.Component {
           showMenu={this.handleShowMenu.bind(this)}
           logo={LOGO}
           pages={PAGES}
+          handleChangeTheme={this.handleChangeTheme.bind(this)}
         />
         <Main
           {...this.state}

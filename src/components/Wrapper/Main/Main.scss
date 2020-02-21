@@ -25,6 +25,7 @@
     width: 60%;
 
     @media #{$break-smallMax} {
+      z-index: 0 !important;
       text-align: center;
       margin: 10px 0;
       width: 100%;

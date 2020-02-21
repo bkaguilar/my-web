@@ -188,7 +188,8 @@ div[data-theme="black-theme"] {
     z-index: 0;
   }
 
-  header {
+  header,
+  footer {
     color: $sc-color;
 
     svg .logo-path1 {
@@ -209,9 +210,39 @@ div[data-theme="black-theme"] {
         color: $sc-color;
       }
     }
+
+    .Main__text {
+      z-index: 2;
+    }
+
     figure {
       z-index: 0;
+
+      .mountain-svg {
+        fill: rgb(48, 48, 48);
+      }
+
+      .phone-svg__shadow,
+      .tree-svg,
+      .shadow-svg {
+        display: none;
+      }
     }
+
+    .path-svg {
+      stroke: $sc-color;
+    }
+
+    .plane-svg path {
+      stroke: $pp-color;
+      fill: $sc-color;
+    }
+  }
+
+  footer {
+    // @include patternBackground("./images/pattern6.svg");
+    background: transparent;
+    color: $sc-color;
   }
 
   .Dot {
@@ -230,6 +261,10 @@ div[data-theme="white-theme"] {
   }
   main {
     color: $pp-color;
+  }
+
+  footer {
+    @include patternBackground("./images/pattern6.svg");
   }
 }
 
