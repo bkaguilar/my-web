@@ -4,8 +4,6 @@ import Anchor from "../../Widgets/Anchor/Anchor";
 import { ReactComponent as Plant } from "../../../images/plant.svg";
 import Button from "../../Widgets/Button/Button";
 import "./Header.scss";
-import { promised } from "q";
-
 class Header extends React.Component {
   render() {
     const { onClick, showMenu, logo, pages } = this.props;
