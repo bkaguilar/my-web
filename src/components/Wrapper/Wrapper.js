@@ -4,7 +4,6 @@ import Header from "./Header/Header";
 import Main from "./Main/Main";
 import Footer from "./Footer/Footer";
 import Dot from "../Widgets/Dot/Dot";
-import Cursor from "../Widgets/Cursor/Cursor";
 
 let lastTime = new Date().getTime();
 let toucheStart, touchesEnd;
@@ -15,22 +14,8 @@ class Wrapper extends React.Component {
     this.state = {
       active: 0,
       blackTheme: false,
-      isMenuVisible: false,
-      isSmallDevice: true,
-      cursor: {
-        posX: 0,
-        posY: 0
-      }
+      isMenuVisible: false
     };
-  }
-
-  handleMovePointer(e) {
-    this.setState({
-      cursor: {
-        posX: e.clientX,
-        posY: e.clientY
-      }
-    });
   }
 
   moveToPage(n) {
@@ -115,15 +100,6 @@ class Wrapper extends React.Component {
 
   componentDidMount() {
     setTimeout(console.log.bind(console, MESSAGE));
-    if (window.innerWidth <= 768 || window.innerHeight <= 768) {
-      this.setState({
-        isSmallDevice: true
-      });
-    } else {
-      this.setState({
-        isSmallDevice: false
-      });
-    }
     window.addEventListener("wheel", this.handleWheel.bind(this));
     window.addEventListener("keydown", this.handleKeydown.bind(this));
     window.addEventListener("touchend", this.handleTouchEnd.bind(this));
@@ -132,6 +108,7 @@ class Wrapper extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.active !== prevState.active) {
+      console.log("cambui");
       setTimeout(function() {
         window.scrollTo(0, 0);
       }, 100);

@@ -4,7 +4,7 @@ import Anchor from "../../Widgets/Anchor/Anchor";
 import { ReactComponent as Plant } from "../../../images/plant.svg";
 import Button from "../../Widgets/Button/Button";
 import "./Header.scss";
-import { isUserWhitespacable } from "@babel/types";
+
 class Header extends React.Component {
   render() {
     const { onClick, showMenu, logo, pages } = this.props;
@@ -47,7 +47,7 @@ class Header extends React.Component {
             x="0px"
             y="0px"
             viewBox="0 0 200 200"
-            enable-background="new 0 0 200 200"
+            enableBackground="new 0 0 200 200"
           >
             <path
               className="theme-icon__sun"
@@ -67,64 +67,64 @@ class Header extends React.Component {
             >
               <circle
                 stroke="#000000"
-                stroke-width="5"
-                stroke-miterlimit="10"
+                strokeWidth="5"
+                strokeMiterlimit="10"
                 cx="99.9"
                 cy="12.2"
                 r="10"
               />
               <circle
                 stroke="#000000"
-                stroke-width="5"
-                stroke-miterlimit="10"
+                strokeWidth="5"
+                strokeMiterlimit="10"
                 cx="100.4"
                 cy="187.8"
                 r="10"
               />
               <circle
                 stroke="#000000"
-                stroke-width="5"
-                stroke-miterlimit="10"
+                strokeWidth="5"
+                strokeMiterlimit="10"
                 cx="27.3"
                 cy="39.5"
                 r="10"
               />
               <circle
                 stroke="#000000"
-                stroke-width="5"
-                stroke-miterlimit="10"
+                strokeWidth="5"
+                strokeMiterlimit="10"
                 cx="172.6"
                 cy="39.5"
                 r="10"
               />
               <circle
                 stroke="#000000"
-                stroke-width="5"
-                stroke-miterlimit="10"
+                strokeWidth="5"
+                strokeMiterlimit="10"
                 cx="172.6"
                 cy="160.6"
                 r="10"
               />
               <circle
                 stroke="#000000"
-                stroke-width="5"
-                stroke-miterlimit="10"
+                strokeWidth="5"
+                strokeMiterlimit="10"
                 cx="27.4"
                 cy="159.9"
                 r="10"
               />
               <circle
                 stroke="#000000"
-                stroke-width="5"
-                stroke-miterlimit="10"
+                strokeWidth="5"
+                strokeMiterlimit="10"
                 cx="188.7"
                 cy="99.3"
                 r="10"
               />
               <circle
                 stroke="#000000"
-                stroke-width="5"
-                stroke-miterlimit="10"
+                strokeWidth="5"
+                strokeMiterlimit="10"
                 cx="11.3"
                 cy="99.8"
                 r="10"
