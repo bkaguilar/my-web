@@ -73,7 +73,7 @@ export const PAGES = [
     title: "Hello world, I'm Bessy",
     content: {
       paragrah1:
-        "I am an Honduran frontend developer who created this landing page to show you how i made landing pages and rule you and bring you in the enlightenment behind it."
+        "I am an Honduran frontend developer who created this web page to show you how i made web pages."
     }
   },
   {
@@ -82,11 +82,11 @@ export const PAGES = [
     title: "About me",
     content: {
       paragrah1:
-        "Self-taught developer, designer and photography lover who has been building for the web in some capacity since 2019.",
+        "Self-taught developer, designer and photography lover who has been building for the web since 2019.",
       paragrah2:
-        "I currently have my residence in Zaragoza, Spain. I love the cinematography and the art behind a lens; quite appreciate a well done and peculiar scene. I ride my bike when i can and occasionally read fantasy medieval(Go Tolkien <3) and distopic storys, I'm a person very curious and straightforward.",
+        "I currently have my residence in Zaragoza, Spain. I love the cinematography and the art behind a lens; quite appreciate a well done and peculiar scene. I ride my bike when i can and occasionally read fantasy medieval and distopic storys, I'm a person very curious and straightforward.",
       paragrah3:
-        "Outside of my work I like to travelling and getting out with my camera. I shoot with a Nikon D3200(yeah, i know ;( ) and a 18-55mm lens, and sometimes just my phone. I like the space and all that shit and i dont like to talk about me but i like to eat. o.o",
+        "Outside of my work I like to travelling and getting out with my camera. I shoot with a Nikon D3200 and a 18-55mm lens, and sometimes just my phone. I like the space and all that shit and i dont like to talk about me but i like to eat. o.o",
       paragrah4:
         "I'm still very green and all these but always keeping learning and i keep abreast of new technological advances; I like to craft solid and responsive products without sacrificing creativity. Design quality, user-friendly and scalable products regardless of stack.",
       paragrah5:
