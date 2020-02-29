@@ -6,6 +6,7 @@
   background: white;
   max-height: $max-footer;
   animation: appear 500ms ease 1s forwards;
+  // @include position(fixed, unset, 0, 0, 0);
 
   @keyframes appear {
     100% {
@@ -14,6 +15,7 @@
   }
 
   @media #{$break-smallMax} {
+    // position: relative;
     max-height: none;
   }
 

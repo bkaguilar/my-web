@@ -1,7 +1,6 @@
 @import "../../../common.scss";
 
 .Header {
-  position: relative;
   padding: $lr-padding $lr-padding 0 $lr-padding;
   z-index: 1;
   display: flex;
@@ -9,12 +8,7 @@
   align-items: center;
   height: 110px;
   transition: all 100ms ease;
-
-  .theme-icon {
-    cursor: pointer;
-    margin: 0 50px 0 auto;
-    width: 25px;
-  }
+  @include position(fixed, 0, 0, unset, 0);
 
   @media #{$break-smallMax} {
     height: 80px;

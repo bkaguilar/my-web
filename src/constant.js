@@ -79,7 +79,6 @@ export const PAGES = [
   {
     id: 1,
     name: "personal",
-    image: <Bike />,
     title: "About me",
     content: {
       paragrah1:

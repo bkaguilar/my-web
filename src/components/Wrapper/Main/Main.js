@@ -18,7 +18,7 @@ class Main extends React.Component {
         >
           <main tabIndex="0" id={name} className={"Main Main--" + name}>
             <div className="Main__text">
-              <div className="patterns"></div>
+              <figure className="patterns"></figure>
               <h2 className="Main__text__title">
                 {title} <span className="title-point">.</span>
               </h2>
@@ -34,14 +34,27 @@ class Main extends React.Component {
               )}
             </div>
             {image && <figure className="Main__figure">{image}</figure>}
-            {content.paragrah2 && (
-              <div className="Main__text">
-                <p className="Main__text__content">{content.paragrah2}</p>
-                <p className="Main__text__content">{content.paragrah3}</p>
-                <p className="Main__text__content">{content.paragrah4}</p>
-                <p className="Main__text__content">{content.paragrah5}</p>
-                <p className="Main__text__content">{content.paragrah6}</p>
-              </div>
+            {Object.keys(content).length > 1 && (
+              <article className="Main__article">
+                <figure className="Main__figure"></figure>
+                <div className="Main__paragraphs">
+                  <p className="Main__paragraphs__content">
+                    {content.paragrah2}
+                  </p>
+                  <p className="Main__paragraphs__content">
+                    {content.paragrah3}
+                  </p>
+                  <p className="Main__paragraphs__content">
+                    {content.paragrah4}
+                  </p>
+                  <p className="Main__paragraphs__content">
+                    {content.paragrah5}
+                  </p>
+                  <p className="Main__paragraphs__content">
+                    {content.paragrah6}
+                  </p>
+                </div>
+              </article>
             )}
           </main>
         </CSSTransition>

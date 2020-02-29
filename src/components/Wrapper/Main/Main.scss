@@ -1,22 +1,21 @@
 @import "../../../common.scss";
 .Main {
   position: relative;
-  flex: 1 0 auto;
   width: 100%;
+  min-height: 100vh;
   max-width: $max-width;
-  padding: $lr-padding;
   margin: 0 auto;
+  padding: 110px $lr-padding $lr-padding $lr-padding;
   transition: all $timing-transition ease-in;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
 
   @media #{$break-smallMax} {
-    padding: 1.6em;
-    align-items: center;
-    justify-content: center;
+    padding: 80px 1.6em 1.6em 1.6em;
   }
   @media #{$break-largeLandscape} {
-    padding: 1.6em;
+    padding: 80px 1.6em 1.6em 1.6em;
   }
 
   &__text {
@@ -39,7 +38,7 @@
       @include showAnimation;
       animation-delay: calc(#{$time-delay} + 0.6s);
       position: relative;
-      font-size: 4.5em;
+      font-size: 6.5em;
       font-family: "Raleway", sans-serif;
       letter-spacing: -0.02em;
       margin-bottom: 50px;
@@ -50,18 +49,19 @@
         margin-bottom: 20px;
       }
     }
+  }
 
-    &__content {
-      @include showAnimation;
-      animation-delay: $time-delay + 0.9s;
-      margin-bottom: 15px;
-      font-size: 1.1em;
-      letter-spacing: 0.04em;
+  &__text__content,
+  &__paragraphs__content {
+    @include showAnimation;
+    animation-delay: $time-delay + 0.9s;
+    margin-bottom: 35px;
+    font-size: 1.2em;
+    letter-spacing: 0.04em;
 
-      @media #{$break-smallMax} {
-        font-size: 1em;
-        line-height: 1.4;
-      }
+    @media #{$break-smallMax} {
+      font-size: 1em;
+      line-height: 1.4;
     }
   }
 
@@ -138,26 +138,42 @@
   }
 
   &--personal {
-    align-items: center;
-    justify-content: space-between;
-
-    .Main__text:first-of-type {
+    .Main__text {
       margin: 30vh 0;
     }
 
-    .Main__text:last-child {
-      width: 100%;
-      margin-top: 80px;
+    .Main__article {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 50px;
+      @media #{$break-smallMax} {
+        justify-content: center;
+      }
     }
 
-    .Main__figure {
-      margin: 10px;
-      width: 30%;
+    .Main__paragraphs {
+      width: 50%;
+      margin: 0 30px;
 
       @media #{$break-smallMax} {
         width: 100%;
-        margin: 10px;
       }
+    }
+
+    .Main__figure {
+      background: url("../../../images/bike.svg") no-repeat;
+      background-position: center center;
+      margin: 20px;
+      height: 340px;
+      width: 30%;
+
+      @media #{$break-smallMax} {
+        width: 70%;
+        height: 140px;
+      }
+
       @media #{$break-largeHeight} {
         width: 80%;
       }
@@ -169,6 +185,7 @@
   }
 
   &--contact {
+    min-height: auto;
     .Main__figure {
       @include position(absolute, 100px, 10%, 0, unset);
       transform: rotate(-45deg);
