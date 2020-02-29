@@ -96,7 +96,7 @@ export const PAGES = [
   {
     id: 2,
     name: "contact",
-    image: <Plane />,
+    // image: <Plane />,
     title: "Let's work together",
     content: {
       paragrah1: "If you have some idea or proposal let me now, ⊂(´･◡･⊂ )."
