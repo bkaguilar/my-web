@@ -1,13 +1,14 @@
 @import "../../../common.scss";
 
 .Header {
-  padding: $lr-padding $lr-padding 0 $lr-padding;
-  z-index: 2;
+  padding: $lr-padding;
+  z-index: 3;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 110px;
-  transition: all 100ms ease;
+  transition: all 500ms ease-in-out;
+  @include header-background($sc-color);
   @include position(fixed, 0, 0, unset, 0);
 
   @media #{$break-smallMax} {

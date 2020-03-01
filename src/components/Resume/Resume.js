@@ -1,5 +1,5 @@
 import React from "react";
-import { RESUME_PROFILE, RESUME_DATA, LOGO } from "../../constant";
+import { RESUME_PROFILE, RESUME_DATA, LOGO } from "../../en_text";
 import profile from "../../images/perfil.jpg";
 import "./Resume.scss";
 

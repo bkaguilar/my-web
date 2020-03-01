@@ -231,6 +231,10 @@ div[data-theme="black-theme"] {
     z-index: 0;
   }
 
+  header {
+    @include header-background($pp-color);
+  }
+
   header,
   footer {
     color: $sc-color;
@@ -292,7 +296,7 @@ div[data-theme="black-theme"] {
     }
   }
 
-  .Main--personal figure {
+  .Main--personal .Main__article figure {
     background: $sc-color;
   }
 
