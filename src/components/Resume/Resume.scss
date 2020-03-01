@@ -26,9 +26,9 @@
 
     &__name {
       width: 70%;
+      font-family: "Raleway", sans-serif;
       font-size: 4.4em;
       font-weight: 900;
-      color: $brand_color-2;
       margin-bottom: 10px;
 
       @media #{$break-smallMax} {
@@ -220,7 +220,7 @@
     &::before {
       content: "•";
       margin: 5px;
-      color: $brand_color-2;
+      color: $pp-color;
     }
   }
 }

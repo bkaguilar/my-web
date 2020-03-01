@@ -2,31 +2,29 @@ import React from "react";
 import Anchor from "./components/Widgets/Anchor/Anchor";
 import { ReactComponent as Logo } from "./images/logo.svg";
 import { ReactComponent as Cover } from "./images/cover.svg";
-import { ReactComponent as Bike } from "./images/bike.svg";
-import { ReactComponent as Plane } from "./images/plane.svg";
 
 export const RESUME_PROFILE = [
   {
     id: 1,
-    sectionName: "Educación",
+    sectionName: "Education",
     year: "2007 - 2009",
-    title: "Tecnico en computacíon",
+    title: "Computer Technician",
     site: "INTAE, San Pedro Sula, Honduras"
   },
   {
     id: 2,
-    sectionName: "Experiencia Laboral",
-    year: "Marzo 2019 - Septiembre 2019",
-    title: "Diseñadora Web",
+    sectionName: "Work experience",
+    year: "March 2019 - September 2019",
+    title: "Web Designer",
     site: "BaboonLab",
     description:
-      "Desarrollé la infraestructura frontend y diseñe las distinas aplicaciones de la compañia, ayudaba con el desarrollo con el lenguaje PHP ayudandome con el framework symfony "
+      "Developed the frontend infrastructure and designed the different applications of the company, helped with the development in PHP language helping me with the symfony framework."
   }
 ];
 
 export const RESUME_DATA = [
   {
-    sectionName: "contacto",
+    sectionName: "contact",
     items: [
       <Anchor
         href="mailto:hola@bkaguilar.com?subject=🤟🏽Hola Bessy, quiero proponerte algo"
@@ -49,7 +47,7 @@ export const RESUME_DATA = [
     ]
   },
   {
-    sectionName: "Habilidades",
+    sectionName: "Skills",
     items: [
       "Control de versiones GIT",
       "Docker",
@@ -62,6 +60,10 @@ export const RESUME_DATA = [
       "SVG Animaciones",
       "Suite Adobe(Illustrator, Photoshop, XD, Lightroom)"
     ]
+  },
+  {
+    sectionName: "Language",
+    items: ["Spanish (matern)", "English (intermediate)"]
   }
 ];
 
@@ -71,36 +73,29 @@ export const PAGES = [
     name: "home",
     image: <Cover />,
     title: "Hello world, I'm Bessy",
-    content: {
-      paragrah1:
-        "I am an Honduran frontend developer who created this web page to show you how i made web pages."
-    }
+    content:
+      "I am an Honduran frontend developer who created this web page to show you how i made web pages."
   },
   {
     id: 1,
     name: "personal",
     title: "About me",
-    content: {
-      paragrah1:
-        "Self-taught developer, designer and photography lover who has been building for the web since 2019.",
-      paragrah2:
-        "I currently have my residence in Zaragoza, Spain. I love the cinematography and the art behind a lens; quite appreciate a well done and peculiar scene. I ride my bike when i can and occasionally read fantasy medieval and distopic storys, I'm a person very curious and straightforward.",
-      paragrah3:
-        "Outside of my work I like to travelling and getting out with my camera. I shoot with a Nikon D3200 and a 18-55mm lens, and sometimes just my phone. I like the space and all that shit and i dont like to talk about me but i like to eat. o.o",
-      paragrah4:
-        "I'm still very green and all these but always keeping learning and i keep abreast of new technological advances; I like to craft solid and responsive products without sacrificing creativity. Design quality, user-friendly and scalable products regardless of stack.",
-      paragrah5:
-        "These days currently im a freelancer developer .... I'm now available for contracts and remote full-time roles."
-    }
+    subTitle: "A little about me and my background",
+    content:
+      "Self-taught developer, designer and photography lover who has been building for the web since 2019.",
+    paragraphs: [
+      "I currently have my residence in Zaragoza, Spain. Love the cinematography and the art behind a lens; quite appreciate a well done and peculiar scene, occasionally read fantasy medieval and distopic storys, I'm a person very curious and straightforward.",
+      "Outside of my work I like to travelling and getting out with my camera. I shoot with a Nikon D3200 and a 18-55mm lens, and sometimes just my phone.",
+      "Always keeping learning and keep abreast of new technological advances; Like to craft solid and responsive products without sacrificing creativity. Design quality, user-friendly and scalable products regardless of stack.",
+      "I'm now available for contracts and remote full-time roles."
+    ]
   },
   {
     id: 2,
     name: "contact",
     // image: <Plane />,
     title: "Let's work together",
-    content: {
-      paragrah1: "If you have some idea or proposal let me now, ⊂(´･◡･⊂ )."
-    }
+    content: "If you have some idea or proposal let me now, ⊂(´･◡･⊂ )."
   }
 ];
 
@@ -160,8 +155,8 @@ export const MESSAGE =
   "          |     : : :_/_|  /'._\\  '--|_\\        \n" +
   "          /___.-/_|-'   \\  \\                    \n" +
   "                         '-'                      \n" +
-  "Si quieres hablar sobre algun proyecto o tu empresa esta buscando a alguien con mis habilidades \n" +
-  "que no son muchas de momento, pero son algunas(hola Jos <3) \n" +
-  "escribeme: hola@bkaguilar.com  (ノ^o^)ノ ";
+  "If you want to talk with me about an idea or your company is looking \n" +
+  "for someone with my skills let chat...\n" +
+  "hola@bkaguilar.com  (ノ^o^)ノ ";
 
 export const LOGO = <Logo title="Bk Aguilar logo" className="Logo" />;

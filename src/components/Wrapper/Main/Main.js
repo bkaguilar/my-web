@@ -1,12 +1,24 @@
 import React from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { ReactComponent as Skills } from "../../../images/skills.svg";
 import Button from "../../Widgets/Button/Button";
 import "./Main.scss";
 
 class Main extends React.Component {
   render() {
+    let paragraphElement;
     const { pages, active } = this.props;
-    const { title, image, name, content, id } = pages[active];
+    const { title, image, name, content, id, paragraphs, subTitle } = pages[
+      active
+    ];
+
+    if (paragraphs) {
+      paragraphElement = paragraphs.map((text, index) => (
+        <p key={index} className="Main__paragraphs__content">
+          {text}
+        </p>
+      ));
+    }
     return (
       <TransitionGroup component={null}>
         <CSSTransition
@@ -22,7 +34,7 @@ class Main extends React.Component {
               <h2 className="Main__text__title">
                 {title} <span className="title-point">.</span>
               </h2>
-              <p className="Main__text__content">{content.paragrah1}</p>
+              <p className="Main__text__content">{content}</p>
               {active === 0 && (
                 <Button
                   type="button"
@@ -34,25 +46,17 @@ class Main extends React.Component {
               )}
             </div>
             {image && <figure className="Main__figure">{image}</figure>}
-            {Object.keys(content).length > 1 && (
+            {active === 1 && <div className="scroll-label">scroll</div>}
+            {paragraphs && (
               <article className="Main__article">
-                <figure className="Main__figure"></figure>
+                <figure className="Main__figure">
+                  <Skills />
+                </figure>
                 <div className="Main__paragraphs">
-                  <p className="Main__paragraphs__content">
-                    {content.paragrah2}
-                  </p>
-                  <p className="Main__paragraphs__content">
-                    {content.paragrah3}
-                  </p>
-                  <p className="Main__paragraphs__content">
-                    {content.paragrah4}
-                  </p>
-                  <p className="Main__paragraphs__content">
-                    {content.paragrah5}
-                  </p>
-                  <p className="Main__paragraphs__content">
-                    {content.paragrah6}
-                  </p>
+                  <h3 className="Main__paragraphs__subtitle">
+                    {subTitle} <span className="title-point">.</span>
+                  </h3>
+                  {paragraphElement}
                 </div>
               </article>
             )}

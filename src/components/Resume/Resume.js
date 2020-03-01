@@ -29,9 +29,9 @@ class Resume extends React.Component {
             Bessy K. Galdamez Aguilar
           </h1>
           <h2 className="Resume__header__title" aria-labelledby="header">
-            Desarrolladora Front-end
+            Front-end Developer
           </h2>
-          <span>Zaragoza, España</span>
+          <span>Zaragoza, Spain</span>
           <a
             href="./cv.pdf"
             className="Resume__header__link"
@@ -42,7 +42,7 @@ class Resume extends React.Component {
             <span className="emoji" role="img" aria-label="download">
               ⬇
             </span>
-            Descargar
+            Download
           </a>
         </header>
         <div className="Resume__description">
@@ -50,7 +50,7 @@ class Resume extends React.Component {
             className="Resume__description__title"
             aria-labelledby="Description title"
           >
-            Perfil
+            Profile
           </h3>
           <figure className="Resume__description__photo">
             <img src={profile} alt="perfil" />
@@ -59,9 +59,8 @@ class Resume extends React.Component {
             className="Resume__description__content"
             aria-labelledby="Description"
           >
-            I like to craft solid and responsive products without sacrificing
-            creativity. Design quality, user-friendly and scalable products
-            regardless of stack.
+            Self-taught developer, designer and photography lover, like to craft
+            solid and responsive products without sacrificing creativity.
           </p>
         </div>
         <div className="Resume__main">

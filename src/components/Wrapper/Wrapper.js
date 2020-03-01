@@ -155,7 +155,6 @@ class Wrapper extends React.Component {
           />
         )}
         <ul className="dots">{dots}</ul>
-        {this.state.active === 1 && <div className="scroll-label">scroll</div>}
         <figure
           className="theme-icon"
           onClick={this.handleChangeTheme.bind(this)}
