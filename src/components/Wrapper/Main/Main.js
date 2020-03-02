@@ -84,7 +84,7 @@ class Main extends React.Component {
               )}
             </div>
             {image && <figure className="Main__figure">{image}</figure>}
-            {active === 1 && <div className="scroll-label">scroll</div>}
+            {active !== 0 && <div className="scroll-label">scroll</div>}
             {paragraphs && (
               <article className="Main__article">
                 <figure

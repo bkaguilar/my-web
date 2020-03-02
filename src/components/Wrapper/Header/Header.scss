@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 110px;
+  // height: 110px;
   transition: all 500ms ease-in-out;
   @include header-background($sc-color);
   @include position(fixed, 0, 0, unset, 0);
@@ -17,7 +17,7 @@
   }
 
   @media #{$break-largeLandscape} {
-    padding: 1.6em;
+    padding: 3em;
   }
 
   &__figure {
