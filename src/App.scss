@@ -138,10 +138,10 @@ body {
   }
 
   @media #{$break-smallMax} {
-    left: -3px;
+    left: 0;
     top: -10px;
     height: 50px;
-    width: 80px;
+    width: 100px;
   }
 
   @media #{$break-landscape} {
@@ -297,7 +297,7 @@ div[data-theme="black-theme"] {
   }
 
   .Main--personal .Main__article figure {
-    background: $sc-color;
+    background: rgba($sc-color, 0.1);
   }
 
   .Dot {
@@ -339,4 +339,9 @@ div[data-theme="white-theme"] {
   &-exit-active {
     display: none;
   }
+}
+
+.intersectionActive {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }

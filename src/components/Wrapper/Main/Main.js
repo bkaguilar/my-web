@@ -5,6 +5,42 @@ import Button from "../../Widgets/Button/Button";
 import "./Main.scss";
 
 class Main extends React.Component {
+  constructor(props) {
+    super(props);
+    this.figureRef = null;
+    this.subTitleRef = null;
+    this.paragraphRef = [];
+    this.observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("intersectionActive");
+        } else {
+          entry.target.classList.remove("intersectionActive");
+        }
+      });
+    });
+  }
+
+  observeEachElement() {
+    if (this.figureRef) {
+      this.observer.observe(this.figureRef);
+    }
+
+    if (this.subTitleRef) {
+      this.observer.observe(this.subTitleRef);
+    }
+
+    if (this.paragraphRef) {
+      this.paragraphRef.forEach(item => {
+        this.observer.observe(item);
+      });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    this.observeEachElement();
+  }
+
   render() {
     let paragraphElement;
     const { pages, active } = this.props;
@@ -14,7 +50,11 @@ class Main extends React.Component {
 
     if (paragraphs) {
       paragraphElement = paragraphs.map((text, index) => (
-        <p key={index} className="Main__paragraphs__content">
+        <p
+          key={index}
+          ref={e => (this.paragraphRef[index] = e)}
+          className="Main__paragraphs__content"
+        >
           {text}
         </p>
       ));
@@ -49,11 +89,17 @@ class Main extends React.Component {
             {active === 1 && <div className="scroll-label">scroll</div>}
             {paragraphs && (
               <article className="Main__article">
-                <figure className="Main__figure">
+                <figure
+                  className="Main__article__figure"
+                  ref={e => (this.figureRef = e)}
+                >
                   <Skills />
                 </figure>
                 <div className="Main__paragraphs">
-                  <h3 className="Main__paragraphs__subtitle">
+                  <h3
+                    className="Main__paragraphs__subtitle"
+                    ref={e => (this.subTitleRef = e)}
+                  >
                     {subTitle} <span className="title-point">.</span>
                   </h3>
                   {paragraphElement}
