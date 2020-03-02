@@ -21,24 +21,22 @@ class Main extends React.Component {
     });
   }
 
-  observeEachElement() {
-    if (this.figureRef) {
-      this.observer.observe(this.figureRef);
-    }
-
-    if (this.subTitleRef) {
-      this.observer.observe(this.subTitleRef);
-    }
-
-    if (this.paragraphRef) {
-      this.paragraphRef.forEach(item => {
-        this.observer.observe(item);
-      });
-    }
-  }
-
   componentDidUpdate(prevProps, prevState) {
-    this.observeEachElement();
+    if (this.props.active !== prevProps.active) {
+      if (this.figureRef) {
+        this.observer.observe(this.figureRef);
+      }
+
+      if (this.subTitleRef) {
+        this.observer.observe(this.subTitleRef);
+      }
+
+      if (this.paragraphRef && this.props.active === 1) {
+        this.paragraphRef.forEach(item => {
+          this.observer.observe(item);
+        });
+      }
+    }
   }
 
   render() {
