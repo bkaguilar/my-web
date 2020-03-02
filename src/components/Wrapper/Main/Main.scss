@@ -235,22 +235,44 @@
     }
 
     .Main__figure {
-      @include position(absolute, 100px, 10%, 0, unset);
-      transform: rotate(-45deg);
-      width: 80%;
-      clip-path: circle(0 at 0 0);
-      animation: showPlane 4s linear 1.5s forwards;
+      position: absolute;
+      top: 35%;
+      right: 15%;
+      width: 30vh;
+      height: 30vh;
 
-      @keyframes showPlane {
-        100% {
-          clip-path: circle(200% at 0 0);
+      @media #{$break-largeLandscape} {
+        top: 25%;
+      }
+
+      @media #{$break-largeHeight} {
+        top: 50%;
+        width: 10vh;
+        height: 10vh;
+      }
+
+      .letter-svg {
+        height: 100%;
+        width: 100%;
+        stroke: white;
+
+        #rectLetter {
+          transform-origin: 0 bottom;
+          transform: scaleY(0);
+          animation: showLetter 300ms linear 2s forwards;
+          @keyframes showLetter {
+            100% {
+              transform: scaleY(1);
+            }
+          }
+        }
+
+        .svg-line {
+          stroke: rgba($th-color, 0.5);
+          stroke-width: 4;
+          stroke-linecap: round;
         }
       }
-
-      .plane-svg {
-        transform: translate(-90px, -90px) rotate(15deg);
-      }
-
       @media #{$break-smallMax} {
         display: none;
       }

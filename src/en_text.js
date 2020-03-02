@@ -1,6 +1,7 @@
 import React from "react";
 import Anchor from "./components/Widgets/Anchor/Anchor";
 import { ReactComponent as Logo } from "./images/logo.svg";
+import { ReactComponent as Letter } from "./images/letter.svg";
 import { ReactComponent as Cover } from "./images/cover.svg";
 
 export const RESUME_PROFILE = [
@@ -93,7 +94,7 @@ export const PAGES = [
   {
     id: 2,
     name: "contact",
-    // image: <Plane />,
+    image: <Letter />,
     title: "Let's work together",
     content: "If you have some idea or proposal let me now, ⊂(´･◡･⊂ )."
   }
