@@ -1,7 +1,7 @@
 @import "../../../common.scss";
 
 .Button {
-  @include showAnimation();
+  @include showAnimation(20px);
   position: relative;
   max-width: 200px;
   width: 100%;

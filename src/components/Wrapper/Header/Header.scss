@@ -21,7 +21,7 @@
   }
 
   &__figure {
-    @include showAnimation;
+    @include showAnimation(20px);
     animation-delay: $time-delay + 0.2s;
     height: 100%;
     margin: 0;
@@ -46,7 +46,7 @@
     transition: all $timing-transition cubic-bezier(0.165, 0.84, 0.44, 1);
 
     &__email {
-      @include showAnimation();
+      @include showAnimation(20px);
       position: relative;
       animation-delay: calc(#{$time-delay} + 1.4s);
       text-transform: uppercase;
@@ -91,7 +91,7 @@
   }
 
   &__responsive {
-    @include showAnimation;
+    @include showAnimation(20px);
     animation-delay: $time-delay + 0.2s;
     z-index: 1;
     display: none;

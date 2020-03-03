@@ -69,9 +69,11 @@ class Main extends React.Component {
           <main tabIndex="0" id={name} className={"Main Main--" + name}>
             <div className="Main__text">
               <figure className="patterns"></figure>
-              <h2 className="Main__text__title">
-                {title} <span className="title-point">.</span>
-              </h2>
+              <div style={{ overflow: "hidden" }}>
+                <h2 className="Main__text__title">
+                  {title} <span className="title-point">.</span>
+                </h2>
+              </div>
               <p className="Main__text__content">{content}</p>
               {active === 0 && (
                 <Button

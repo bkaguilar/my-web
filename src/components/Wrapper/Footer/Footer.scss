@@ -62,7 +62,7 @@
   }
 
   &__author {
-    @include showAnimation;
+    @include showAnimation(20px);
     animation-delay: calc(#{$time-delay} + 3.2s);
     max-width: $max-width;
     margin: 0 auto;

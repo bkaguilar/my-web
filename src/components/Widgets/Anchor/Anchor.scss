@@ -2,7 +2,7 @@
 
 .Anchor {
   @include header-text();
-  @include showAnimation;
+  @include showAnimation(20px);
   position: relative;
   margin-right: 35px;
 

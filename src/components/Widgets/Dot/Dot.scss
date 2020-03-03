@@ -1,7 +1,7 @@
 @import "../../../common.scss";
 
 .Dot {
-  @include showAnimation;
+  @include showAnimation(20px);
   position: relative;
   cursor: pointer;
   height: $dot-size;

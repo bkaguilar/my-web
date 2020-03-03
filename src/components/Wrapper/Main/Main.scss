@@ -40,8 +40,7 @@
     }
 
     &__title {
-      @include showAnimation;
-      animation-delay: calc(#{$time-delay} + 0.6s);
+      @include showAnimation(150px);
       position: relative;
       font-size: 6.5em;
       font-family: "Raleway", sans-serif;
@@ -57,7 +56,7 @@
   }
 
   &__text__content {
-    @include showAnimation;
+    @include showAnimation(20px);
     animation-delay: $time-delay + 0.9s;
     font-weight: 600;
   }
@@ -268,8 +267,8 @@
         }
 
         .svg-line {
-          stroke: rgba($th-color, 0.5);
-          stroke-width: 4;
+          stroke: rgba($pp-color, 0.1);
+          stroke-width: 3;
           stroke-linecap: round;
         }
       }

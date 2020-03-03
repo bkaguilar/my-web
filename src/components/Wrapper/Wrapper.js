@@ -13,7 +13,7 @@ class Wrapper extends React.Component {
     super(props);
     this.state = {
       active: 0,
-      blackTheme: false,
+      darkMode: false,
       isMenuVisible: false
     };
   }
@@ -94,7 +94,7 @@ class Wrapper extends React.Component {
 
   handleChangeTheme() {
     this.setState({
-      blackTheme: !this.state.blackTheme
+      darkMode: !this.state.darkMode
     });
   }
 
@@ -134,7 +134,7 @@ class Wrapper extends React.Component {
             ? "Wrapper positionFixed"
             : "Wrapper"
         }
-        data-theme={this.state.blackTheme ? "black-theme" : "white-theme"}
+        data-theme={this.state.darkMode ? "black-theme" : "white-theme"}
       >
         <Header
           {...this.state}
@@ -174,8 +174,8 @@ class Wrapper extends React.Component {
               className="theme-icon__sun"
               style={{
                 transition: "all 200ms ease",
-                fill: this.state.blackTheme ? "white" : "#191919",
-                d: this.state.blackTheme
+                fill: this.state.darkMode ? "white" : "#191919",
+                d: this.state.darkMode
                   ? "path('M130,121.2c-26.9,0-48.7-21.8-48.7-48.7c0-16.4,8.1-30.9,20.5-39.7c-0.6,0-1.2,0-1.8,0c-37.1,0-67.2,30.1-67.2,67.2 c0,37.1,30.1,67.2,67.2,67.2c35.7,0,64.9-27.9,67.1-63.1C158.1,114.6,144.9,121.2,130,121.2z')"
                   : "path('M40,100a60,60 0 1,0 120,0a60,60 0 1,0 -120,0')"
               }}
@@ -183,7 +183,7 @@ class Wrapper extends React.Component {
             <g
               className="theme-icon__points"
               style={{
-                display: this.state.blackTheme ? "none" : ""
+                display: this.state.darkMode ? "none" : ""
               }}
             >
               <circle

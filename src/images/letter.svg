@@ -10,10 +10,10 @@
         <line class="svg-line" x1="30" y1="40" x2="30" y2="40" id="second-line"/>
         <line class="svg-line" x1="30" y1="60" x2="30" y2="60" id="third-line"/>
         <line class="svg-line" x1="30" y1="80" x2="30" y2="80" id="fourth-line"/>
-        <animate xlink:href="#first-line" attributeName="x2" from="30" begin="2s" to="100" dur="1s" fill="freeze" id="first-anim" />
-        <animate xlink:href="#second-line" attributeName="x2" begin="2s" from="30" to="120" dur="1s" fill="freeze" id="second-anim" />
-        <animate xlink:href="#third-line" attributeName="x2" begin="2s" from="30" to="100" dur="1s" fill="freeze" id="third-anim" />
-        <animate xlink:href="#fourth-line" attributeName="x2" begin="2s" from="30" to="80" dur="1s" fill="freeze" id="fourth-anim" />
+        <animate xlink:href="#first-line" attributeName="x2" from="30" begin="2s" to="80%" dur="1s" fill="freeze" id="first-anim" />
+        <animate xlink:href="#second-line" attributeName="x2" begin="2s" from="30" to="50%" dur="1s" fill="freeze" id="second-anim" />
+        <animate xlink:href="#third-line" attributeName="x2" begin="2s" from="30" to="80%" dur="1s" fill="freeze" id="third-anim" />
+        <animate xlink:href="#fourth-line" attributeName="x2" begin="2s" from="30" to="60%" dur="1s" fill="freeze" id="fourth-anim" />
 
         <path id="letterPathOne" fill="url(#gradient)" d="M114,146.8l94.07-45.6c7.49-3.63,15.93,2.34,15.93,11.27v76.06c.09,6.45-6.44,11.59-13.84,11.59H15.33A11.46,11.46,0,0,1,4,188.54H4V112.47c0-8.93,8.44-14.9,15.93-11.27L114,146.8l97.08,47.08c6.76,3,11.5.35,12.92-5.35-1.44,6.63-6.21,8.6-13.63,5-13.24-6.43-45.66-22.4-51.5-25C153.71,166.28,114,146.8,114,146.8Z" transform="translate(1 -2)"/>
       </svg>
