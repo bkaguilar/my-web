@@ -57,7 +57,7 @@
 
   &__text__content {
     @include showAnimation(20px);
-    animation-delay: $time-delay + 0.9s;
+    animation-delay: $time-delay + 0.3s;
     font-weight: 600;
   }
 
