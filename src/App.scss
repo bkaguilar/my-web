@@ -286,9 +286,12 @@ div[data-theme="black-theme"] {
   }
 
   footer {
-    // @include patternBackground("./images/pattern6.svg");
     background: $pp-color;
     color: $sc-color;
+
+    .Footer__anchors {
+      border-bottom: none;
+    }
 
     .Anchor--footer::before {
       color: $sc-color !important;

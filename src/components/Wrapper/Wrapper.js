@@ -176,81 +176,10 @@ class Wrapper extends React.Component {
                 transition: "all 200ms ease",
                 fill: this.state.darkMode ? "white" : "#191919",
                 d: this.state.darkMode
-                  ? "path('M130,121.2c-26.9,0-48.7-21.8-48.7-48.7c0-16.4,8.1-30.9,20.5-39.7c-0.6,0-1.2,0-1.8,0c-37.1,0-67.2,30.1-67.2,67.2 c0,37.1,30.1,67.2,67.2,67.2c35.7,0,64.9-27.9,67.1-63.1C158.1,114.6,144.9,121.2,130,121.2z')"
-                  : "path('M40,100a60,60 0 1,0 120,0a60,60 0 1,0 -120,0')"
+                  ? "path('M40,100a60,60 0 1,0 120,0a60,60 0 1,0 -120,0')"
+                  : "path('M130,121.2c-26.9,0-48.7-21.8-48.7-48.7c0-16.4,8.1-30.9,20.5-39.7c-0.6,0-1.2,0-1.8,0c-37.1,0-67.2,30.1-67.2,67.2 c0,37.1,30.1,67.2,67.2,67.2c35.7,0,64.9-27.9,67.1-63.1C158.1,114.6,144.9,121.2,130,121.2z')"
               }}
             />
-            <g
-              className="theme-icon__points"
-              style={{
-                display: this.state.darkMode ? "none" : ""
-              }}
-            >
-              <circle
-                stroke="#000000"
-                strokeWidth="5"
-                strokeMiterlimit="10"
-                cx="99.9"
-                cy="12.2"
-                r="10"
-              />
-              <circle
-                stroke="#000000"
-                strokeWidth="5"
-                strokeMiterlimit="10"
-                cx="100.4"
-                cy="187.8"
-                r="10"
-              />
-              <circle
-                stroke="#000000"
-                strokeWidth="5"
-                strokeMiterlimit="10"
-                cx="27.3"
-                cy="39.5"
-                r="10"
-              />
-              <circle
-                stroke="#000000"
-                strokeWidth="5"
-                strokeMiterlimit="10"
-                cx="172.6"
-                cy="39.5"
-                r="10"
-              />
-              <circle
-                stroke="#000000"
-                strokeWidth="5"
-                strokeMiterlimit="10"
-                cx="172.6"
-                cy="160.6"
-                r="10"
-              />
-              <circle
-                stroke="#000000"
-                strokeWidth="5"
-                strokeMiterlimit="10"
-                cx="27.4"
-                cy="159.9"
-                r="10"
-              />
-              <circle
-                stroke="#000000"
-                strokeWidth="5"
-                strokeMiterlimit="10"
-                cx="188.7"
-                cy="99.3"
-                r="10"
-              />
-              <circle
-                stroke="#000000"
-                strokeWidth="5"
-                strokeMiterlimit="10"
-                cx="11.3"
-                cy="99.8"
-                r="10"
-              />
-            </g>
           </svg>
         </figure>
         <section className="loading"></section>
