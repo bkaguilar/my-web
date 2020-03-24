@@ -22,24 +22,23 @@
   &__header {
     position: relative;
     min-height: 200px;
+    text-align: center;
     padding: 50px 0;
 
     &__name {
-      width: 70%;
       font-family: "Raleway", sans-serif;
       font-size: 4.4em;
       font-weight: 900;
       margin-bottom: 10px;
 
       @media #{$break-smallMax} {
-        width: 100%;
         font-size: 2.7em;
       }
     }
 
     &__title {
       margin-bottom: 10px;
-      font-size: 1.3em;
+      font-size: 1.8em;
     }
 
     &__link {
@@ -94,7 +93,8 @@
     &__title {
       grid-area: header;
       padding: 10px;
-      background: rgba(#ccc, 0.4);
+      color: white;
+      background: #191919;
     }
 
     &__photo {

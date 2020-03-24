@@ -7,16 +7,16 @@ import { ReactComponent as Cover } from "./images/cover.svg";
 export const RESUME_PROFILE = [
   {
     id: 1,
-    sectionName: "Education",
+    sectionName: "Educación",
     year: "2007 - 2009",
-    title: "Computer Technician",
+    title: "Técnico en computación",
     site: "INTAE, San Pedro Sula, Honduras"
   },
   {
     id: 2,
-    sectionName: "Work experience",
-    year: "March 2019 - September 2019",
-    title: "Web Designer",
+    sectionName: "Experiencia laboral",
+    year: "Marzo 2019 - Septiembre 2019",
+    title: "Diseñadora web",
     site: "BaboonLab",
     description:
       "Developed the frontend infrastructure and designed the different applications of the company, helped with the development in PHP language helping me with the symfony framework."
@@ -48,13 +48,13 @@ export const RESUME_DATA = [
     ]
   },
   {
-    sectionName: "Skills",
+    sectionName: "Habilidades",
     items: [
       "Suite Adobe(Illustrator, Photoshop, XD, Lightroom)",
       "HTML5",
       "CSS3",
-      "SVG Animations",
-      "Version control system GIT",
+      "Animaciones SVG",
+      "Control de versiones GIT",
       "Javascript",
       "NodeJS",
       "React",
@@ -63,17 +63,17 @@ export const RESUME_DATA = [
     ]
   },
   {
-    sectionName: "Language",
-    items: ["Spanish (matern)", "English (intermediate)"]
+    sectionName: "Idiomas",
+    items: ["Español (materno)", "Inglés (intermedio)"]
   }
 ];
 
 export const PAGES = [
   {
     id: 0,
-    name: "home",
+    name: "inicio",
     image: <Cover />,
-    title: "Hello world, I'm Bessy",
+    title: "Hola mundo, mi nombre es Bessy",
     content:
       "I am an Honduran frontend developer who created this web page to show you how i made web pages."
   },

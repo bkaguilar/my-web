@@ -131,8 +131,8 @@ class Wrapper extends React.Component {
       <div
         className={
           this.state.isMenuVisible || this.state.active === 0
-            ? "Wrapper positionFixed"
-            : "Wrapper"
+            ? "positionFixed"
+            : ""
         }
         data-theme={this.state.darkMode ? "black-theme" : "white-theme"}
       >
