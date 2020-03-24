@@ -86,11 +86,11 @@ class Footer extends React.Component {
             />
           </small>
           <small>
-            Hecho con
+            Made with
             <span className="emoji" role="img" aria-label="react-atom">
               ⚛️
             </span>
-            y
+            and
             <span className="emoji" role="img" aria-label="heart">
               ❤
             </span>
