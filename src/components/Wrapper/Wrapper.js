@@ -99,7 +99,6 @@ class Wrapper extends React.Component {
   }
 
   componentDidMount() {
-    console.log(navigator.language);
     setTimeout(console.log.bind(console, MESSAGE));
     window.addEventListener("wheel", this.handleWheel.bind(this));
     window.addEventListener("keydown", this.handleKeydown.bind(this));
