@@ -34,7 +34,7 @@ $break-largeLandscape: "only screen and (min-width: 767px) and (max-height: 768p
 }
 
 @mixin header-background($color) {
-  background: linear-gradient(to top, rgba($color, 0), rgba($color, 0.9) 40%);
+  background: linear-gradient(to top, rgba($color, 0), rgba($color, 0.95) 50%);
 }
 
 @mixin showAnimation($posY) {
