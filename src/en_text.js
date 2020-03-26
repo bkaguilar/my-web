@@ -14,9 +14,9 @@ export const RESUME_PROFILE = [
   },
   {
     id: 2,
-    sectionName: "Work experience",
+    sectionName: "Work Experience",
     year: "March 2019 - September 2019",
-    title: "Web Designer",
+    title: "Web Designer", // sure? why Designer, if you were using Docker, tweaking TWIG templates and so... shouldn't be fucking frontend developer the role? that's the offering you applied for!
     site: "BaboonLab",
     description:
       "Developed the frontend infrastructure and designed the different applications of the company, helped with the development in PHP language helping me with the symfony framework."
@@ -28,7 +28,7 @@ export const RESUME_DATA = [
     sectionName: "contact",
     items: [
       <Anchor
-        href="mailto:hola@bkaguilar.com?subject=🤟🏽Hola Bessy, quiero proponerte algo"
+        href="mailto:hola@bkaguilar.com?subject=🤟🏽Hola Bessy, quiero proponerte algo" // difficult to translate this to english< "Hi Bessy, I have something for you | I want something from you", both sound very bad, "I have a proposal for you..." don't know Rick...
         name="hola@bkaguilar.com"
         target="__blank"
         className="Anchor--resume"
@@ -50,21 +50,22 @@ export const RESUME_DATA = [
   {
     sectionName: "Skills",
     items: [
-      "Suite Adobe(Illustrator, Photoshop, XD, Lightroom)",
       "HTML5",
       "CSS3",
       "SVG Animations",
-      "Version control system GIT",
-      "Javascript",
-      "NodeJS",
+      "JavaScript / ES6",
       "React",
-      "Jest",
+      "Adobe Illustrator / Photoshop / XD / Lightroom",
+      "WordPress"
+      "Git",
       "Docker"
+      "Node.js",
+      "Jest",
     ]
   },
   {
-    sectionName: "Language",
-    items: ["Spanish (matern)", "English (intermediate)"]
+    sectionName: "Languages",
+    items: ["Spanish (Native)", "English (Professional working proficiency)"]
   }
 ];
 
@@ -75,7 +76,7 @@ export const PAGES = [
     image: <Cover />,
     title: "Hello world, I'm Bessy",
     content:
-      "I am an Honduran frontend developer who created this web page to show you how i made web pages."
+      "I'm an Honduran frontend developer, always learning and looking for opportunities."
   },
   {
     id: 1,
@@ -85,10 +86,10 @@ export const PAGES = [
     content:
       "Self-taught developer, designer and photography lover who has been building for the web since 2019.",
     paragraphs: [
-      "I currently have my residence in Zaragoza, Spain. Love the cinematography and the art behind a lens; quite appreciate a well done and peculiar scene, occasionally read fantasy medieval and distopic storys, I'm a person very curious and straightforward.",
-      "Outside of my work I like to travelling and getting out with my camera. I shoot with a Nikon D3200 and a 18-55mm lens, and sometimes just my phone.",
-      "Always keeping learning and keep abreast of new technological advances; Like to craft solid and responsive products without sacrificing creativity. Design quality, user-friendly and scalable products regardless of stack.",
-      "I'm now available for contracts and remote full-time roles."
+      "I currently live in Zaragoza, Spain. Love the cinematography and the art behind a len (I really appreciate a well done and peculiar scene). Occasionally read medieval fantasy and dystopic literature. And I'm a very curious person.",
+      "Outside of my work I like to travel and going out with my camera. I shoot with a Nikon D3200 and a 18-55mm lens, and sometimes just with my phone.",
+      "Always learning and keeping abreast of new technologies. Love to craft solid and responsive products without sacrificing creativity. Design quality, user-friendly and scalable products regardless of the tech stack.",
+      "I'm interested in full or part-time remote jobs but also available as a contractor."
     ]
   },
   {
@@ -96,17 +97,17 @@ export const PAGES = [
     name: "contact",
     image: <Letter />,
     title: "Let's work together",
-    content: "If you have some idea or proposal let me now, ⊂(´･◡･⊂ )."
+    content: "If you have some idea or proposal, let me now, ⊂(´･◡･⊂ )."
   }
 ];
 
 export const SOCIAL = [
   {
-    name: "Github",
+    name: "GitHub",
     anchor: "https://github.com/bkaguilar"
   },
   {
-    name: "Linkedin",
+    name: "LinkedIn",
     anchor: "https://linkedin.com/in/bk-aguilar"
   },
   {
@@ -123,7 +124,7 @@ export const SERVICES = [
   {
     name: "hola@bkaguilar.com",
     anchor:
-      "mailto:hola@bkaguilar.com?subject=🤟🏽Hola Bessy, quiero proponerte algo"
+      "mailto:hola@bkaguilar.com?subject=🤟🏽Hola Bessy, quiero proponerte algo" // FIXME: same as above!
   },
   {
     name: "Telegram",
@@ -156,8 +157,8 @@ export const MESSAGE =
   "          |     : : :_/_|  /'._\\  '--|_\\        \n" +
   "          /___.-/_|-'   \\  \\                    \n" +
   "                         '-'                      \n" +
-  "If you want to talk with me about an idea or your company is looking \n" +
-  "for someone with my skills let chat...\n" +
+  "If you want to talk with me about some idea or your company is looking \n" +
+  "for someone with my skills we can chat...\n" +
   "hola@bkaguilar.com  (ノ^o^)ノ ";
 
 export const LOGO = <Logo title="Bk Aguilar logo" className="Logo" />;
