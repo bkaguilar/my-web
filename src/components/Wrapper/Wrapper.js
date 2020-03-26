@@ -22,6 +22,7 @@ class Wrapper extends React.Component {
     this.setState({
       active: this.state.active + n
     });
+    window.location.hash = PAGES[this.state.active].name;
   }
 
   movetoContact() {
