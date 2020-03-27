@@ -6,6 +6,8 @@ class Anchor extends React.Component {
     const {
       href,
       name,
+      value,
+      title,
       index,
       onClick,
       className,
@@ -18,12 +20,12 @@ class Anchor extends React.Component {
         target={target}
         index={index}
         name={name}
-        title={name}
+        title={title}
         className={"Anchor " + className}
         onClick={onClick}
         onMouseOver={onHover}
       >
-        {name}
+        {value}
       </a>
     );
   }

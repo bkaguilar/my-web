@@ -1,5 +1,12 @@
 import React from "react";
-import { PAGES, SOCIAL, SERVICES, LOGO, MESSAGE } from "../../en_text";
+import {
+  SECTIONS,
+  PAGES,
+  SOCIAL_LINKS,
+  SERVICES_LINKS,
+  LOGO,
+  MESSAGE
+} from "../../en_text";
 import Header from "./Header/Header";
 import Main from "./Main/Main";
 import Footer from "./Footer/Footer";
@@ -22,7 +29,7 @@ class Wrapper extends React.Component {
     this.setState({
       active: this.state.active + n
     });
-    window.location.hash = PAGES[this.state.active].name;
+    window.location.hash = SECTIONS[this.state.active];
   }
 
   movetoContact() {
@@ -116,12 +123,12 @@ class Wrapper extends React.Component {
   }
 
   render() {
-    let dots = PAGES.map((item, i) => {
+    let dots = SECTIONS.map((item, i) => {
       return (
         <Dot
-          key={item.name}
+          key={item}
           index={i}
-          name={item.name}
+          name={item}
           className={this.state.active === i ? " active" : ""}
           onClick={this.handleChange.bind(this)}
         />
@@ -142,6 +149,7 @@ class Wrapper extends React.Component {
           showMenu={this.handleShowMenu.bind(this)}
           logo={LOGO}
           pages={PAGES}
+          sections={SECTIONS}
         />
         <Main
           {...this.state}
@@ -150,8 +158,8 @@ class Wrapper extends React.Component {
         />
         {this.state.active === PAGES.length - 1 && (
           <Footer
-            servicesAnchors={SERVICES}
-            socialAnchors={SOCIAL}
+            servicesAnchors={SERVICES_LINKS}
+            socialAnchors={SOCIAL_LINKS}
             logo={LOGO}
           />
         )}

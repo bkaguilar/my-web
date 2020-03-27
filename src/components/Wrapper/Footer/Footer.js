@@ -1,5 +1,6 @@
 import React from "react";
 import Anchor from "../../Widgets/Anchor/Anchor";
+import { FormattedMessage } from "react-intl";
 import "./Footer.scss";
 
 let year = new Date().getFullYear();
@@ -37,6 +38,8 @@ class Footer extends React.Component {
           href={item.anchor}
           target="_blank"
           name={item.name}
+          title={item.name}
+          value={item.name}
           className="Anchor--footer"
         />
       );
@@ -49,6 +52,8 @@ class Footer extends React.Component {
           href={item.anchor}
           target="_blank"
           name={item.name}
+          title={item.name}
+          value={item.name}
           className="Anchor--footer"
           onClick={this.clipboardEmail.bind(this)}
           onHover={this.emailHover.bind(this)}
@@ -60,11 +65,15 @@ class Footer extends React.Component {
         <div className="Footer__anchors">
           <figure className="Footer__anchors__logo">{logo}</figure>
           <nav className="Footer__anchors__nav">
-            <h3 className="Footer__anchors__nav__title">Say Hello</h3>
+            <h3 className="Footer__anchors__nav__title">
+              <FormattedMessage id="footer.hello" />
+            </h3>
             {services}
           </nav>
           <nav className="Footer__anchors__nav">
-            <h3 className="Footer__anchors__nav__title">Social Media</h3>
+            <h3 className="Footer__anchors__nav__title">
+              <FormattedMessage id="footer.rrss" />
+            </h3>
             {socialMedia}
           </nav>
         </div>

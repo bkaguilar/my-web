@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 import Anchor from "../../Widgets/Anchor/Anchor";
 import { ReactComponent as Plant } from "../../../images/plant.svg";
 import Button from "../../Widgets/Button/Button";
@@ -7,14 +8,16 @@ import "./Header.scss";
 
 class Header extends React.Component {
   render() {
-    const { onClick, showMenu, logo, pages } = this.props;
+    const { onClick, showMenu, logo, pages, sections } = this.props;
     let anchors = pages.map((item, i) => {
       return (
         <Anchor
-          key={item.name}
+          key={sections[i]}
           index={i}
-          name={item.name}
-          href={"#" + item.name}
+          title={sections[i]}
+          name={sections[i]}
+          href={"#" + sections[i]}
+          value={item.name}
           className={
             this.props.active === i ? "Anchor--header active" : "Anchor--header"
           }
@@ -42,7 +45,11 @@ class Header extends React.Component {
         >
           {anchors}
           <Link to="/resume" target="_blank">
-            <Button type="button" className="Button--header" value="Resume" />
+            <Button
+              type="button"
+              className="Button--header"
+              value={<FormattedMessage id="button.resume" />}
+            />
           </Link>
           {this.props.isMenuVisible && (
             <div className="Header__nav__plant">

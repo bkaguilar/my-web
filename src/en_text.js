@@ -3,6 +3,7 @@ import Anchor from "./components/Widgets/Anchor/Anchor";
 import { ReactComponent as Logo } from "./images/logo.svg";
 import { ReactComponent as Letter } from "./images/letter.svg";
 import { ReactComponent as Cover } from "./images/cover.svg";
+import { FormattedMessage } from "react-intl";
 
 export const RESUME_PROFILE = [
   {
@@ -69,39 +70,39 @@ export const RESUME_DATA = [
   }
 ];
 
+export const SECTIONS = ["home", "personal", "contact"];
+
 export const PAGES = [
   {
     id: 0,
-    name: "home",
+    name: <FormattedMessage id="home.name" />,
     image: <Cover />,
-    title: "Hello world, I'm Bessy",
-    content:
-      "I'm an Honduran frontend developer, always learning and looking for opportunities."
+    title: <FormattedMessage id="home.title" />,
+    content: <FormattedMessage id="home.content" />
   },
   {
     id: 1,
-    name: "personal",
-    title: "About me",
-    subTitle: "A little about me and my background",
-    content:
-      "Self-taught developer, designer and photography lover who has been building for the web since 2019.",
+    name: <FormattedMessage id="about.name" />,
+    title: <FormattedMessage id="about.title" />,
+    subTitle: <FormattedMessage id="about.subtitle" />,
+    content: <FormattedMessage id="about.content" />,
     paragraphs: [
-      "I currently live in Zaragoza, Spain. Love the cinematography and the art behind a len (I really appreciate a well done and peculiar scene). Occasionally read medieval fantasy and dystopic literature. And I'm a very curious person.",
-      "Outside of my work I like to travel and going out with my camera. I shoot with a Nikon D3200, and sometimes just with my phone.",
-      "Always learning and keeping abreast of new technologies. Love to craft solid and responsive products without sacrificing creativity. Design quality, user-friendly and scalable products regardless of the tech stack.",
-      "I'm interested in full or part-time remote jobs but also available as a contractor."
+      <FormattedMessage id="about.paragraph1" />,
+      <FormattedMessage id="about.paragraph2" />,
+      <FormattedMessage id="about.paragraph3" />,
+      <FormattedMessage id="about.paragraph4" />
     ]
   },
   {
     id: 2,
-    name: "contact",
+    name: <FormattedMessage id="contact.name" />,
     image: <Letter />,
-    title: "Let's work together",
-    content: "If you have some idea or proposal, let me now, ⊂(´･◡･⊂ )."
+    title: <FormattedMessage id="contact.title" />,
+    content: <FormattedMessage id="contact.content" />
   }
 ];
 
-export const SOCIAL = [
+export const SOCIAL_LINKS = [
   {
     name: "GitHub",
     anchor: "https://github.com/bkaguilar"
@@ -120,10 +121,10 @@ export const SOCIAL = [
   }
 ];
 
-export const SERVICES = [
+export const SERVICES_LINKS = [
   {
     name: "hola@bkaguilar.com",
-    anchor: "mailto:hola@bkaguilar.com?subject=🤟🏽Hi Bessy..."
+    anchor: <FormattedMessage id="servicesLinks.anchor" />
   },
   {
     name: "Telegram",

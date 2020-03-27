@@ -1,4 +1,5 @@
 import React from "react";
+import { FormattedMessage } from "react-intl";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { ReactComponent as Skills } from "../../../images/skills.svg";
 import Button from "../../Widgets/Button/Button";
@@ -41,10 +42,9 @@ class Main extends React.Component {
 
   render() {
     let paragraphElement;
+    const sections = ["home", "personal", "contact"];
     const { pages, active } = this.props;
-    const { title, image, name, content, id, paragraphs, subTitle } = pages[
-      active
-    ];
+    const { title, image, content, id, paragraphs, subTitle } = pages[active];
 
     if (paragraphs) {
       paragraphElement = paragraphs.map((text, index) => (
@@ -66,7 +66,11 @@ class Main extends React.Component {
           appear={true}
           classNames="titleAnimation"
         >
-          <main tabIndex="0" id={name} className={"Main Main--" + name}>
+          <main
+            tabIndex="0"
+            id={sections[active]}
+            className={"Main Main--" + sections[active]}
+          >
             <div className="Main__text">
               <figure className="patterns"></figure>
               <div style={{ overflow: "hidden" }}>
@@ -80,7 +84,7 @@ class Main extends React.Component {
                   type="button"
                   onClick={this.props.onClick}
                   className="Button--contact"
-                  value="Contact me"
+                  value={<FormattedMessage id="button.contact" />}
                   emoji="➝"
                 />
               )}
