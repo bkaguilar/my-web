@@ -22,5 +22,23 @@
   "footer.rrss": "Social Media",
 
   "button.resume": "Resume",
-  "button.contact": "Contact me"
+  "button.contact": "Contact me",
+
+  "resume.title": "Front-end Developer",
+  "resume.location": "Zargoza, Spain",
+  "resume.download": "Download",
+  "resume.profile": "profile",
+  "resume.description": "Self-taught developer, designer and photography lover who has been building for the web since 2019, like to craft solid and responsive products without sacrificing creativity.",
+  "resume.contact": "contact",
+  "resume.education": "education",
+  "resume.skills": "skills",
+  "resume.skills.svg": "SVG Animations",
+  "resume.experience": "work experience",
+  "resume.languages": "languages",
+  "resume.spanish": "Spanish (Native)",
+  "resume.english": "English (Professional working proficiency)",
+  "resume.education.title": "Computer technician",
+  "resume.work.title": "Web Designer",
+  "resume.work.date": "March 2019 - September 2019",
+  "resume.work.description": "Developed the frontend infrastructure and designed the different applications of the company, helped with the development in PHP language helping me with the symfony framework, Twig templates, Docker, etc..."
 }

@@ -22,5 +22,23 @@
   "footer.rrss": "Redes sociales",
 
   "button.resume": "Curriculum",
-  "button.contact": "Contáctame"
+  "button.contact": "Contáctame",
+
+  "resume.title": "Desarrolladora frontend",
+  "resume.location": "Zargoza, España",
+  "resume.download": "Descargar",
+  "resume.profile": "perfil",
+  "resume.description": "Desarrolladora autodidacta, amante del diseño y la fotografía quien ha estado aprendiendo sobre la web desde 2019. Me gusta crear productos solidos y ajustables a cualquier dispositivo sin sacrificar la creatividad",
+  "resume.contact": "contacto",
+  "resume.education": "educación",
+  "resume.skills": "habilidades",
+  "resume.skills.svg": "SVG Animaciones",
+  "resume.experience": "experiencia laboral",
+  "resume.languages": "idiomas",
+  "resume.spanish": "Español (Nativo)",
+  "resume.english": "Inglés (???)",
+  "resume.education.title": "Tecnico en computación",
+  "resume.work.title": "Diseñadora Web",
+  "resume.work.date": "Marzo 2019 - Septiembre 2019",
+  "resume.work.description": "Desarrollo de la infraestructura frontend y el diseño de distintas aplicaciones de la compañia, ayudada en el desarrollo con herramientas del lenguage PHP como Symfony framework, plantillas Twig, Docker, etc..."
 }

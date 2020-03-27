@@ -1,5 +1,6 @@
 import React from "react";
-import { RESUME_PROFILE, RESUME_DATA, LOGO } from "../../en_text";
+import { FormattedMessage } from "react-intl";
+import { RESUME_PROFILE, RESUME_DATA, LOGO } from "../../constants";
 import profile from "../../images/profile.jpg";
 import "./Resume.scss";
 
@@ -23,9 +24,11 @@ class Resume extends React.Component {
             Bessy Karina Galdamez Aguilar
           </h1>
           <h2 className="Resume__header__title" aria-labelledby="header">
-            Front-end Developer
+            <FormattedMessage id="resume.title" />
           </h2>
-          <span>Zaragoza, Spain</span>
+          <span>
+            <FormattedMessage id="resume.location" />
+          </span>
           <a
             href="./cv.pdf"
             className="Resume__header__link"
@@ -36,7 +39,7 @@ class Resume extends React.Component {
             <span className="emoji" role="img" aria-label="download">
               ⬇
             </span>
-            Download
+            <FormattedMessage id="resume.download" />
           </a>
         </header>
         <div className="Resume__description">
@@ -44,7 +47,7 @@ class Resume extends React.Component {
             className="Resume__description__title"
             aria-labelledby="Description title"
           >
-            Profile
+            <FormattedMessage id="resume.profile" />
           </h3>
           <figure className="Resume__description__photo">
             <img src={profile} alt="perfil" />
@@ -53,8 +56,7 @@ class Resume extends React.Component {
             className="Resume__description__content"
             aria-labelledby="Description"
           >
-            Self-taught developer, designer and photography lover, like to craft
-            solid and responsive products without sacrificing creativity.
+            <FormattedMessage id="resume.description" />
           </p>
         </div>
         <div className="Resume__main">
