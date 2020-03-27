@@ -28,7 +28,7 @@ export const RESUME_DATA = [
     sectionName: "contact",
     items: [
       <Anchor
-        href="mailto:hola@bkaguilar.com?subject=🤟🏽Hola Bessy, quiero proponerte algo" // difficult to translate this to english< "Hi Bessy, I have something for you | I want something from you", both sound very bad, "I have a proposal for you..." don't know Rick...
+        href="mailto:hola@bkaguilar.com?subject=🤟🏽Hi Bessy..."
         name="hola@bkaguilar.com"
         target="__blank"
         className="Anchor--resume"
@@ -56,11 +56,11 @@ export const RESUME_DATA = [
       "JavaScript / ES6",
       "React",
       "Adobe Illustrator / Photoshop / XD / Lightroom",
-      "WordPress"
+      "WordPress",
       "Git",
-      "Docker"
+      "Docker",
       "Node.js",
-      "Jest",
+      "Jest"
     ]
   },
   {
@@ -87,7 +87,7 @@ export const PAGES = [
       "Self-taught developer, designer and photography lover who has been building for the web since 2019.",
     paragraphs: [
       "I currently live in Zaragoza, Spain. Love the cinematography and the art behind a len (I really appreciate a well done and peculiar scene). Occasionally read medieval fantasy and dystopic literature. And I'm a very curious person.",
-      "Outside of my work I like to travel and going out with my camera. I shoot with a Nikon D3200 and a 18-55mm lens, and sometimes just with my phone.",
+      "Outside of my work I like to travel and going out with my camera. I shoot with a Nikon D3200, and sometimes just with my phone.",
       "Always learning and keeping abreast of new technologies. Love to craft solid and responsive products without sacrificing creativity. Design quality, user-friendly and scalable products regardless of the tech stack.",
       "I'm interested in full or part-time remote jobs but also available as a contractor."
     ]
@@ -123,8 +123,7 @@ export const SOCIAL = [
 export const SERVICES = [
   {
     name: "hola@bkaguilar.com",
-    anchor:
-      "mailto:hola@bkaguilar.com?subject=🤟🏽Hola Bessy, quiero proponerte algo" // FIXME: same as above!
+    anchor: "mailto:hola@bkaguilar.com?subject=🤟🏽Hi Bessy..."
   },
   {
     name: "Telegram",
