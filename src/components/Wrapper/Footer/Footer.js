@@ -88,7 +88,7 @@ class Footer extends React.Component {
             <Anchor
               href="/"
               className="Anchor--footer__author"
-              name="Bessy K. Aguilar"
+              value="Bessy K. Aguilar"
               title="Bk Aguilar"
               aria-label="Bk Aguilar"
               target="_blank"

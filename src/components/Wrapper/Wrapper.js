@@ -134,6 +134,19 @@ class Wrapper extends React.Component {
         />
       );
     });
+
+    let darkModeIcon;
+    if (this.state.darkMode) {
+      darkModeIcon = <circle cx="100" cy="100" r="60" fill="white" />;
+    } else {
+      darkModeIcon = (
+        <path
+          d="M130,121.2c-26.9,0-48.7-21.8-48.7-48.7c0-16.4,8.1-30.9,20.5-39.7c-0.6,0-1.2,0-1.8,0c-37.1,0-67.2,30.1-67.2,67.2 c0,37.1,30.1,67.2,67.2,67.2c35.7,0,64.9-27.9,67.1-63.1C158.1,114.6,144.9,121.2,130,121.2z'"
+          fill="#191919"
+          className="theme-icon__sun"
+        />
+      );
+    }
     return (
       <div
         className={
@@ -178,16 +191,7 @@ class Wrapper extends React.Component {
             viewBox="0 0 200 200"
             enableBackground="new 0 0 200 200"
           >
-            <path
-              className="theme-icon__sun"
-              style={{
-                transition: "all 200ms ease",
-                fill: this.state.darkMode ? "white" : "#191919",
-                d: this.state.darkMode
-                  ? "path('M40,100a60,60 0 1,0 120,0a60,60 0 1,0 -120,0')"
-                  : "path('M130,121.2c-26.9,0-48.7-21.8-48.7-48.7c0-16.4,8.1-30.9,20.5-39.7c-0.6,0-1.2,0-1.8,0c-37.1,0-67.2,30.1-67.2,67.2 c0,37.1,30.1,67.2,67.2,67.2c35.7,0,64.9-27.9,67.1-63.1C158.1,114.6,144.9,121.2,130,121.2z')"
-              }}
-            />
+            {darkModeIcon}
           </svg>
         </figure>
         <section className="loading"></section>
