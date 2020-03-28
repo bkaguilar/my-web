@@ -7,16 +7,16 @@
   "about.title": "About me",
   "about.subtitle": "A little about me and my background",
   "about.content": "Self-taught developer, designer and photography lover who has been building for the web since 2019.",
-  "about.paragraph1": "I currently live in Zaragoza, Spain. Love the cinematography and the art behind a len (I really appreciate a well done and peculiar scene). Occasionally read medieval fantasy and dystopic literature. And I'm a very curious person.",
+  "about.paragraph1": "I currently live in Zaragoza, Spain. Love the cinematography and the art behind a lens (I really appreciate a well done and peculiar scene). Occasionally read medieval fantasy, sci-fi and dystopian literature. And I'm a very curious person.",
   "about.paragraph2": "Outside of my work I like to travel and going out with my camera. I shoot with a Nikon D3200, and sometimes just with my phone.",
-  "about.paragraph3": "Always learning and keeping abreast of new technologies. Love to craft solid and responsive products without sacrificing creativity. Design quality, user-friendly and scalable products regardless of the tech stack.",
+  "about.paragraph3": "Always learning and keeping abreast of new technologies. Love to craft solid and responsive products without sacrificing creativity. Design quality, user-friendly and scalable products regardless of the tech stack.", // FIXME
   "about.paragraph4": "I'm interested in full or part-time remote jobs but also available as a contractor.",
 
   "contact.name": "contact",
-  "contact.title": "Let's work together",
+  "contact.title": "Let's work together!",
   "contact.content": "If you have some idea or proposal, let me now, ⊂(´･◡･⊂ ).",
 
-  "servicesLinks.anchor": "mailto:hola@bkaguilar.com?subject=🤟🏽Hi Bessy...",
+  "servicesLinks.anchor": "mailto:hello@bkaguilar.com?subject=🤟🏽Hi Bessy...",
 
   "footer.hello": "Say hello",
   "footer.rrss": "Social Media",
@@ -37,8 +37,8 @@
   "resume.languages": "languages",
   "resume.spanish": "Spanish (Native)",
   "resume.english": "English (Professional working proficiency)",
-  "resume.education.title": "Computer technician",
+  "resume.education.title": "Computer Technician",
   "resume.work.title": "Web Designer",
   "resume.work.date": "March 2019 - September 2019",
-  "resume.work.description": "Developed the frontend infrastructure and designed the different applications of the company, helped with the development in PHP language helping me with the symfony framework, Twig templates, Docker, etc..."
+  "resume.work.description": "Developed the frontend infrastructure and designed the different applications of the company, helped with the development in PHP language helping me with the symfony framework, Twig templates, Docker, etc..." // FIXME
 }

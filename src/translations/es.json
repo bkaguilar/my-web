@@ -1,19 +1,19 @@
 {
   "home.name": "inicio",
   "home.title": "Hola mundo, soy Bessy",
-  "home.content": "Soy una desarroladora fronted de Honduras, siempre aprendiendo y en busca de oportunidades e insiparación.",
+  "home.content": "Soy una desarroladora frontend hondureña, siempre aprendiendo y en busca de oportunidades e insiparación.",
 
   "about.name": "personal",
   "about.title": "Sobre mi",
   "about.subtitle": "Un poco sobre mí",
-  "about.content": "Desarrolladora autodidacta, amante del diseño y la fotografía quien ha estado aprendiendo sobre la web desde 2019.",
-  "about.paragraph1": "Actualmente vivo en Zaragoza, España. Me encanta la cinamatografia y el arte detrás de un lente(Aprecio una escena bien hecha). Ocasiaonalmente leo libros de genero fantasia medieval, ciencia ficción y distopia. Soy una persona muy curiosa.",
-  "about.paragraph2": "Fuera de mi trabajo me gusta viajar e ir con mi camara con la que echo fotografías, pero a veces lo hago solo con mi movil.",
-  "about.paragraph3": "Siempre aprendiendo y manteniendome al dia con las nuevas tecnologias. Me gusta crear productos solidos y ajustables a cualquier dispositivo sin sacrificar la creatividad. Diseño productos de calidad, fáciles de usar y escalables independientemente del software que se utilice.",
-  "about.paragraph4": "Estoy interesada en un trabajo a tiempo completo o parcial, pero también disponisbles para contratos.?????",
+  "about.content": "Desarrolladora autodidacta, amante del diseño y la fotografía. Aprendiendo sobre la web desde 2019.",
+  "about.paragraph1": "Actualmente vivo en Zaragoza, España. Me encanta la cinematografía y el arte detrás de un lente (aprecio una escena bien hecha). Leo fantasía medieval, ciencia ficción y novelas distópicas de vez en cuando. Y soy una persona muy curiosa.",
+  "about.paragraph2": "Fuera de mi trabajo me gusta viajar y tomar fotos con mi Nikon D3200, aunque a veces también simplemente con el móvil.",
+  "about.paragraph3": "Siempre aprendiendo y manteniéndome al dîa con las nuevas tecnologías. Me gusta crear productos sólidos y ajustables a cualquier dispositivo sin sacrificar la creatividad. Me encanta diseñar productos de calidad, fáciles de usar y escalables independientemente del software que se utilice.",
+  "about.paragraph4": "Estoy interesada principalmente en un trabajo a tiempo completo o parcial, pero también puedo ofrecer mis servicios como freelance.",
 
   "contact.name": "contacto",
-  "contact.title": "como traduzco esto sin que suene feo???",
+  "contact.title": "como traduzco esto sin que suene feo??? IMPOSIBLE, EL FIXME MAS GORDO, LUEGO LO HABLAMOS",
   "contact.content": "Si tienes una idea o propuesta hazmela saber, ⊂(´･◡･⊂ ).",
 
   "servicesLinks.anchor": "mailto:hola@bkaguilar.com?subject=🤟🏽Hola Bessy...",
@@ -21,24 +21,24 @@
   "footer.hello": "Di Hola",
   "footer.rrss": "Redes sociales",
 
-  "button.resume": "Curriculum",
+  "button.resume": "CV",
   "button.contact": "Contáctame",
 
   "resume.title": "Desarrolladora frontend",
   "resume.location": "Zargoza, España",
   "resume.download": "Descargar",
   "resume.profile": "perfil",
-  "resume.description": "Desarrolladora autodidacta, amante del diseño y la fotografía quien ha estado aprendiendo sobre la web desde 2019. Me gusta crear productos solidos y ajustables a cualquier dispositivo sin sacrificar la creatividad",
+  "resume.description": "Desarrolladora autodidacta, amante del diseño y la fotografía. Aprendiendo sobre la web desde 2019. Me gusta crear productos sólidos y ajustables a cualquier dispositivo sin sacrificar la creatividad.",
   "resume.contact": "contacto",
   "resume.education": "educación",
   "resume.skills": "habilidades",
-  "resume.skills.svg": "SVG Animaciones",
+  "resume.skills.svg": "Animaciones SVG",
   "resume.experience": "experiencia laboral",
   "resume.languages": "idiomas",
   "resume.spanish": "Español (Nativo)",
-  "resume.english": "Inglés (???)",
-  "resume.education.title": "Tecnico en computación",
+  "resume.english": "Inglés (FIXME: PONLO EN LINKEDIN Y MIRALO)",
+  "resume.education.title": "Tecnico en Computación",
   "resume.work.title": "Diseñadora Web",
   "resume.work.date": "Marzo 2019 - Septiembre 2019",
-  "resume.work.description": "Desarrollo de la infraestructura frontend y el diseño de distintas aplicaciones de la compañia, ayudada en el desarrollo con herramientas del lenguage PHP como Symfony framework, plantillas Twig, Docker, etc..."
+  "resume.work.description": "Desarrollo de la infraestructura frontend y el diseño de distintas aplicaciones de la compañia, ayudada en el desarrollo con herramientas del lenguage PHP como Symfony framework, plantillas Twig, Docker, etc..." // FIXME
 }
