@@ -1,7 +1,7 @@
 @import "../../../common.scss";
 
 .Anchor {
-  @include header-text();
+  @include headerText();
   @include showAnimation(20px);
   position: relative;
   margin-right: 35px;
@@ -70,7 +70,7 @@
     }
 
     @media #{$break-smallMin} {
-      &[name="hola@bkaguilar.com"]:hover {
+      &:first-of-type:hover {
         transition: color 0.3s ease;
         color: transparent;
         &::before {

@@ -5,6 +5,11 @@ import { ReactComponent as Letter } from "./images/letter.svg";
 import { ReactComponent as Cover } from "./images/cover.svg";
 import { FormattedMessage } from "react-intl";
 
+const emailLanguage = () => {
+  let language = navigator.language.split(/[-_]/)[0];
+  return language === "en" ? "hello@bkaguilar.com" : "hola@bkaguilar.com";
+};
+
 export const RESUME_PROFILE = [
   {
     id: 1,
@@ -17,7 +22,7 @@ export const RESUME_PROFILE = [
     id: 2,
     sectionName: <FormattedMessage id="resume.experience" />,
     year: <FormattedMessage id="resume.work.date" />,
-    title: <FormattedMessage id="resume.work.title" />, // sure? why Designer, if you were using Docker, tweaking TWIG templates and so... shouldn't be fucking frontend developer the role? that's the offering you applied for!
+    title: <FormattedMessage id="resume.work.title" />,
     site: "BaboonLab",
     description: <FormattedMessage id="resume.work.description" />
   }
@@ -28,9 +33,9 @@ export const RESUME_DATA = [
     sectionName: <FormattedMessage id="resume.contact" />,
     items: [
       <Anchor
-        href="mailto:hola@bkaguilar.com"
-        name="hola@bkaguilar.com"
-        value="hola@bkaguilar.com"
+        href={"mailto:" + emailLanguage()}
+        name={emailLanguage()}
+        value={emailLanguage()}
         target="__blank"
         className="Anchor--resume"
       />,
@@ -128,8 +133,8 @@ export const SOCIAL_LINKS = [
 
 export const SERVICES_LINKS = [
   {
-    name: "hola@bkaguilar.com",
-    anchor: <FormattedMessage id="servicesLinks.anchor" />
+    name: emailLanguage(),
+    anchor: "mailto:hola@bkaguilar.com?subject=🤟🏽Hola Bessy..."
   },
   {
     name: "Telegram",

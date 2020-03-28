@@ -19,9 +19,9 @@
   "servicesLinks.anchor": "mailto:hola@bkaguilar.com?subject=🤟🏽Hola Bessy...",
 
   "footer.hello": "Di Hola",
-  "footer.rrss": "Redes sociales",
+  "footer.social": "Redes sociales",
 
-  "button.resume": "CV",
+  "button.resume": "currículum Vitae",
   "button.contact": "Contáctame",
 
   "resume.title": "Desarrolladora frontend",
@@ -36,9 +36,9 @@
   "resume.experience": "experiencia laboral",
   "resume.languages": "idiomas",
   "resume.spanish": "Español (Nativo)",
-  "resume.english": "Inglés (FIXME: PONLO EN LINKEDIN Y MIRALO)",
+  "resume.english": "Inglés (Competencia básica profesional)",
   "resume.education.title": "Tecnico en Computación",
-  "resume.work.title": "Diseñadora Web",
+  "resume.work.title": "Diseñadora / Frontend developer",
   "resume.work.date": "Marzo 2019 - Septiembre 2019",
-  "resume.work.description": "Desarrollo de la infraestructura frontend y el diseño de distintas aplicaciones de la compañia, ayudada en el desarrollo con herramientas del lenguage PHP como Symfony framework, plantillas Twig, Docker, etc..." // FIXME
+  "resume.work.description": "Desarrollo de la infraestructura frontend y el diseño de distintas aplicaciones de la compañia, ayudada en el desarrollo con herramientas del lenguage PHP como Symfony framework, plantillas Twig, Docker, etc...(FIXME)"
 }

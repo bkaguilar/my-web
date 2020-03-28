@@ -7,9 +7,9 @@ let year = new Date().getFullYear();
 
 class Footer extends React.Component {
   clipboardEmail(e) {
+    let emailValue = e.currentTarget.innerText;
     if (window.innerWidth >= 768) {
-      let emailValue = e.currentTarget.innerText;
-      if (emailValue === "hola@bkaguilar.com") {
+      if (emailValue === "hola@bkaguilar.com" || "hello@bkaguilar.com") {
         e.preventDefault();
         let inp = document.createElement("input");
         document.body.appendChild(inp);
@@ -23,9 +23,11 @@ class Footer extends React.Component {
   }
 
   emailHover(e) {
-    let emailValue = e.currentTarget.innerText;
-    if (emailValue === "hola@bkaguilar.com") {
-      e.currentTarget.title = "Copy to clipboard";
+    if (window.innerWidth >= 768) {
+      let emailValue = e.currentTarget.innerText;
+      if (emailValue === "hola@bkaguilar.com" || "hello@bkaguilar.com") {
+        e.currentTarget.title = "Copy to clipboard";
+      }
     }
   }
 
@@ -72,7 +74,7 @@ class Footer extends React.Component {
           </nav>
           <nav className="Footer__anchors__nav">
             <h3 className="Footer__anchors__nav__title">
-              <FormattedMessage id="footer.rrss" />
+              <FormattedMessage id="footer.social" />
             </h3>
             {socialMedia}
           </nav>

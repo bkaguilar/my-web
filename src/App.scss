@@ -230,7 +230,7 @@ div[data-theme="black-theme"] {
   }
 
   header {
-    @include header-background($pp-color);
+    @include headerBackground($pp-color);
   }
 
   header,
