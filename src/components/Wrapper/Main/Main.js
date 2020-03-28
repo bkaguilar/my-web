@@ -1,7 +1,7 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import { ReactComponent as Skills } from "../../../images/skills.svg";
+import { ReactComponent as Photography } from "../../../images/photography.svg";
 import Button from "../../Widgets/Button/Button";
 import "./Main.scss";
 
@@ -42,8 +42,7 @@ class Main extends React.Component {
 
   render() {
     let paragraphElement;
-    const sections = ["home", "personal", "contact"];
-    const { pages, active } = this.props;
+    const { pages, sections, active } = this.props;
     const { title, image, content, id, paragraphs, subTitle } = pages[active];
 
     if (paragraphs) {
@@ -97,7 +96,7 @@ class Main extends React.Component {
                   className="Main__article__figure"
                   ref={e => (this.figureRef = e)}
                 >
-                  <Skills />
+                  <Photography />
                 </figure>
                 <div className="Main__paragraphs">
                   <h3

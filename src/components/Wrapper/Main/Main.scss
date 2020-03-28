@@ -64,7 +64,7 @@
   &__text__content,
   &__paragraphs__content {
     margin-bottom: 35px;
-    font-size: 1.2em;
+    font-size: 1.1em;
     letter-spacing: 0.04em;
 
     @media #{$break-smallMax} {
@@ -163,6 +163,7 @@
     }
 
     .Main__article {
+      position: relative;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -175,18 +176,18 @@
 
       @media #{$break-largeHeight} {
         margin: 100px 0;
+        justify-content: space-between;
         flex-direction: column;
       }
 
       &__figure {
-        background: rgba($brand-color_2, 0.2);
-        border-radius: 50%;
-        margin: 20px;
-        width: 30%;
+        width: 60%;
+        margin-right: 20px;
         @include intersectionStyles;
 
         @media #{$break-smallMax} {
           width: 80%;
+          margin-right: 0;
         }
 
         @media #{$break-largeHeight} {
@@ -200,7 +201,8 @@
     }
 
     .Main__paragraphs {
-      width: 50%;
+      width: 40%;
+      text-align: justify;
       margin: 30px;
 
       @media #{$break-largeHeight} {

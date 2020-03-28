@@ -141,7 +141,7 @@ class Wrapper extends React.Component {
     } else {
       darkModeIcon = (
         <path
-          d="M130,121.2c-26.9,0-48.7-21.8-48.7-48.7c0-16.4,8.1-30.9,20.5-39.7c-0.6,0-1.2,0-1.8,0c-37.1,0-67.2,30.1-67.2,67.2 c0,37.1,30.1,67.2,67.2,67.2c35.7,0,64.9-27.9,67.1-63.1C158.1,114.6,144.9,121.2,130,121.2z'"
+          d="M130,121.2c-26.9,0-48.7-21.8-48.7-48.7c0-16.4,8.1-30.9,20.5-39.7c-0.6,0-1.2,0-1.8,0c-37.1,0-67.2,30.1-67.2,67.2 c0,37.1,30.1,67.2,67.2,67.2c35.7,0,64.9-27.9,67.1-63.1C158.1,114.6,144.9,121.2,130,121.2z"
           fill="#191919"
           className="theme-icon__sun"
         />
@@ -167,6 +167,7 @@ class Wrapper extends React.Component {
         <Main
           {...this.state}
           pages={PAGES}
+          sections={SECTIONS}
           onClick={this.movetoContact.bind(this)}
         />
         {this.state.active === PAGES.length - 1 && (
