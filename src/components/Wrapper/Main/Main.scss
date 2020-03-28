@@ -185,6 +185,20 @@
         margin-right: 20px;
         @include intersectionStyles;
 
+        .cloud-svg {
+          animation: swiping 10s linear infinite;
+
+          &:last-child {
+            animation-delay: 3s;
+          }
+
+          @keyframes swiping {
+            50% {
+              transform: translate(-20px, 20px);
+            }
+          }
+        }
+
         @media #{$break-smallMax} {
           width: 80%;
           margin-right: 0;
@@ -203,7 +217,7 @@
     .Main__paragraphs {
       width: 40%;
       text-align: justify;
-      margin: 30px;
+      margin: 10px 30px 10px 10px;
 
       @media #{$break-largeHeight} {
         width: 100%;
