@@ -1,5 +1,6 @@
 import React from "react";
 import Anchor from "../../Widgets/Anchor/Anchor";
+import { EMAIL_COPY_TITLE, EMAIL_TITLE } from "../../../constants";
 import { FormattedMessage } from "react-intl";
 import "./Footer.scss";
 
@@ -17,7 +18,7 @@ class Footer extends React.Component {
         inp.select();
         document.execCommand("copy", false);
         inp.remove();
-        e.currentTarget.title = "Email copied";
+        e.currentTarget.title = EMAIL_TITLE;
       }
     }
   }
@@ -26,7 +27,7 @@ class Footer extends React.Component {
     if (window.innerWidth >= 768) {
       let emailValue = e.currentTarget.innerText;
       if (emailValue === "hola@bkaguilar.com" || "hello@bkaguilar.com") {
-        e.currentTarget.title = "Copy to clipboard";
+        e.currentTarget.title = EMAIL_COPY_TITLE;
       }
     }
   }

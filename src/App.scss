@@ -57,12 +57,6 @@ body {
   }
 }
 
-.positionFixed {
-  @media #{$break-smallMax} {
-    @include position(fixed, 0, 0, 0, 0);
-  }
-}
-
 .loading {
   @include position(fixed, 10px, 10px, 10px, 10px);
   z-index: 5;

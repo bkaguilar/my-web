@@ -15,6 +15,7 @@
   @media #{$break-smallMax} {
     padding: 80px 1.6em 1.6em 1.6em;
   }
+
   @media #{$break-largeLandscape} {
     padding: 80px 3em 1.6em 3em;
   }
@@ -49,7 +50,7 @@
       transition: all 1s linear;
 
       @media #{$break-smallMax} {
-        font-size: 1.8em;
+        font-size: 1.7em;
         margin-bottom: 20px;
       }
     }

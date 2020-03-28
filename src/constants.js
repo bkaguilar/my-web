@@ -5,10 +5,30 @@ import { ReactComponent as Letter } from "./images/letter.svg";
 import { ReactComponent as Cover } from "./images/cover.svg";
 import { FormattedMessage } from "react-intl";
 
-const emailLanguage = () => {
+const changeTextLanguage = (enText, esText) => {
   let language = navigator.language.split(/[-_]/)[0];
-  return language === "en" ? "hello@bkaguilar.com" : "hola@bkaguilar.com";
+  return language === "en" ? enText : esText;
 };
+
+export const DARK_MODE_OFF_TITLE = changeTextLanguage(
+  "Enable Dark Mode",
+  "Activar Modo oscuro"
+);
+
+export const DARK_MODE_ON_TITLE = changeTextLanguage(
+  "Disable Dark Mode",
+  "Desactivar Modo oscuro"
+);
+
+export const EMAIL_COPY_TITLE = changeTextLanguage(
+  "Copy to clipboard",
+  "Copiar al portapapeles"
+);
+
+export const EMAIL_TITLE = changeTextLanguage(
+  "Email copied!",
+  "¡Email copiado!"
+);
 
 export const RESUME_PROFILE = [
   {
@@ -37,9 +57,12 @@ export const RESUME_DATA = [
     sectionName: <FormattedMessage id="resume.contact" />,
     items: [
       <Anchor
-        href={"mailto:" + emailLanguage()}
-        name={emailLanguage()}
-        value={emailLanguage()}
+        href={
+          "mailto:" +
+          changeTextLanguage("hello@bkaguilar.com", "hola@bkaguilar.com")
+        }
+        name={changeTextLanguage("hello@bkaguilar.com", "hola@bkaguilar.com")}
+        value={changeTextLanguage("hello@bkaguilar.com", "hola@bkaguilar.com")}
         target="__blank"
         className="Anchor--resume"
       />,
@@ -137,7 +160,7 @@ export const SOCIAL_LINKS = [
 
 export const SERVICES_LINKS = [
   {
-    name: emailLanguage(),
+    name: changeTextLanguage("hello@bkaguilar.com", "hola@bkaguilar.com"),
     anchor: "mailto:hola@bkaguilar.com?subject=🤟🏽Hola Bessy..."
   },
   {
@@ -176,3 +199,6 @@ export const MESSAGE =
   "hola@bkaguilar.com  (ノ^o^)ノ ";
 
 export const LOGO = <Logo title="Bk Aguilar logo" className="Logo" />;
+
+export const DARK_MODE_ICON_PATH =
+  "M130,121.2c-26.9,0-48.7-21.8-48.7-48.7c0-16.4,8.1-30.9,20.5-39.7c-0.6,0-1.2,0-1.8,0c-37.1,0-67.2,30.1-67.2,67.2 c0,37.1,30.1,67.2,67.2,67.2c35.7,0,64.9-27.9,67.1-63.1C158.1,114.6,144.9,121.2,130,121.2z";

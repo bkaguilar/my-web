@@ -5,7 +5,10 @@ import {
   SOCIAL_LINKS,
   SERVICES_LINKS,
   LOGO,
-  MESSAGE
+  MESSAGE,
+  DARK_MODE_ON_TITLE,
+  DARK_MODE_OFF_TITLE,
+  DARK_MODE_ICON_PATH
 } from "../../constants";
 import Header from "./Header/Header";
 import Main from "./Main/Main";
@@ -20,7 +23,7 @@ class Wrapper extends React.Component {
     super(props);
     this.state = {
       active: 0,
-      darkMode: false,
+      darkModeOn: false,
       isMenuVisible: false
     };
   }
@@ -102,7 +105,7 @@ class Wrapper extends React.Component {
 
   handleChangeTheme() {
     this.setState({
-      darkMode: !this.state.darkMode
+      darkModeOn: !this.state.darkModeOn
     });
   }
 
@@ -123,6 +126,7 @@ class Wrapper extends React.Component {
   }
 
   render() {
+    let darkModeOnIcon;
     let dots = SECTIONS.map((item, i) => {
       return (
         <Dot
@@ -135,27 +139,19 @@ class Wrapper extends React.Component {
       );
     });
 
-    let darkModeIcon;
-    if (this.state.darkMode) {
-      darkModeIcon = <circle cx="100" cy="100" r="60" fill="white" />;
+    if (this.state.darkModeOn) {
+      darkModeOnIcon = <circle cx="100" cy="100" r="60" fill="white" />;
     } else {
-      darkModeIcon = (
+      darkModeOnIcon = (
         <path
-          d="M130,121.2c-26.9,0-48.7-21.8-48.7-48.7c0-16.4,8.1-30.9,20.5-39.7c-0.6,0-1.2,0-1.8,0c-37.1,0-67.2,30.1-67.2,67.2 c0,37.1,30.1,67.2,67.2,67.2c35.7,0,64.9-27.9,67.1-63.1C158.1,114.6,144.9,121.2,130,121.2z"
+          d={DARK_MODE_ICON_PATH}
           fill="#191919"
           className="theme-icon__sun"
         />
       );
     }
     return (
-      <div
-        className={
-          this.state.isMenuVisible || this.state.active === 0
-            ? "positionFixed"
-            : ""
-        }
-        data-theme={this.state.darkMode ? "black-theme" : "white-theme"}
-      >
+      <div data-theme={this.state.darkModeOn ? "black-theme" : "white-theme"}>
         <Header
           {...this.state}
           onClick={this.handleChange.bind(this)}
@@ -181,8 +177,10 @@ class Wrapper extends React.Component {
         <figure
           className="theme-icon"
           onClick={this.handleChangeTheme.bind(this)}
-          title="Change theme"
-          alt="icon for change theme"
+          title={
+            this.state.darkModeOn ? DARK_MODE_ON_TITLE : DARK_MODE_OFF_TITLE
+          }
+          alt="icon for enable dark mode"
         >
           <svg
             version="1.1"
@@ -192,7 +190,7 @@ class Wrapper extends React.Component {
             viewBox="0 0 200 200"
             enableBackground="new 0 0 200 200"
           >
-            {darkModeIcon}
+            {darkModeOnIcon}
           </svg>
         </figure>
         <section className="loading"></section>
