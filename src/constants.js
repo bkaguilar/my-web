@@ -24,7 +24,11 @@ export const RESUME_PROFILE = [
     year: <FormattedMessage id="resume.work.date" />,
     title: <FormattedMessage id="resume.work.title" />,
     site: "BaboonLab",
-    description: <FormattedMessage id="resume.work.description" />
+    description: [
+      <FormattedMessage id="resume.work.description0" />,
+      <FormattedMessage id="resume.work.description1" />,
+      <FormattedMessage id="resume.work.description2" />
+    ]
   }
 ];
 

@@ -38,5 +38,7 @@
   "resume.education.title": "Computer Technician",
   "resume.work.title": "Designer / Frontend Developer",
   "resume.work.date": "March 2019 - September 2019",
-  "resume.work.description": "Developed the frontend infrastructure and designed the different applications of the company, helped with the development in PHP language helping me with the symfony framework, Twig templates, Docker, etc...(FIXME)"
+  "resume.work.description0": "Empresa que se dedica al marketing inmobiliario en la que trabaje en un par de proyectos como la única desarrolladora frontend, realice la elaboración y mejora del diseño de sus aplicaciones, la accesibilidad web y la experiencia de usuaruio para los clintes.",
+  "resume.work.description1": "Diseñé UI para aplicaciones de UNREAL que utilizaba la empresa con sus clientes, desarrolle el diseño y maquetacion de paginas web y aplicaciones PHP, utilizando las plantillas del framework Symfony, Twig. Me gustaba hacer cumplor las bases de codigo correctas y utulizar un estilo y estandar de codigo.",
+  "resume.work.description2": "Diseñé y elabore la parte frontend de un chat funcional con videollamada para la comunicación de sus clientes.Trabaje con teconologias como Docker, Linux, Base de datos, y no se que más."
 }

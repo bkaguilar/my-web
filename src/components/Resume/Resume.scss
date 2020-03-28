@@ -6,6 +6,7 @@
   background: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 50px;
+  line-height: 34px;
 
   @media #{$break-smallMax} {
     text-align: center;
@@ -192,7 +193,7 @@
     &__title,
     &__site,
     &__year,
-    &__description {
+    &__description p {
       margin-bottom: 20px;
     }
 

@@ -100,9 +100,11 @@ class SumaryProfile extends React.Component {
               {this.props.item.year}
             </span>
             {this.props.item.description && (
-              <p className="SumaryProfile__list__item__description">
-                {this.props.item.description}
-              </p>
+              <div className="SumaryProfile__list__item__description">
+                {this.props.item.description.map((item, index) => {
+                  return <p key={index}>{item}</p>;
+                })}
+              </div>
             )}
           </li>
         </ul>
