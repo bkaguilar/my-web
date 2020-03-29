@@ -55,16 +55,22 @@ export const RESUME_PROFILE = [
     sectionName: <FormattedMessage id="resume.experience" />,
     items: [
       {
-        year: <FormattedMessage id="resume.work.date" />,
-        title: <FormattedMessage id="resume.work.title" />,
+        year: <FormattedMessage id="resume.work1.date" />,
+        title: <FormattedMessage id="resume.work1.title" />,
+        site: "Freelance",
+        description: [<FormattedMessage id="resume.work1.description" />]
+      },
+      {
+        year: <FormattedMessage id="resume.work2.date" />,
+        title: <FormattedMessage id="resume.work2.title" />,
         site: "BaboonLab",
         description: [
-          <FormattedMessage id="resume.work.description0" />,
-          <FormattedMessage id="resume.work.description1" />,
-          <FormattedMessage id="resume.work.description2" />,
-          <FormattedMessage id="resume.work.description3" />,
-          <FormattedMessage id="resume.work.description4" />,
-          <FormattedMessage id="resume.work.description5" />
+          <FormattedMessage id="resume.work2.description1" />,
+          <FormattedMessage id="resume.work2.description2" />,
+          <FormattedMessage id="resume.work2.description3" />,
+          <FormattedMessage id="resume.work2.description4" />,
+          <FormattedMessage id="resume.work2.description5" />,
+          <FormattedMessage id="resume.work2.description6" />
         ]
       }
     ]
