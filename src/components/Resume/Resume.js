@@ -74,9 +74,10 @@ export default Resume;
 
 class SumaryProfile extends React.Component {
   render() {
-    let itemsSumary = this.props.item.items.map(item => {
+    let itemsSumary = this.props.item.items.map((item, index) => {
       return (
         <li
+          key={index}
           className="SumaryProfile__list__item"
           aria-labelledby="SumaryProfile"
         >
