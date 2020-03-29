@@ -74,6 +74,26 @@ export default Resume;
 
 class SumaryProfile extends React.Component {
   render() {
+    let itemsSumary = this.props.item.items.map(item => {
+      return (
+        <li
+          className="SumaryProfile__list__item"
+          aria-labelledby="SumaryProfile"
+        >
+          <h4 className="SumaryProfile__list__item__title">{item.title}</h4>
+          <span className="SumaryProfile__list__item__site">{item.site}</span>
+          <span className="SumaryProfile__list__item__year">{item.year}</span>
+          {item.description && (
+            <div className="SumaryProfile__list__item__description">
+              {item.description.map((item, index) => {
+                return <p key={index}>{item}</p>;
+              })}
+            </div>
+          )}
+        </li>
+      );
+    });
+
     return (
       <section className="SumaryProfile">
         <h3
@@ -86,27 +106,7 @@ class SumaryProfile extends React.Component {
           className="SumaryProfile__list"
           aria-labelledby="SumaryProfile container"
         >
-          <li
-            className="SumaryProfile__list__item"
-            aria-labelledby="SumaryProfile"
-          >
-            <h4 className="SumaryProfile__list__item__title">
-              {this.props.item.title}
-            </h4>
-            <span className="SumaryProfile__list__item__site">
-              {this.props.item.site}
-            </span>
-            <span className="SumaryProfile__list__item__year">
-              {this.props.item.year}
-            </span>
-            {this.props.item.description && (
-              <div className="SumaryProfile__list__item__description">
-                {this.props.item.description.map((item, index) => {
-                  return <p key={index}>{item}</p>;
-                })}
-              </div>
-            )}
-          </li>
+          {itemsSumary}
         </ul>
       </section>
     );

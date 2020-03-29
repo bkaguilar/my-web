@@ -34,29 +34,37 @@ export const RESUME_PROFILE = [
   {
     id: 1,
     sectionName: <FormattedMessage id="resume.education" />,
-    year: "2007 - 2009",
-    title: <FormattedMessage id="resume.education.title1" />,
-    site: "INTAE, San Pedro Sula, Honduras"
+    items: [
+      {
+        year: "2007 - 2009",
+        title: <FormattedMessage id="resume.education.title1" />,
+        site: "INTAE, San Pedro Sula, Honduras"
+      },
+      {
+        year: "2010 - 2013",
+        title: <FormattedMessage id="resume.education.title2" />,
+        site: "Universidad de San Pedro Sula, Honduras"
+      }
+    ]
   },
+
   {
     id: 2,
-    year: "2010 - 2013",
-    title: <FormattedMessage id="resume.education.title2" />,
-    site: "Universidad de San Pedro Sula, Honduras"
-  },
-  {
-    id: 3,
     sectionName: <FormattedMessage id="resume.experience" />,
-    year: <FormattedMessage id="resume.work.date" />,
-    title: <FormattedMessage id="resume.work.title" />,
-    site: "BaboonLab",
-    description: [
-      <FormattedMessage id="resume.work.description0" />,
-      <FormattedMessage id="resume.work.description1" />,
-      <FormattedMessage id="resume.work.description2" />,
-      <FormattedMessage id="resume.work.description3" />,
-      <FormattedMessage id="resume.work.description4" />,
-      <FormattedMessage id="resume.work.description5" />
+    items: [
+      {
+        year: <FormattedMessage id="resume.work.date" />,
+        title: <FormattedMessage id="resume.work.title" />,
+        site: "BaboonLab",
+        description: [
+          <FormattedMessage id="resume.work.description0" />,
+          <FormattedMessage id="resume.work.description1" />,
+          <FormattedMessage id="resume.work.description2" />,
+          <FormattedMessage id="resume.work.description3" />,
+          <FormattedMessage id="resume.work.description4" />,
+          <FormattedMessage id="resume.work.description5" />
+        ]
+      }
     ]
   }
 ];
@@ -72,21 +80,18 @@ export const RESUME_DATA = [
         }
         name={changeTextLanguage("hello@bkaguilar.com", "hola@bkaguilar.com")}
         value={changeTextLanguage("hello@bkaguilar.com", "hola@bkaguilar.com")}
-        target="__blank"
         className="Anchor--resume"
       />,
       <Anchor
         href="bkaguilar.com"
         name="bkaguilar.com"
         value="bkaguilar.com"
-        target="__blank"
         className="Anchor--resume"
       />,
       <Anchor
         href="t.me/bkaguilar"
         name="t.me/bkaguilar"
         value="t.me/bkaguilar"
-        target="__blank"
         className="Anchor--resume"
       />
     ]
