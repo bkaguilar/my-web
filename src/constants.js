@@ -12,12 +12,12 @@ const changeTextLanguage = (enText, esText) => {
 
 export const DARK_MODE_OFF_TITLE = changeTextLanguage(
   "Enable Dark Mode",
-  "Activar Modo oscuro"
+  "Activar Modo Oscuro"
 );
 
 export const DARK_MODE_ON_TITLE = changeTextLanguage(
   "Disable Dark Mode",
-  "Desactivar Modo oscuro"
+  "Desactivar Modo Oscuro"
 );
 
 export const EMAIL_COPY_TITLE = changeTextLanguage(
@@ -35,11 +35,17 @@ export const RESUME_PROFILE = [
     id: 1,
     sectionName: <FormattedMessage id="resume.education" />,
     year: "2007 - 2009",
-    title: <FormattedMessage id="resume.education.title" />,
+    title: <FormattedMessage id="resume.education.title1" />,
     site: "INTAE, San Pedro Sula, Honduras"
   },
   {
     id: 2,
+    year: "2010 - 2013",
+    title: <FormattedMessage id="resume.education.title2" />,
+    site: "Universidad de San Pedro Sula, Honduras"
+  },
+  {
+    id: 3,
     sectionName: <FormattedMessage id="resume.experience" />,
     year: <FormattedMessage id="resume.work.date" />,
     title: <FormattedMessage id="resume.work.title" />,
@@ -47,7 +53,10 @@ export const RESUME_PROFILE = [
     description: [
       <FormattedMessage id="resume.work.description0" />,
       <FormattedMessage id="resume.work.description1" />,
-      <FormattedMessage id="resume.work.description2" />
+      <FormattedMessage id="resume.work.description2" />,
+      <FormattedMessage id="resume.work.description3" />,
+      <FormattedMessage id="resume.work.description4" />,
+      <FormattedMessage id="resume.work.description5" />
     ]
   }
 ];
@@ -88,14 +97,16 @@ export const RESUME_DATA = [
       "HTML5",
       "CSS3",
       <FormattedMessage id="resume.skills.svg" />,
-      "JavaScript / ES6",
+      "JavaScript (ES6 / jQuery)",
       "React",
       "Adobe Illustrator / Photoshop / XD / Lightroom",
       "WordPress",
+      "Linux (Ubuntu)",
       "Git",
       "Docker",
       "Node.js",
-      "Jest"
+      "Jest",
+      "JIRA"
     ]
   },
   {
@@ -196,7 +207,7 @@ export const MESSAGE =
   "                         '-'                      \n" +
   "If you want to talk with me about some idea or your company is looking \n" +
   "for someone with my skills we can chat...\n" +
-  "hola@bkaguilar.com  (ノ^o^)ノ ";
+  "hello@bkaguilar.com  (ノ^o^)ノ ";
 
 export const LOGO = <Logo title="Bk Aguilar logo" className="Logo" />;
 

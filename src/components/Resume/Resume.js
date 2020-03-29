@@ -21,7 +21,7 @@ class Resume extends React.Component {
       <main className="Resume">
         <header className="Resume__header">
           <h1 className="Resume__header__name" aria-labelledby="header">
-            Bessy Karina Galdamez Aguilar
+            Bessy Karina Galdámez Aguilar
           </h1>
           <h2 className="Resume__header__title" aria-labelledby="header">
             <FormattedMessage id="resume.title" />
@@ -34,7 +34,7 @@ class Resume extends React.Component {
             className="Resume__header__link"
             title="Curriculum PDF"
             alt="PDF"
-            download="Curriculum_BessyAguilar"
+            download="CV_BessyAguilar"
           >
             <span className="emoji" role="img" aria-label="download">
               ⬇

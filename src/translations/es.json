@@ -1,7 +1,7 @@
 {
   "home.name": "inicio",
   "home.title": "Hola mundo, soy Bessy",
-  "home.content": "Soy una desarroladora frontend hondureña, siempre aprendiendo y en busca de oportunidades e insiparación.",
+  "home.content": "Soy una desarrolladora web hondureña, siempre aprendiendo y en busca de oportunidades e inspiración.",
 
   "about.name": "personal",
   "about.title": "Sobre mi",
@@ -9,23 +9,23 @@
   "about.content": "Desarrolladora autodidacta, amante del diseño y la fotografía. Aprendiendo sobre la web desde 2019.",
   "about.paragraph1": "Actualmente vivo en Zaragoza, España. Me encanta la cinematografía y el arte detrás de un lente (aprecio una escena bien hecha). Leo fantasía medieval, ciencia ficción y novelas distópicas de vez en cuando. Y soy una persona muy curiosa.",
   "about.paragraph2": "Fuera de mi trabajo me gusta viajar y tomar fotos con mi Nikon D3200, aunque a veces también simplemente con el móvil.",
-  "about.paragraph3": "Siempre aprendiendo y manteniéndome al dîa con las nuevas tecnologías. Me gusta crear productos sólidos y ajustables a cualquier dispositivo sin sacrificar la creatividad. Me encanta diseñar productos de calidad, fáciles de usar y escalables independientemente del software que se utilice.",
+  "about.paragraph3": "Siempre aprendiendo y manteniéndome al día con las nuevas tecnologías. Me gusta crear productos sólidos y ajustables a cualquier dispositivo sin sacrificar la creatividad. Me encanta diseñar productos de calidad, fáciles de usar y escalables independientemente del software que se utilice.",
   "about.paragraph4": "Estoy interesada principalmente en un trabajo a tiempo completo o parcial, pero también puedo ofrecer mis servicios como freelance.",
 
   "contact.name": "contacto",
-  "contact.title": "como traduzco esto sin que suene feo??? IMPOSIBLE, EL FIXME MAS GORDO, LUEGO LO HABLAMOS",
-  "contact.content": "Si tienes una idea o propuesta hazmela saber, ⊂(´･◡･⊂ ).",
+  "contact.title": "Trabajemos juntos",
+  "contact.content": "Si tienes alguna idea o propuesta, ¡házmela saber! ⊂(´･◡･⊂ ).",
 
   "servicesLinks.anchor": "mailto:hola@bkaguilar.com?subject=🤟🏽Hola Bessy...",
 
   "footer.hello": "Di Hola",
   "footer.social": "Redes sociales",
 
-  "button.resume": "currículum Vitae",
+  "button.resume": "Curriculum Vitae",
   "button.contact": "Contáctame",
 
   "resume.title": "Desarrolladora frontend",
-  "resume.location": "Zargoza, España",
+  "resume.location": "Zaragoza, España",
   "resume.download": "Descargar",
   "resume.profile": "perfil",
   "resume.description": "Desarrolladora autodidacta, amante del diseño y la fotografía. Aprendiendo sobre la web desde 2019. Me gusta crear productos sólidos y ajustables a cualquier dispositivo sin sacrificar la creatividad.",
@@ -33,14 +33,18 @@
   "resume.education": "educación",
   "resume.skills": "habilidades",
   "resume.skills.svg": "Animaciones SVG",
-  "resume.experience": "experiencia laboral",
+  "resume.experience": "experiencia profesional",
   "resume.languages": "idiomas",
   "resume.spanish": "Español (Nativo)",
   "resume.english": "Inglés (Competencia básica profesional)",
-  "resume.education.title": "Tecnico en Computación",
-  "resume.work.title": "Diseñadora / Frontend developer",
+  "resume.education.title1": "Técnico en Computación",
+  "resume.education.title2": "Ciencias de la comunicación y publicidad",
+  "resume.work.title": "Diseñadora / Desarrolladora web",
   "resume.work.date": "Marzo 2019 - Septiembre 2019",
-  "resume.work.description0": "Empresa que se dedica al marketing inmobiliario en la que trabaje en un par de proyectos como la única desarrolladora frontend, realice la elaboración y mejora del diseño, la accesibilidad web y la experiencia de usuaruio para los clintes.",
-  "resume.work.description1": "Diseñé UI para aplicaciones de UNREAL que utilizaba la empresa con sus clientes, desarrolle el diseño y maquetacion de paginas web y aplicaciones PHP, utilizando las plantillas del framework Symfony, Twig. Me gustaba hacer cumplor las bases de codigo correctas y utulizar un estilo y estandar de codigo.",
-  "resume.work.description2": "Diseñé y elabore la parte frontend de un chat funcional con videollamada para la comunicación de sus clientes.Trabaje con teconologias como Docker, Linux, Base de datos, y no se que más."
+  "resume.work.description0": "Empresa que se dedica al marketing inmobiliario. Ejercí como la única desarrolladora frontend, encargada de la elaboración y mejora del diseño, la accesibilidad web y la experiencia de usuario para los clientes.",
+  "resume.work.description1": "Participé en el diseño y desarrollo de aplicaciones web y webs corporativas con PHP (Symfony y WordPress) y jQuery.",
+  "resume.work.description2": "Diseñé y elaboré la parte frontend (HTML5/ES6) de un chat web con videollamada para la comunicación con los clientes.",
+  "resume.work.description3": "Diseñé también la interfaz de usuario de una aplicación multiplataforma (Unreal Engine) con funcionalidades de realidad virtual y aumentada para promotores inmobiliarios",
+  "resume.work.description4": "Como iniciativa propia, propuse la elaboración de una guía de estilo de código común para todo el equipo.",
+  "resume.work.description5": "Mi entorno de trabajo era Linux, usando Git como control sistema de control de versiones, Docker para desplegar el entorno de desarrollo y JIRA para la gestión de tareas."
 }
