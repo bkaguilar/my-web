@@ -48,6 +48,7 @@
       letter-spacing: -0.02em;
       margin-bottom: 50px;
       transition: all 1s linear;
+      @include textShadow(white);
 
       @media #{$break-smallMax} {
         font-size: 1.7em;
@@ -58,20 +59,24 @@
 
   &__text__content {
     @include showAnimation(20px);
+    @include textShadow(white);
     animation-delay: $time-delay + 0.3s;
-    font-weight: 600;
+    font-size: 1.2em;
   }
 
   &__text__content,
   &__paragraphs__content {
     margin-bottom: 35px;
-    font-size: 1.1em;
     letter-spacing: 0.04em;
 
     @media #{$break-smallMax} {
       font-size: 1em;
       line-height: 1.4;
     }
+  }
+
+  &__paragraphs__content {
+    font-size: 1.1em;
   }
 
   &__figure {

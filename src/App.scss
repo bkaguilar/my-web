@@ -126,7 +126,7 @@ body {
 
   @keyframes showPattern {
     100% {
-      opacity: 0.3;
+      opacity: 0.7;
     }
   }
 
@@ -247,6 +247,7 @@ div[data-theme="black-theme"] {
     color: $sc-color;
 
     h2 {
+      text-shadow: none;
       color: $brand-color_1;
 
       .title-point {
@@ -256,6 +257,10 @@ div[data-theme="black-theme"] {
 
     .Main__text {
       z-index: 2;
+
+      &__content {
+        text-shadow: none;
+      }
     }
 
     figure {
