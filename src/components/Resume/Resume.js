@@ -1,6 +1,6 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
-import { RESUME_PROFILE, RESUME_DATA, LOGO } from "../../constants";
+import { RESUME_PROFILE, RESUME_DATA, LOGO, PDF_LANG } from "../../constants";
 import profile from "../../images/profile.jpg";
 import "./Resume.scss";
 
@@ -30,7 +30,7 @@ class Resume extends React.Component {
             <FormattedMessage id="resume.location" />
           </span>
           <a
-            href="./cv.pdf"
+            href={`./cv_${PDF_LANG}.pdf`}
             className="Resume__header__link"
             title="Curriculum PDF"
             alt="PDF"

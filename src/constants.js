@@ -30,6 +30,8 @@ export const EMAIL_TITLE = changeTextLanguage(
   "¡Email copiado!"
 );
 
+export const PDF_LANG = changeTextLanguage("en", "es");
+
 export const RESUME_PROFILE = [
   {
     id: 1,
