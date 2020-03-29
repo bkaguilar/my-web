@@ -17,7 +17,7 @@
   }
 
   @media #{$break-largeLandscape} {
-    padding: 80px 3em 1.6em 3em;
+    padding: 80px 4em 1.6em 4em;
   }
 
   &__text {
@@ -37,7 +37,7 @@
     }
 
     @media #{$break-largeLandscape} {
-      width: 80%;
+      width: 70%;
     }
 
     &__title {
@@ -181,6 +181,10 @@
         flex-direction: column;
       }
 
+      @media #{$break-largeLandscape} {
+        margin-right: 25px;
+      }
+
       &__figure {
         width: 60%;
         margin-right: 20px;
@@ -246,7 +250,7 @@
       margin-top: calc(35vh - 10%);
 
       @media #{$break-largeLandscape} {
-        margin-top: calc(35vh - 20%);
+        margin-top: 10vh;
       }
     }
 
