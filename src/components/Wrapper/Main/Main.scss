@@ -23,7 +23,7 @@
   &__text {
     position: relative;
     margin: 40px 0;
-    width: 60%;
+    width: 62%;
 
     @media #{$break-smallMax} {
       z-index: 0 !important;
@@ -70,7 +70,7 @@
     letter-spacing: 0.04em;
 
     @media #{$break-smallMax} {
-      font-size: 1em;
+      font-size: 1em !important;
       line-height: 1.4;
     }
   }
@@ -227,7 +227,7 @@
     .Main__paragraphs {
       width: 40%;
       text-align: justify;
-      margin: 10px 30px 10px 10px;
+      margin: 10px 35px 10px 10px;
 
       @media #{$break-largeHeight} {
         width: 100%;

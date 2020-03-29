@@ -59,7 +59,7 @@
 
     &__plant {
       @include position(absolute, unset, -25px, 0, unset);
-      opacity: 0.6;
+      opacity: 0.3;
       z-index: -1;
       width: 200px;
 
