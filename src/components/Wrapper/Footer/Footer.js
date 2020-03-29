@@ -5,12 +5,12 @@ import { FormattedMessage } from "react-intl";
 import "./Footer.scss";
 
 let year = new Date().getFullYear();
-
+let windowLargeSize = window.innerWidth >= 768;
 class Footer extends React.Component {
   clipboardEmail(e) {
-    let emailValue = e.currentTarget.innerText;
-    if (window.innerWidth >= 768) {
-      if (emailValue === "hola@bkaguilar.com" || "hello@bkaguilar.com") {
+    if (windowLargeSize) {
+      if (parseInt(e.currentTarget.id) === 0) {
+        console.log("hey");
         e.preventDefault();
         let inp = document.createElement("input");
         document.body.appendChild(inp);
@@ -24,9 +24,8 @@ class Footer extends React.Component {
   }
 
   emailHover(e) {
-    if (window.innerWidth >= 768) {
-      let emailValue = e.currentTarget.innerText;
-      if (emailValue === "hola@bkaguilar.com" || "hello@bkaguilar.com") {
+    if (windowLargeSize) {
+      if (parseInt(e.currentTarget.id) === 0) {
         e.currentTarget.title = EMAIL_COPY_TITLE;
       }
     }
@@ -34,7 +33,7 @@ class Footer extends React.Component {
 
   render() {
     const { servicesAnchors, socialAnchors, logo } = this.props;
-    let socialMedia = socialAnchors.map((item, i) => {
+    let socialMedia = socialAnchors.map((item, index) => {
       return (
         <Anchor
           key={item.name}
@@ -48,10 +47,11 @@ class Footer extends React.Component {
       );
     });
 
-    let services = servicesAnchors.map((item, i) => {
+    let services = servicesAnchors.map((item, index) => {
       return (
         <Anchor
           key={item.name}
+          id={index}
           href={item.anchor}
           target="_blank"
           name={item.name}
@@ -99,9 +99,11 @@ class Footer extends React.Component {
           </small>
           <small>
             Made with
-            <span className="emoji" role="img" aria-label="react-atom">
-              ⚛️
-            </span>
+            <a href="https://reactjs.org/" title="React">
+              <span className="emoji" role="img" aria-label="react-atom">
+                ⚛
+              </span>
+            </a>
             and
             <span className="emoji" role="img" aria-label="heart">
               ❤

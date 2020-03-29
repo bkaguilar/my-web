@@ -12,11 +12,13 @@ class Anchor extends React.Component {
       onClick,
       className,
       target,
-      onHover
+      onHover,
+      id
     } = this.props;
     return (
       <a
         href={href}
+        id={id}
         target={target}
         index={index}
         name={name}
