@@ -39,10 +39,10 @@
   "resume.education.title2": "Communication Science",
   "resume.work.title": "Designer / Frontend Developer",
   "resume.work.date": "March 2019 - September 2019",
-  "resume.work.description0": "Empresa que se dedica al marketing inmobiliario. Ejercí como la única desarrolladora frontend, encargada de la elaboración y mejora del diseño, la accesibilidad web y la experiencia de usuario para los clientes.",
-  "resume.work.description1": "Participé en el diseño y desarrollo de aplicaciones web y webs corporativas con PHP (Symfony y WordPress) y jQuery.",
-  "resume.work.description2": "Diseñé y elaboré la parte frontend (HTML5/ES6) de un chat web con videollamada para la comunicación con los clientes.",
-  "resume.work.description3": "Diseñé también la interfaz de usuario de una aplicación multiplataforma (Unreal Engine) con funcionalidades de realidad virtual y aumentada para promotores inmobiliarios",
-  "resume.work.description4": "Como iniciativa propia, propuse la elaboración de una guía de estilo de código común para todo el equipo.",
-  "resume.work.description5": "Mi entorno de trabajo era Linux, usando Git como control sistema de control de versiones, Docker para desplegar el entorno de desarrollo y JIRA para la gestión de tareas."
+  "resume.work.description0": "Proptech Start-up. I was the only frontend developer in the team, in charge making and improving designs, web accessibility and user experience for the customers.",
+  "resume.work.description1": "I took part in the design and development of web apps and corporate websites using PHP (Symfony and WordPress) and jQuery.",
+  "resume.work.description2": "I designed and implemented the frontend (HTML5/ES6) of a webchat with videocalls support for communicating with the customers.",
+  "resume.work.description3": "Also designed the UI for a multiplatform (Unreal Engine) app with VR and AR capabilities for real estate companies.",
+  "resume.work.description4": "As a personal initiative, proposed the ellaboration of a common coding style guide for the whole team and the different projects.",
+  "resume.work.description5": "My work environment was Linux, using Git as VCS, Docker for deploying the development environment and JIRA for task management."
 }
