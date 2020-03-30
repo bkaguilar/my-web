@@ -1,14 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
-import Anchor from "../../Widgets/Anchor/Anchor";
 import { ReactComponent as Plant } from "../../../images/plant.svg";
+import Email from "../../Widgets/Email/Email";
+import Anchor from "../../Widgets/Anchor/Anchor";
 import Button from "../../Widgets/Button/Button";
 import "./Header.scss";
 
 class Header extends React.Component {
   render() {
     const { onClick, showMenu, logo, pages, sections } = this.props;
+    let menuLabel;
+
+    if (this.props.isMenuVisible) {
+      menuLabel = this.props.lang === "en" ? "Close" : "Cerrar";
+    } else {
+      menuLabel = "Menú";
+    }
     let anchors = pages.map((item, i) => {
       return (
         <Anchor
@@ -58,21 +66,7 @@ class Header extends React.Component {
           )}
           {this.props.isMenuVisible && (
             <div className="Header__nav__email">
-              <a
-                href="mailto:hola@bkaguilar.com?subject=🤟🏽Hola Bessy, quiero proponerte algo"
-                rel="noopener noreferrer"
-                title="Enviame un E-mail ;)"
-                alt="hola@bkaguilar.com"
-              >
-                hola@bkaguilar.com
-                <span
-                  role="img"
-                  aria-label="woman tech emoji"
-                  className="emoji"
-                >
-                  &#9998;
-                </span>
-              </a>
+              <Email lang={this.props.lang} className="Header__nav__email__a" />
             </div>
           )}
         </nav>
@@ -85,9 +79,7 @@ class Header extends React.Component {
             color: this.props.isMenuVisible ? "#f2f4f6" : "inherit"
           }}
         >
-          <span className="Header__responsive__text">
-            {this.props.isMenuVisible ? "Cerrar" : "Menú"}
-          </span>
+          <span className="Header__responsive__text">{menuLabel}</span>
           <span
             aria-label="lines"
             className={

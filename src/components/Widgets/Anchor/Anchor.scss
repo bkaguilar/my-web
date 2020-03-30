@@ -69,20 +69,6 @@
       padding: 10px;
     }
 
-    @media #{$break-smallMin} {
-      &:first-of-type:hover {
-        transition: color 0.3s ease;
-        color: transparent;
-        &::before {
-          content: attr(title);
-          margin-left: 7px;
-          color: $pp-color;
-          padding-right: 25px;
-          white-space: nowrap;
-        }
-      }
-    }
-
     &__author {
       margin-left: 10px;
       transition: all $timing-transition linear;

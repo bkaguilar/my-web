@@ -1,36 +1,8 @@
 import React from "react";
-import Anchor from "./components/Widgets/Anchor/Anchor";
 import { ReactComponent as Logo } from "./images/logo.svg";
 import { ReactComponent as Letter } from "./images/letter.svg";
 import { ReactComponent as Cover } from "./images/cover.svg";
 import { FormattedMessage } from "react-intl";
-
-const changeTextLanguage = (enText, esText) => {
-  let language = navigator.language.split(/[-_]/)[0];
-  return language === "en" ? enText : esText;
-};
-
-export const DARK_MODE_OFF_TITLE = changeTextLanguage(
-  "Enable Dark Mode",
-  "Activar Modo Oscuro"
-);
-
-export const DARK_MODE_ON_TITLE = changeTextLanguage(
-  "Disable Dark Mode",
-  "Desactivar Modo Oscuro"
-);
-
-export const EMAIL_COPY_TITLE = changeTextLanguage(
-  "Copy to clipboard",
-  "Copiar al portapapeles"
-);
-
-export const EMAIL_TITLE = changeTextLanguage(
-  "Email copied!",
-  "¡Email copiado!"
-);
-
-export const PDF_LANG = changeTextLanguage("en", "es");
 
 export const RESUME_PROFILE = [
   {
@@ -79,32 +51,12 @@ export const RESUME_PROFILE = [
 
 export const RESUME_DATA = [
   {
+    id: 0,
     sectionName: <FormattedMessage id="resume.contact" />,
-    items: [
-      <Anchor
-        href={
-          "mailto:" +
-          changeTextLanguage("hello@bkaguilar.com", "hola@bkaguilar.com")
-        }
-        name={changeTextLanguage("hello@bkaguilar.com", "hola@bkaguilar.com")}
-        value={changeTextLanguage("hello@bkaguilar.com", "hola@bkaguilar.com")}
-        className="Anchor--resume"
-      />,
-      <Anchor
-        href="bkaguilar.com"
-        name="bkaguilar.com"
-        value="bkaguilar.com"
-        className="Anchor--resume"
-      />,
-      <Anchor
-        href="t.me/bkaguilar"
-        name="t.me/bkaguilar"
-        value="t.me/bkaguilar"
-        className="Anchor--resume"
-      />
-    ]
+    items: ["bkaguilar.com", "t.me/bkaguilar"]
   },
   {
+    id: 1,
     sectionName: <FormattedMessage id="resume.skills" />,
     items: [
       "HTML5",
@@ -123,6 +75,7 @@ export const RESUME_DATA = [
     ]
   },
   {
+    id: 2,
     sectionName: <FormattedMessage id="resume.languages" />,
     items: [
       <FormattedMessage id="resume.spanish" />,
@@ -183,10 +136,6 @@ export const SOCIAL_LINKS = [
 ];
 
 export const SERVICES_LINKS = [
-  {
-    name: changeTextLanguage("hello@bkaguilar.com", "hola@bkaguilar.com"),
-    anchor: "mailto:hola@bkaguilar.com?subject=🤟🏽Hola Bessy..."
-  },
   {
     name: "Telegram",
     anchor: "https://t.me/bkaguilar"

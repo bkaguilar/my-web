@@ -55,6 +55,11 @@
       margin: 40px auto;
       padding: 0 10px;
       color: $sc-color;
+
+      &__a {
+        text-transform: uppercase;
+        margin: 0;
+      }
     }
 
     &__plant {

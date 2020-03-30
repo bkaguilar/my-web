@@ -17,6 +17,7 @@ class Anchor extends React.Component {
     } = this.props;
     return (
       <a
+        rel="noopener noreferrer"
         href={href}
         id={id}
         target={target}

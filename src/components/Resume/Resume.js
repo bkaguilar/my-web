@@ -1,7 +1,8 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
-import { RESUME_PROFILE, RESUME_DATA, LOGO, PDF_LANG } from "../../constants";
+import { RESUME_PROFILE, RESUME_DATA, LOGO } from "../../constants";
 import profile from "../../images/profile.jpg";
+import Email from "../Widgets/Email/Email";
 import "./Resume.scss";
 
 class Resume extends React.Component {
@@ -15,7 +16,7 @@ class Resume extends React.Component {
     });
 
     let dataSections = RESUME_DATA.map((item, index) => {
-      return <TechnicalData key={index} item={item} />;
+      return <TechnicalData key={index} item={item} lang={this.props.lang} />;
     });
     return (
       <main className="Resume">
@@ -30,7 +31,7 @@ class Resume extends React.Component {
             <FormattedMessage id="resume.location" />
           </span>
           <a
-            href={`./cv_${PDF_LANG}.pdf`}
+            href={`./cv_${this.props.lang}.pdf`}
             className="Resume__header__link"
             title="Curriculum PDF"
             alt="PDF"
@@ -116,6 +117,7 @@ class SumaryProfile extends React.Component {
 
 class TechnicalData extends React.Component {
   render() {
+    console.log();
     let list = this.props.item.items.map((item, index) => {
       return (
         <li
@@ -134,6 +136,11 @@ class TechnicalData extends React.Component {
           className="TechnicalData__list"
           aria-labelledby="TechnicalData container"
         >
+          {this.props.item.id === 0 && (
+            <li className="TechnicalData__list__item">
+              <Email lang={this.props.lang} className="Anchor--resume" />
+            </li>
+          )}
           {list}
         </ul>
       </section>

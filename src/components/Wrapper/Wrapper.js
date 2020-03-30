@@ -6,8 +6,6 @@ import {
   SERVICES_LINKS,
   LOGO,
   MESSAGE,
-  DARK_MODE_ON_TITLE,
-  DARK_MODE_OFF_TITLE,
   DARK_MODE_ICON_PATH
 } from "../../constants";
 import Header from "./Header/Header";
@@ -126,7 +124,7 @@ class Wrapper extends React.Component {
   }
 
   render() {
-    let darkModeOnIcon;
+    let darkModeOnIcon, titleDarkModeIcon;
     let dots = SECTIONS.map((item, i) => {
       return (
         <Dot
@@ -141,6 +139,10 @@ class Wrapper extends React.Component {
 
     if (this.state.darkModeOn) {
       darkModeOnIcon = <circle cx="100" cy="100" r="60" fill="white" />;
+      titleDarkModeIcon =
+        this.props.lang === "es"
+          ? "Desactivar Modo Oscuro"
+          : "Disable Dark Mode";
     } else {
       darkModeOnIcon = (
         <path
@@ -149,6 +151,8 @@ class Wrapper extends React.Component {
           className="theme-icon__sun"
         />
       );
+      titleDarkModeIcon =
+        this.props.lang === "es" ? "Activar Modo Oscuro" : "Enable Dark Mode";
     }
     return (
       <div data-theme={this.state.darkModeOn ? "black-theme" : "white-theme"}>
@@ -159,6 +163,7 @@ class Wrapper extends React.Component {
           logo={LOGO}
           pages={PAGES}
           sections={SECTIONS}
+          lang={this.props.lang}
         />
         <Main
           {...this.state}
@@ -171,15 +176,14 @@ class Wrapper extends React.Component {
             servicesAnchors={SERVICES_LINKS}
             socialAnchors={SOCIAL_LINKS}
             logo={LOGO}
+            lang={this.props.lang}
           />
         )}
         <ul className="dots">{dots}</ul>
         <figure
           className="theme-icon"
           onClick={this.handleChangeTheme.bind(this)}
-          title={
-            this.state.darkModeOn ? DARK_MODE_ON_TITLE : DARK_MODE_OFF_TITLE
-          }
+          title={titleDarkModeIcon}
           alt="icon for enable dark mode"
         >
           <svg

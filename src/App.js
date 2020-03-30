@@ -5,16 +5,26 @@ import Wrapper from "./components/Wrapper/Wrapper";
 import "./App.scss";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      lang: ""
+    };
+  }
+
+  componentDidMount() {
+    this.setState({ lang: navigator.language.split(/[-_]/)[0] });
+  }
   render() {
     return (
       <div className="App">
         <Router>
           <Switch>
             <Route path="/" exact>
-              <Wrapper />
+              <Wrapper {...this.state} />
             </Route>
             <Route path="/resume" exact>
-              <Resume />
+              <Resume {...this.state} />
             </Route>
           </Switch>
         </Router>
