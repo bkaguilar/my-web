@@ -8,14 +8,14 @@
       "type": "image/x-icon"
     },
     {
-      "src": "192x87.png",
+      "src": "logo192.png",
       "type": "image/png",
-      "sizes": "192x87"
+      "sizes": "192x192"
     },
     {
-      "src": "512x233.png",
+      "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512x233"
+      "sizes": "512x512"
     }
   ],
   "start_url": "bkaguilar.com",
