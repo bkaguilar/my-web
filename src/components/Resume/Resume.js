@@ -33,7 +33,7 @@ class Resume extends React.Component {
           <a
             href={`./cv_${this.props.lang}.pdf`}
             className="Resume__header__link"
-            title="Curriculum PDF"
+            title="Curriculum Vitae PDF"
             alt="PDF"
             download="CV_BessyAguilar"
           >
