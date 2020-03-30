@@ -1,5 +1,5 @@
 {
-  "short_name": "BkAguilar",
+  "short_name": "Bk Aguilar Web",
   "name": "Bk Aguilar Frontend Developer",
   "icons": [
     {
@@ -8,18 +8,19 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "192x87.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x87"
     },
     {
-      "src": "logo512.png",
+      "src": "512x233.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x233"
     }
   ],
-  "start_url": ".",
+  "start_url": "bkaguilar.com",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#191919",
+  "background_color": "#f2f4f6",
+  "orientation": "portrait"
 }
