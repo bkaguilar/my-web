@@ -8,33 +8,24 @@ let year = new Date().getFullYear();
 class Footer extends React.Component {
   render() {
     const { servicesAnchors, socialAnchors, logo } = this.props;
-    let socialMedia = socialAnchors.map((item, index) => {
-      return (
-        <Anchor
-          key={item.name}
-          href={item.anchor}
-          target="_blank"
-          name={item.name}
-          title={item.name}
-          value={item.name}
-          className="Anchor--footer"
-        />
-      );
-    });
+    const [socialMedia, services] = [socialAnchors, servicesAnchors].map(
+      anchor => {
+        return anchor.map((item, index) => {
+          return (
+            <Anchor
+              key={index}
+              href={item.anchor}
+              target="_blank"
+              name={item.name}
+              title={item.name}
+              value={item.name}
+              className="Anchor--footer"
+            />
+          );
+        });
+      }
+    );
 
-    let services = servicesAnchors.map((item, index) => {
-      return (
-        <Anchor
-          key={item.name}
-          href={item.anchor}
-          target="_blank"
-          name={item.name}
-          title={item.name}
-          value={item.name}
-          className="Anchor--footer"
-        />
-      );
-    });
     return (
       <footer className="Footer">
         <div className="Footer__anchors">
