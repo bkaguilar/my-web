@@ -1,7 +1,7 @@
 {
   "home.name": "inicio",
   "home.title": "Hola mundo, soy Bessy",
-  "home.content": "Soy una desarrolladora web hondureña, siempre aprendiendo y en busca de oportunidades e inspiración.",
+  "home.content": "Soy una desarrolladora web hondureña, siempre aprendiendo y en busca de oportunidades e inspiración. Actualmente trabajando de forma remota.",
 
   "about.name": "personal",
   "about.title": "Sobre mi",
@@ -10,7 +10,8 @@
   "about.paragraph1": "Actualmente vivo en Zaragoza, España. Me encanta la cinematografía y el arte detrás de un lente (aprecio una escena bien hecha). Leo fantasía medieval, ciencia ficción y novelas distópicas de vez en cuando. Y soy una persona muy curiosa.",
   "about.paragraph2": "Fuera de mi trabajo me gusta viajar y tomar fotos con mi Nikon D3200, aunque a veces también simplemente con el móvil.",
   "about.paragraph3": "Siempre aprendiendo y manteniéndome al día con las nuevas tecnologías. Me gusta crear productos sólidos y ajustables a cualquier dispositivo sin sacrificar la creatividad. Me encanta diseñar productos de calidad, fáciles de usar y escalables independientemente del software que se utilice.",
-  "about.paragraph4": "Estoy interesada principalmente en un trabajo a tiempo completo o parcial, pero también puedo ofrecer mis servicios como freelance.",
+  "about.paragraph4": "Me intereso principalmente en trabajos a tiempo completo o parcial, pero también puedo ofrecer mis servicios como freelance.",
+  "about.paragraph5": "Actualmente trabajando remotamente.",
 
   "contact.name": "contacto",
   "contact.title": "Trabajemos juntos",

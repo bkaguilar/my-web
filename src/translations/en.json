@@ -1,7 +1,7 @@
 {
   "home.name": "home",
   "home.title": "Hello world, I'm Bessy",
-  "home.content": "I'm an Honduran frontend developer, always learning and looking for opportunities and inspiration.",
+  "home.content": "I'm an Honduran frontend developer, always learning and looking for opportunities and inspiration. Currently working remotely",
 
   "about.name": "personal",
   "about.title": "About me",
@@ -11,6 +11,7 @@
   "about.paragraph2": "Outside of my work I like to travel and going out with my camera. I shoot with a Nikon D3200, and sometimes just with my phone.",
   "about.paragraph3": "Always learning and keeping abreast of new technologies. Love to craft solid and responsive products without sacrificing creativity. Passionate about designing quality, user-friendly and scalable products regardless of the tech stack.",
   "about.paragraph4": "I'm interested in full or part-time remote jobs but also available as a contractor.",
+  "about.paragraph5": "Currently working remotely.",
 
   "contact.name": "contact",
   "contact.title": "Let's work together",

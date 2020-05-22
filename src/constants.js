@@ -4,6 +4,8 @@ import { ReactComponent as Letter } from "./images/letter.svg";
 import { ReactComponent as Cover } from "./images/cover.svg";
 import { FormattedMessage } from "react-intl";
 
+const ABOUT_PARAGRAPHS = 5;
+
 export const RESUME_PROFILE = [
   {
     id: 1,
@@ -77,10 +79,7 @@ export const RESUME_DATA = [
   {
     id: 2,
     sectionName: <FormattedMessage id="resume.languages" />,
-    items: [
-      <FormattedMessage id="resume.spanish" />,
-      <FormattedMessage id="resume.english" />
-    ]
+    items: [<FormattedMessage id="resume.spanish" />, <FormattedMessage id="resume.english" />]
   }
 ];
 
@@ -100,12 +99,9 @@ export const PAGES = [
     title: <FormattedMessage id="about.title" />,
     subTitle: <FormattedMessage id="about.subtitle" />,
     content: <FormattedMessage id="about.content" />,
-    paragraphs: [
-      <FormattedMessage id="about.paragraph1" />,
-      <FormattedMessage id="about.paragraph2" />,
-      <FormattedMessage id="about.paragraph3" />,
-      <FormattedMessage id="about.paragraph4" />
-    ]
+    paragraphs: Array(ABOUT_PARAGRAPHS)
+      .fill()
+      .map((p, index) => <FormattedMessage id={`about.paragraph${index + 1}`} />)
   },
   {
     id: 2,
