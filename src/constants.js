@@ -5,6 +5,7 @@ import { ReactComponent as Cover } from "./images/cover.svg";
 import { FormattedMessage } from "react-intl";
 
 const ABOUT_PARAGRAPHS = 5;
+const RESUME_WORK_DESCRIPTION = 6;
 
 export const RESUME_PROFILE = [
   {
@@ -31,21 +32,22 @@ export const RESUME_PROFILE = [
       {
         year: <FormattedMessage id="resume.work1.date" />,
         title: <FormattedMessage id="resume.work1.title" />,
-        site: "Freelance",
+        site: "Torresburriel Estudio",
         description: [<FormattedMessage id="resume.work1.description" />]
       },
       {
         year: <FormattedMessage id="resume.work2.date" />,
         title: <FormattedMessage id="resume.work2.title" />,
+        site: "Freelance",
+        description: [<FormattedMessage id="resume.work2.description" />]
+      },
+      {
+        year: <FormattedMessage id="resume.work3.date" />,
+        title: <FormattedMessage id="resume.work3.title" />,
         site: "BaboonLab",
-        description: [
-          <FormattedMessage id="resume.work2.description1" />,
-          <FormattedMessage id="resume.work2.description2" />,
-          <FormattedMessage id="resume.work2.description3" />,
-          <FormattedMessage id="resume.work2.description4" />,
-          <FormattedMessage id="resume.work2.description5" />,
-          <FormattedMessage id="resume.work2.description6" />
-        ]
+        description: Array(RESUME_WORK_DESCRIPTION)
+          .fill()
+          .map((p, index) => <FormattedMessage id={`resume.work3.description${index + 1}`} />)
       }
     ]
   }
