@@ -41,7 +41,10 @@
 
   "resume.work1.title": "Desarrolladora web",
   "resume.work1.date": "abril 2020 - actualidad",
-  "resume.work1.description": "Empresa UX que trabaja en el diseño de experiencia de usuario (UX) para sitios web y aplicaciones móviles.",
+  "resume.work1.description1": "Empresa UX que trabaja en el diseño de experiencia de usuario para sitios web y aplicaciones móviles.",
+  "resume.work1.description2": "He trabajado en distintos proyecto, ahora mismo desarrollo mejoras y ayudo en el desarrollo de un sistema de diseño basado en tecncologia de 'web components' utilizando herramientas como Stencil, Typescript, Abstract, y Jest.",
+  "resume.work1.description3": "Doy continuio soporte a diferentes equipos de desarolladores y ayudo en el desarrollo de páginas web para una de las grandes empresas de seguro de España",
+  "resume.work1.description4": "Mi entorno de trabajo es Linux, usando Git (Bitbucket) como control sistema de control de versiones, Jenkis para desplegar distintos entornos y produccion, JIRA y Teamwork para la gestión de tareas.",
 
   "resume.work2.title": "Diseñadora / Desarrolladora web",
   "resume.work2.date": "junio 2018 - marzo 2020",

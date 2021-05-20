@@ -33,7 +33,7 @@ export const RESUME_PROFILE = [
         year: <FormattedMessage id="resume.work1.date" />,
         title: <FormattedMessage id="resume.work1.title" />,
         site: "Torresburriel Estudio",
-        description: [<FormattedMessage id="resume.work1.description" />]
+        description: [...Array(4).keys()].map((p, index) => <FormattedMessage id={`resume.work1.description${index + 1}`} />)
       },
       {
         year: <FormattedMessage id="resume.work2.date" />,
@@ -45,9 +45,7 @@ export const RESUME_PROFILE = [
         year: <FormattedMessage id="resume.work3.date" />,
         title: <FormattedMessage id="resume.work3.title" />,
         site: "BaboonLab",
-        description: Array(RESUME_WORK_DESCRIPTION)
-          .fill()
-          .map((p, index) => <FormattedMessage id={`resume.work3.description${index + 1}`} />)
+        description: [...Array(RESUME_WORK_DESCRIPTION).keys()].map((p, index) => <FormattedMessage id={`resume.work3.description${index + 1}`} />)
       }
     ]
   }
@@ -69,13 +67,15 @@ export const RESUME_DATA = [
       "JavaScript (ES6 / jQuery)",
       "React",
       "Adobe Illustrator / Photoshop / XD / Lightroom",
-      "WordPress",
+      "Stencil",
+      "TypeScript",
       "Linux (Ubuntu)",
       "Git",
       "Docker",
       "Node.js",
       "Jest",
-      "JIRA"
+      "JIRA",
+      "WordPress",
     ]
   },
   {
