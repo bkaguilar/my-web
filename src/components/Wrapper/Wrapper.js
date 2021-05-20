@@ -56,7 +56,7 @@ class Wrapper extends React.Component {
 
   checkPage(activePage = this.state.active) {
     let top = window.scrollY;
-    let offset = top + window.innerHeight + 0.5;
+    let offset = top + window.innerHeight + 1;
     let height = document.documentElement.offsetHeight;
     return [
       activePage < PAGES.length - 1 && offset >= height,
