@@ -5,7 +5,13 @@ import { ReactComponent as Cover } from "./images/cover.svg";
 import { FormattedMessage } from "react-intl";
 
 const ABOUT_PARAGRAPHS = 5;
-const RESUME_WORK_DESCRIPTION = 6;
+
+const JOBS = [
+  { name: "Netcentric", paragraphs: 1 },
+  { name: "Torresburriel Estudio", paragraphs: 4 },
+  { name: "Freelance", paragraphs: 1 },
+  { name: "BaboonLab", paragraphs: 6 },
+]
 
 export const RESUME_PROFILE = [
   {
@@ -28,26 +34,12 @@ export const RESUME_PROFILE = [
   {
     id: 2,
     sectionName: <FormattedMessage id="resume.experience" />,
-    items: [
-      {
-        year: <FormattedMessage id="resume.work1.date" />,
-        title: <FormattedMessage id="resume.work1.title" />,
-        site: "Torresburriel Estudio",
-        description: [...Array(4).keys()].map((p, index) => <FormattedMessage id={`resume.work1.description${index + 1}`} />)
-      },
-      {
-        year: <FormattedMessage id="resume.work2.date" />,
-        title: <FormattedMessage id="resume.work2.title" />,
-        site: "Freelance",
-        description: [<FormattedMessage id="resume.work2.description" />]
-      },
-      {
-        year: <FormattedMessage id="resume.work3.date" />,
-        title: <FormattedMessage id="resume.work3.title" />,
-        site: "BaboonLab",
-        description: [...Array(RESUME_WORK_DESCRIPTION).keys()].map((p, index) => <FormattedMessage id={`resume.work3.description${index + 1}`} />)
-      }
-    ]
+    items: JOBS.map(({name, paragraphs}, jobIndex) => ({
+      year: <FormattedMessage id={`resume.work${jobIndex + 1}.date`} />,
+      title: <FormattedMessage id={`resume.work${jobIndex + 1}.title`} />,
+      site: name,
+      description: [...Array(paragraphs).keys()].map((p, index) => <FormattedMessage id={`resume.work${jobIndex + 1}.description${index + 1}`} />),
+    })),
   }
 ];
 
@@ -66,7 +58,7 @@ export const RESUME_DATA = [
       <FormattedMessage id="resume.skills.svg" />,
       "JavaScript (ES6 / jQuery)",
       "React",
-      "Adobe Illustrator / Photoshop / XD / Lightroom",
+      "Vue",
       "Stencil",
       "TypeScript",
       "Linux (Ubuntu)",
@@ -75,6 +67,8 @@ export const RESUME_DATA = [
       "Node.js",
       "Jest",
       "JIRA",
+      "Adobe Illustrator / Photoshop / XD / Lightroom",
+      "Adobe Experience Manager",
       "WordPress",
     ]
   },

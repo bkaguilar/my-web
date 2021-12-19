@@ -40,22 +40,26 @@
   "resume.education.title2": "Ciencias de la comunicación y publicidad",
 
   "resume.work1.title": "Desarrolladora web",
-  "resume.work1.date": "abril 2020 - actualidad",
-  "resume.work1.description1": "Empresa UX que trabaja en el diseño de experiencia de usuario para sitios web y aplicaciones móviles.",
-  "resume.work1.description2": "He trabajado en distintos proyecto, ahora mismo desarrollo mejoras y ayudo en el desarrollo de un sistema de diseño basado en tecncologia de 'web components' utilizando herramientas como Stencil, Typescript, Abstract, y Jest.",
-  "resume.work1.description3": "Doy continuio soporte a diferentes equipos de desarolladores y ayudo en el desarrollo de páginas web para una de las grandes empresas de seguro de España",
-  "resume.work1.description4": "Mi entorno de trabajo es Linux, usando Git (Bitbucket) como control sistema de control de versiones, Jenkis para desplegar distintos entornos y produccion, JIRA y Teamwork para la gestión de tareas.",
+  "resume.work1.date": "octubre 2021 - actualidad",
+  "resume.work1.description1": "Proveedor de servicios digitales que transforma las experiencias de los clientes para las principales marcas del mundo al liberar todo el potencial de Adobe Experience Cloud.",
 
-  "resume.work2.title": "Diseñadora / Desarrolladora web",
-  "resume.work2.date": "junio 2018 - marzo 2020",
-  "resume.work2.description": "Colaboraciones satisfactorias en diferentes proyectos en los campos de electrodomésticos de cocina inteligentes, salud o infraestructura TIC.",
+  "resume.work2.title": "Desarrolladora web",
+  "resume.work2.date": "abril 2020 - septiembre 2021",
+  "resume.work2.description1": "Empresa UX que trabaja en el diseño de experiencia de usuario para sitios web y aplicaciones móviles.",
+  "resume.work2.description2": "He trabajado en distintos proyecto, ahora mismo desarrollo mejoras y ayudo en el desarrollo de un sistema de diseño basado en tecncologia de 'web components' utilizando herramientas como Stencil, Typescript, Abstract, y Jest.",
+  "resume.work2.description3": "Doy continuio soporte a diferentes equipos de desarolladores y ayudo en el desarrollo de páginas web para una de las grandes empresas de seguro de España",
+  "resume.work2.description4": "Mi entorno de trabajo es Linux, usando Git (Bitbucket) como control sistema de control de versiones, Jenkis para desplegar distintos entornos y produccion, JIRA y Teamwork para la gestión de tareas.",
 
   "resume.work3.title": "Diseñadora / Desarrolladora web",
-  "resume.work3.date": "marzo 2019 - septiembre 2019",
-  "resume.work3.description1": "Start-up que se dedica al marketing inmobiliario. Ejercí como la única desarrolladora frontend, encargada de la elaboración y mejora del diseño, la accesibilidad web y la experiencia de usuario para los clientes.",
-  "resume.work3.description2": "Participé en el diseño y desarrollo de aplicaciones web y webs corporativas con PHP (Symfony y WordPress) y jQuery.",
-  "resume.work3.description3": "Diseñé y elaboré la parte frontend (HTML5/ES6) de un chat web con videollamada para la comunicación con los clientes.",
-  "resume.work3.description4": "Diseñé también la interfaz de usuario de una aplicación multiplataforma (Unreal Engine) con funcionalidades de realidad virtual y aumentada para promotores inmobiliarios.",
-  "resume.work3.description5": "Como iniciativa propia, propuse la elaboración de una guía de estilo de código común para todo el equipo y los diferentes proyectos.",
-  "resume.work3.description6": "Mi entorno de trabajo era Linux, usando Git como control sistema de control de versiones, Docker para desplegar el entorno de desarrollo y JIRA para la gestión de tareas."
+  "resume.work3.date": "junio 2018 - marzo 2020",
+  "resume.work3.description": "Colaboraciones satisfactorias en diferentes proyectos en los campos de electrodomésticos de cocina inteligentes, salud o infraestructura TIC.",
+
+  "resume.work4.title": "Diseñadora / Desarrolladora web",
+  "resume.work4.date": "marzo 2019 - septiembre 2019",
+  "resume.work4.description1": "Start-up que se dedica al marketing inmobiliario. Ejercí como la única desarrolladora frontend, encargada de la elaboración y mejora del diseño, la accesibilidad web y la experiencia de usuario para los clientes.",
+  "resume.work4.description2": "Participé en el diseño y desarrollo de aplicaciones web y webs corporativas con PHP (Symfony y WordPress) y jQuery.",
+  "resume.work4.description3": "Diseñé y elaboré la parte frontend (HTML5/ES6) de un chat web con videollamada para la comunicación con los clientes.",
+  "resume.work4.description4": "Diseñé también la interfaz de usuario de una aplicación multiplataforma (Unreal Engine) con funcionalidades de realidad virtual y aumentada para promotores inmobiliarios.",
+  "resume.work4.description5": "Como iniciativa propia, propuse la elaboración de una guía de estilo de código común para todo el equipo y los diferentes proyectos.",
+  "resume.work4.description6": "Mi entorno de trabajo era Linux, usando Git como control sistema de control de versiones, Docker para desplegar el entorno de desarrollo y JIRA para la gestión de tareas."
 }
